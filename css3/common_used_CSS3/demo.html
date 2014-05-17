@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3常用属性介绍</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<div class="menu_wrap">
+    <ul class="menu_list">
+        <li><h4 class="tit">CSS3菜单</h4></li>
+        <li><a class="txt" href="#link_color">1、颜色</a></li>
+        <li><a class="txt" href="#link_opacity">2、透明度</a></li>
+        <li><a class="txt" href="#link_border_radius">3、圆角</a></li>
+        <li><a class="txt" href="#link_shadow">4、投影</a></li>
+        <li><a class="txt" href="#link_transform">5、变换</a></li>
+        <li><a class="txt" href="#link_transition">6、过渡</a></li>
+        <li><a class="txt" href="#link_animation">7、动画</a></li>
+        <li><a class="txt" href="#link_background_size">8、背景尺寸</a></li>
+        <li><a class="txt" href="#link_gradient">9、渐变</a></li>
+    </ul>
+    <a class="tri" href="#">></a>
+</div>
+
+<div class="content_wrap">
+	<h1 class="article_title">CSS3常用属性介绍</h1>
+    <h2 class="article_subtitle">- 亲爱的陈某真</h2>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">一、颜色</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <span class="demo_img">#000</span>
+                </div>
+                
+                <div class="img_box">
+                    <span class="demo_img demo_color">rgba(255,0,0,1)</span>
+                    <p class="txt">rgba(255,0,255,1)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="mod_con" id="link_opacity">
+        <h3 class="title">二、透明度</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt">opacity: 1;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_opacity" alt=""/>
+                    <p class="txt">opacity: 0.5;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mod_con" id="link_border_radius">
+        <h3 class="title">三、圆角</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt">border-radius: 0px;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_border_radius" alt=""/>
+                    <p class="txt">border-radius: 20px;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_shadow">
+        <h3 class="title">四、投影</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <span class="demo_img box_shadow">盒子投影</span>
+                    <p class="txt">box-shadow: 0px 0px 10px rgba(0,0,0,0.5);</p>
+                </div>
+                
+                <div class="img_box">
+                    <span class="demo_img text_shadow">文字投影</span>
+                    <p class="txt">text-shadow: 10px 10px 2px rgba(0,0,0,1);</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_transform">
+        <h3 class="title">五、变换</h3>
+        <h4 class="subtitle">1) 位移</h4>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transform:translate(0px,0px);</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_translate" alt=""/>
+                    <p class="txt"> -moz-transform:translate(50px,10px);</p>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="subtitle">2) 旋转</h4>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transform:rotate(0deg);</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_rotate" alt=""/>
+                    <p class="txt"> -moz-transform:rotate(-45deg);</p>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="subtitle">3) 缩放</h4>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transform:scale(1);</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_scale" alt=""/>
+                    <p class="txt"> -moz-transform:scale(1.5);</p>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="subtitle">4) 斜切</h4>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transform:skew(0deg,0deg);</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_skew" alt=""/>
+                    <p class="txt"> -moz-transform:skew(20deg,10deg);</p>
+                </div>
+            </div>
+        </div>
+        
+        <h4 class="subtitle">5) 变换原点</h4>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transform-origin:50% 50%;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_transform_origin" alt=""/>
+                    <p class="txt"> -moz-transform-origin:100% 0%;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_transition">
+        <h3 class="title">六、过渡</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt"> -moz-transition: none;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_transition" alt=""/>
+                    <p class="txt"> -moz-transition: -moz-transform 0.3s linear;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_animation">
+        <h3 class="title">七、动画</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img" alt=""/>
+                    <p class="txt">-moz-animation: none;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="img/bg.jpg" class="demo_img demo_animation" alt=""/>
+                    <p class="txt">-moz-animation: a_animation 0.5s linear infinite alternate;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_background_size">
+        <h3 class="title">八、背景尺寸</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="" class="demo_img" alt=""/>
+                    <p class="txt">background-size: 300px 300px;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="" class="demo_img demo_background_size" alt=""/>
+                    <p class="txt">background-size: 150px 150px;</p>
+                </div>
+                
+                <div class="img_box">
+                    <img src="" class="demo_img demo_bs_contain" alt=""/>
+                    <p class="txt">background-size: contain;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_gradient">
+        <h3 class="title">九、渐变</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <span class="demo_img"></span>
+                    <p class="txt">background: -moz-linear-gradient( top , #e51f89 , #7e05ef );</p>
+                </div>
+                
+                <div class="img_box">
+                    <span class="demo_img demo_gradient"></span>
+                    <p class="txt">background: -moz-radial-gradient( center center , #e51f89, #7e05ef );</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

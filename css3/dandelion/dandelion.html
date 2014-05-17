@@ -1,0 +1,1751 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>蒲公英 Dandelion</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+
+.main{ height:600px; width:1000px; background:url(bg.jpg) no-repeat left top; overflow:hidden; position:relative;}
+.dandelion_box{ position: absolute; height:220px;}
+.dandelion_box_1{ -moz-transform:skewX(2deg); bottom:-10px; opacity:0.95; left:100px; z-index:2;}
+.dandelion_box_2{ -moz-transform:scale(0.7) skewX(-1.5deg); opacity:0.8; left:155px; bottom:-45px; z-index:1;}
+.dandelion_box_3{ -moz-transform:scale(0.8) skewX(-3deg); opacity:0.9; left:50px; bottom:-25px; z-index:1;}
+
+.dandelion{ position: absolute; height:70px; width:60px; overflow:hidden; left:0px; top:0px; display:none;}
+.dandelion_fluff{ height:40px; width:60px; position:absolute; left:1px; top:4px;}
+.dandelion_fluff_inner{display:block; height:20px; width:30px; border-bottom:1px solid rgba(255,255,255,0.6); border-radius:30px 30px 10px 40px/25px 20px 5px 15px; position:absolute; -moz-transform-origin:100% 100%;}
+.dandelion_fluff_inner:after{content:""; display:block; height:20px; width:30px; border-bottom:1px solid rgba(255,255,255,0.3); border-radius:30px 30px 20px 40px/25px 20px 5px 20px; position:absolute; left:0px; top:0px; -moz-transform-origin:100% 100%; -moz-transform:rotate(-10deg);}
+.dandelion_fluff_inner:before{content:""; display:block; height:20px; width:30px; border-bottom:1px solid rgba(255,255,255,0.2); border-radius:30px 30px 20px 40px/25px 20px 5px 20px; position:absolute; left:0px; top:0px; -moz-transform-origin:100% 100%; -moz-transform:rotate(-18deg);}
+
+.dandelion_stem{ height:30px; width:1px; background: -moz-linear-gradient(top,rgba(225,219,203,0.6),rgba(201,183,136,0.8)); position: absolute; top:24px; left:31px;}
+
+.dandelion_seed{ height:16px; width:3px; background: -moz-linear-gradient(top,#46384e,#1c1a1f); border-radius:8px/50px; position:absolute; top:54px; left:30px; overflow:hidden;}
+.dandelion_seed:after{content:""; display:block; height:16px; width:1px; background:rgba(83,70,87,1);border-radius:8px/50px; position:absolute; left:0.5px; top:0px;}
+
+.r15{-moz-transform:rotate(15deg) scale(0.88,0.88);border-bottom:1px solid rgba(255,255,255,0.6);}
+.r30{-moz-transform:rotate(30deg) scale(0.9,0.9);border-bottom:1px solid rgba(255,255,255,0.6);}
+.r45{-moz-transform:rotate(45deg) scale(0.85,0.85);}
+.r60{-moz-transform:rotate(60deg) scale(0.8,0.8);}
+.r75{-moz-transform:rotate(75deg) scale(0.8,0.8);}
+.r90{-moz-transform:rotate(90deg) scale(0.8,0.8); border-radius:10px 30px 10px 10px/5px; border-bottom:1px solid rgba(255,255,255,0.3);}
+
+.r15_2{-moz-transform:rotate(-15deg) scale(-0.88,0.88); left:1px;}
+.r30_2{-moz-transform:rotate(-30deg) scale(-0.9,0.9);left:1px;}
+.r45_2{-moz-transform:rotate(-45deg) scale(-0.85,0.85);left:1px;}
+.r60_2{-moz-transform:rotate(-60deg) scale(-0.8,0.8);left:1px;}
+.r75_2{-moz-transform:rotate(-75deg) scale(-0.8,0.8);left:1px;}
+
+.dandelion_base{height:50px; width:65px; border-radius:65px/50px;position:relative; z-index:2; left:3px;}
+
+.pompon{ position:absolute; left:3px; top:-65px; height:100px; width:100px; z-index:2;}
+
+.dandelion_out{ -moz-transform-origin:50% 135%;}
+.dandelion_in{ -moz-transform-origin:50% 123%; opacity:0.8; top:0px;}
+.dandelion_inner{ -moz-transform-origin:50% 95%; opacity:0.9; top:25px;}
+.dandelion_inner .dandelion_stem{ height:15px;}
+.dandelion_inner .dandelion_seed,.dandelion_inner .dandelion_seed:after{ height:8px;}
+.dandelion_inner .dandelion_seed{ top:40px;}
+
+.dandelion_inner_2{ -moz-transform-origin:50% 73%; opacity:0.9; top:38px;}
+.dandelion_inner_2 .dandelion_stem{ height:5px;}
+.dandelion_inner_2 .dandelion_seed,.dandelion_inner_2 .dandelion_seed:after{ height:4px;}
+.dandelion_inner_2 .dandelion_seed{ top:30px;}
+.dandelion_inner_2 .dandelion_stem{ height:5px;}
+.dandelion_inner_2 .dandelion_seed,.dandelion_inner_2 .dandelion_seed:after{ height:4px;}
+.dandelion_inner_2 .dandelion_seed{ top:30px;}
+
+.dandelion_inner_3{top:52px;}
+.dandelion_inner_3 .dandelion_stem{ display:none;}
+.dandelion_inner_3 .dandelion_seed,.dandelion_inner_3 .dandelion_seed:after{ height:4px; opacity:0.2;}
+.dandelion_inner_3 .dandelion_seed{ top:20px;}
+
+.dandelion_1{-moz-transform:rotate(-120deg) scale(0.8);}
+.dandelion_2{-moz-transform:rotate(-90deg) scale(0.8);}
+.dandelion_3{-moz-transform:rotate(-60deg) scale(0.8) rotate(0deg);}
+.dandelion_4{-moz-transform:rotate(-30deg) scale(0.8) rotate(0deg);}
+.dandelion_5{-moz-transform:rotate(0deg) scale(0.8) rotate(0deg);}
+.dandelion_6{-moz-transform:rotate(30deg) scale(0.8) rotate(0deg);}
+.dandelion_7{-moz-transform:rotate(60deg) scale(0.8) rotate(0deg);}
+.dandelion_8{-moz-transform:rotate(90deg) scale(0.8) rotate(0deg);}
+.dandelion_9{-moz-transform:rotate(120deg) scale(0.8) rotate(0deg);}
+
+.dandelion_10{-moz-transform:rotate(-160deg) scale(0.9) rotate(0deg);}
+.dandelion_11{-moz-transform:rotate(-130deg) scale(0.9) rotate(0deg);}
+.dandelion_12{-moz-transform:rotate(-100deg) scale(0.9) rotate(0deg);}
+.dandelion_13{-moz-transform:rotate(-70deg) scale(0.9) rotate(0deg);}
+.dandelion_14{-moz-transform:rotate(-40deg) scale(0.9) rotate(0deg);}
+.dandelion_15{-moz-transform:rotate(-10deg) scale(0.9) rotate(0deg);}
+.dandelion_16{-moz-transform:rotate(20deg) scale(0.9) rotate(0deg);}
+.dandelion_17{-moz-transform:rotate(50deg) scale(0.9);}
+.dandelion_18{-moz-transform:rotate(80deg) scale(0.9);}
+.dandelion_19{-moz-transform:rotate(110deg) scale(0.9);}
+.dandelion_20{-moz-transform:rotate(140deg) scale(0.9);}
+
+.dandelion_21{-moz-transform:rotate(-210deg);}
+.dandelion_22{-moz-transform:rotate(-170deg);}
+.dandelion_23{-moz-transform:rotate(-130deg);}
+.dandelion_24{-moz-transform:rotate(-90deg);}
+.dandelion_25{-moz-transform:rotate(-50deg);}
+.dandelion_26{-moz-transform:rotate(-10deg);}
+.dandelion_27{-moz-transform:rotate(30deg);}
+.dandelion_28{-moz-transform:rotate(70deg);}
+.dandelion_29{-moz-transform:rotate(110deg);}
+.dandelion_30{-moz-transform:rotate(150deg);}
+
+.dandelion_31{-moz-transform:rotate(-250deg);}
+.dandelion_32{-moz-transform:rotate(-200deg);}
+.dandelion_33{-moz-transform:rotate(-150deg);}
+.dandelion_34{-moz-transform:rotate(-100deg);}
+.dandelion_35{-moz-transform:rotate(-50deg);}
+.dandelion_36{-moz-transform:rotate(0deg);}
+.dandelion_37{-moz-transform:rotate(50deg);}
+
+.dandelion_38{-moz-transform:rotate(-180deg);}
+.dandelion_39{-moz-transform:rotate(-120deg);}
+.dandelion_40{-moz-transform:rotate(-60deg);}
+.dandelion_41{-moz-transform:rotate(0deg);}
+.dandelion_42{-moz-transform:rotate(60deg);}
+.dandelion_43{-moz-transform:rotate(120deg);}
+
+
+.main:hover .dandelion{ -moz-transition:-moz-transform 4s linear,opacity 4s linear;}
+
+.main:hover .dandelion_3{-moz-transform:translate(1260px,-20px) scale(0.5) rotate(-10deg); opacity:0.7;
+ -moz-transition:-moz-transform 4s linear,opacity 4s linear;}
+.main:hover .dandelion_4{-moz-transform:translate(1230px, -10px) scale(0.6) rotate(8deg); opacity:0.6;
+ -moz-transition:-moz-transform 3s linear,opacity 3s linear;}
+.main:hover .dandelion_5{-moz-transform:translate(1210px, -20px) scale(0.8) rotate(20deg); opacity:0.9;
+ -moz-transition:-moz-transform 10s linear,opacity 10s linear;}
+.main:hover .dandelion_7{-moz-transform:translate(1580px,-20px) scale(0.8) rotate(20deg); opacity:0.8;
+ -moz-transition:-moz-transform 10s linear,opacity 10s linear;}
+.main:hover .dandelion_8{-moz-transform:translate(1460px,-90px) scale(0.4) rotate(20deg); opacity:0.8;
+ -moz-transition:-moz-transform 5s linear,opacity 5s linear;}
+.main:hover .dandelion_9{-moz-transform:translate(1240px,-60px) scale(0.9) rotate(-20deg); opacity:0.6;
+ -moz-transition:-moz-transform 5s linear,opacity 5s linear;}
+.main:hover .dandelion_12{-moz-transform:translate(1185px,10px) scale(0.5) rotate(-10deg); opacity:0.7;
+ -moz-transition:-moz-transform 4s linear,opacity 4s linear;}
+.main:hover .dandelion_13{-moz-transform:translate(1170px, -15px) scale(0.7) rotate(18deg); opacity:0.6;
+ -moz-transition:-moz-transform 5s linear,opacity 5s linear;}
+.main:hover .dandelion_14{-moz-transform:translate(1460px,15px) scale(0.6) rotate(14deg); opacity:0.7;
+ -moz-transition:-moz-transform 12s linear,opacity 12s linear;}
+.main:hover .dandelion_15{-moz-transform:translate(1160px, -70px) scale(0.6) rotate(5deg); opacity:0.8;
+ -moz-transition:-moz-transform 7s linear,opacity 7s linear;}
+.main:hover .dandelion_16{-moz-transform:translate(1760px,-35px) scale(0.5) rotate(10deg); opacity:0.5;
+ -moz-transition:-moz-transform 6s linear,opacity 6s linear;}
+
+.dandelion_3,.dandelion_4,.dandelion_5,.dandelion_7,.dandelion_8,.dandelion_9,.dandelion_12,.dandelion_13,.dandelion_14,.dandelion_15,.dandelion_16{ display:block;}
+
+</style>
+</head>
+
+<body>
+<div class="main">
+
+<div class="dandelion_box dandelion_box_1 flyaway">
+    <div class="dandelion_base">
+    
+    <div class="pompon">
+    
+    <div class="dandelion dandelion_out dandelion_1">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_2">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_3">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_4">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_5">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_6">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_7">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_8">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_9">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_in dandelion_10">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_11">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_12">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_13">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_14">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_15">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_16">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_17">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_18">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_19">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+     <div class="dandelion dandelion_in dandelion_20">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner dandelion_21">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_22">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_23">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_24">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_25">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_26">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_27">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_28">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_29">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_30">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner_2 dandelion_31">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_32">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_33">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_34">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_35">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_36">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_37">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner_3 dandelion_38">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_39">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_40">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_41">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_42">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_43">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+
+    </div>
+    
+    </div>
+    <div class="leaves">
+        <i class="leaf leaf_1"></i>
+        <i class="leaf leaf_2"></i>
+        <i class="leaf leaf_3"></i>
+        <i class="leaf leaf_4"></i>
+    </div>
+    <div class="dandelion_base_stem"></div>
+</div>
+
+<div class="dandelion_box dandelion_box_2 flyaway">
+    <div class="dandelion_base">
+    
+    <div class="pompon">
+    
+    <div class="dandelion dandelion_out dandelion_1">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_2">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_3">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_4">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_5">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_6">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_7">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_8">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_out dandelion_9">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_in dandelion_10">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_11">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_12">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_13">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_14">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_15">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_16">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_17">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_18">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_in dandelion_19">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+     <div class="dandelion dandelion_in dandelion_20">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner dandelion_21">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_22">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_23">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_24">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_25">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_26">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_27">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_28">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_29">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner dandelion_30">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner_2 dandelion_31">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_32">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_33">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_34">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_35">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_36">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_2 dandelion_37">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    
+    <div class="dandelion dandelion_inner_3 dandelion_38">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_39">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_40">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_41">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_42">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+    <div class="dandelion dandelion_inner_3 dandelion_43">
+        <div class="dandelion_fluff">
+        <i class="dandelion_fluff_inner r15"></i>
+        <i class="dandelion_fluff_inner r30"></i>
+        <i class="dandelion_fluff_inner r45"></i>
+        <i class="dandelion_fluff_inner r60"></i>
+        <i class="dandelion_fluff_inner r75"></i>
+        <i class="dandelion_fluff_inner r90"></i>
+        
+        <i class="dandelion_fluff_inner r15_2"></i>
+        <i class="dandelion_fluff_inner r30_2"></i>
+        <i class="dandelion_fluff_inner r45_2"></i>
+        <i class="dandelion_fluff_inner r60_2"></i>
+        <i class="dandelion_fluff_inner r75_2"></i>
+        </div>
+        <div class="dandelion_stem"></div>
+        <div class="dandelion_seed"></div>
+    </div>
+
+    </div>
+    
+    </div>
+    <div class="leaves">
+        <i class="leaf leaf_1"></i>
+        <i class="leaf leaf_2"></i>
+        <i class="leaf leaf_3"></i>
+        <i class="leaf leaf_4"></i>
+    </div>
+    <div class="dandelion_base_stem"></div>
+</div>
+
+<div class="dandelion_box dandelion_box_3">
+    <div class="dandelion_base"></div>
+    <div class="leaves">
+        <i class="leaf leaf_1"></i>
+        <i class="leaf leaf_2"></i>
+        <i class="leaf leaf_3"></i>
+        <i class="leaf leaf_4"></i>
+    </div>
+    <div class="dandelion_base_stem"></div>
+</div>
+
+
+</div>
+</body>
+</html>
