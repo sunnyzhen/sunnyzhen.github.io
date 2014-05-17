@@ -1,4 +1,4 @@
-sunnycchen.github.io
+sunnyzhen.github.io
 ====================
 
-sunnyzhen's static blog
+sunnyzhen's blog
