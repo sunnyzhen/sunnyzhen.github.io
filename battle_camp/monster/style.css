@@ -1,0 +1,145 @@
+body {
+	font-family: verdana;
+	font-size: 10pt;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+span {
+	margin: 12px;
+	display: block;
+	color: #FFFFFF;
+}
+ul ul li {
+	float: left;
+	display: block;
+	width: 10%;
+}
+img {
+	max-height: 100px;
+}	
+.search {
+	width: 90%;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 20pt;
+}
+.main {
+	margin: 0 auto;
+	width: 90%;
+}
+.header, .footer {
+	clear: left;
+}
+.catalogue, .titles {
+	width: 100%;
+}
+.catalogue>li, .titles>li {
+	float: left;
+	width: 100%;
+}
+.titles {
+	font-weight: bold;
+	font-size: 12pt;
+	padding-bottom: 50px;
+}
+.catalogue>li:nth-child(even) {
+	background: #FFF5EE;
+}
+.catalogue>li:nth-child(even) span {
+	color: #FFF5EE;
+}
+.catalogue .element img {
+	width: 25px;
+}
+.catalogue .name.uncommon {
+	color: #7A7876;
+	font-weight: bold;
+}
+.catalogue .name.rareminus {
+	color: #D6A744;
+	font-weight: bold;
+}
+.catalogue .name.rare {
+	color: #64B63C;
+	font-weight: bold;
+}
+.catalogue .name.ultra {
+	color: #F5776B;
+	font-weight: bold;
+}
+.catalogue .name.legendary {
+	color: #968BC9;
+	font-weight: bold;
+}
+.sorter {
+	display: inline-block;
+	position: relative;
+	padding: 0 5px;
+	margin: -1px 0 0 5px;
+	vertical-align: top;
+}	
+.sorter:before, .sorter:after {
+	content: " ";
+	width: 0;
+	height: 0;
+	border: 5px solid transparent;
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+.sorter:before {
+	border-color: transparent transparent #555 transparent;
+}
+.sorter:after {
+	border-color: #555 transparent transparent transparent;
+	top: 11px;
+}
+.filters select, .filters input {
+	width: 30%;
+	font-size: 20pt;
+	margin-bottom: 50px;
+}
+.search-hidden, .rarity-hidden, .element-hidden {
+	display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px),
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5){
+	.titles {
+		display: none;
+	}
+	span, .catalogue>li:nth-child(even) span {
+		display: inline;
+		font-weight: bold;
+		color: #000000;
+	}
+	ul {
+		margin: 10px 0 10px 0;
+	}
+	li {
+		padding: 1px;
+		float: none !important;
+		display: block;
+		text-align: left;
+		width: auto !important;
+	}
+	.photo {
+		float: right !important;
+		padding-right: 10px;
+	}
+	.catalogue .element img {
+		width: 10px;
+	}
+	.sorter {
+		display: none;
+	}
+}

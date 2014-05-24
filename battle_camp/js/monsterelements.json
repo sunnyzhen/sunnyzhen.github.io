@@ -1,0 +1,5640 @@
+var elements = {
+  "monsters": [
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth1",
+      "public_rarity": "common",
+      "name": "earth1",
+      "description": "earth1_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire1",
+      "public_rarity": "common",
+      "name": "fire1",
+      "description": "fire1_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass1",
+      "public_rarity": "common",
+      "name": "grass1",
+      "description": "grass1_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water1",
+      "public_rarity": "common",
+      "name": "water1",
+      "description": "water1_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind1",
+      "public_rarity": "common",
+      "name": "wind1",
+      "description": "wind1_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth2",
+      "public_rarity": "common",
+      "name": "earth2",
+      "description": "earth2_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire2",
+      "public_rarity": "common",
+      "name": "fire2",
+      "description": "fire2_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass2",
+      "public_rarity": "common",
+      "name": "grass2",
+      "description": "grass2_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water2",
+      "public_rarity": "common",
+      "name": "water2",
+      "description": "water2_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind2",
+      "public_rarity": "common",
+      "name": "wind2",
+      "description": "wind2_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth4",
+      "public_rarity": "common",
+      "name": "earth4",
+      "description": "earth4_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire4",
+      "public_rarity": "common",
+      "name": "fire4",
+      "description": "fire4_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass4",
+      "public_rarity": "common",
+      "name": "grass4",
+      "description": "grass4_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water4",
+      "public_rarity": "common",
+      "name": "water4",
+      "description": "water4_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind4",
+      "public_rarity": "common",
+      "name": "wind4",
+      "description": "wind4_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth7",
+      "public_rarity": "common",
+      "name": "earth7",
+      "description": "earth7_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire7",
+      "public_rarity": "common",
+      "name": "fire7",
+      "description": "fire7_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass7",
+      "public_rarity": "common",
+      "name": "grass7",
+      "description": "grass7_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water7",
+      "public_rarity": "common",
+      "name": "water7",
+      "description": "water7_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind7",
+      "public_rarity": "common",
+      "name": "wind7",
+      "description": "wind7_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth6",
+      "public_rarity": "common",
+      "name": "earth6",
+      "description": "earth6_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire6",
+      "public_rarity": "common",
+      "name": "fire6",
+      "description": "fire6_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass6",
+      "public_rarity": "common",
+      "name": "grass6",
+      "description": "grass6_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water6",
+      "public_rarity": "common",
+      "name": "water6",
+      "description": "water6_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind6",
+      "public_rarity": "common",
+      "name": "wind6",
+      "description": "wind6_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth3",
+      "public_rarity": "common",
+      "name": "earth3",
+      "description": "earth3_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire3",
+      "public_rarity": "common",
+      "name": "fire3",
+      "description": "fire3_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass3",
+      "public_rarity": "common",
+      "name": "grass3",
+      "description": "grass3_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water3",
+      "public_rarity": "common",
+      "name": "water3",
+      "description": "water3_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind3",
+      "public_rarity": "common",
+      "name": "wind3",
+      "description": "wind3_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth5",
+      "public_rarity": "commonplus",
+      "name": "earth5",
+      "description": "earth5_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire5",
+      "public_rarity": "commonplus",
+      "name": "fire5",
+      "description": "fire5_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass5",
+      "public_rarity": "commonplus",
+      "name": "grass5",
+      "description": "grass5_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water5",
+      "public_rarity": "commonplus",
+      "name": "water5",
+      "description": "water5_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind5",
+      "public_rarity": "commonplus",
+      "name": "wind5",
+      "description": "wind5_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "e1fairy",
+      "public_rarity": "commonplus",
+      "name": "e1fairy",
+      "description": "e1fairy_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "e1baking",
+      "public_rarity": "commonplus",
+      "name": "e1baking",
+      "description": "e1baking_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "e2devil",
+      "public_rarity": "commonplus",
+      "name": "e2devil",
+      "description": "e2devil_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "e2angel",
+      "public_rarity": "commonplus",
+      "name": "e2angel",
+      "description": "e2angel_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "e3mushroom",
+      "public_rarity": "commonplus",
+      "name": "e3mushroom",
+      "description": "e3mushroom_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "e4headphones",
+      "public_rarity": "commonplus",
+      "name": "e4headphones",
+      "description": "e4headphones_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "coal",
+      "public_rarity": "commonplus",
+      "name": "coal",
+      "description": "coal_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "e9nanobot",
+      "public_rarity": "commonplus",
+      "name": "e9nanobot",
+      "description": "e9nanobot_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earthcrystal",
+      "public_rarity": "commonplus",
+      "name": "earthcrystal",
+      "description": "earthcrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "epiccrystal",
+      "public_rarity": "commonplus",
+      "name": "epiccrystal",
+      "description": "epiccrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "firecrystal",
+      "public_rarity": "commonplus",
+      "name": "firecrystal",
+      "description": "firecrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grasscrystal",
+      "public_rarity": "commonplus",
+      "name": "grasscrystal",
+      "description": "grasscrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "supercrystal",
+      "public_rarity": "commonplus",
+      "name": "supercrystal",
+      "description": "supercrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "ultracrystal",
+      "public_rarity": "commonplus",
+      "name": "ultracrystal",
+      "description": "ultracrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "watercrystal",
+      "public_rarity": "commonplus",
+      "name": "watercrystal",
+      "description": "watercrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "windcrystal",
+      "public_rarity": "commonplus",
+      "name": "windcrystal",
+      "description": "windcrystal_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "e8chocolate",
+      "public_rarity": "commonplus",
+      "name": "e8chocolate",
+      "description": "e8chocolate_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "epicspecial",
+      "public_rarity": "commonplus",
+      "name": "epicspecial",
+      "description": "epicspecial_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "superspecial",
+      "public_rarity": "commonplus",
+      "name": "superspecial",
+      "description": "superspecial_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "ultraspecial",
+      "public_rarity": "commonplus",
+      "name": "ultraspecial",
+      "description": "ultraspecial_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e9sinanju",
+      "evolves": "e9sinanju_e",
+      "public_rarity": "legendary",
+      "name": "e9sinanju",
+      "description": "e9sinanju_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e9sinanju_e",
+      "evolves": "e9sinanju_3",
+      "public_rarity": "legendary",
+      "name": "e9sinanju_e",
+      "description": "e9sinanju_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e8lust",
+      "evolves": "e8lust_e",
+      "public_rarity": "legendary",
+      "name": "e8lust",
+      "description": "e8lust_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e8lust_e",
+      "evolves": "e8lust_3",
+      "public_rarity": "legendary",
+      "name": "e8lust_e",
+      "description": "e8lust_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "grandelk",
+      "evolves": "grandelk_e",
+      "public_rarity": "legendary",
+      "name": "grandelk",
+      "description": "grandelk_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "grandelk_e",
+      "evolves": "grandelk_3",
+      "public_rarity": "legendary",
+      "name": "grandelk_e",
+      "description": "grandelk_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "grandelk_3",
+      "public_rarity": "legendary",
+      "name": "grandelk_3",
+      "description": "grandelk_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e9robo",
+      "evolves": "e9robo_e",
+      "public_rarity": "rare",
+      "name": "e9robo",
+      "description": "e9robo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e9robo_e",
+      "evolves": "e9robo_3",
+      "public_rarity": "rare",
+      "name": "e9robo_e",
+      "description": "e9robo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "fion",
+      "evolves": "fion_e",
+      "public_rarity": "rare",
+      "name": "fion",
+      "description": "fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "fion_e",
+      "evolves": "fion_3",
+      "public_rarity": "rare",
+      "name": "fion_e",
+      "description": "fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e1lavaraptor",
+      "evolves": "e1lavaraptor_e",
+      "public_rarity": "rare",
+      "name": "e1lavaraptor",
+      "description": "e1lavaraptor_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e1lavaraptor_e",
+      "public_rarity": "rare",
+      "name": "e1lavaraptor_e",
+      "description": "e1lavaraptor_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "fion_3",
+      "public_rarity": "rare",
+      "name": "fion_3",
+      "description": "fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "pitcherpara",
+      "evolves": "pitcherpara_e",
+      "public_rarity": "rare",
+      "name": "pitcherpara",
+      "description": "pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "pitcherpara_e",
+      "evolves": "pitcherpara_3",
+      "public_rarity": "rare",
+      "name": "pitcherpara_e",
+      "description": "pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e1pitcherpara",
+      "evolves": "e1pitcherpara_e",
+      "public_rarity": "rare",
+      "name": "e1pitcherpara",
+      "description": "e1pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "cactusviper",
+      "evolves": "cactusviper_e",
+      "public_rarity": "rare",
+      "name": "cactusviper",
+      "description": "cactusviper_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "cactusviper_e",
+      "evolves": "cactusviper_3",
+      "public_rarity": "rare",
+      "name": "cactusviper_e",
+      "description": "cactusviper_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e1pitcherpara_e",
+      "evolves": "e1pitcherpara_3",
+      "public_rarity": "rare",
+      "name": "e1pitcherpara_e",
+      "description": "e1pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e6flowerrooster",
+      "evolves": "e6flowerrooster_e",
+      "public_rarity": "rare",
+      "name": "e6flowerrooster",
+      "description": "e6flowerrooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e6flowerrooster_e",
+      "public_rarity": "rare",
+      "name": "e6flowerrooster_e",
+      "description": "e6flowerrooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "cactusviper_3",
+      "public_rarity": "rare",
+      "name": "cactusviper_3",
+      "description": "cactusviper_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e1pitcherpara_3",
+      "public_rarity": "rare",
+      "name": "e1pitcherpara_3",
+      "description": "e1pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "pitcherpara_3",
+      "public_rarity": "rare",
+      "name": "pitcherpara_3",
+      "description": "pitcherpara_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "stonehead",
+      "evolves": "stonehead_e",
+      "public_rarity": "rare",
+      "name": "stonehead",
+      "description": "stonehead_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "stonehead_e",
+      "evolves": "stonehead_3",
+      "public_rarity": "rare",
+      "name": "stonehead_e",
+      "description": "stonehead_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "snowmonkey",
+      "evolves": "snowmonkey_e",
+      "public_rarity": "rare",
+      "name": "snowmonkey",
+      "description": "snowmonkey_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "snowmonkey_e",
+      "evolves": "snowmonkey_3",
+      "public_rarity": "rare",
+      "name": "snowmonkey_e",
+      "description": "snowmonkey_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4boneysaur",
+      "evolves": "e4boneysaur_e",
+      "public_rarity": "rare",
+      "name": "e4boneysaur",
+      "description": "e4boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4boneysaur_e",
+      "evolves": "e4boneysaur_3",
+      "public_rarity": "rare",
+      "name": "e4boneysaur_e",
+      "description": "e4boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rockcat",
+      "evolves": "rockcat_e",
+      "public_rarity": "rare",
+      "name": "rockcat",
+      "description": "rockcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rockcat_e",
+      "public_rarity": "rare",
+      "name": "rockcat_e",
+      "description": "rockcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4boneysaur_3",
+      "public_rarity": "rare",
+      "name": "e4boneysaur_3",
+      "description": "e4boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "snowmonkey_3",
+      "public_rarity": "rare",
+      "name": "snowmonkey_3",
+      "description": "snowmonkey_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "stonehead_3",
+      "public_rarity": "rare",
+      "name": "stonehead_3",
+      "description": "stonehead_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lavaraptor",
+      "evolves": "lavaraptor_e",
+      "public_rarity": "rare",
+      "name": "lavaraptor",
+      "description": "lavaraptor_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lavaraptor_e",
+      "evolves": "lavaraptor_3",
+      "public_rarity": "rare",
+      "name": "lavaraptor_e",
+      "description": "lavaraptor_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2fion",
+      "evolves": "e2fion_e",
+      "public_rarity": "rare",
+      "name": "e2fion",
+      "description": "e2fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2fion_e",
+      "evolves": "e2fion_3",
+      "public_rarity": "rare",
+      "name": "e2fion_e",
+      "description": "e2fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2fion_3",
+      "public_rarity": "rare",
+      "name": "e2fion_3",
+      "description": "e2fion_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e7lubu",
+      "evolves": "e7lubu_e",
+      "public_rarity": "rare",
+      "name": "e7lubu",
+      "description": "e7lubu_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e7lubu_e",
+      "evolves": "e7lubu_3",
+      "public_rarity": "rare",
+      "name": "e7lubu_e",
+      "description": "e7lubu_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lavaraptor_3",
+      "public_rarity": "rare",
+      "name": "lavaraptor_3",
+      "description": "lavaraptor_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "murderbunny",
+      "evolves": "murderbunny_e",
+      "public_rarity": "rare",
+      "name": "murderbunny",
+      "description": "murderbunny_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "murderbunny_e",
+      "public_rarity": "rare",
+      "name": "murderbunny_e",
+      "description": "murderbunny_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2whirlostrich",
+      "evolves": "e2whirlostrich_e",
+      "public_rarity": "rare",
+      "name": "e2whirlostrich",
+      "description": "e2whirlostrich_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2whirlostrich_e",
+      "public_rarity": "rare",
+      "name": "e2whirlostrich_e",
+      "description": "e2whirlostrich_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "winddragon",
+      "evolves": "winddragon_e",
+      "public_rarity": "rare",
+      "name": "winddragon",
+      "description": "winddragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "winddragon_e",
+      "public_rarity": "rare",
+      "name": "winddragon_e",
+      "description": "winddragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bouldoise",
+      "evolves": "bouldoise_e",
+      "public_rarity": "rare",
+      "name": "bouldoise",
+      "description": "bouldoise_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bouldoise_e",
+      "evolves": "bouldoise_3",
+      "public_rarity": "rare",
+      "name": "bouldoise_e",
+      "description": "bouldoise_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bouldoise_3",
+      "public_rarity": "rare",
+      "name": "bouldoise_3",
+      "description": "bouldoise_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e3blueshell",
+      "evolves": "e3blueshell_e",
+      "public_rarity": "rare",
+      "name": "e3blueshell",
+      "description": "e3blueshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e3blueshell_e",
+      "public_rarity": "rare",
+      "name": "e3blueshell_e",
+      "description": "e3blueshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seaplio",
+      "evolves": "seaplio_e",
+      "public_rarity": "rare",
+      "name": "seaplio",
+      "description": "seaplio_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seaplio_e",
+      "evolves": "seaplio_3",
+      "public_rarity": "rare",
+      "name": "seaplio_e",
+      "description": "seaplio_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seaplio_3",
+      "public_rarity": "rare",
+      "name": "seaplio_3",
+      "description": "seaplio_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e8steelheart",
+      "evolves": "e8steelheart_e",
+      "public_rarity": "rare",
+      "name": "e8steelheart",
+      "description": "e8steelheart_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e8steelheart_e",
+      "evolves": "e8steelheart_3",
+      "public_rarity": "rare",
+      "name": "e8steelheart_e",
+      "description": "e8steelheart_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9blasty",
+      "evolves": "e9blasty_e",
+      "public_rarity": "rare",
+      "name": "e9blasty",
+      "description": "e9blasty_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9blasty_e",
+      "public_rarity": "rare",
+      "name": "e9blasty_e",
+      "description": "e9blasty_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "whirlostrich",
+      "evolves": "whirlostrich_e",
+      "public_rarity": "rare",
+      "name": "whirlostrich",
+      "description": "whirlostrich_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "whirlostrich_e",
+      "evolves": "whirlostrich_3",
+      "public_rarity": "rare",
+      "name": "whirlostrich_e",
+      "description": "whirlostrich_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "christmaswreath",
+      "evolves": "christmaswreath_e",
+      "public_rarity": "rare",
+      "name": "christmaswreath",
+      "description": "christmaswreath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "christmaswreath_e",
+      "evolves": "christmaswreath_3",
+      "public_rarity": "rare",
+      "name": "christmaswreath_e",
+      "description": "christmaswreath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "christmaswreath_3",
+      "public_rarity": "rare",
+      "name": "christmaswreath_3",
+      "description": "christmaswreath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "whirlostrich_3",
+      "public_rarity": "rare",
+      "name": "whirlostrich_3",
+      "description": "whirlostrich_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "tornadoarchy",
+      "evolves": "tornadoarchy_e",
+      "public_rarity": "rare",
+      "name": "tornadoarchy",
+      "description": "tornadoarchy_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "tornadoarchy_e",
+      "evolves": "tornadoarchy_3",
+      "public_rarity": "rare",
+      "name": "tornadoarchy_e",
+      "description": "tornadoarchy_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "tornadoarchy_3",
+      "public_rarity": "rare",
+      "name": "tornadoarchy_3",
+      "description": "tornadoarchy_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e5hothands",
+      "evolves": "e5hothands_e",
+      "public_rarity": "rare",
+      "name": "e5hothands",
+      "description": "e5hothands_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e5hothands_e",
+      "public_rarity": "rare",
+      "name": "e5hothands_e",
+      "description": "e5hothands_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e5forestsquirrel",
+      "evolves": "e5forestsquirrel_e",
+      "public_rarity": "rare",
+      "name": "e5forestsquirrel",
+      "description": "e5forestsquirrel_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e5forestsquirrel_e",
+      "public_rarity": "rare",
+      "name": "e5forestsquirrel_e",
+      "description": "e5forestsquirrel_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e7guanyu",
+      "evolves": "e7guanyu_e",
+      "public_rarity": "rare",
+      "name": "e7guanyu",
+      "description": "e7guanyu_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e7guanyu_e",
+      "public_rarity": "rare",
+      "name": "e7guanyu_e",
+      "description": "e7guanyu_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e5pellisea",
+      "evolves": "e5pellisea_e",
+      "public_rarity": "rare",
+      "name": "e5pellisea",
+      "description": "e5pellisea_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e5pellisea_e",
+      "public_rarity": "rare",
+      "name": "e5pellisea_e",
+      "description": "e5pellisea_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "hoxer",
+      "evolves": "hoxer_e",
+      "public_rarity": "rare",
+      "name": "hoxer",
+      "description": "hoxer_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "hoxer_e",
+      "public_rarity": "rare",
+      "name": "hoxer_e",
+      "description": "hoxer_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "rudolph",
+      "evolves": "rudolph_e",
+      "public_rarity": "rare",
+      "name": "rudolf",
+      "description": "rudolf_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "rudolph_e",
+      "public_rarity": "rare",
+      "name": "rudolf_e",
+      "description": "rudolf_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "belgianfern",
+      "evolves": "belgianfern_e",
+      "public_rarity": "rare",
+      "name": "belgianfern",
+      "description": "belgianfern_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "belgianfern_e",
+      "public_rarity": "rare",
+      "name": "belgianfern_e",
+      "description": "belgianfern_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4hopsound",
+      "evolves": "e4hopsound_e",
+      "public_rarity": "rare",
+      "name": "e4hopsound",
+      "description": "e4hopsound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4hopsound_e",
+      "public_rarity": "rare",
+      "name": "e4hopsound_e",
+      "description": "e4hopsound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "schnaicing",
+      "evolves": "schnaicing_e",
+      "public_rarity": "rare",
+      "name": "schnaicing",
+      "description": "schnaicing_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "schnaicing_e",
+      "public_rarity": "rare",
+      "name": "schnaicing_e",
+      "description": "schnaicing_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e5snailbra",
+      "evolves": "e5snailbra_e",
+      "public_rarity": "rare",
+      "name": "e5snailbra",
+      "description": "e5snailbra_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e5snailbra_e",
+      "evolves": "e5snailbra_3",
+      "public_rarity": "rare",
+      "name": "e5snailbra_e",
+      "description": "e5snailbra_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e5snailbra_3",
+      "public_rarity": "rare",
+      "name": "e5snailbra_3",
+      "description": "e5snailbra_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e5cockatree",
+      "evolves": "e5cockatree_e",
+      "public_rarity": "rare",
+      "name": "e5cockatree",
+      "description": "e5cockatree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e5cockatree_e",
+      "evolves": "e5cockatree_3",
+      "public_rarity": "rare",
+      "name": "e5cockatree_e",
+      "description": "e5cockatree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e5cockatree_3",
+      "public_rarity": "rare",
+      "name": "e5cockatree_3",
+      "description": "e5cockatree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e3purpleyoshi",
+      "evolves": "e3purpleyoshi_e",
+      "public_rarity": "rare",
+      "name": "e3purpleyoshi",
+      "description": "e3purpleyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e3purpleyoshi_e",
+      "evolves": "e3purpleyoshi_3",
+      "public_rarity": "rare",
+      "name": "e3purpleyoshi_e",
+      "description": "e3purpleyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "pestilencehorse",
+      "evolves": "pestilencehorse_e",
+      "public_rarity": "rare",
+      "name": "pestilencehorse",
+      "description": "pestilencehorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "pestilencehorse_e",
+      "evolves": "pestilencehorse_3",
+      "public_rarity": "rare",
+      "name": "pestilencehorse_e",
+      "description": "pestilencehorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e3purpleyoshi_3",
+      "public_rarity": "rare",
+      "name": "e3purpleyoshi_3",
+      "description": "e3purpleyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8diablos",
+      "evolves": "e8diablos_e",
+      "public_rarity": "rare",
+      "name": "e8diablos",
+      "description": "e8diablos_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8diablos_e",
+      "public_rarity": "rare",
+      "name": "e8diablos_e",
+      "description": "e8diablos_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "pestilencehorse_3",
+      "public_rarity": "rare",
+      "name": "pestilencehorse_3",
+      "description": "pestilencehorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windteryx",
+      "evolves": "windteryx_e",
+      "public_rarity": "rareminus",
+      "name": "windteryx",
+      "description": "windteryx_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windteryx_e",
+      "public_rarity": "rareminus",
+      "name": "windteryx_e",
+      "description": "windteryx_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "blackstormwolf",
+      "evolves": "blackstormwolf_e",
+      "public_rarity": "rareminus",
+      "name": "blackstormwolf",
+      "description": "blackstormwolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "blackstormwolf_e",
+      "public_rarity": "rareminus",
+      "name": "blackstormwolf_e",
+      "description": "blackstormwolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e8hearteater",
+      "evolves": "e8hearteater_e",
+      "public_rarity": "rareminus",
+      "name": "e8hearteater",
+      "description": "e8hearteater_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e8hearteater_e",
+      "public_rarity": "rareminus",
+      "name": "e8hearteater_e",
+      "description": "e8hearteater_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "dimetropane",
+      "evolves": "dimetropane_e",
+      "public_rarity": "rareminus",
+      "name": "dimetropane",
+      "description": "dimetropane_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "dimetropane_e",
+      "public_rarity": "rareminus",
+      "name": "dimetropane_e",
+      "description": "dimetropane_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e1infernospino",
+      "evolves": "e1infernospino_e",
+      "public_rarity": "rareminus",
+      "name": "e1infernospino",
+      "description": "e1infernospino_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e1infernospino_e",
+      "public_rarity": "rareminus",
+      "name": "e1infernospino_e",
+      "description": "e1infernospino_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "firedragon",
+      "evolves": "firedragon_e",
+      "public_rarity": "rareminus",
+      "name": "firedragon",
+      "description": "firedragon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "firedragon_e",
+      "public_rarity": "rareminus",
+      "name": "firedragon_e",
+      "description": "firedragon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "venasaur",
+      "evolves": "venasaur_e",
+      "public_rarity": "rareminus",
+      "name": "venasaur",
+      "description": "venasaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "venasaur_e",
+      "public_rarity": "rareminus",
+      "name": "venasaur_e",
+      "description": "venasaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "tritite",
+      "evolves": "tritite_e",
+      "public_rarity": "rareminus",
+      "name": "tritite",
+      "description": "tritite_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "tritite_e",
+      "public_rarity": "rareminus",
+      "name": "tritite_e",
+      "description": "tritite_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "murloc",
+      "evolves": "murloc_e",
+      "public_rarity": "rareminus",
+      "name": "murloc",
+      "description": "murloc_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "murloc_e",
+      "public_rarity": "rareminus",
+      "name": "murloc_e",
+      "description": "murloc_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e6icerooster",
+      "evolves": "e6icerooster_e",
+      "public_rarity": "rareminus",
+      "name": "e6icerooster",
+      "description": "e6icerooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e6icerooster_e",
+      "public_rarity": "rareminus",
+      "name": "e6icerooster_e",
+      "description": "e6icerooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2windteryx",
+      "evolves": "e2windteryx_e",
+      "public_rarity": "rareminus",
+      "name": "e2windteryx",
+      "description": "e2windteryx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2windteryx_e",
+      "public_rarity": "rareminus",
+      "name": "e2windteryx_e",
+      "description": "e2windteryx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bonefeathercat",
+      "evolves": "bonefeathercat_e",
+      "public_rarity": "rareminus",
+      "name": "bonefeathercat",
+      "description": "bonefeathercat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bonefeathercat_e",
+      "public_rarity": "rareminus",
+      "name": "bonefeathercat_e",
+      "description": "bonefeathercat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e4cactusviper",
+      "evolves": "e4cactusviper_e",
+      "public_rarity": "rareminus",
+      "name": "e4cactusviper",
+      "description": "e4cactusviper_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e4cactusviper_e",
+      "public_rarity": "rareminus",
+      "name": "e4cactusviper_e",
+      "description": "e4cactusviper_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "faminehorse",
+      "evolves": "faminehorse_e",
+      "public_rarity": "rareminus",
+      "name": "faminehorse",
+      "description": "faminehorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "faminehorse_e",
+      "public_rarity": "rareminus",
+      "name": "faminehorse_e",
+      "description": "faminehorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "snolf",
+      "evolves": "snolf_e",
+      "public_rarity": "rareminus",
+      "name": "snolf",
+      "description": "snolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "snolf_e",
+      "public_rarity": "rareminus",
+      "name": "snolf_e",
+      "description": "snolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e3greenshell",
+      "evolves": "e3greenshell_e",
+      "public_rarity": "rareminus",
+      "name": "e3greenshell",
+      "description": "e3greenshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e3greenshell_e",
+      "public_rarity": "rareminus",
+      "name": "e3greenshell_e",
+      "description": "e3greenshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "thecrow",
+      "evolves": "thecrow_e",
+      "public_rarity": "rareminus",
+      "name": "thecrow",
+      "description": "thecrow_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "thecrow_e",
+      "public_rarity": "rareminus",
+      "name": "thecrow_e",
+      "description": "thecrow_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "waterdragon",
+      "evolves": "waterdragon_e",
+      "public_rarity": "rareminus",
+      "name": "waterdragon",
+      "description": "waterdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "waterdragon_e",
+      "public_rarity": "rareminus",
+      "name": "waterdragon_e",
+      "description": "waterdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "bountyhare",
+      "evolves": "bountyhare_e",
+      "public_rarity": "rareminus",
+      "name": "bountyhare",
+      "description": "bountyhare_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "bountyhare_e",
+      "public_rarity": "rareminus",
+      "name": "bountyhare_e",
+      "description": "bountyhare_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "bushlynx",
+      "evolves": "bushlynx_e",
+      "public_rarity": "rareminus",
+      "name": "bushlynx",
+      "description": "bushlynx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "bushlynx_e",
+      "public_rarity": "rareminus",
+      "name": "bushlynx_e",
+      "description": "bushlynx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "e4diamondtoad",
+      "evolves": "e4diamondtoad_e",
+      "public_rarity": "rareminus",
+      "name": "e4diamondtoad",
+      "description": "e4diamondtoad_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "e4diamondtoad_e",
+      "public_rarity": "rareminus",
+      "name": "e4diamondtoad_e",
+      "description": "e4diamondtoad_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "icemanx",
+      "evolves": "icemanx_e",
+      "public_rarity": "rareminus",
+      "name": "icemanx",
+      "description": "icemanx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "icemanx_e",
+      "public_rarity": "rareminus",
+      "name": "icemanx_e",
+      "description": "icemanx_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "stormeater",
+      "evolves": "stormeater_e",
+      "public_rarity": "rareminus",
+      "name": "stormeater",
+      "description": "stormeater_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "stormeater_e",
+      "public_rarity": "rareminus",
+      "name": "stormeater_e",
+      "description": "stormeater_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "firebat",
+      "evolves": "firebat_e",
+      "public_rarity": "rareminus",
+      "name": "firebat",
+      "description": "firebat_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "firebat_e",
+      "public_rarity": "rareminus",
+      "name": "firebat_e",
+      "description": "firebat_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e7zhangfei",
+      "evolves": "e7zhangfei_e",
+      "public_rarity": "rareminus",
+      "name": "e7zhangfei",
+      "description": "e7zhangfei_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e7zhangfei_e",
+      "public_rarity": "rareminus",
+      "name": "e7zhangfei_e",
+      "description": "e7zhangfei_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "woodtapir",
+      "evolves": "woodtapir_e",
+      "public_rarity": "rareminus",
+      "name": "woodtapir",
+      "description": "woodtapir_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "woodtapir_e",
+      "public_rarity": "rareminus",
+      "name": "woodtapir_e",
+      "description": "woodtapir_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "diamondtoad",
+      "evolves": "diamondtoad_e",
+      "public_rarity": "rareminus",
+      "name": "diamondtoad",
+      "description": "diamondtoad_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "diamondtoad_e",
+      "public_rarity": "rareminus",
+      "name": "diamondtoad_e",
+      "description": "diamondtoad_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "riveranha",
+      "evolves": "riveranha_e",
+      "public_rarity": "rareminus",
+      "name": "riveranha",
+      "description": "riveranha_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "riveranha_e",
+      "public_rarity": "rareminus",
+      "name": "riveranha_e",
+      "description": "riveranha_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windptero",
+      "evolves": "windptero_e",
+      "public_rarity": "rareminus",
+      "name": "windptero",
+      "description": "windptero_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windptero_e",
+      "evolves": "windptero_3",
+      "public_rarity": "rareminus",
+      "name": "windptero_e",
+      "description": "windptero_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e9clampy",
+      "evolves": "e9clampy_e",
+      "public_rarity": "rareminus",
+      "name": "e9clampy",
+      "description": "e9clampy_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e9clampy_e",
+      "public_rarity": "rareminus",
+      "name": "e9clampy_e",
+      "description": "e9clampy_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windptero_3",
+      "public_rarity": "rareminus",
+      "name": "windptero_3",
+      "description": "windptero_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "infernospino",
+      "evolves": "infernospino_e",
+      "public_rarity": "rareminus",
+      "name": "infernospino",
+      "description": "infernospino_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "infernospino_e",
+      "evolves": "infernospino_3",
+      "public_rarity": "rareminus",
+      "name": "infernospino_e",
+      "description": "infernospino_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "legale",
+      "evolves": "legale_e",
+      "public_rarity": "rareminus",
+      "name": "legale",
+      "description": "legale_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "legale_e",
+      "public_rarity": "rareminus",
+      "name": "legale_e",
+      "description": "legale_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "infernospino_3",
+      "public_rarity": "rareminus",
+      "name": "infernospino_3",
+      "description": "infernospino_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "stegotree",
+      "evolves": "stegotree_e",
+      "public_rarity": "rareminus",
+      "name": "stegotree",
+      "description": "stegotree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "stegotree_e",
+      "evolves": "stegotree_3",
+      "public_rarity": "rareminus",
+      "name": "stegotree_e",
+      "description": "stegotree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "chipapa",
+      "evolves": "chipapa_e",
+      "public_rarity": "rareminus",
+      "name": "chipapa",
+      "description": "chipapa_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "chipapa_e",
+      "public_rarity": "rareminus",
+      "name": "chipapa_e",
+      "description": "chipapa_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "blitzen",
+      "evolves": "blitzen_e",
+      "public_rarity": "rareminus",
+      "name": "blitzen",
+      "description": "blitzen_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "blitzen_e",
+      "public_rarity": "rareminus",
+      "name": "blitzen_e",
+      "description": "blitzen_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "stegotree_3",
+      "public_rarity": "rareminus",
+      "name": "stegotree_3",
+      "description": "stegotree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "ironsaurus",
+      "evolves": "ironsaurus_e",
+      "public_rarity": "rareminus",
+      "name": "ironsaurus",
+      "description": "ironsaurus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "ironsaurus_e",
+      "evolves": "ironsaurus_3",
+      "public_rarity": "rareminus",
+      "name": "ironsaurus_e",
+      "description": "ironsaurus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "ironsaurus_3",
+      "public_rarity": "rareminus",
+      "name": "ironsaurus_3",
+      "description": "ironsaurus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "coralrex",
+      "evolves": "coralrex_e",
+      "public_rarity": "rareminus",
+      "name": "coralrex",
+      "description": "coralrex_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "coralrex_e",
+      "evolves": "coralrex_3",
+      "public_rarity": "rareminus",
+      "name": "coralrex_e",
+      "description": "coralrex_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "laddle",
+      "evolves": "laddle_e",
+      "public_rarity": "rareminus",
+      "name": "laddle",
+      "description": "laddle_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "laddle_e",
+      "public_rarity": "rareminus",
+      "name": "laddle_e",
+      "description": "laddle_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9coralrex",
+      "evolves": "e9coralrex_e",
+      "public_rarity": "rareminus",
+      "name": "e9coralrex",
+      "description": "e9coralrex_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9coralrex_e",
+      "public_rarity": "rareminus",
+      "name": "e9coralrex_e",
+      "description": "e9coralrex_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "coralrex_3",
+      "public_rarity": "rareminus",
+      "name": "coralrex_3",
+      "description": "coralrex_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e3blueyoshi",
+      "evolves": "e3blueyoshi_e",
+      "public_rarity": "rareminus",
+      "name": "e3blueyoshi",
+      "description": "e3blueyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e3blueyoshi_e",
+      "public_rarity": "rareminus",
+      "name": "e3blueyoshi_e",
+      "description": "e3blueyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e8iceheart",
+      "evolves": "e8iceheart_e",
+      "public_rarity": "rareminus",
+      "name": "e8iceheart",
+      "description": "e8iceheart_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e8iceheart_e",
+      "public_rarity": "rareminus",
+      "name": "e8iceheart_e",
+      "description": "e8iceheart_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windturok",
+      "evolves": "windturok_e",
+      "public_rarity": "ultra",
+      "name": "windturok",
+      "description": "windturok_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windturok_e",
+      "evolves": "windturok_3",
+      "public_rarity": "ultra",
+      "name": "windturok_e",
+      "description": "windturok_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windturok_3",
+      "public_rarity": "ultra",
+      "name": "windturok_3",
+      "description": "windturok_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "huolong",
+      "evolves": "huolong_e",
+      "public_rarity": "ultra",
+      "name": "huolong",
+      "description": "huolong_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "huolong_e",
+      "evolves": "huolong_3",
+      "public_rarity": "ultra",
+      "name": "huolong_e",
+      "description": "huolong_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "huolong_3",
+      "public_rarity": "ultra",
+      "name": "huolong_3",
+      "description": "huolong_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "brachitree",
+      "evolves": "brachitree_e",
+      "public_rarity": "ultra",
+      "name": "brachitree",
+      "description": "brachitree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "brachitree_e",
+      "evolves": "brachitree_3",
+      "public_rarity": "ultra",
+      "name": "brachitree_e",
+      "description": "brachitree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e9pantherbot",
+      "evolves": "e9pantherbot_e",
+      "public_rarity": "ultra",
+      "name": "e9pantherbot",
+      "description": "e9pantherbot_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e9pantherbot_e",
+      "evolves": "e9pantherbot_3",
+      "public_rarity": "ultra",
+      "name": "e9pantherbot_e",
+      "description": "e9pantherbot_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "brachitree_3",
+      "public_rarity": "ultra",
+      "name": "brachitree_3",
+      "description": "brachitree_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "boneysaur",
+      "evolves": "boneysaur_e",
+      "public_rarity": "ultra",
+      "name": "boneysaur",
+      "description": "boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "boneysaur_e",
+      "evolves": "boneysaur_3",
+      "public_rarity": "ultra",
+      "name": "boneysaur_e",
+      "description": "boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "boneysaur_3",
+      "public_rarity": "ultra",
+      "name": "boneysaur_3",
+      "description": "boneysaur_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seanagi",
+      "evolves": "seanagi_e",
+      "public_rarity": "ultra",
+      "name": "seanagi",
+      "description": "seanagi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seanagi_e",
+      "evolves": "seanagi_3",
+      "public_rarity": "ultra",
+      "name": "seanagi_e",
+      "description": "seanagi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "deathhorse",
+      "evolves": "deathhorse_e",
+      "public_rarity": "ultra",
+      "name": "deathhorse",
+      "description": "deathhorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "deathhorse_e",
+      "evolves": "deathhorse_3",
+      "public_rarity": "ultra",
+      "name": "deathhorse_e",
+      "description": "deathhorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "seanagi_3",
+      "public_rarity": "ultra",
+      "name": "seanagi_3",
+      "description": "seanagi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "deathhorse_3",
+      "public_rarity": "ultra",
+      "name": "deathhorse_3",
+      "description": "deathhorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e6steelrooster",
+      "evolves": "e6steelrooster_e",
+      "public_rarity": "ultra",
+      "name": "e6steelrooster",
+      "description": "e6steelrooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e6steelrooster_e",
+      "public_rarity": "ultra",
+      "name": "e6steelrooster_e",
+      "description": "e6steelrooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "christmasangel",
+      "evolves": "christmasangel_e",
+      "public_rarity": "ultra",
+      "name": "christmasangel",
+      "description": "christmasangel_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "christmasangel_e",
+      "evolves": "christmasangel_3",
+      "public_rarity": "ultra",
+      "name": "christmasangel_e",
+      "description": "christmasangel_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "christmasangel_3",
+      "public_rarity": "ultra",
+      "name": "christmasangel_3",
+      "description": "christmasangel_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e7diaochan",
+      "evolves": "e7diaochan_e",
+      "public_rarity": "ultra",
+      "name": "e7diaochan",
+      "description": "e7diaochan_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e7diaochan_e",
+      "evolves": "e7diaochan_3",
+      "public_rarity": "ultra",
+      "name": "e7diaochan_e",
+      "description": "e7diaochan_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e1skullrex",
+      "evolves": "e1skullrex_e",
+      "public_rarity": "ultra",
+      "name": "e1skullrex",
+      "description": "e1skullrex_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e1skullrex_e",
+      "public_rarity": "ultra",
+      "name": "e1skullrex_e",
+      "description": "e1skullrex_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "electriccat",
+      "evolves": "electriccat_e",
+      "public_rarity": "ultra",
+      "name": "electriccat",
+      "description": "electriccat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "electriccat_e",
+      "public_rarity": "ultra",
+      "name": "electriccat_e",
+      "description": "electriccat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e4mausmong",
+      "evolves": "e4mausmong_e",
+      "public_rarity": "ultra",
+      "name": "e4mausmong",
+      "description": "e4mausmong_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e4mausmong_e",
+      "public_rarity": "ultra",
+      "name": "e4mausmong_e",
+      "description": "e4mausmong_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e8kol",
+      "evolves": "e8kol_e",
+      "public_rarity": "ultra",
+      "name": "e8kol",
+      "description": "e8kol_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e8kol_e",
+      "evolves": "e8kol_3",
+      "public_rarity": "ultra",
+      "name": "e8kol_e",
+      "description": "e8kol_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "hellkid",
+      "evolves": "hellkid_e",
+      "public_rarity": "ultra",
+      "name": "hellkid",
+      "description": "hellkid_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "hellkid_e",
+      "public_rarity": "ultra",
+      "name": "hellkid_e",
+      "description": "hellkid_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e8kod",
+      "evolves": "e8kod_e",
+      "public_rarity": "ultra",
+      "name": "e8kod",
+      "description": "e8kod_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e8kod_e",
+      "public_rarity": "ultra",
+      "name": "e8kod_e",
+      "description": "e8kod_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2flameox",
+      "evolves": "e2flameox_e",
+      "public_rarity": "ultra",
+      "name": "e2flameox",
+      "description": "e2flameox_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2flameox_e",
+      "evolves": "e2flameox_3",
+      "public_rarity": "ultra",
+      "name": "e2flameox_e",
+      "description": "e2flameox_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e2flameox_3",
+      "public_rarity": "ultra",
+      "name": "e2flameox_3",
+      "description": "e2flameox_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "coaldeer",
+      "evolves": "coaldeer_e",
+      "public_rarity": "ultra",
+      "name": "coaldeer",
+      "description": "coaldeer_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "coaldeer_e",
+      "public_rarity": "ultra",
+      "name": "coaldeer_e",
+      "description": "coaldeer_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e2birdcat",
+      "evolves": "e2birdcat_e",
+      "public_rarity": "ultra",
+      "name": "e2birdcat",
+      "description": "e2birdcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e2birdcat_e",
+      "public_rarity": "ultra",
+      "name": "e2birdcat_e",
+      "description": "e2birdcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e4magestico",
+      "evolves": "e4magestico_e",
+      "public_rarity": "ultra",
+      "name": "e4magestico",
+      "description": "e4magestico_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e4magestico_e",
+      "evolves": "e4magestico_3",
+      "public_rarity": "ultra",
+      "name": "e4magestico_e",
+      "description": "e4magestico_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e4magestico_3",
+      "public_rarity": "ultra",
+      "name": "e4magestico_3",
+      "description": "e4magestico_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "blindpath",
+      "evolves": "blindpath_e",
+      "public_rarity": "ultra",
+      "name": "blindpath",
+      "description": "blindpath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "blindpath_e",
+      "evolves": "blindpath_3",
+      "public_rarity": "ultra",
+      "name": "blindpath_e",
+      "description": "blindpath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "blindpath_3",
+      "public_rarity": "ultra",
+      "name": "blindpath_3",
+      "description": "blindpath_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9dinobot",
+      "evolves": "e9dinobot_e",
+      "public_rarity": "ultra",
+      "name": "e9dinobot",
+      "description": "e9dinobot_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9dinobot_e",
+      "public_rarity": "ultra",
+      "name": "e9dinobot_e",
+      "description": "e9dinobot_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "frostdragon",
+      "evolves": "frostdragon_e",
+      "public_rarity": "ultra",
+      "name": "frostdragon",
+      "description": "frostdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "frostdragon_e",
+      "public_rarity": "ultra",
+      "name": "frostdragon_e",
+      "description": "frostdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "featherlord",
+      "evolves": "featherlord_e",
+      "public_rarity": "ultra",
+      "name": "featherlord",
+      "description": "featherlord_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "featherlord_e",
+      "evolves": "featherlord_3",
+      "public_rarity": "ultra",
+      "name": "featherlord_e",
+      "description": "featherlord_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "featherlord_3",
+      "public_rarity": "ultra",
+      "name": "featherlord_3",
+      "description": "featherlord_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e5lavahunter",
+      "evolves": "e5lavahunter_e",
+      "public_rarity": "ultra",
+      "name": "e5lavahunter",
+      "description": "e5lavahunter_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e5lavahunter_e",
+      "public_rarity": "ultra",
+      "name": "e5lavahunter_e",
+      "description": "e5lavahunter_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e5trufflehog",
+      "evolves": "e5trufflehog_e",
+      "public_rarity": "ultra",
+      "name": "e5trufflehog",
+      "description": "e5trufflehog_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e5trufflehog_e",
+      "public_rarity": "ultra",
+      "name": "e5trufflehog_e",
+      "description": "e5trufflehog_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e5bearzzard",
+      "evolves": "e5bearzzard_e",
+      "public_rarity": "ultra",
+      "name": "e5bearzzard",
+      "description": "e5bearzzard_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e5bearzzard_e",
+      "public_rarity": "ultra",
+      "name": "e5bearzzard_e",
+      "description": "e5bearzzard_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e7caocao",
+      "evolves": "e7caocao_e",
+      "public_rarity": "ultra",
+      "name": "e7caocao",
+      "description": "e7caocao_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e7caocao_e",
+      "public_rarity": "ultra",
+      "name": "e7caocao_e",
+      "description": "e7caocao_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "skykirin",
+      "evolves": "skykirin_e",
+      "public_rarity": "ultra",
+      "name": "skykirin",
+      "description": "skykirin_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "skykirin_e",
+      "evolves": "skykirin_3",
+      "public_rarity": "ultra",
+      "name": "skykirin_e",
+      "description": "skykirin_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "skykirin_3",
+      "public_rarity": "ultra",
+      "name": "skykirin_3",
+      "description": "skykirin_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "hellsloth",
+      "evolves": "hellsloth_e",
+      "public_rarity": "ultra",
+      "name": "hellsloth",
+      "description": "hellsloth_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "hellsloth_e",
+      "evolves": "hellsloth_3",
+      "public_rarity": "ultra",
+      "name": "hellsloth_e",
+      "description": "hellsloth_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "broilzoi",
+      "evolves": "broilzoi_e",
+      "public_rarity": "ultra",
+      "name": "broilzoi",
+      "description": "broilzoi_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "broilzoi_e",
+      "public_rarity": "ultra",
+      "name": "broilzoi_e",
+      "description": "broilzoi_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e3bowser",
+      "evolves": "e3bowser_e",
+      "public_rarity": "ultra",
+      "name": "e3bowser",
+      "description": "e3bowser_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e3bowser_e",
+      "public_rarity": "ultra",
+      "name": "e3bowser_e",
+      "description": "e3bowser_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "hellsloth_3",
+      "public_rarity": "ultra",
+      "name": "hellsloth_3",
+      "description": "hellsloth_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "mammoss",
+      "evolves": "mammoss_e",
+      "public_rarity": "ultra",
+      "name": "mammoss",
+      "description": "mammoss_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "mammoss_e",
+      "evolves": "mammoss_3",
+      "public_rarity": "ultra",
+      "name": "mammoss_e",
+      "description": "mammoss_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "traphound",
+      "evolves": "traphound_e",
+      "public_rarity": "ultra",
+      "name": "traphound",
+      "description": "traphound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "traphound_e",
+      "public_rarity": "ultra",
+      "name": "traphound_e",
+      "description": "traphound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "mammoss_3",
+      "public_rarity": "ultra",
+      "name": "mammoss_3",
+      "description": "mammoss_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rocklodon",
+      "evolves": "rocklodon_e",
+      "public_rarity": "ultra",
+      "name": "rocklodon",
+      "description": "rocklodon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rocklodon_e",
+      "evolves": "rocklodon_3",
+      "public_rarity": "ultra",
+      "name": "rocklodon_e",
+      "description": "rocklodon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rocklodon_3",
+      "public_rarity": "ultra",
+      "name": "rocklodon_3",
+      "description": "rocklodon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "kraken",
+      "evolves": "kraken_e",
+      "public_rarity": "ultra",
+      "name": "kraken",
+      "description": "kraken_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "kraken_e",
+      "evolves": "kraken_3",
+      "public_rarity": "ultra",
+      "name": "kraken_e",
+      "description": "kraken_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "dogshark",
+      "evolves": "dogshark_e",
+      "public_rarity": "ultra",
+      "name": "dogshark",
+      "description": "dogshark_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "dogshark_e",
+      "public_rarity": "ultra",
+      "name": "dogshark_e",
+      "description": "dogshark_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "kraken_3",
+      "public_rarity": "ultra",
+      "name": "kraken_3",
+      "description": "kraken_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "bastet",
+      "evolves": "bastet_e",
+      "public_rarity": "ultra",
+      "name": "bastet",
+      "description": "bastet_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "bastet_e",
+      "public_rarity": "ultra",
+      "name": "bastet_e",
+      "description": "bastet_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "ghoulhound",
+      "evolves": "ghoulhound_e",
+      "public_rarity": "ultra",
+      "name": "ghoulhound",
+      "description": "ghoulhound_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "ghoulhound_e",
+      "public_rarity": "ultra",
+      "name": "ghoulhound_e",
+      "description": "ghoulhound_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "brachishroom",
+      "evolves": "brachishroom_e",
+      "public_rarity": "ultra",
+      "name": "brachishroom",
+      "description": "brachishroom_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "brachishroom_e",
+      "public_rarity": "ultra",
+      "name": "brachishroom_e",
+      "description": "brachishroom_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "shaledon",
+      "evolves": "shaledon_e",
+      "public_rarity": "ultra",
+      "name": "shaledon",
+      "description": "shaledon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "shaledon_e",
+      "public_rarity": "ultra",
+      "name": "shaledon_e",
+      "description": "shaledon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e1pirus",
+      "evolves": "e1pirus_e",
+      "public_rarity": "ultra",
+      "name": "e1pirus",
+      "description": "e1pirus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e1pirus_e",
+      "evolves": "e1pirus_3",
+      "public_rarity": "ultra",
+      "name": "e1pirus_e",
+      "description": "e1pirus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "icedogshark",
+      "evolves": "icedogshark_e",
+      "public_rarity": "ultra",
+      "name": "icedogshark",
+      "description": "icedogshark_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "icedogshark_e",
+      "public_rarity": "ultra",
+      "name": "icedogshark_e",
+      "description": "icedogshark_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e1pirus_3",
+      "public_rarity": "ultra",
+      "name": "e1pirus_3",
+      "description": "e1pirus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e3yoshi",
+      "evolves": "e3yoshi_e",
+      "public_rarity": "ultra",
+      "name": "e3yoshi",
+      "description": "e3yoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e3yoshi_e",
+      "evolves": "e3yoshi_3",
+      "public_rarity": "ultra",
+      "name": "e3yoshi_e",
+      "description": "e3yoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "chimera",
+      "evolves": "chimera_e",
+      "public_rarity": "ultra",
+      "name": "chimera",
+      "description": "chimera_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "chimera_e",
+      "public_rarity": "ultra",
+      "name": "chimera_e",
+      "description": "chimera_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "e3yoshi_3",
+      "public_rarity": "ultra",
+      "name": "e3yoshi_3",
+      "description": "e3yoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "treant",
+      "public_rarity": "unattainable",
+      "name": "treant",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "evilspirit",
+      "public_rarity": "unattainable",
+      "name": "evilspirit",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "miner",
+      "public_rarity": "unattainable",
+      "name": "miner",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "volcano",
+      "public_rarity": "unattainable",
+      "name": "volcano",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "cerberus_1",
+      "public_rarity": "unattainable",
+      "name": "cerberus_1",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "cerberus_2",
+      "public_rarity": "unattainable",
+      "name": "cerberus_2",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "cerberus_3",
+      "public_rarity": "unattainable",
+      "name": "cerberus_3",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "bohka_1",
+      "public_rarity": "unattainable",
+      "name": "bohka_1",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "bohka_2",
+      "public_rarity": "unattainable",
+      "name": "bohka_2",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "bohka_3",
+      "public_rarity": "unattainable",
+      "name": "bohka_3",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "kaioyo_1",
+      "public_rarity": "unattainable",
+      "name": "kaioyo_1",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "kaioyo_2",
+      "public_rarity": "unattainable",
+      "name": "kaioyo_2",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "kaioyo_3",
+      "public_rarity": "unattainable",
+      "name": "kaioyo_3",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "g1firedragon",
+      "public_rarity": "unattainable",
+      "name": "g1firedragon",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "egeneric",
+      "public_rarity": "unattainable",
+      "name": "egeneric",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "ginger",
+      "public_rarity": "unattainable",
+      "name": "ginger",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "petasludge",
+      "public_rarity": "unattainable",
+      "name": "petasludge",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "petasludgeangry",
+      "public_rarity": "unattainable",
+      "name": "petasludgeangry",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2goodbear",
+      "public_rarity": "unattainable",
+      "name": "e2goodbear",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2evilbear",
+      "public_rarity": "unattainable",
+      "name": "e2evilbear",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2evilbearangry",
+      "public_rarity": "unattainable",
+      "name": "e2evilbearangry",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "clapclap",
+      "public_rarity": "unattainable",
+      "name": "clapclap",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "g3blindpath",
+      "public_rarity": "unattainable",
+      "name": "g3blindpath",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "g2featherlord",
+      "public_rarity": "unattainable",
+      "name": "g2featherlord",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "mario",
+      "public_rarity": "unattainable",
+      "name": "mario",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "luigi",
+      "public_rarity": "unattainable",
+      "name": "luigi",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "enragedmario",
+      "public_rarity": "unattainable",
+      "name": "enragedmario",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "metallo",
+      "public_rarity": "unattainable",
+      "name": "metallo",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "enragedmetallo",
+      "public_rarity": "unattainable",
+      "name": "enragedmetallo",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "raidmaster",
+      "public_rarity": "unattainable",
+      "name": "raidmaster",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "enragedraidmaster",
+      "public_rarity": "unattainable",
+      "name": "enragedraidmaster",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "enragedg1firedragon",
+      "public_rarity": "unattainable",
+      "name": "enragedg1firedragon",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "enragedg2featherlord",
+      "public_rarity": "unattainable",
+      "name": "enragedg2featherlord",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "enragedg3blindpath",
+      "public_rarity": "unattainable",
+      "name": "enragedg3blindpath",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "plaugette",
+      "public_rarity": "unattainable",
+      "name": "plaugette",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "jackobane",
+      "public_rarity": "unattainable",
+      "name": "jackobane",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "enragedplaugette",
+      "public_rarity": "unattainable",
+      "name": "enragedplaugette",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "grumpycat",
+      "public_rarity": "unattainable",
+      "name": "grumpycat",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "enragedgrumpycat",
+      "public_rarity": "unattainable",
+      "name": "enragedgrumpycat",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "buddy",
+      "public_rarity": "unattainable",
+      "name": "buddy",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "goda",
+      "public_rarity": "unattainable",
+      "name": "goda",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "enragedgoda",
+      "public_rarity": "unattainable",
+      "name": "enragedgoda",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "alisa",
+      "public_rarity": "unattainable",
+      "name": "alisa",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "architect",
+      "public_rarity": "unattainable",
+      "name": "architect",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "carebear",
+      "public_rarity": "unattainable",
+      "name": "carebear",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "crystalboss",
+      "public_rarity": "unattainable",
+      "name": "crystalboss",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "cupid",
+      "public_rarity": "unattainable",
+      "name": "cupid",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "daygon",
+      "public_rarity": "unattainable",
+      "name": "daygon",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "drusk",
+      "public_rarity": "unattainable",
+      "name": "drusk",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "enragedcupid",
+      "public_rarity": "unattainable",
+      "name": "enragedcupid",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "enragedg4chimera",
+      "public_rarity": "unattainable",
+      "name": "enragedg4chimera",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "enragedgeneralma",
+      "public_rarity": "unattainable",
+      "name": "enragedgeneralma",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "enragedreaper",
+      "public_rarity": "unattainable",
+      "name": "enragedreaper",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "g4chimera",
+      "public_rarity": "unattainable",
+      "name": "g4chimera",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "generalma",
+      "public_rarity": "unattainable",
+      "name": "generalma",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "icegiant",
+      "public_rarity": "unattainable",
+      "name": "icegiant",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lucifrit",
+      "public_rarity": "unattainable",
+      "name": "lucifrit",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "parasetta",
+      "public_rarity": "unattainable",
+      "name": "parasetta",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "reaper",
+      "public_rarity": "unattainable",
+      "name": "reaper",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "rockgiant",
+      "public_rarity": "unattainable",
+      "name": "rockgiant",
+      "description": "filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "flamaboar",
+      "evolves": "flamaboar_e",
+      "public_rarity": "uncommon",
+      "name": "flamaboar",
+      "description": "flamaboar_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "flamaboar_e",
+      "public_rarity": "uncommon",
+      "name": "flamaboar_e",
+      "description": "flamaboar_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "flamedragon",
+      "evolves": "flamedragon_e",
+      "public_rarity": "uncommon",
+      "name": "flamedragon",
+      "description": "flamedragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "flamedragon_e",
+      "public_rarity": "uncommon",
+      "name": "flamedragon_e",
+      "description": "flamedragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8hugs",
+      "evolves": "e8hugs_e",
+      "public_rarity": "uncommon",
+      "name": "e8hugs",
+      "description": "e8hugs_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8hugs_e",
+      "public_rarity": "uncommon",
+      "name": "e8hugs_e",
+      "description": "e8hugs_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "roccroc",
+      "evolves": "roccroc_e",
+      "public_rarity": "uncommon",
+      "name": "roccroc",
+      "description": "roccroc_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "roccroc_e",
+      "public_rarity": "uncommon",
+      "name": "roccroc_e",
+      "description": "roccroc_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e6firerooster",
+      "evolves": "e6firerooster_e",
+      "public_rarity": "uncommon",
+      "name": "e6firerooster",
+      "description": "e6firerooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e6firerooster_e",
+      "public_rarity": "uncommon",
+      "name": "e6firerooster_e",
+      "description": "e6firerooster_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "crystalrhino",
+      "evolves": "crystalrhino_e",
+      "public_rarity": "uncommon",
+      "name": "crystalrhino",
+      "description": "crystalrhino_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "watersalamander",
+      "evolves": "watersalamander_e",
+      "public_rarity": "uncommon",
+      "name": "watersalamander",
+      "description": "watersalamander_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "crystalrhino_e",
+      "public_rarity": "uncommon",
+      "name": "crystalrhino_e",
+      "description": "crystalrhino_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "watersalamander_e",
+      "public_rarity": "uncommon",
+      "name": "watersalamander_e",
+      "description": "watersalamander_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2cloudowl",
+      "evolves": "e2cloudowl_e",
+      "public_rarity": "uncommon",
+      "name": "e2cloudowl",
+      "description": "e2cloudowl_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e2cloudowl_e",
+      "public_rarity": "uncommon",
+      "name": "e2cloudowl_e",
+      "description": "e2cloudowl_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "watercat",
+      "evolves": "watercat_e",
+      "public_rarity": "uncommon",
+      "name": "watercat",
+      "description": "watercat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "watercat_e",
+      "public_rarity": "uncommon",
+      "name": "watercat_e",
+      "description": "watercat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "flowerquail",
+      "evolves": "flowerquail_e",
+      "public_rarity": "uncommon",
+      "name": "flowerquail",
+      "description": "flowerquail_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windbunny",
+      "evolves": "windbunny_e",
+      "public_rarity": "uncommon",
+      "name": "windbunny",
+      "description": "windbunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "snowdeer",
+      "evolves": "snowdeer_e",
+      "public_rarity": "uncommon",
+      "name": "snowdeer",
+      "description": "snowdeer_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windrooster",
+      "evolves": "windrooster_e",
+      "public_rarity": "uncommon",
+      "name": "windrooster",
+      "description": "windrooster_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "flowerquail_e",
+      "public_rarity": "uncommon",
+      "name": "flowerquail_e",
+      "description": "flowerquail_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windbunny_e",
+      "public_rarity": "uncommon",
+      "name": "windbunny_e",
+      "description": "windbunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "snowdeer_e",
+      "public_rarity": "uncommon",
+      "name": "snowdeer_e",
+      "description": "snowdeer_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "windrooster_e",
+      "public_rarity": "uncommon",
+      "name": "windrooster_e",
+      "description": "windrooster_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "ornament",
+      "evolves": "ornament_e",
+      "public_rarity": "uncommon",
+      "name": "ornament",
+      "description": "ornament_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "ornament_e",
+      "public_rarity": "uncommon",
+      "name": "ornament_e",
+      "description": "ornament_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "gustang",
+      "evolves": "gustang_e",
+      "public_rarity": "uncommon",
+      "name": "gustang",
+      "description": "gustang_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "gustang_e",
+      "public_rarity": "uncommon",
+      "name": "gustang_e",
+      "description": "gustang_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e1flamaboar",
+      "evolves": "e1flamaboar_e",
+      "public_rarity": "uncommon",
+      "name": "e1flamaboar",
+      "description": "e1flamaboar_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e1flamaboar_e",
+      "public_rarity": "uncommon",
+      "name": "e1flamaboar_e",
+      "description": "e1flamaboar_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e3redshell",
+      "evolves": "e3redshell_e",
+      "public_rarity": "uncommon",
+      "name": "e3redshell",
+      "description": "e3redshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e3redshell_e",
+      "public_rarity": "uncommon",
+      "name": "e3redshell_e",
+      "description": "e3redshell_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "frostdax",
+      "evolves": "frostdax_e",
+      "public_rarity": "uncommon",
+      "name": "frostdax",
+      "description": "frostdax_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "frostdax_e",
+      "public_rarity": "uncommon",
+      "name": "frostdax_e",
+      "description": "frostdax_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "witchcat",
+      "evolves": "witchcat_e",
+      "public_rarity": "uncommon",
+      "name": "witchcat",
+      "description": "witchcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "witchcat_e",
+      "public_rarity": "uncommon",
+      "name": "witchcat_e",
+      "description": "witchcat_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lightningbaboon",
+      "evolves": "lightningbaboon_e",
+      "public_rarity": "uncommon",
+      "name": "lightningbaboon",
+      "description": "lightningbaboon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "forestfirebear",
+      "evolves": "forestfirebear_e",
+      "public_rarity": "uncommon",
+      "name": "forestfirebear",
+      "description": "forestfirebear_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "lightningbaboon_e",
+      "public_rarity": "uncommon",
+      "name": "lightningbaboon_e",
+      "description": "lightningbaboon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "forestfirebear_e",
+      "public_rarity": "uncommon",
+      "name": "forestfirebear_e",
+      "description": "forestfirebear_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "cottonsheep",
+      "evolves": "cottonsheep_e",
+      "public_rarity": "uncommon",
+      "name": "cottonsheep",
+      "description": "cottonsheep_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "cottonsheep_e",
+      "public_rarity": "uncommon",
+      "name": "cottonsheep_e",
+      "description": "cottonsheep_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "diamondgorilla",
+      "evolves": "diamondgorilla_e",
+      "public_rarity": "uncommon",
+      "name": "diamondgorilla",
+      "description": "diamondgorilla_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "steellodillo",
+      "evolves": "steellodillo_e",
+      "public_rarity": "uncommon",
+      "name": "steellodillo",
+      "description": "steellodillo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "diamondgorilla_e",
+      "public_rarity": "uncommon",
+      "name": "diamondgorilla_e",
+      "description": "diamondgorilla_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "steellodillo_e",
+      "public_rarity": "uncommon",
+      "name": "steellodillo_e",
+      "description": "steellodillo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "grassmonkey",
+      "evolves": "grassmonkey_e",
+      "public_rarity": "uncommon",
+      "name": "grassmonkey",
+      "description": "grassmonkey_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "cloudowl",
+      "evolves": "cloudowl_e",
+      "public_rarity": "uncommon",
+      "name": "cloudowl",
+      "description": "cloudowl_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "grassmonkey_e",
+      "public_rarity": "uncommon",
+      "name": "grassmonkey_e",
+      "description": "grassmonkey_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "cloudowl_e",
+      "public_rarity": "uncommon",
+      "name": "cloudowl_e",
+      "description": "cloudowl_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "grasspanda",
+      "evolves": "grasspanda_e",
+      "public_rarity": "uncommon",
+      "name": "grasspanda",
+      "description": "grasspanda_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "grasspanda_e",
+      "public_rarity": "uncommon",
+      "name": "grasspanda_e",
+      "description": "grasspanda_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rockelephant",
+      "evolves": "rockelephant_e",
+      "public_rarity": "uncommon",
+      "name": "rockelephant",
+      "description": "rockelephant_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "rockelephant_e",
+      "public_rarity": "uncommon",
+      "name": "rockelephant_e",
+      "description": "rockelephant_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "icehippo",
+      "evolves": "icehippo_e",
+      "public_rarity": "uncommon",
+      "name": "icehippo",
+      "description": "icehippo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "icehippo_e",
+      "public_rarity": "uncommon",
+      "name": "icehippo_e",
+      "description": "icehippo_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e7xiahoudun",
+      "evolves": "e7xiahoudun_e",
+      "public_rarity": "uncommon",
+      "name": "e7xiahoudun",
+      "description": "e7xiahoudun_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e7xiahoudun_e",
+      "public_rarity": "uncommon",
+      "name": "e7xiahoudun_e",
+      "description": "e7xiahoudun_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "cloudraccoon",
+      "evolves": "cloudraccoon_e",
+      "public_rarity": "uncommon",
+      "name": "cloudraccoon",
+      "description": "cloudraccoon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "stormwolf",
+      "evolves": "stormwolf_e",
+      "public_rarity": "uncommon",
+      "name": "stormwolf",
+      "description": "stormwolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "cloudraccoon_e",
+      "public_rarity": "uncommon",
+      "name": "cloudraccoon_e",
+      "description": "cloudraccoon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "stormwolf_e",
+      "public_rarity": "uncommon",
+      "name": "stormwolf_e",
+      "description": "stormwolf_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "tibetanspirit",
+      "evolves": "tibetanspirit_e",
+      "public_rarity": "uncommon",
+      "name": "tibetanspirit",
+      "description": "tibetanspirit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "tibetanspirit_e",
+      "public_rarity": "uncommon",
+      "name": "tibetanspirit_e",
+      "description": "tibetanspirit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "firedog",
+      "evolves": "firedog_e",
+      "public_rarity": "uncommon",
+      "name": "firedog",
+      "description": "firedog_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "magmacat",
+      "evolves": "magmacat_e",
+      "public_rarity": "uncommon",
+      "name": "magmacat",
+      "description": "magmacat_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "firedog_e",
+      "public_rarity": "uncommon",
+      "name": "firedog_e",
+      "description": "firedog_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "magmacat_e",
+      "public_rarity": "uncommon",
+      "name": "magmacat_e",
+      "description": "magmacat_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "lavstiff",
+      "evolves": "lavstiff_e",
+      "public_rarity": "uncommon",
+      "name": "lavstiff",
+      "description": "lavstiff_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "lavstiff_e",
+      "public_rarity": "uncommon",
+      "name": "lavstiff_e",
+      "description": "lavstiff_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "warhorse",
+      "evolves": "warhorse_e",
+      "public_rarity": "uncommon",
+      "name": "warhorse",
+      "description": "warhorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "warhorse_e",
+      "public_rarity": "uncommon",
+      "name": "warhorse_e",
+      "description": "warhorse_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "treefrog",
+      "evolves": "treefrog_e",
+      "public_rarity": "uncommon",
+      "name": "treefrog",
+      "description": "treefrog_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "treefrog_e",
+      "public_rarity": "uncommon",
+      "name": "treefrog_e",
+      "description": "treefrog_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "trog",
+      "evolves": "trog_e",
+      "public_rarity": "uncommon",
+      "name": "trog",
+      "description": "trog_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "trog_e",
+      "public_rarity": "uncommon",
+      "name": "trog_e",
+      "description": "trog_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "steelox",
+      "evolves": "steelox_e",
+      "public_rarity": "uncommon",
+      "name": "steelox",
+      "description": "steelox_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "steelox_e",
+      "public_rarity": "uncommon",
+      "name": "steelox_e",
+      "description": "steelox_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4diamondgorilla",
+      "evolves": "e4diamondgorilla_e",
+      "public_rarity": "uncommon",
+      "name": "e4diamondgorilla",
+      "description": "e4diamondgorilla_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e4diamondgorilla_e",
+      "public_rarity": "uncommon",
+      "name": "e4diamondgorilla_e",
+      "description": "e4diamondgorilla_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "comet",
+      "evolves": "comet_e",
+      "public_rarity": "uncommon",
+      "name": "comet",
+      "description": "comet_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "comet_e",
+      "public_rarity": "uncommon",
+      "name": "comet_e",
+      "description": "comet_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "waterturtle",
+      "evolves": "waterturtle_e",
+      "public_rarity": "uncommon",
+      "name": "waterturtle",
+      "description": "waterturtle_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "seaotter",
+      "evolves": "seaotter_e",
+      "public_rarity": "uncommon",
+      "name": "seaotter",
+      "description": "seaotter_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "waterturtle_e",
+      "public_rarity": "uncommon",
+      "name": "waterturtle_e",
+      "description": "waterturtle_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "seaotter_e",
+      "public_rarity": "uncommon",
+      "name": "seaotter_e",
+      "description": "seaotter_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "sealound",
+      "evolves": "sealound_e",
+      "public_rarity": "uncommon",
+      "name": "sealound",
+      "description": "sealound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "sealound_e",
+      "public_rarity": "uncommon",
+      "name": "sealound_e",
+      "description": "sealound_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e9minibot",
+      "evolves": "e9minibot_e",
+      "public_rarity": "uncommon",
+      "name": "e9minibot",
+      "description": "e9minibot_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "e9minibot_e",
+      "public_rarity": "uncommon",
+      "name": "e9minibot_e",
+      "description": "e9minibot_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9robunny",
+      "evolves": "e9robunny_e",
+      "public_rarity": "uncommon",
+      "name": "e9robunny",
+      "description": "e9robunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "e9robunny_e",
+      "public_rarity": "uncommon",
+      "name": "e9robunny_e",
+      "description": "e9robunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "electricsnake",
+      "evolves": "electricsnake_e",
+      "public_rarity": "uncommon",
+      "name": "electricsnake",
+      "description": "electricsnake_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "shroobbit",
+      "evolves": "shroobbit_e",
+      "public_rarity": "uncommon",
+      "name": "shroobbit",
+      "description": "shroobbit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "electricsnake_e",
+      "public_rarity": "uncommon",
+      "name": "electricsnake_e",
+      "description": "electricsnake_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "shroobbit_e",
+      "public_rarity": "uncommon",
+      "name": "shroobbit_e",
+      "description": "shroobbit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e3redyoshi",
+      "evolves": "e3redyoshi_e",
+      "public_rarity": "uncommon",
+      "name": "e3redyoshi",
+      "description": "e3redyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e3redyoshi_e",
+      "public_rarity": "uncommon",
+      "name": "e3redyoshi_e",
+      "description": "e3redyoshi_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8brokenheart",
+      "evolves": "e8brokenheart_e",
+      "public_rarity": "uncommon",
+      "name": "e8brokenheart",
+      "description": "e8brokenheart_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "e8brokenheart_e",
+      "public_rarity": "uncommon",
+      "name": "e8brokenheart_e",
+      "description": "e8brokenheart_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "emeralddragon",
+      "evolves": "emeralddragon_e",
+      "public_rarity": "uncommon",
+      "name": "emeralddragon",
+      "description": "emeralddragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "emeralddragon_e",
+      "public_rarity": "uncommon",
+      "name": "emeralddragon_e",
+      "description": "emeralddragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "amberdragon",
+      "evolves": "amberdragon_e",
+      "public_rarity": "rareminus",
+      "name": "amberdragon",
+      "description": "amberdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "amberdragon_e",
+      "public_rarity": "rareminus",
+      "name": "amberdragon_e",
+      "description": "amberdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "goldendragon",
+      "evolves": "goldendragon_e",
+      "public_rarity": "rare",
+      "name": "goldendragon",
+      "description": "goldendragon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "goldendragon_e",
+      "public_rarity": "rare",
+      "name": "goldendragon_e",
+      "description": "goldendragon_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bronzedragon",
+      "evolves": "bronzedragon_e",
+      "public_rarity": "rare",
+      "name": "bronzedragon",
+      "description": "bronzedragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 1,
+      "id": "bronzedragon_e",
+      "public_rarity": "rare",
+      "name": "bronzedragon_e",
+      "description": "bronzedragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "quartzdragon",
+      "evolves": "quartzdragon_e",
+      "public_rarity": "ultra",
+      "name": "quartzdragon",
+      "description": "quartzdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "quartzdragon_e",
+      "public_rarity": "ultra",
+      "name": "quartzdragon_e",
+      "description": "quartzdragon_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "ursus",
+      "evolves": "ursus_e",
+      "public_rarity": "ultra",
+      "name": "ursus",
+      "description": "ursus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "ursus_e",
+      "public_rarity": "ultra",
+      "name": "ursus_e",
+      "description": "ursus_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "easterbunneh",
+      "evolves": "easterbunneh_e",
+      "public_rarity": "legendary",
+      "name": "easterbunneh",
+      "description": "easterbunneh_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "easterbunneh_e",
+      "public_rarity": "legendary",
+      "name": "easterbunneh_e",
+      "description": "easterbunneh_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "e8steelheart_3",
+      "public_rarity": "rare",
+      "name": "e8steelheart_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "e9pantherbot_3",
+      "public_rarity": "ultra",
+      "name": "e9pantherbot_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "luchabunny",
+      "evolves": "luchabunny_e",
+      "public_rarity": "rareminus",
+      "name": "luchabunny",
+      "description": "luchabunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "luchabunny_e",
+      "public_rarity": "rareminus",
+      "name": "luchabunny_e",
+      "description": "luchabunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "chicklette",
+      "evolves": "chicklette_e",
+      "public_rarity": "rareminus",
+      "name": "chicklette",
+      "description": "chicklette_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "chicklette_e",
+      "public_rarity": "rareminus",
+      "name": "chicklette_e",
+      "description": "chicklette_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "flowerbunny",
+      "evolves": "flowerbunny_e",
+      "public_rarity": "rare",
+      "name": "flowerbunny",
+      "description": "flowerbunny_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "flowerbunny_e",
+      "public_rarity": "rare",
+      "name": "flowerbunny_e",
+      "description": "flowerbunny_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "werebunny",
+      "evolves": "werebunny_e",
+      "public_rarity": "rare",
+      "name": "werebunny",
+      "description": "werebunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "werebunny_e",
+      "public_rarity": "rare",
+      "name": "werebunny_e",
+      "description": "werebunny_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "easterlord",
+      "evolves": "easterlord_e",
+      "public_rarity": "ultra",
+      "name": "easterlord",
+      "description": "easterlord_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "easterlord_e",
+      "public_rarity": "ultra",
+      "name": "easterlord_e",
+      "description": "easterlord_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "jackalope",
+      "evolves": "jackalope_e",
+      "public_rarity": "ultra",
+      "name": "jackalope",
+      "description": "jackalope_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "jackalope_e",
+      "public_rarity": "ultra",
+      "name": "jackalope_e",
+      "description": "jackalope_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e7lubu_3",
+      "public_rarity": "rare",
+      "name": "e7lubu_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e7diaochan_3",
+      "public_rarity": "ultra",
+      "name": "e7diaochan_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e8lust_3",
+      "public_rarity": "legendary",
+      "name": "e8lust_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "eeps",
+      "evolves": "eeps_e",
+      "public_rarity": "uncommon",
+      "name": "eeps",
+      "description": "eeps_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "eeps_e",
+      "public_rarity": "uncommon",
+      "name": "eeps_e",
+      "description": "eeps_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "eggbbit",
+      "evolves": "eggbbit_e",
+      "public_rarity": "uncommon",
+      "name": "eggbbit",
+      "description": "eggbbit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "eggbbit_e",
+      "public_rarity": "uncommon",
+      "name": "eggbbit_e",
+      "description": "eggbbit_descrip",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "leafant",
+      "evolves": "leafant_e",
+      "public_rarity": "uncommon",
+      "name": "leafant",
+      "description": "leafant_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "leafant_e",
+      "public_rarity": "uncommon",
+      "name": "leafant_e",
+      "description": "leafant_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "orchidmantis",
+      "evolves": "orchidmantis_e",
+      "public_rarity": "rareminus",
+      "name": "orchidmantis",
+      "description": "orchidmantis_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "orchidmantis_e",
+      "public_rarity": "rareminus",
+      "name": "orchidmantis_e",
+      "description": "orchidmantis_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "jumpspider",
+      "evolves": "jumpspider_e",
+      "public_rarity": "rare",
+      "name": "jumpspider",
+      "description": "jumpspider_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "jumpspider_e",
+      "public_rarity": "rare",
+      "name": "jumpspider_e",
+      "description": "jumpspider_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 3,
+      "id": "rhinobeetle",
+      "evolves": "rhinobeetle_e",
+      "public_rarity": "ultra",
+      "name": "rhinobeetle",
+      "description": "rhinobeetle_descrip",
+      "event": true
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "rhinobeetle_e",
+      "public_rarity": "ultra",
+      "name": "rhinobeetle_e",
+      "description": "rhinobeetle_descrip",
+      "event": true
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "e9robo_3",
+      "public_rarity": "rare",
+      "name": "e9robo_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "e8kol_3",
+      "public_rarity": "ultra",
+      "name": "e8kol_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 0,
+      "id": "e9sinanju_3",
+      "public_rarity": "legendary",
+      "name": "e9sinanju_3",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "easter",
+      "public_rarity": "commonplus",
+      "name": "easter",
+      "description": "easter_descrip",
+      "event": true
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water8",
+      "public_rarity": "common",
+      "name": "water8",
+      "description": "water8_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind8",
+      "public_rarity": "common",
+      "name": "wind8",
+      "description": "wind8_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire8",
+      "public_rarity": "common",
+      "name": "fire8",
+      "description": "fire8_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass8",
+      "public_rarity": "common",
+      "name": "grass8",
+      "description": "grass8_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth8",
+      "public_rarity": "common",
+      "name": "earth8",
+      "description": "earth8_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 1,
+      "id": "earth9",
+      "public_rarity": "common",
+      "name": "earth9",
+      "description": "earth9_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 4,
+      "id": "wind9",
+      "public_rarity": "common",
+      "name": "wind9",
+      "description": "wind9_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 2,
+      "id": "water9",
+      "public_rarity": "common",
+      "name": "water9",
+      "description": "water9_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 3,
+      "id": "grass9",
+      "public_rarity": "common",
+      "name": "grass9",
+      "description": "grass9_descrip",
+      "event": false
+    },
+    {
+      "type": "common",
+      "element": 0,
+      "id": "fire9",
+      "public_rarity": "common",
+      "name": "fire9",
+      "description": "fire9_descrip",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "easterchick",
+      "public_rarity": "unattainable",
+      "name": "easterchick",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "g5ursus",
+      "public_rarity": "unattainable",
+      "name": "g5ursus",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 4,
+      "id": "g5ursusenraged",
+      "public_rarity": "unattainable",
+      "name": "g5ursusenraged",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "pvplieutenant",
+      "public_rarity": "unattainable",
+      "name": "pvplieutenant",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "pvplieutenantenraged",
+      "public_rarity": "unattainable",
+      "name": "pvplieutenantenraged",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "easterbunny",
+      "public_rarity": "unattainable",
+      "name": "easterbunny",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 2,
+      "id": "easterbunnyenraged",
+      "public_rarity": "unattainable",
+      "name": "easterbunnyenraged",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 2,
+      "id": "waterboss",
+      "public_rarity": "unattainable",
+      "name": "waterboss",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 0,
+      "id": "fireboss",
+      "public_rarity": "unattainable",
+      "name": "fireboss",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 3,
+      "id": "grassboss",
+      "public_rarity": "unattainable",
+      "name": "grassboss",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarebi",
+      "element": 1,
+      "id": "rockboss",
+      "public_rarity": "unattainable",
+      "name": "rockboss",
+      "description": "Filler",
+      "event": false
+    },
+    {
+      "type": "rarequad",
+      "element": 4,
+      "id": "windboss",
+      "public_rarity": "unattainable",
+      "name": "windboss",
+      "description": "Filler",
+      "event": false
+    }
+  ],
+  "quest_items": [
+    {
+      "id": "totem_earth",
+      "name": "totem_earth_name",
+      "description": "totem_earth_descrip"
+    },
+    {
+      "id": "totem_leaf",
+      "name": "totem_leaf_name",
+      "description": "totem_leaf_descrip"
+    },
+    {
+      "id": "totem_fire",
+      "name": "Fire Totem",
+      "description": "Filler"
+    },
+    {
+      "id": "totem_water",
+      "name": "totem_water_name",
+      "description": "totem_water_descrip"
+    },
+    {
+      "id": "totem_wind",
+      "name": "totem_wind_name",
+      "description": "totem_wind_descrip"
+    },
+    {
+      "id": "divine_rod",
+      "name": "divine_rod_name",
+      "description": "divine_rod_descrip"
+    },
+    {
+      "id": "whistle",
+      "name": "whistle_name",
+      "description": "whistle_descrip"
+    },
+    {
+      "id": "banana",
+      "name": "banana_name",
+      "description": "banana_descrip"
+    },
+    {
+      "id": "mind_piece",
+      "name": "mind_piece_name",
+      "description": "mind_piece_descrip"
+    },
+    {
+      "id": "tablet",
+      "name": "tablet_name",
+      "description": "tablet_descrip"
+    },
+    {
+      "id": "tree_branch",
+      "name": "tree_branch_name",
+      "description": "tree_branch_descrip"
+    },
+    {
+      "id": "badass_piece",
+      "name": "badass_piece_name",
+      "description": "badass_piece_descrip"
+    },
+    {
+      "id": "tiki_earth",
+      "name": "tiki_earth_name",
+      "description": "tiki_earth_descrip"
+    },
+    {
+      "id": "tiki_water",
+      "name": "tiki_water_name",
+      "description": "tiki_water_descrip"
+    },
+    {
+      "id": "tiki_leaf",
+      "name": "tiki_leaf_name",
+      "description": "tiki_leaf_descrip"
+    },
+    {
+      "id": "tiki_wind",
+      "name": "tiki_wind_name",
+      "description": "tiki_wind_descrip"
+    },
+    {
+      "id": "tiki_fire",
+      "name": "tiki_fire_name",
+      "description": "tiki_fire_descrip"
+    },
+    {
+      "id": "pixie_stick",
+      "name": "pixie_stick_name",
+      "description": "pixie_stick_descrip"
+    },
+    {
+      "id": "bing_stick",
+      "name": "bing_stick_name",
+      "description": "bing_stick_descrip"
+    },
+    {
+      "id": "fife",
+      "name": "Fife",
+      "description": "Filler"
+    },
+    {
+      "id": "event_token",
+      "name": "event_token_name",
+      "description": "event_token_descrip"
+    },
+    {
+      "id": "greek_token",
+      "name": "greek_token_name",
+      "description": "greek_token_descrip"
+    },
+    {
+      "id": "aztec_token",
+      "name": "aztec_token_name",
+      "description": "aztec_token_descrip"
+    },
+    {
+      "id": "valor_token",
+      "name": "valor_token_name",
+      "description": "valor_token_descrip"
+    },
+    {
+      "id": "hanky",
+      "name": "hanky_name",
+      "description": "hanky_descrip"
+    },
+    {
+      "id": "nugget",
+      "name": "nugget_name",
+      "description": "nugget_descrip"
+    }
+  ]
+}
