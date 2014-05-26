@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="Tencent CDC Team" />
+	<title>华容道</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <style type="text/css">
+    	.klotski_list li{ height:auto; width:auto;}
+		.img_tips{ display:block; height:300px; width:300px; opacity:0.05;  position:absolute; left:0px; top:0px; z-index:1;}
+		.patch_wrap{ overflow: visible; padding:8px; width:416px; position:static;}
+		.patch_List{ height:250px; width:100%; position:static;}
+		.patch_List li{ position:static; float:left;}
+    </style>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/$.drag.js"></script>
+    <script language="javascript" type="text/javascript">
+    	$(document).ready(function(){
+			
+			var Width=300;
+			var Height=300;
+			var klotskiList=$(".klotski_list");
+			var patchList=$(".patch_List");
+			var temList="";
+			var unit=5;
+			
+			CreateList();
+			
+			function CreateList(){
+				for(var i=0;i<unit*unit;i++){
+					var listItem="<li data-left='"+Width/unit*(i%unit)+"' data-top='"+Height/unit*Math.floor(i/unit)+"' style='left:"+Width/unit*(i%unit)+"px; top:"+Height/unit*Math.floor(i/unit)+"px;'><a href='#' style='background:url(data/bg.jpg) no-repeat "+Width/unit*(i%unit)*-1+"px "+Height/unit*Math.floor(i/unit)*-1+"px; height:"+(Height/unit-1)+"px; width:"+(Width/unit-1)+"px;'>"+i+"</a></li>";
+					temList+=listItem;
+				}
+				patchList.html(temList);
+			}
+			
+			function randomSort(a,b){ //数组元素随机排列
+				return Math.random()>.5 ? -1:1;
+			}
+			
+			var liList=$(".patch_List li");
+			liList.sort(randomSort);
+			patchList.html(liList);//打散
+			
+			/*
+			function showIndex(){
+			  for(var j=0;j<liList.length;j++){
+				  console.log(liList[j]); //输出到控制台
+			  }
+			}
+			
+			showIndex();*/
+			for(var j=0;j<liList.length;j++){
+				$.drag(liList[j]); 
+			}
+
+			$(".patch_List li").bind('mouseup',mouseUp);
+			$(".patch_List li").bind('touchend',mouseUp);
+			
+			function mouseUp(){
+			alert("fuck you");
+				var that=this;
+				var c_left=$(klotskiList).offset().left;
+				var c_top=$(klotskiList).offset().top;
+				
+				var li_left=$(that).offset().left;
+				var li_top=$(that).offset().top;
+				
+				if((((li_left-c_left)<$(that).data('left')+15)&&((li_left-c_left)>$(that).data('left')-15))&&(((li_top-c_top)<$(that).data('top')+15)&&((li_top-c_top)>$(that).data('top')-15))){
+					$(that).css({
+						'left':$(that).data('left')+c_left,
+						'top':$(that).data('top')+c_top
+					});
+				}
+				else{
+					$(that).css({
+						'position':'static'
+					});
+				}
+			}
+		});
+    </script>
+</head>
+<body>
+
+<div class="wrap">
+	<div class="klotski_wrap">
+    	<div class="klotski_main">
+        	<div class="klotski_box">
+            	<!--<ul class="klotski_list">
+                    <li class="p1 current"><a href="#" style="background:url(data/bg.jpg) no-repeat 0 0;">1</a></li>
+                    <li class="p2"><a href="#" style="background:url(data/bg.jpg) no-repeat -100px 0;">2</a></li>
+                    <li class="p3"><a href="#" style="background:url(data/bg.jpg) no-repeat -200px 0;">3</a></li>
+                    
+                    <li class="p4"><a href="#" style="background:url(data/bg.jpg) no-repeat 0 -100px;">4</a></li>
+                    <li class="p5"><a href="#" style="background:url(data/bg.jpg) no-repeat -100px -100px;">5</a></li>
+                    <li class="p6"><a href="#" style="background:url(data/bg.jpg) no-repeat -200px -100px;">6</a></li>
+                    
+                    <li class="p7"><a href="#" style="background:url(data/bg.jpg) no-repeat 0 -200px;">7</a></li>
+                    <li class="p8"><a href="#" style="background:url(data/bg.jpg) no-repeat -100px -200px;">8</a></li>
+                    <li class="p9"><a href="#">9</a></li>
+                </ul>-->
+                <ul class="klotski_list"></ul>
+                <div class="img_tips" style="background:url(data/bg.jpg) no-repeat 0 0;"></div>
+            </div>
+            
+            <div class="rank_box"><!-- rank_box_show 显示-->
+            	<div class="rank_box_title">
+                    <ul class="rank_list">
+                        <li class="title"><span class="index">排 位</span><span class="name">玩 家</span><span class="step">步 数</span><span class="time">时 间</span></li>
+                    </ul>
+                </div>
+                <div class="rank_box_con">
+                    <ul class="rank_list">
+                        <li><span class="index">NO.1</span><span class="name">sunny</span><span class="step">10</span><span class="time">1:30</span></li>
+                        <li><span class="index">NO.2</span><span class="name">sunnysunnysunnysunnysunny</span><span class="step">10</span><span class="time">10:30</span></li>
+                        <li><span class="index">NO.3</span><span class="name">t0</span><span class="step">10</span><span class="time">12:30</span></li>
+                        <li><span class="index">NO.4</span><span class="name">tommy</span><span class="step">10</span><span class="time">14:30</span></li>
+                        <li><span class="index">NO.5</span><span class="name">tw</span><span class="step">10</span><span class="time">17:30</span></li>
+                        <li><span class="index">NO.6</span><span class="name">sunny</span><span class="step">10</span><span class="time">1:30</span></li>
+                        <li><span class="index">NO.7</span><span class="name">sunnysunnysunnysunnysunny</span><span class="step">10</span><span class="time">10:30</span></li>
+                        <li><span class="index">NO.8</span><span class="name">t0</span><span class="step">10</span><span class="time">12:30</span></li>
+                        <li><span class="index">NO.9</span><span class="name">tommy</span><span class="step">10</span><span class="time">14:30</span></li>
+                        <li><span class="index">NO.10</span><span class="name">tw</span><span class="step">10</span><span class="time">17:30</span></li>
+                        <li><span class="index">NO.11</span><span class="name">sunny</span><span class="step">10</span><span class="time">1:30</span></li>
+                        <li><span class="index">NO.12</span><span class="name">sunnysunnysunnysunnysunny</span><span class="step">10</span><span class="time">10:30</span></li>
+                        <li><span class="index">NO.13</span><span class="name">t0</span><span class="step">10</span><span class="time">12:30</span></li>
+                        <li><span class="index">NO.14</span><span class="name">tommy</span><span class="step">10</span><span class="time">14:30</span></li>
+                        <li><span class="index">NO.15</span><span class="name">tw</span><span class="step">10</span><span class="time">17:30</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="klotski_sidebar">
+        	<h3 class="side_title" style="display:none;">菜单</h3>
+            <div class="score_time">00 : 01</div>
+            <div class="score_step">1</div>
+        	<ul class="menu_list">
+            	<li>
+                	<a href="#" class="btn">开 始</a><!-- <a href="#">暂 停</a>-->
+                </li>
+                <li>
+                	<a href="#" class="btn">提 示</a>
+                </li>
+                <li>
+                	<a href="#" class="btn actived">音 乐</a>
+                </li>
+                <li>
+                	<a href="#" class="btn">排 行</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="klotski_wrap patch_wrap">
+       <ul class="klotski_list patch_List"></ul>
+    </div>
+    
+    <div class="klotski_wrap">
+        <div class="klotski_rank">
+           <ul class="rank_list">
+          	 	<li class="title"><span class="index">排 位</span><span class="name">玩 家</span><span class="step">步 数</span><span class="time">时 间</span></li>
+                <li><span class="index">NO.1</span><span class="name"><a href="#">sunny</a></span><span class="step">10</span><span class="time">1:30</span></li>
+                <li><span class="index">NO.2</span><span class="name"><a href="#">sunnysunnysunnysunnysunny</a></span><span class="step">10</span><span class="time">10:30</span></li>
+                <li><span class="index">NO.3</span><span class="name"><a href="#">t0</a></span><span class="step">10</span><span class="time">12:30</span></li>
+           </ul>
+        </div>
+    </div>
+    
+    
+    </div>
+    
+</div>
+
+</body>
+</html>

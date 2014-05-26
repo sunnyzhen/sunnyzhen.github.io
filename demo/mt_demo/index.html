@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta id="viewport" name="viewport" content="initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>微趋势</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script language="javascript" type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+
+<div class="wrap"><!-- js_setting_wrap_show 切换显示隐藏 设置面板 面板展现，可滚动，当滚动高度超过设置面板高度，则不可滚动 -->
+	<div class="time_bar btn_wrap"><a href="#" class="btn" id="order_1">更新数据</a></div>
+    <div class="update_wrap update_wrap_hide"><p>暂时无法更新数据，请检查网络链接</p><a href="#" class="close" id="update_wrap_close">关闭</a></div>
+  <div class="time_bar" style="position:fixed; top:25px;"><i class="icon icon_clock"></i>近一个月（9.30-10.6）<span class="time_bar_desc">口碑指数<i class="icon icon_rank"></i></span><span class="time_bar_desc_2">竞品</span></div>
+    <div class="main">
+    	<div class="project_list">
+        	
+            <div class="mod_project" data-flag="1"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon.jpg" alt=""/><i class="flag_warning">!</i></div>
+                    <div class="project_name"><h3>电脑管家</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">88</div>
+                    <!--<div class="project_value">888<span class="unit">k</span></div>-->
+                  <!--  <span class="project_compare"><i class="icon_trend"></i>15</span>-->
+                    <span class="project_compare">领先竞品<span class="num">+7</span></span>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area" style="display:none;"><!-- 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value compare_down">88</div>
+                            <span class="project_compare compare_down"><i class="icon_trend"></i>15</span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                    	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mod_project" data-flag="1"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon_2.jpg" alt=""/><i class="flag_warning">!</i></div>
+                    <div class="project_name"><h3>腾讯网</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">82</div>
+                    <span class="project_compare tips_warning">落后竞品<span class="num">-2</span></span>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area"><!-- 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">76</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value compare_down">88</div>
+                            <span class="project_compare compare_down"><i class="icon_trend"></i>15</span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                    	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mod_project" data-flag="1"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon_3.jpg" alt=""/></div>
+                    <div class="project_name"><h3>手机QQ浏览器</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">72</div>
+                    <span class="project_compare">领先竞品<span class="num">+7</span></span>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area"><!-- 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">69</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare tips_warning">领先竞品<span class="num">+7</span></span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value compare_down">88</div>
+                            <span class="project_compare compare_down"><i class="icon_trend"></i>15</span>
+                            <div class="problem">
+                                <p>自己的问题</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                    	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mod_project"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon_4.jpg" alt=""/><i class="flag_warning">!</i></div>
+                    <div class="project_name"><h3>英雄联盟</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">65</div>
+                    <span class="project_compare">领先竞品<span class="num">+1</span></span>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area"><!-- 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                    	<div class="problem self_problem">
+                        	<p><span class="name">电脑管家</span>近一个月口碑环比下降明显，请关注</p>
+                    		<i class="icon_tri"></i>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">63</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                    	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mod_project"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon_5.jpg" alt=""/></div>
+                    <div class="project_name"><h3>微信</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">60</div>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area"><!--  style="height:91px;" 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                            
+                            <div class="problem">
+                                <p><span class="name">360安全卫士</span>超过<span class="name">电脑管家</span>，请关注</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value compare_down">88</div>
+                            <span class="project_compare compare_down"><i class="icon_trend"></i>15</span>
+                        </div>
+                    	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="mod_project"><!-- js_warning_wrap_show 切换显示隐藏 警告文字 -->
+            	<div class="project_main">
+                    <div class="project_logo"><img src="data/icon_6.jpg" alt=""/><i class="flag_warning">!</i></div>
+                    <div class="project_name"><h3>QQ浏览器</h3><a href="#" class="project_name_tips">竞品</a></div>
+                    <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                    <div class="project_value">58</div>
+                    <span class="project_compare tips_warning">落后竞品<span class="num">-10</span></span>
+                    <div class="warning_wrap">
+                    	<a href="#" class="flag_warning">!</a>
+                        <div class="warning_word">
+                        	<p style="display:none;"><span class="name">电脑管家</span>近一个月口碑环比下降明显，热度大幅提升，请关注</p>
+                            <p>竞品xx近一个月口碑超过了yy，请关注</p>
+                            <p>竞品xx近一个月口碑上升明显，请关注</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="show_area"><!-- 通过设置高度，切换显示隐藏 竞品列表 -->
+                    <div class="compare_list">
+                        <div class="compare_item">
+                            <h3 class="compare_name">360安全卫士360安全卫</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value">88</div>
+                            <span class="project_compare"><i class="icon_trend"></i>15</span>
+                            
+                            <div class="problem">
+                                <p><span class="name">360安全卫士</span>突然增加，请关注</p>
+                                <i class="icon_tri"></i>
+                            </div>
+                            
+                        </div>
+                        <div class="compare_item">
+                            <h3 class="compare_name">安全卫士</h3>
+                            <div class="project_weibo"><i class="icon icon_sina"></i><i class="icon icon_weibo"></i>3000</div>
+                            <div class="compare_value compare_down">88</div>
+                            <span class="project_compare compare_down"><i class="icon_trend"></i>15</span>
+                        </div>
+                   	 	<i class="icon_tri"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="order_wrap" style="display:none">
+    	<h3 class="order_title"><i class="icon icon_select"></i>选择排序</h3>
+        <ul class="order_list">
+        	<li class="current"><a href="#"><i class="icon icon_ticked"></i>产品热度</a></li>
+            <li><a href="#"><i class="icon icon_ticked"></i>口碑指数</a></li>
+            <li><a href="#"><i class="icon icon_ticked"></i>最新上线</a></li>
+        </ul>
+        <h3 class="order_title"><i class="icon icon_clock"></i>时间范围</h3>
+        <ul class="order_list">
+        	<li class="current"><a href="#"><i class="icon icon_ticked"></i>年</a></li>
+            <li><a href="#"><i class="icon icon_ticked"></i>季</a></li>
+            <li><a href="#"><i class="icon icon_ticked"></i>月</a></li>
+            <li><a href="#"><i class="icon icon_ticked"></i>周</a></li>
+        </ul>
+        <ul class="order_list link_list">
+            <li><a href="#">我的收藏<i class="icon icon_arrow">></i></a></li>
+            <li><a href="#">新手引导<i class="icon icon_arrow">></i></a></li>
+        </ul>
+        <div class="contact_wrap">
+        	<i class="icon icon_contact"></i>
+            <div class="contact_txt">
+                <p>你有想在MOA上监测的产品吗？</p>
+                <p>请联系jennylv</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+</div>
+
+</body>
+</html>

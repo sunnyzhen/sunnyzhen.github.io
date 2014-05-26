@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta id="viewport" name="viewport" content="initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=yes" />
+	<meta name="author" content="Tencent CDC Team" />
+	<title>华容道</title>
+	<link rel="stylesheet" type="text/css" href="css/style_re.css" />
+</head>
+<body>
+
+<div class="wrap">
+	<div class="mod_time">
+    	<i class="icon_clock"></i>
+        <span class="time">00:10:30</span>
+    </div>
+    
+    <div class="control_wrap">
+    	<a href="#" class="btn_pause">暂停</a>
+    </div>
+    
+    <div class="klotski_main">
+        <div class="klotski_box dest_box">
+            <ul class="klotski_list"></ul>
+            <div class="img_tips" style="background:url(data/tomato.jpg) no-repeat 0 0; background-size:240px 270px;"></div>
+            <i class="line_tips"></i>
+        </div>
+    </div>
+    
+    <div class="patch_wrap">
+       <ul class="klotski_list patch_List"></ul>
+    </div>
+    
+</div>
+
+</body>
+</html>
+
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/$.drag.js"></script>
+<script language="javascript" type="text/javascript">
+    	$(document).ready(function(){
+			
+			var Width=240;
+			var Height=270;
+			var klotskiList=$(".klotski_list");
+			var patchList=$(".patch_List");
+			var temList="";
+			var unit={w:4,h:4};
+			var paramMatrix=new Array();
+			var param_attract={w: Width/(unit.w*2),h: Height/(unit.h*2)};
+			
+			var actual_wh={w:(Width/unit.w-1),h:(Height/unit.h-1)};
+			var virtual_wh={w: Math.floor(actual_wh.w*50/actual_wh.h),h:50};
+			
+			var item_top_ori=-1;
+			
+			CreateList();
+			ResetMatrix();
+			
+			function CreateList(){
+				
+				var temStr="height:"+actual_wh.h+"px; width:"+actual_wh.w+"px; background-size:240px 270px;";
+				for(var i=0;i<unit.w*unit.h;i++){
+					var listItem="<li data-left='"+Width/unit.w*(i%unit.w)+"' data-top='"+Height/unit.h*Math.floor(i/unit.w)+"' data-row='"+Math.floor(i/unit.w)+"' data-col='"+i%unit.w+"'  style='left:"+Width/unit.w*(i%unit.w)+"px; top:"+Height/unit.h*Math.floor(i/unit.w)+"px;'><a style='background:url(data/tomato.jpg) no-repeat "+Width/unit.w*(i%unit.w)*-1+"px "+Height/unit.h*Math.floor(i/unit.w)*-1+"px; "+temStr+"'>"+i+"</a></li>"; //'
+					temList+=listItem;
+				}
+				
+				patchList.html(temList);
+				
+				var line_tips=$(".line_tips");
+				var shadow_tri="";
+				for(var i=0;i<unit.w*unit.h;i++){
+					if(i==unit.w*unit.h-1){
+						shadow_tri+=Width/unit.w*(i%unit.w)+"px "+Height/unit.h*Math.floor(i/unit.w)+"px 0px rgba(0,0,0,0.05)";
+					}
+					else{
+						shadow_tri+=Width/unit.w*(i%unit.w)+"px "+Height/unit.h*Math.floor(i/unit.w)+"px 0px rgba(0,0,0,0.05),";
+					}
+				}
+				
+				$(line_tips).css({
+					"height":(Height/unit.h-1)+'px',
+					"width":(Width/unit.w-1)+'px',
+					"box-shadow":shadow_tri
+				});
+			}
+			
+			function ResetMatrix(){
+				for(var i=0;i<unit.h;i++){
+					paramMatrix[i]=new Array(unit.w);
+					for(var j=0;j<unit.w;j++){
+						paramMatrix[i][j]=-1;
+					}
+				}
+			}
+			
+			function randomSort(a,b){ //数组元素随机排列
+				return Math.random()>.5 ? -1:1;
+			}
+			
+			var liList=$(".patch_List li");
+			liList.sort(randomSort);
+			patchList.html(liList);//打散
+			
+			var c_left=$(klotskiList).offset().left;
+			var c_top=$(klotskiList).offset().top;
+			
+			var p_left=$(patchList).offset().left;
+			var p_top=$(patchList).offset().top;
+			
+			var liList=$(".patch_List li");
+			
+			for(var i=0;i<liList.length;i++){
+				var li_left=$(liList[i]).offset().left;
+				var li_top=$(liList[i]).offset().top;
+				$(liList[i]).css({
+					"left":c_left-li_left+$(liList[i]).data("left"),
+					"top":c_top-li_top+$(liList[i]).data("top"),
+					"position":"relative"
+				});
+			}
+			
+			setTimeout(function(){
+				$('.patch_List li').css({
+					"left":0,
+					"top":0,
+					'height':virtual_wh.h,
+					'width':virtual_wh.w,
+					'-moz-transition': 'left 0.2s ease-in-out,top 0.2s ease-in-out',
+					'-webkit-transition': 'left 0.2s ease-in-out,top 0.2s ease-in-out'
+				}).children('a').css({
+					'height':virtual_wh.h,
+					'width':virtual_wh.w,
+					'-moz-transition': 'height 0.2s ease-in-out,width 0.2s ease-in-out',
+					'-webkit-transition': 'height 0.2s ease-in-out,width 0.2s ease-in-out'
+				});
+
+			},500);
+			
+			for(var j=0;j<liList.length;j++){
+				$.drag(liList[j]); 
+			}
+
+			$(".patch_List li").bind('mouseup',mouseUp);
+			$(".patch_List li").bind('mousedown',mouseDown);
+			$(".patch_List li").bind('touchend',mouseUp);
+			$(".patch_List li").bind('touchstart',mouseDown);
+			
+			function mouseUp(){
+				var that=this;
+				$(that).css({
+					'-moz-transition': 'left 0.1s ease-in-out,top 0.1s ease-in-out,margin 0.1s ease-in-out',
+					'-webkit-transition': 'left 0.1s ease-in-out,top 0.1s ease-in-out,margin 0.1s ease-in-out',
+					'z-index': '1'
+				});
+				
+				/*验证2B用户，拖动一点距离就松手*/
+				if(item_top_ori>=0){
+					if(item_top_ori-$(that).offset().top<50){
+							$(that).css({
+								'-moz-transition': 'none',
+								'-webkit-transition': 'none',
+								'z-index': 0,
+								'position':'static',
+								'left':0,
+								'top':0,
+								'margin-top':0,
+								'margin-left':0
+							});
+							
+							$(that).children('a').removeClass('current').css({
+								'height':virtual_wh.h,
+								'width':virtual_wh.w
+							});
+							//拖动后 归位，未设为-1
+							//取消占位
+							var temArray=$(that).nextAll();
+							for(var i=0;i<temArray.length;i++){
+								if(paramMatrix[$(temArray[i]).data('row')][$(temArray[i]).data('col')]==-1){
+								  $(temArray[i]).css({
+									  'margin-left': 0
+								  });
+								  paramMatrix[$(that).data('row')][$(that).data('col')]=-1;
+								  break;
+								}
+							}
+							
+							$(that).data('inbox',1);
+							
+							return ;
+					}
+				}
+				
+				
+				/*验证位置*/
+				var c_left=$(klotskiList).offset().left;
+				var c_top=$(klotskiList).offset().top;
+				
+				var li_left=$(that).offset().left;
+				var li_top=$(that).offset().top;
+				
+				
+				if((((li_left-c_left)<$(that).data('left')+param_attract.w)&&((li_left-c_left)>$(that).data('left')-param_attract.w))&&(((li_top-c_top)<$(that).data('top')+param_attract.h)&&((li_top-c_top)>$(that).data('top')-param_attract.h))){
+					$(that).css({
+						'left':$(that).data('left')+c_left,
+						'top':$(that).data('top')+c_top,
+						'margin-top':0,
+						'margin-left':0,
+						'z-index':0
+					});
+					
+					$(that).children('a').css({
+						'cursor':'default'
+					});
+					
+					paramMatrix[$(that).data('row')][$(that).data('col')]=1;
+					$.drag(that).off();
+					
+					
+				}
+				else{
+					paramMatrix[$(that).data('row')][$(that).data('col')]=0;
+					
+					//清除 设置图片右上偏移，不被手指遮挡 相关代码偏移值 
+					$(that).css({
+						'left':$(that).offset().left,
+						'top':$(that).offset().top,
+						'margin-top':0,
+						'margin-left':0
+					});
+					
+					$(that).data('inbox',1);
+					
+					//清除 设置图片右上偏移，不被手指遮挡 相关代码偏移值
+				}
+				
+				$(that).children('a').removeClass("current");
+				
+				
+				//取消占位
+				var temArray=$(that).nextAll();
+				for(var i=0;i<temArray.length;i++){
+					if(paramMatrix[$(temArray[i]).data('row')][$(temArray[i]).data('col')]==-1){
+					  $(temArray[i]).css({
+						  'margin-left': 0
+					  });
+					  break;
+					}
+				}
+				
+				if(CheckWin()){
+					alert("你又欠粉割一个亲亲了!");
+				}
+			}
+			
+			function mouseDown(eve){
+				var that=this;
+				var eve=eve||window.event;
+					
+				if(paramMatrix[$(that).data('row')][$(that).data('col')]<=0){
+					$(that).css({
+						'-moz-transition': 'none',
+						'-webkit-transition': 'none',
+						'z-index': '999'
+					});
+					
+					$(that).children("a").css({
+						'height':actual_wh.h,
+						'width':actual_wh.w
+					});
+					
+					$(that).children('a').addClass("current").addClass("a_scale");
+					
+					setTimeout(function(){
+						$(that).children('a').removeClass("a_scale")
+					},500);
+					
+					if($(that).offset().top>=item_top_ori){
+						var temArray=$(that).nextAll();
+						for(var i=0;i<temArray.length;i++){
+							if(paramMatrix[$(temArray[i]).data('row')][$(temArray[i]).data('col')]==-1){
+							  $(temArray[i]).css({
+								  'margin-left': virtual_wh.w+10
+							  });
+							  break;
+							}
+						}
+					}
+					
+					$.drag(that);
+					
+					//设置图片右上偏移，不被手指遮挡
+					//console.log($(that).offset());
+					//console.log(eve.pageY);
+					
+					var mouseX=eve.pageX||eve.clientX + document.documentElement.scrollLeft;
+					var mouseY=eve.pageY||eve.clientY + document.documentElement.scrollTop;
+					
+					if('createTouch' in document){
+						//alert('fuck');
+						mouseX=event.changedTouches[0].clientX+document.documentElement.scrollLeft;
+						//alert(mouseX);
+						mouseY=event.changedTouches[0].clientY+document.documentElement.scrollLeft;
+						//alert(mouseY);
+					}
+					
+					var des=10;
+					
+					//console.log(paramMatrix[$(that).data('row')][$(that).data('col')]);
+					
+					if(!$(that).data('inbox')){
+						//alert('fuck');
+					  var t_wh={
+						  w:$(that).offset().left+actual_wh.w-10-mouseX,
+						  h:$(that).offset().top+actual_wh.h-10-mouseY
+					  };
+					  
+					  $(that).css({
+						  'margin-left': t_wh.w*-1+'px',
+						  'margin-top': t_wh.h*-1+'px',
+						  //'-moz-transform': 'translate('+t_wh.w*-1+'px,'+t_wh.h*-1+'px)',
+					  });
+					}
+					else{
+					  $(that).offset({
+						  'left': mouseX-actual_wh.w+des,
+						  'top': mouseY-actual_wh.h+des
+					  });
+					}
+					//$(".patch_List li").bind('mousemove',mouseMove);
+					
+					
+					//设置图片右上偏移，不被手指遮挡 <-
+					
+					if(item_top_ori<0){
+						item_top_ori=parseInt($(that).css("top"));
+					}
+				}
+				
+				
+	/*			function mouseMove(eve){
+					var eve=eve||window.event;
+					var now_mouseX=eve.pageX||eve.clientX + document.documentElement.scrollLeft;
+					var now_mouseY=eve.pageY||eve.clientY + document.documentElement.scrollTop;
+					
+					$(that).css({
+						'left': now_mouseX-mouseX+$(that).css('left'),
+						'top': now_mouseY-mouseY+$(that).css('top')
+					});
+				}*/
+			}
+			
+			function CheckWin(){
+				for(var i=0;i<paramMatrix.length;i++){
+					for(var j=0;j<paramMatrix[0].length;j++){
+						if(paramMatrix[i][j]<=0) return false;
+					}
+				}
+				
+				return true;
+			}
+			
+		});
+		
+		
+</script>

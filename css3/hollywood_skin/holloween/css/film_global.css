@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* 浏览器样式清除
+----------------------------------*/
+html,body{width:100%;height:100%;}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td { margin: 0; padding: 0; }
+body, button, input, select, textarea, th{ font:12px/1.5 Arial, Helvetica, sans-serif; }
+body{background:#d4d4d4;text-align:center;color:#666; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; }
+ul, ol, li { list-style:none; }
+legend { color:#000; }
+fieldset, img { border:none; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+em { font-style:normal; }
+a { text-decoration:none ;}
+button {cursor:pointer;}
+.container{padding-bottom:45px;overflow:hidden;zoom:1;background:#ebebeb; min-width:980px; margin-bottom:-45px;}
+.inner_container{width:980px;margin:0 auto;text-align:left; border-top:1px solid rgba(0,0,0,0); position:relative;}
+.inner_container strong{color:#c8060a;}
+.inner_container a{color:#0082cc;}
+
+/*头部搜索框区*/
+.head{ text-align:left; position:relative; z-index:2 ; min-width:980px;}
+.head .mod_inner{width:980px;margin:0 auto;}
+.head .head_wrap{ height:57px; background:-moz-linear-gradient(top,#f8f8f8,#eee); background:-webkit-linear-gradient(top,#f8f8f8,#eee); position:relative; z-index:2;}
+.head .head_action{ width:980px; margin:0px auto; position:relative; z-index:1;}
+
+.head .head_action .logo{ background: url(../img/global/nav_bg.png) no-repeat 0 -37px; height:28px; width:139px; text-indent:-9999px; overflow:hidden; position:absolute; left:0px; top:17px;}
+
+.mod_search{ display:block; position:absolute; left:295px; top:13px;}
+.mod_search legend{ display:none;}
+.mod_search .mod_search_txt{ display:inline; height:32px; line-height: normal; line-height: 32px\9; width:226px; background:url(../img/global/nav_bg.png) no-repeat 0 0; border: none 0; float:left; padding:0px 10px;color:#a3a3a3; margin-right:0px;}
+.mod_search .mod_search_txt:focus{color:#676767;}
+.mod_search .btn_search{ background:url(../img/global/nav_bg.png) no-repeat -246px 0; display:block; height:32px; width:62px; text-align:center; line-height:32px; color:#fff; float:left; font-size:14px; border:none; cursor:pointer; text-indent:-9999px; overflow:hidden;}
+.mod_search_open .mod_pop{ width:245px;}
+.mod_search .mod_pop li .result_detail{ width:165px;}
+
+.head .head_action .login_wrap{ position:absolute; right:0px; top:20px; width:332px;}
+.login_wrap .name{ width:55px; overflow:hidden; text-overflow: ellipsis; display:inline; margin-right:5px; text-align:right; float:left; white-space:nowrap;}
+.login_wrap a.name{ color:#2e2e2e;}
+.login_wrap a.name:hover{ text-decoration:none;}
+.login_wrap .tab_area{ float:left; height:26px; line-height:20px; *line-height:22px; width:60px; padding:0px 5px; margin:-1px 5px 0px;}
+.icon_vip{ display:inline; float:left; height:16px; width:16px; background:url(../img/global/icon_vip.png) no-repeat 0 0; _background:url(../img/global/nav_bg.png) no-repeat -42px -72px; text-indent:-9999px; overflow:hidden; margin-right:5px; margin-top:1px;}
+.icon_notVip{ background-position:-21px 0; _background-position:-63px -72px;}
+.login_wrap .login_in,.login_wrap .login_out{ color:#2e2e2e; padding-right:5px; border-right:1px solid #2e2e2e; display:inline; float: left; height:11px; line-height:10px; line-height:9px\9; *line-height:14px; margin-top:4px;}
+.login_wrap .login_in{ float:right; border:none;}
+.login_wrap .login_out{*line-height:12px;}
+.login_wrap .get_vip{ display:inline; float:left; height:20px; line-height:20px;*line-height:22px; width:66px; text-align:center; background:url(../img/global/nav_bg.png) no-repeat -84px -72px; color:#fff; position:relative; top:-1px\9;}
+.login_wrap .mod_history,.login_wrap .mod_personal{ float:left; display:inline; position:relative;}
+.login_wrap .s_line{ float:left;}
+.login_wrap .link_purchased{ margin-left:10px; margin-right:10px; *margin-left:5px; *margin-top:1px; _margin-right:8px;  float:left; display:inline; color:#2e2e2e;}
+
+.mod_personal{ width:110px; cursor:pointer;}
+.mod_personal .tab_area{ max-width:90px; width:auto; float:right; *margin-top:0px;}
+.mod_personal .tab_area .icon_vip{ float:right;}
+.mod_personal .tab_area .name{ margin-top:0px; float:right; max-width:53px; width:auto; _width:53px; margin-right:16px;}
+.mod_personal .arrow{ position:absolute; right:12px; top:0px; margin-top:8px;}
+
+
+/*头部搜索框区*/
+
+/*头部菜单区*/
+.head .nav_wrap{ height:50px; border-bottom:1px solid #2d2d2d; background: url(../img/global/bg_header_v2.png) repeat-x 0 0;}
+.head .nav_wrap .mod_nav{ width:980px; margin:0px auto;}
+
+/*菜单*/
+.nav_wrap{ position:relative;}
+.mod_nav{ position:relative;}
+.mod_nav_list{ padding-top:5px;}
+.mod_nav_list li{float:left;}
+.mod_nav_list li a{ display:block; float:left; width:140px;height:40px; line-height:37px; _line-height:40px; font-size:18px; font-family:"microsoft yahei";color:#fff;text-shadow:0 1px 0 #000;text-decoration:none;text-align:center;-webkit-transition:color .3s ease;-moz-transition:color .3s ease; margin-right:5px;}
+.mod_nav_list li a.current{ background:url(../img/global/nav_bg.png) no-repeat -236px -37px;}
+.mod_nav_list li a.current i{ display:inline; height:40px; width:10px; background:url(../img/global/nav_bg.png) no-repeat -236px -37px; float:left; margin-right:-10px;}
+.mod_nav_list li.index a{ width:100px;}
+.mod_nav_list li.index a.current{ background-position:-276px -37px;}
+.mod_nav_list li a:hover{color:#FFF;}
+
+/* 头部简版
+----------------------------------*/
+.head_simple{background: url(../img/bg_header_v2.png) repeat-x scroll 0 -10px #1e1d1b; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4); color: #bfbfbf; min-width:980px; text-align: left; height:42px; position:relative; z-index:2;}
+.head_simple .mod_inner{ width:980px; margin:0px auto; position: relative;}
+.head_simple .logo a{background: url(../img/global/nav_bg.png) no-repeat 0 -97px; height: 22px; width: 102px; overflow: hidden;text-indent: -9999px;position: absolute;top: 10px;left:0;}
+.head_simple .logo h1{ display:none;}
+
+.head_simple .mod_nav_simple{ margin-left:145px;}
+.head_simple .mod_nav_simple li{ float:left; margin-right:25px; display:inline; height:42px; line-height:42px;}
+.head_simple .mod_nav_simple li a{ color:#bfbfbf; font-size:12px;}
+.head_simple .mod_nav_simple li a:hover{ text-decoration:none;}
+
+.head_simple .mod_search_form{ _position:absolute;}
+.head_simple .mod_search{ background:#3a3a3a; height:23px; box-shadow:0px -1px 0px #181818; position:relative; width:220px; left:10px; top:9px; border:1px solid #222;border:none 0\9;}
+.head_simple .mod_search .mod_search_txt{ background:none; width:173px; padding:0px 10px; height:23px; line-height:23px; _line-height:27px; color:#a3a3a3;}
+.head_simple .mod_search .mod_search_txt:focus{ color:#d7d7d7;}
+.head_simple .mod_search .s_form{ height:27px; width:190px; position:relative;  background:#363636; border:1px solid #2e2e2e; box-shadow:0px -1px 0px #181818; }
+.head_simple .mod_search legend{display:none}
+.head_simple .mod_search .btn_search{ height:16px; width:16px; background:url(../img/global/nav_bg.png) no-repeat 0 -72px; text-indent:-9999px; overflow:hidden; margin-top:3px;}
+
+.head_simple .login_wrap{ position:absolute; left:770px; top:12px; color:#8b8b8b;}
+.head_simple .login_wrap .name{ width:77px; _width:75px; height:16px; line-height:16px; margin-top:1px; *margin-top:2px;}
+.head_simple .login_wrap a.name{ color:#bfbfbf;}
+.head_simple .login_wrap a.name:active{ background:none;}
+.head_simple .login_wrap .login_in,.head_simple .login_wrap .login_out{ color:#bfbfbf; border-right:none 0; padding-right:0px; width:31px; _width:30px; text-align:center; *margin-top:3px;}
+.head_simple .login_wrap .login_in{ float:left;}
+.head_simple .login_wrap .tab_area{ height:32px; margin-right:0px;}
+.head_simple .login_wrap .tab_area:hover{ text-decoration:none;}
+
+.head_simple .mod_history .text{color:#bfbfbf;}
+.head_simple .mod_history .arrow{ background-position:-179px -72px;}
+
+.mod_history .text{ display:inline; float:left; margin-right:5px; color:#2e2e2e;}
+.mod_personal .arrow,.mod_history .arrow{ display:inline; float:left; height:4px; width:7px; background:url(../img/global/nav_bg.png) no-repeat -155px -72px; margin-top:8px; margin-top:9px\9;}
+
+/*head_v3 消息中心*/
+.head_v3 .login_wrap{ z-index:2;}
+.head_v3 .login_wrap .get_vip{ background:url(../img/global/login_bg.png) no-repeat 0 0; height:27px; line-height:27px; width:102px;}
+.head_v3 .login_wrap .tab_area{ line-height:26px; width:auto; margin-top:1px; margin-left:0px;}
+.head_v3 .login_wrap .login_in{ margin-top:9px; *margin-top:7px; height:auto;}
+.head_v3 .mod_personal{ width:114px;}
+.head_v3 .mod_personal .tab_area .name,.head_v3 .mod_personal .tab_area .icon_vip{ float:left;}
+.head_v3 .mod_personal .arrow,.head_v3 .mod_history .arrow{ margin-top:11px;}
+.head_v3 .icon_vip{ margin-top:4px;}
+.head_v3 .head_action .login_wrap{ width:271px;}
+/*head_v3 消息中心*/

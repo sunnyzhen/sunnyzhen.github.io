@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/*!
+ * 好莱坞影院万圣节样式
+ *
+ * Author：Sunnycchen
+ *
+ */
+
+.holloween .head .head_wrap{ background: url(../img/head_bg_2.jpg) no-repeat center 0; height:197px; _background:url(../img/head_bg.jpg) no-repeat center 0;}
+.holloween .head .head_action .logo{ top:156px; background:none;}
+.holloween .head .head_action .logo a{ display:block; height:28px;}
+.holloween .mod_search{ top:152px; left:330px;}
+.holloween .head .head_action .login_wrap{top:159px;}
+.holloween .login_wrap .tab_area a.name,.holloween .mod_history .text,.holloween .login_wrap .login_in{ color:#d5d5d5;}
+.holloween .head .mod_personal .arrow,.holloween .head .mod_history .arrow{background-position: -179px -72px;}
+.holloween .head .mod_personal_open .tab_area,.holloween .head .mod_history_open .tab_area{ background:#353535; border-left:1px solid #111; border-top:1px solid #111; box-shadow:1px 1px 1px rgba(0,0,0,0.3) inset;}
+.holloween .pop_tips_2{ top:197px;}
+
+.holloween .head .head_action .hat{ display:block; height:42px; width:55px; background: url(../img/bg_holloween.png) no-repeat 0 0; position:absolute; left:0px; top:135px; left:-19px; -moz-transition:-moz-transform 0.2s linear,-moz-transform-origin 0.2s linear; -moz-transform-origin:5% 100%; -webkit-transition:-webkit-transform 0.2s linear,-webkit-transform-origin 0.2s linear; -webkit-transform-origin:5% 100%;}
+.holloween .head .head_wrap:hover .hat{ -moz-transform-origin:55% 100%; -moz-transform:rotate(-20deg) translate(-1px,-3px); -webkit-transform-origin:55% 100%; -webkit-transform:rotate(-20deg) translate(-1px,-3px);}
+
+.holloween .head .head_action .pumpkin{ display:block; height:83px; width:102px; background:url(../img/bg_holloween.png) no-repeat 0 -42px; position:absolute; left:0px; top:114px; left:137px; /*初次出现 触发动画后 鼠标滑动才触发*/-moz-transform-origin:50% 100%; -moz-animation:a_jelly 0.8s linear; -webkit-transform-origin:50% 100%; -webkit-animation:a_jelly 0.8s linear;}
+.holloween .head .head_action .pumpkin:hover{-moz-transform-origin:50% 100%; -moz-animation:a_jelly_1 0.8s linear; -webkit-transform-origin:50% 100%; -webkit-animation:a_jelly_1 0.8s linear;}
+
+@-moz-keyframes a_jelly{
+	0%{-moz-transform:scale(1,1);}
+	25%{-moz-transform:scale(1.2,0.9);}
+	40%{-moz-transform:scale(0.9,1.2);}
+	55%{-moz-transform:scale(1.1,0.95);}
+	70%{-moz-transform:scale(0.95,1.1);}
+	85%{-moz-transform:scale(1.05,0.98);}
+	100%{-moz-transform:scale(1,1);}
+}
+
+@-webkit-keyframes a_jelly{
+	0%{-webkit-transform:scale(1,1);}
+	25%{-webkit-transform:scale(1.2,0.9);}
+	40%{-webkit-transform:scale(0.9,1.2);}
+	55%{-webkit-transform:scale(1.1,0.95);}
+	70%{-webkit-transform:scale(0.95,1.1);}
+	85%{-webkit-transform:scale(1.05,0.98);}
+	100%{-webkit-transform:scale(1,1);}
+}
+
+@-moz-keyframes a_jelly_1{
+	0%{-moz-transform:scale(1,1);}
+	25%{-moz-transform:scale(1.2,0.9);}
+	40%{-moz-transform:scale(0.9,1.2);}
+	55%{-moz-transform:scale(1.1,0.95);}
+	70%{-moz-transform:scale(0.95,1.1);}
+	85%{-moz-transform:scale(1.05,0.98);}
+	100%{-moz-transform:scale(1,1);}
+}
+
+@-webkit-keyframes a_jelly_1{
+	0%{-webkit-transform:scale(1,1);}
+	25%{-webkit-transform:scale(1.2,0.9);}
+	40%{-webkit-transform:scale(0.9,1.2);}
+	55%{-webkit-transform:scale(1.1,0.95);}
+	70%{-webkit-transform:scale(0.95,1.1);}
+	85%{-webkit-transform:scale(1.05,0.98);}
+	100%{-webkit-transform:scale(1,1);}
+}
+
+.holloween .head .head_action .bat{ display:block; height:21px; width:11px; background:url(../img/bg_holloween.png) no-repeat -182px -18px;}
+.holloween .head .head_action .bat .wing_l{ display:block; height:36px; width:43px; background:url(../img/bg_holloween.png) no-repeat -140px 0;}
+.holloween .head .head_action .bat .wing_r{ display:block; height:32px; width:45px; background:url(../img/bg_holloween.png) no-repeat -192px -3px}
+
+.holloween .head .head_action .bat{ position:absolute; left:626px; top:72px; -moz-transform:rotate(20deg); -webkit-transform:rotate(20deg);}
+.holloween .head .head_action .bat .wing_l{ position:absolute; left:-40px; top:-18px;}
+.holloween .head .head_action .bat .wing_r{ position:absolute; left:9px; top:-16px;}
+
+.holloween .head .head_action .bat:hover{ -moz-animation:a_bat 1.2s linear infinite; -webkit-animation:a_bat 1.2s linear infinite;}
+.holloween .head .head_action .bat:hover .wing_l{ -moz-animation:a_bat_wing_l 1.2s linear infinite; -moz-transform-origin:100% 80%; -webkit-animation:a_bat_wing_l 1.2s linear infinite; -webkit-transform-origin:100% 80%;}
+.holloween .head .head_action .bat:hover .wing_r{ -moz-animation:a_bat_wing_r 1.2s linear infinite; -moz-transform-origin:0% 80%; -webkit-animation:a_bat_wing_r 1.2s linear infinite; -webkit-transform-origin:0% 80%;}
+
+@-moz-keyframes a_bat{
+	0%{-moz-transform:rotate(20deg) translate(0,0);}
+	25%{-moz-transform:rotate(20deg) translate(0,3px);}
+	50%{-moz-transform:rotate(20deg) translate(0,-2px);}
+	75%{-moz-transform:rotate(20deg) translate(0,1px);}
+	100%{-moz-transform:rotate(20deg) translate(0,0);}
+}
+
+@-moz-keyframes a_bat_wing_l{
+	0%{-moz-transform: rotate(0);}
+	25%{-moz-transform: rotate(20deg);}
+	50%{-moz-transform: rotate(-20deg);}
+	75%{-moz-transform: rotate(20deg);}
+	100%{-moz-transform: rotate(0);}
+}
+
+@-moz-keyframes a_bat_wing_r{
+	0%{-moz-transform: rotate(0);}
+	25%{-moz-transform: rotate(-20deg);}
+	50%{-moz-transform: rotate(20deg);}
+	75%{-moz-transform: rotate(-20deg);}
+	100%{-moz-transform: rotate(0);}
+}
+
+@-webkit-keyframes a_bat{
+	0%{-webkit-transform:rotate(20deg) translate(0,0);}
+	25%{-webkit-transform:rotate(20deg) translate(0,3px);}
+	50%{-webkit-transform:rotate(20deg) translate(0,-2px);}
+	75%{-webkit-transform:rotate(20deg) translate(0,1px);}
+	100%{-webkit-transform:rotate(20deg) translate(0,0);}
+}
+
+@-webkit-keyframes a_bat_wing_l{
+	0%{-webkit-transform: rotate(0);}
+	25%{-webkit-transform: rotate(20deg);}
+	50%{-webkit-transform: rotate(-20deg);}
+	75%{-webkit-transform: rotate(20deg);}
+	100%{-webkit-transform: rotate(0);}
+}
+
+@-webkit-keyframes a_bat_wing_r{
+	0%{-webkit-transform: rotate(0);}
+	25%{-webkit-transform: rotate(-20deg);}
+	50%{-webkit-transform: rotate(20deg);}
+	75%{-webkit-transform: rotate(-20deg);}
+	100%{-webkit-transform: rotate(0);}
+}
+
+
+.spider_wrap{ width:55px; height:253px; overflow:hidden; position:absolute; left:-10px; top:248px; border-top:1px solid #000;}
+.spider_wrap .spider{ background:url(../img/bg_holloween.png) no-repeat -100px 0; display:block; height:53px; width:35px; position:relative; top: -53px; /*初次出现 触发动画后 鼠标滑动才触发*/ -moz-animation:a_spider 2.5s ease; -webkit-animation:a_spider 2.5s ease;}
+.spider_wrap .spider .silk{ display:block; height:200px; width:1px; background:#222; position:absolute; left:16px; top:-188px;}
+.spider_wrap:hover .spider{-moz-animation:a_spider_1 2.5s ease; -webkit-animation:a_spider_1 2.5s ease;}
+
+@-moz-keyframes a_spider{
+	0%{-moz-transform: translate(0,0);}
+	20%{-moz-transform: translate(0,180px);}
+	30%{-moz-transform: translate(0,165px);}
+	40%{-moz-transform: translate(0,175px);}
+	50%{-moz-transform: translate(0,170px);}
+	65%{-moz-transform: translate(0,172px);}
+	100%{-moz-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_spider{
+	0%{-webkit-transform: translate(0,0);}
+	20%{-webkit-transform: translate(0,180px);}
+	30%{-webkit-transform: translate(0,165px);}
+	40%{-webkit-transform: translate(0,175px);}
+	50%{-webkit-transform: translate(0,170px);}
+	65%{-webkit-transform: translate(0,172px);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+@-moz-keyframes a_spider_1{
+	0%{-moz-transform: translate(0,0);}
+	20%{-moz-transform: translate(0,180px);}
+	30%{-moz-transform: translate(0,165px);}
+	40%{-moz-transform: translate(0,175px);}
+	50%{-moz-transform: translate(0,170px);}
+	65%{-moz-transform: translate(0,172px);}
+	100%{-moz-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_spider_1{
+	0%{-webkit-transform: translate(0,0);}
+	20%{-webkit-transform: translate(0,180px);}
+	30%{-webkit-transform: translate(0,165px);}
+	40%{-webkit-transform: translate(0,175px);}
+	50%{-webkit-transform: translate(0,170px);}
+	65%{-webkit-transform: translate(0,172px);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+.holloween .owl_wrap{ display:block; height:35px; width:40px; position:absolute; left:255px; top:-34px; overflow:hidden; _display:none;}
+.holloween .owl{ display:block; height:34px; width:27px; background:url(../img/bg_holloween.png) no-repeat -60px 0; position:relative; left:7px; top:34px;}
+.holloween .owl .wing_l{ display:block; height:11px; width:7px; background:url(../img/bg_holloween.png) no-repeat -88px 0; position:absolute; left:-7px; top:25px;}
+.holloween .owl .wing_r{ display:block; height:15px; width:8px; background:url(../img/bg_holloween.png) no-repeat -88px -10px; position:absolute; left:26px; top:23px;}
+
+.holloween .mod_search_focus .owl,.holloween .mod_search:hover .owl{-moz-animation:a_owl 0.3s ease both; -webkit-animation:a_owl 0.3s ease both; top:0px\9;}
+.holloween .owl:hover .wing_l,.holloween .owl:hover .wing_r{-moz-animation-iteration-count:infinite; -webkit-animation-iteration-count:infinite;}
+.holloween .owl .wing_l{-moz-animation:a_owl_l 0.6s linear 2; -moz-transform-origin:100% 0%; -webkit-animation:a_owl_l 0.6s linear 2; -webkit-transform-origin:100% 0%;}
+.holloween .owl .wing_r{-moz-animation:a_owl_r 0.6s linear 2; -moz-transform-origin:0% 0%; -webkit-animation:a_owl_r 0.6s linear 2; -webkit-transform-origin:0% 0%;}
+
+@-moz-keyframes a_owl{
+	0%{-moz-transform: translate(0px,0px);}
+	100%{-moz-transform: translate(0px,-34px);}
+}
+
+@-moz-keyframes a_owl_l{
+	0%{-moz-transform: rotate(-10deg);}
+	25%{-moz-transform: rotate(10deg);}
+	50%{-moz-transform: rotate(-10deg);}
+	75%{-moz-transform: rotate(10deg);}
+	100%{-moz-transform: rotate(-10deg);}
+}
+
+@-moz-keyframes a_owl_r{
+	0%{-moz-transform: rotate(10deg);}
+	25%{-moz-transform: rotate(-10deg);}
+	50%{-moz-transform: rotate(10deg);}
+	75%{-moz-transform: rotate(-10deg);}
+	100%{-moz-transform: rotate(10deg);}
+}
+
+
+@-webkit-keyframes a_owl{
+	0%{-webkit-transform: translate(0px,0px);}
+	100%{-webkit-transform: translate(0px,-34px);}
+}
+
+@-webkit-keyframes a_owl_l{
+	0%{-webkit-transform: rotate(-10deg);}
+	25%{-webkit-transform: rotate(10deg);}
+	50%{-webkit-transform: rotate(-10deg);}
+	75%{-webkit-transform: rotate(10deg);}
+	100%{-webkit-transform: rotate(-10deg);}
+}
+
+@-webkit-keyframes a_owl_r{
+	0%{-webkit-transform: rotate(10deg);}
+	25%{-webkit-transform: rotate(-10deg);}
+	50%{-webkit-transform: rotate(10deg);}
+	75%{-webkit-transform: rotate(-10deg);}
+	100%{-webkit-transform: rotate(10deg);}
+}
+
+
+.holloween .ghost_wrap{ display:block; height:80px; width:340px; position:absolute; left:55px; top:22px;}
+.holloween .ghost_wrap .ghost{ display:block; height:33px; width:41px; position:absolute; left:300px; top:0px; background:url(../img/bg_holloween.png) no-repeat -242px 0;}
+.holloween .ghost_wrap:hover .ghost{ -moz-animation:a_ghost 16s linear infinite; -webkit-animation:a_ghost 16s linear infinite; }
+
+@-moz-keyframes a_ghost{
+	0%{-moz-transform: translate(0,0);}
+	6%{-moz-transform: translate(-20px,-10px);}
+	12%{-moz-transform: translate(-40px,0);}
+	18%{-moz-transform: translate(-60px,-10px);}
+	24%{-moz-transform: translate(-80px,0);}
+	30%{-moz-transform: translate(-100px,-10px);}
+	36%{-moz-transform: translate(-120px,0);}
+	42%{-moz-transform: translate(-140px,-10px);}
+	48%{-moz-transform: translate(-160px,0);}
+	50%{-moz-transform: translate(-160px,0) scale(-1,1);}
+	56%{-moz-transform: translate(-140px,-10px) scale(-1,1);}
+	62%{-moz-transform: translate(-120px,0) scale(-1,1);}
+	68%{-moz-transform: translate(-100px,-10px) scale(-1,1);}
+	74%{-moz-transform: translate(-80px,0) scale(-1,1);}
+	80%{-moz-transform: translate(-60px,-10px) scale(-1,1);}
+	86%{-moz-transform: translate(-40px,0) scale(-1,1);}
+	92%{-moz-transform: translate(-20px,-10px) scale(-1,1);}
+	98%{-moz-transform: translate(0px,0) scale(-1,1);}
+    100%{-moz-transform: translate(0,0);}
+}
+
+
+@-webkit-keyframes a_ghost{
+	0%{-webkit-transform: translate(0,0);}
+	6%{-webkit-transform: translate(-20px,-10px);}
+	12%{-webkit-transform: translate(-40px,0);}
+	18%{-webkit-transform: translate(-60px,-10px);}
+	24%{-webkit-transform: translate(-80px,0);}
+	30%{-webkit-transform: translate(-100px,-10px);}
+	36%{-webkit-transform: translate(-120px,0);}
+	42%{-webkit-transform: translate(-140px,-10px);}
+	48%{-webkit-transform: translate(-160px,0);}
+	50%{-webkit-transform: translate(-160px,0) scale(-1,1);}
+	56%{-webkit-transform: translate(-140px,-10px) scale(-1,1);}
+	62%{-webkit-transform: translate(-120px,0) scale(-1,1);}
+	68%{-webkit-transform: translate(-100px,-10px) scale(-1,1);}
+	74%{-webkit-transform: translate(-80px,0) scale(-1,1);}
+	80%{-webkit-transform: translate(-60px,-10px) scale(-1,1);}
+	86%{-webkit-transform: translate(-40px,0) scale(-1,1);}
+	92%{-webkit-transform: translate(-20px,-10px) scale(-1,1);}
+	98%{-webkit-transform: translate(0px,0) scale(-1,1);}
+    100%{-webkit-transform: translate(0,0);}
+}
+
+.holloween .head .head_action .hat,.holloween .head .head_action .pumpkin,.holloween .head .head_action .bat,.holloween .ghost_wrap .ghost{ _display:none;}
+
+
+
+
+
+
+
+
