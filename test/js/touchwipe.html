@@ -20,12 +20,12 @@
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
 		$(".touch_wrap").touchwipe({
-			 wipeLeft: function() { $(".touch_wrap .top").css("top",0); },
-			 wipeRight: function() { $(".touch_wrap .right").css("right",0); },
-			 wipeUp: function() { $(".touch_wrap .bottom").css("bottom",0); },
-			 wipeDown: function() { $(".touch_wrap .left").css("left",0); },
-			 min_move_x: 50,
-			 min_move_y: 50,
+			 wipeLeft: function() { $(".touch_wrap .bottom").css("bottom",0); },
+			 wipeRight: function() { $(".touch_wrap .left").css("left",0); },
+			 wipeUp: function() { $(".touch_wrap .top").css("top",0); },
+			 wipeDown: function() { $(".touch_wrap .right").css("right",0); },
+			 min_move_x: 80,
+			 min_move_y: 80,
 			 preventDefaultEvents: true
 		});
 	});
