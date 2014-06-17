@@ -19,9 +19,12 @@
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
 		$(".touch_wrap")[0].ongesturechange=function(e){
-			
+			var height=$(".touch_wrap").height;
+			var width=$(".touch_wrap").width;
+			$(".touch_wrap").height(height*e.scale);
+			$(".touch_wrap").width(width*e.scale);
 			$(".detail").html("当前手势是："+e.scale+", 幅度为：");
-			$(".detail2").html("当前手势是："+e.rotation+", 幅度为：");
+			//$(".detail2").html("当前手势是："+e.rotation+", 幅度为：");
 		}
 	});
 </script>
