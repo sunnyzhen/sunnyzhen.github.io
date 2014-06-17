@@ -19,6 +19,7 @@
 <script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
+		var rotation=0;
 		$(document)[0].ongesturechange=function(e){
 			//var elem_height=$(".touch_wrap").height();
 			//var elem_width=$(".touch_wrap").width();
@@ -26,9 +27,17 @@
 			//$(".touch_wrap").width(elem_width*e.scale);
 			//$(".detail").html("原高度: "+elem_height+"当前手势是："+elem_height*e.scale+", 幅度为："+e.scale);
 			//$(".detail2").html("当前手势是："+e.rotation+", 幅度为：");
+			//$(".touch_wrap").css({
+			//	"-webkit-transform":"scale("+e.scale+","+e.scale+") rotate("+e.rotation+"deg)"
+			//});
+			
 			$(".touch_wrap").css({
-				"-webkit-transform":"scale("+e.scale+","+e.scale+") rotate("+e.rotation+"deg)"
+				"-webkit-transform: rotate("+(rotation+e.rotation)%360+"deg)"
 			});
+		}
+		
+		$(document)[0].ongestureend=function(e){
+			rotation=(rotation+e.rotation)%360;
 		}
 	});
 </script>
