@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>手机触摸事件</title>
+<link rel="apple-touch-icon-precomposed" href="http://sunnyzhen.github.io/test/img/app_icon.png" />
+
+
+<style type="text/css">
+	*{ margin:0; padding:0;}
+	.touch_wrap{ display:block; height:100%; width:100%; background:rgba(0,0,0,0.2); position:absolute; left:0px; top:0px; overflow:hidden; }
+	.touch_wrap .inner{ display:block; height:300px; width:300px; position:absolute; -webkit-transition:all 0.3s linear;}
+	.touch_wrap .top{ display:block; height:300px; width:100%; background:rgba(255,0,0,0.3); top:-300px; left:0px;}
+	.touch_wrap .right{ display:block; height:100%; width:300px; background:rgba(0,255,0,0.3); right:-300px; top:0px;}
+	.touch_wrap .bottom{ display:block; height:300px; width:100%; background:rgba(0,0,255,0.3); bottom:-300px; left:0px;}
+	.touch_wrap .left{ display:block; height:100%; width:300px; background:rgba(255,0,255,0.3); left:-300px; top:0px;}
+</style>
+
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery.touchwipe.min.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function(){
+		$(".touch_wrap").touchwipe({
+			 wipeLeft: function() { $(".touch_wrap .right").css("right",0); },
+			 wipeRight: function() { $(".touch_wrap .left").css("left",0); },
+			 wipeUp: function() { $(".touch_wrap .top").css("top",0); },
+			 wipeDown: function() { $(".touch_wrap .bottom").css("bottom",0); },
+			 min_move_x: 80,
+			 min_move_y: 80,
+			 preventDefaultEvents: true
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+<div class="touch_wrap">
+	<div class="inner top"></div>
+    <div class="inner right"></div>
+    <div class="inner bottom"></div>
+    <div class="inner left"></div>
+</div>
+
+</body>
+</html>
