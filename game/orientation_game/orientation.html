@@ -92,6 +92,17 @@
 			var left=0;
 			var x=2;
 			
+			CockroachMoving(event);
+			
+			function CockroachMoving(eve){
+				if(Math.round(eve.beta)!=0||Math.round(eve.gamma)!=0){
+					$(".cockroach").addClass("cockroach_moving");
+				}
+				else{
+					$(".cockroach").removeClass("cockroach_moving");
+				}
+			}
+			
 			if(Math.round(event.beta)*x>=s_top){
 				top=s_top;
 			}
