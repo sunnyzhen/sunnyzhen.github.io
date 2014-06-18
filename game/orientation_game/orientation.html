@@ -34,7 +34,6 @@
 	.cockroach_moving .leg_4{-webkit-animation: a_cockroach_moving_4 0.3s  linear infinite alternate;}
 	.cockroach_moving .leg_6{-webkit-animation: a_cockroach_moving_6 0.6s 0.7s linear infinite alternate;}
 	
-	
 	@-webkit-keyframes a_cockroach_moving{
 		0%{-webkit-transform:rotate(0deg);}
 		50%{-webkit-transform:rotate(3deg);}
@@ -70,6 +69,11 @@
 		0%{-webkit-transform:rotate(0deg);}
 		100%{-webkit-transform:rotate(10deg) scale(0.75);}
 	}
+	
+	.cockroach_n{ -webkit-transform:rotate(0);}
+	.cockroach_e{ -webkit-transform:rotate(90deg);}
+	.cockroach_s{ -webkit-transform:rotate(180deg);}
+	.cockroach_w{ -webkit-transform:rotate(270deg);}
 	
 </style>
 
@@ -119,6 +123,20 @@
 			else{
 				$(".cockroach").addClass("cockroach_moving");
 			}
+			
+			if(Math.floor(event.beta)<0&&Math.abs(Math.floor(event.beta))>Math.abs(Math.floor(event.gamma))){
+				$(".animal_direction").attr("class","animal_direction cockroach_n");
+			}
+			else if(Math.floor(event.beta)>0&&Math.floor(event.beta)>Math.floor(event.gamma)){
+				$(".animal_direction").attr("class","animal_direction cockroach_s");
+			}
+			
+			if(Math.floor(event.gamma)<0&&Math.abs(Math.floor(event.gamma))>Math.abs(Math.floor(event.beta))){
+				$(".animal_direction").attr("class","animal_direction cockroach_w");
+			}
+			else if(Math.floor(event.gamma)>0&&Math.floor(event.beta)>Math.floor(event.beta)){
+				$(".animal_direction").attr("class","animal_direction cockroach_e");
+			}
         }  
           
         if (window.DeviceOrientationEvent) {  
@@ -134,13 +152,15 @@
         
 <div class="cage_wrap">
 	<div class="animal_wrap">
-        <div class="animal cockroach">
-            <div class="leg leg_1"></div>
-            <div class="leg leg_2"></div>
-            <div class="leg leg_3"></div>
-            <div class="leg leg_4"></div>
-            <div class="leg leg_5"></div>
-            <div class="leg leg_6"></div>
+    	<div class="animal_direction cockroach_nw">
+            <div class="animal cockroach">
+                <div class="leg leg_1"></div>
+                <div class="leg leg_2"></div>
+                <div class="leg leg_3"></div>
+                <div class="leg leg_4"></div>
+                <div class="leg leg_5"></div>
+                <div class="leg leg_6"></div>
+            </div>
         </div>
     </div>
 </div>
