@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>被困的小强</title>
+<link rel="apple-touch-icon-precomposed" href="http://sunnyzhen.github.io/test/img/app_icon.png" />
+
+
+<style type="text/css">
+	*{ margin:0; padding:0;}
+	body{ height:100%; width:100%; overflow:hidden;}
+	.cage_wrap{ height:100%; width:100%; position:absolute; left:0px; top:0px;}
+	.animal{ display:block; position:absolute; left:50%; top:50%;}
+	.cockroach{ background:url(img/xiaoqiang.png) no-repeat -2px 0; height:23px; width:13px; background-size:32px 23px;}
+	.cockroach .leg{ display:block; background:url(img/xiaoqiang.png) no-repeat 0 0; background-size:32px 23px; position:absolute;}
+	.cockroach .leg_1{ height:7px; width:3px; background-position:-16px 0px; left:1px; top:2px; -webkit-transform-origin:100% 100%;}
+	.cockroach .leg_2{ height:6px; width:3px; background-position:-21px 0px; left:9px; top:3px; -webkit-transform-origin:0% 100%;}
+	.cockroach .leg_3{ height:6px; width:5px; background-position:-26px 0px; left:-2px; top:10px; -webkit-transform-origin:100% 0%;-webkit-transform:rotate(10deg);}
+	.cockroach .leg_4{ height:6px; width:5px; background-position:-21px -9px; left:8px; top:10px; -webkit-transform-origin:0% 0%;-webkit-transform:rotate(-10deg);}
+	.cockroach .leg_5{ height:12px; width:3px; background-position:-16px -9px; left:0px; top:16px; -webkit-transform-origin:100% 0%;}
+	.cockroach .leg_6{ height:13px; width:3px; background-position:-29px -8px; left:8px; top:15px; -webkit-transform-origin:0% 0%;}
+	
+	.cockroach_moving{-webkit-animation: a_cockroach_moving 0.6s linear infinite alternate;}
+	
+	.cockroach_moving .leg_1{-webkit-animation: a_cockroach_moving_1 0.3s linear infinite alternate;}
+	.cockroach_moving .leg_3{-webkit-animation: a_cockroach_moving_3 0.3s 0.3s linear infinite alternate;}
+	.cockroach_moving .leg_5{-webkit-animation: a_cockroach_moving_5 0.6s 0.15s linear infinite alternate;}
+	
+	.cockroach_moving .leg_2{-webkit-animation: a_cockroach_moving_2 0.3s 0.3s linear infinite alternate;}
+	.cockroach_moving .leg_4{-webkit-animation: a_cockroach_moving_4 0.3s  linear infinite alternate;}
+	.cockroach_moving .leg_6{-webkit-animation: a_cockroach_moving_6 0.6s 0.7s linear infinite alternate;}
+	
+	
+	@-webkit-keyframes a_cockroach_moving{
+		0%{-webkit-transform:rotate(0deg);}
+		50%{-webkit-transform:rotate(3deg);}
+		100%{-webkit-transform:rotate(-3deg);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_1{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(-25deg) scale(0.9);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_2{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(25deg) scale(0.9);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_3{
+		0%{-webkit-transform:rotate(10deg);}
+		100%{-webkit-transform:rotate(-10deg) scale(0.9);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_4{
+		0%{-webkit-transform:rotate(-10deg);}
+		100%{-webkit-transform:rotate(10deg) scale(0.9);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_5{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(-10deg) scale(0.75);}
+	}
+	
+	@-webkit-keyframes a_cockroach_moving_6{
+		0%{-webkit-transform:rotate(0deg);}
+		100%{-webkit-transform:rotate(10deg) scale(0.75);}
+	}
+	
+</style>
+
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function(){
+		function orientationHandler(event) {  
+        /*    document.getElementById("alpha").innerHTML = event.alpha;  
+            document.getElementById("beta").innerHTML = event.beta;  
+            document.getElementById("gamma").innerHTML = event.gamma;  
+            document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
+            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  */
+			
+			var s_top=($(".cage_wrap").height()-$(".animal").height())/2;
+			var s_left=($(".cage_wrap").width()-$(".animal").width())/2;
+			$(".animal").css({
+				"margin-top": $('.animal').height()/2*-1 +"px",
+				"margin-left": $('.animal').width()/2*-1 +"px"
+			});
+			var top=0;
+			var left=0;
+			var x=2;
+			
+			if(Math.round(event.beta)*x>=s_top){
+				top=s_top;
+			}
+			else if(Math.round(event.beta)*x<=-s_top){
+				top=-s_top;
+			}
+			else
+				top=Math.round(event.beta)*x;
+			
+			if(Math.round(event.gamma)*x>=s_left){
+				left=s_left;
+			}
+			else if(Math.round(event.gamma)*x<=-s_left){
+				left= -s_left;
+			}
+			else
+				left=Math.round(event.gamma)*x;
+			
+			$(".ball").css({
+				"-webkit-transform": "translate("+left+"px,"+top+"px)"
+			});
+        }  
+          
+        if (window.DeviceOrientationEvent) {  
+          window.addEventListener("deviceorientation", orientationHandler, false);  
+        }
+	});
+</script>
+
+</head>
+
+<body>
+
+<!--<p>左右：<span id="alpha">0</span></p>  
+<p>前后：<span id="beta">0</span></p>  
+<p>扭转：<span id="gamma">0</span></p>  
+<p>指北针指向：<span id="heading">0</span>度</p>  
+<p>指北针精度：<span id="accuracy">0</span>度</p>-->
+        
+<div class="cage_wrap">
+	<div class="animal cockroach cockroach_moving">
+    	<div class="leg leg_1"></div>
+        <div class="leg leg_2"></div>
+        <div class="leg leg_3"></div>
+        <div class="leg leg_4"></div>
+        <div class="leg leg_5"></div>
+        <div class="leg leg_6"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
