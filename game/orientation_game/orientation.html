@@ -76,11 +76,6 @@
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
 		function orientationHandler(event) {  
-        /*    document.getElementById("alpha").innerHTML = event.alpha;  
-            document.getElementById("beta").innerHTML = event.beta;  
-            document.getElementById("gamma").innerHTML = event.gamma;  
-            document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
-            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  */
 			
 			var s_top=($(".cage_wrap").height()-$(".animal").height())/2;
 			var s_left=($(".cage_wrap").width()-$(".animal").width())/2;
@@ -114,15 +109,12 @@
 				"-webkit-transform": "translate("+left+"px,"+top+"px)"
 			});
 			
-			//CockroachMoving(event);
-			
-			function CockroachMoving(eve){
-				if(Math.round(eve.beta)!=0||Math.round(eve.gamma)!=0){
-					$(".cockroach").addClass("cockroach_moving");
-				}
-				else{
-					$(".cockroach").removeClass("cockroach_moving");
-				}
+			//moving or not
+			if(Math.round(eve.beta)==0&&Math.round(eve.gamma)==0){
+				$(".cockroach").removeClass("cockroach_moving");
+			}
+			else{
+				$(".cockroach").addClass("cockroach_moving");
 			}
         }  
           
@@ -136,11 +128,6 @@
 
 <body>
 
-<!--<p>左右：<span id="alpha">0</span></p>  
-<p>前后：<span id="beta">0</span></p>  
-<p>扭转：<span id="gamma">0</span></p>  
-<p>指北针指向：<span id="heading">0</span>度</p>  
-<p>指北针精度：<span id="accuracy">0</span>度</p>-->
         
 <div class="cage_wrap">
 	<div class="animal cockroach">
