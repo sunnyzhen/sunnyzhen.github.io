@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>手机摇转</title>
+<link rel="apple-touch-icon-precomposed" href="http://sunnyzhen.github.io/test/img/app_icon.png" />
+
+
+<style type="text/css">
+	*{ margin:0; padding:0;}
+	body{ height:100%; width:100%; overflow:hidden;}
+	.ball_wrap{ height:100%; width:100%; position:relative;}
+	.ball{ background:#333; height:30px; width:30px; border:1px solid #555; box-shadow:0px 0px 2px rgba(0,0,0,0.1); position:absolute; left:0px; top:0px; border-radius:30px;}
+</style>
+
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function(){
+		function orientationHandler(event) {  
+            document.getElementById("alpha").innerHTML = event.alpha;  
+            document.getElementById("beta").innerHTML = event.beta;  
+            document.getElementById("gamma").innerHTML = event.gamma;  
+            document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
+            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  
+        }  
+          
+        if (window.DeviceOrientationEvent) {  
+          window.addEventListener("deviceorientation", orientationHandler, false);  
+        }
+	});
+</script>
+
+</head>
+
+<body>
+
+<div class="ball_wrap">
+	<div class="ball"></div>
+</div>
+<div class="detail"></div>
+
+</body>
+</html>
