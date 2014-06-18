@@ -30,24 +30,25 @@
 			var s_left=($(".ball_wrap").width()-$(".ball").width())/2;
 			var top=0;
 			var left=0;
+			var x=2;
 			
-			if(Math.round(event.beta)>=s_top){
+			if(Math.round(event.beta)*x>=s_top){
 				top=s_top;
 			}
-			else if(Math.round(event.beta)<=-s_top){
+			else if(Math.round(event.beta)*x<=-s_top){
 				top=-s_top;
 			}
 			else
-				top=Math.round(event.beta);
+				top=Math.round(event.beta)*x;
 			
-			if(Math.round(event.gamma)>=s_left){
+			if(Math.round(event.gamma)*x>=s_left){
 				left=s_left;
 			}
-			else if(Math.round(event.gamma)<=-s_left){
+			else if(Math.round(event.gamma)*x<=-s_left){
 				left= -s_left;
 			}
 			else
-				left=Math.round(event.gamma);
+				left=Math.round(event.gamma)*x;
 			
 			$(".ball").css({
 				/*"top": top+"px",
