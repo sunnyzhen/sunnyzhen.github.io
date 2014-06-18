@@ -50,8 +50,9 @@
 				left=Math.round(event.gamma);
 			
 			$(".ball").css({
-				"top": top+"px",
-				"left": left+"px"
+				/*"top": top+"px",
+				"left": left+"px"*/
+				"-webkit-transform": "translate("+left+"px,"+top+"px)"
 			});
         }  
           
