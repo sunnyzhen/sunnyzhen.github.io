@@ -20,11 +20,39 @@
 <script language="javascript" type="text/javascript">
 	$(document).ready(function(){
 		function orientationHandler(event) {  
-            document.getElementById("alpha").innerHTML = event.alpha;  
+        /*    document.getElementById("alpha").innerHTML = event.alpha;  
             document.getElementById("beta").innerHTML = event.beta;  
             document.getElementById("gamma").innerHTML = event.gamma;  
             document.getElementById("heading").innerHTML = event.webkitCompassHeading;  
-            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  
+            document.getElementById("accuracy").innerHTML = event.webkitCompassAccuracy;  */
+			
+			var s_top=($(".ball_wrap").height()-$(".ball").height())/2;
+			var s_left=($(".ball_wrap").width()-$(".ball").width())/2;
+			var top=0;
+			var left=0;
+			
+			if(Math.round(event.beta)>=s_top){
+				top=s_top;
+			}
+			else if(Math.round(event.beta)<=-s_top){
+				top=-s_top;
+			}
+			else
+				top=Math.round(event.beta);
+			
+			if(Math.round(event.gamma)>=s_left){
+				left=s_left;
+			}
+			else if(Math.round(event.gamma)<=-s_left){
+				left= -s_left;
+			}
+			else
+				left=Math.round(event.gamma);
+			
+			$(".ball").css({
+				"top": top+"px",
+				"left": left+"px"
+			});
         }  
           
         if (window.DeviceOrientationEvent) {  
