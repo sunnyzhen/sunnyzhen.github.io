@@ -93,8 +93,9 @@
 			else if(Math.round(event.beta)*x<=-s_top){
 				top=-s_top;
 			}
-			else
+			else{
 				top=Math.round(event.beta)*x;
+			}
 			
 			if(Math.round(event.gamma)*x>=s_left){
 				left=s_left;
@@ -102,15 +103,16 @@
 			else if(Math.round(event.gamma)*x<=-s_left){
 				left= -s_left;
 			}
-			else
+			else{
 				left=Math.round(event.gamma)*x;
+			}
 			
 			$(".cockroach").css({
 				"-webkit-transform": "translate("+left+"px,"+top+"px)"
 			});
 			
 			//moving or not
-			if(Math.round(event.beta)==0&&Math.round(event.gamma)==0){
+			if(Math.floor(event.beta)==0&&Math.floor(event.gamma)==0){
 				$(".cockroach").removeClass("cockroach_moving");
 			}
 			else{
