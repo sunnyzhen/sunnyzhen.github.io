@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*reset*/
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 Tahoma,Arial,'\5B8B\4F53'}
+fieldset,img{border:0}
+ul,li{list-style:none}
+em,i{font-style:normal}
+table{border-collapse:separate;border-spacing:0}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus,input,button,select,textarea{outline:none;font-size:100%}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-variant:normal}
+input,select,img{vertical-align:middle}
+legend{display:none}
+textarea{resize:none}
+button{cursor:pointer}
+
+/*style*/
+body{ background:#e0e0e0; font-size:12px; color:#333;}
+.mod_iframe .iframe{ border:none;}
+
+.article_title{font-size:30px; font-weight:normal; font-family:'microsoft yahei'; padding-top:20px; margin-bottom:10px; text-align:center; }
+.article_subtitle{font-size:16px; font-weight:normal; margin-bottom:20px; text-align:center;}
+
+.mod_con{ padding:20px; clear:both; margin-bottom:20px;}
+.mod_con .title{ font-size:20px; font-weight:normal; font-family:'microsoft yahei'; margin-bottom:20px; border-bottom:1px dotted #bbb; padding-bottom:10px;}
+.mod_con .subtitle{ font-size:16px; font-weight:normal; font-family:'microsoft yahei'; margin-bottom:20px; clear:both;}
+
+.img_con{ clear:both;}
+.img_area{ float:left; clear:both; margin-bottom:20px;}
+.img_box{ float:left; margin-right:50px;}
+.img_box .demo_img{ margin-bottom:10px;}
+.img_box .txt{ font-size:16px; text-align:center; display:block;}
+
+.mod_txt{ margin-bottom:20px;}
+.mod_txt .img_box .demo_img{ margin-bottom:0px;}
+.txt_con .tit{ font-size:16px; font-weight:normal; font-family:'microsoft yahei'; margin-bottom:10px; clear:both; font-weight:bold;}
+.txt_con .txt{ font-size:16px; font-weight:normal; font-family:'microsoft yahei'; margin-bottom:10px; clear:both;}

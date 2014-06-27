@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>扫描动画demo</title>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<div class="content_wrap">
+	<h1 class="article_title">扫描动画demo</h1>
+    <h2 class="article_subtitle">- 亲爱的陈某真</h2>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">原设计稿</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="data/design_ori.jpg" class="demo_img" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">原有效果</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="data/1.gif" class="demo_img" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">稍加改造</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                    <img src="data/2.gif" class="demo_img" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">最终版本</h3>
+        
+        <div class="mod_iframe">
+            <iframe class="iframe" src="demo_solve.html"></iframe>
+        </div>
+        
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">扫描动画来源</h3>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/q&a_1.jpg" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/q&a_2.jpg" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">扫描动画 分析制作</h3>
+        <div class="txt_con">
+        	<div class="mod_txt">
+                <h4 class="tit">一、审题</h4>
+                <p class="txt">设计稿给出的是 “扫”，而原有的动画效果是 “摇”，需要正确审题，否则做出的效果南辕北辙，吃力而不讨好。</p>
+               <!-- <h4 class="tit">二、动画原意</h4>
+                <p class="txt">动画 是为了吸引，引导用户视线而做的，而不是它在动喔，为了什么动，以什么节奏在动，以什么目的在动，没有下文，这样的效果不做也罢</p>-->
+            </div>
+            
+            <div class="mod_txt">
+                <h4 class="tit">二、步骤</h4>
+                <p class="txt">"扫" 是一个过程，需要确定好步骤顺序；</p>
+                <p class="txt">"扫" ：1）手拿手机；2）平移对焦；3）然后 叮；4）获得。</p>
+            </div>
+            
+            <div class="mod_txt">
+                <h4 class="tit">三、现实</h4>
+                <p class="txt">动画 是为了吸引，引导用户视线而做的，而不是它在动喔，为了什么动，以什么节奏在动，以什么目的在动，没有下文，这样的效果不做也罢；</p>
+                <p class="txt">1）"平移对焦"、"叮"、"获得" 这几个状态如果都做出来，需要一定的 时间量；</p>
+                <p class="txt">2）因为终结状态是"获得"，就不需要再"平移对焦"了，所以不适合 循环动画；</p>
+                <p class="txt">3）所以"扫"的过程简化为：1）手拿手机；2）平移对焦；</p>
+                <p class="txt">这样就可以在"平移对焦"的状态循环，而且也没有必须的动画，用户可以随时终止。</p>
+            </div>
+            
+            <div class="mod_txt">
+                <h4 class="tit">四、还原</h4>
+                <p class="txt">"扫" 具体怎么表现呢？</p>
+                <p class="txt">想一想不过不要猜，一切围绕现实，还原现实。</p>
+                <div class="img_area">
+                    <div class="img_box">
+                        <img src="data/IMG_3227.png" class="demo_img" width="320" alt=""/>
+                    </div>
+                </div>
+                <p class="txt">微信扫一扫开启，然后‘截屏’，抽取里面的扫描线;</p>
+                <p class="txt">我们不需要连框带icon都照搬，只需要抽象出里面的关键动作即可，对于微信扫一扫这功能，代表性的关键动作非 那条上下滚动的横线莫属</p>
+                <p class="txt"><br/></p>
+                <p class="txt">话说，设计稿里面没有这条线的喔？！！！！需要让设计师做给我喔？！！！！设计师会不会反感？！！！！</p>
+                <p class="txt">一条线而已，何必惊动设计师呢。</p>
+                <p class="txt">拉一条高1px的横线，左右渐变透明中间实色+外发光，具体代码如下：</p>
+                <p class="txt">background:-moz-linear-gradient(left,rgba(180,245,105,0) 0%,rgba(180,245,105,1) 40%,rgba(180,245,105,1) 60%,rgba(180,245,105,0) 100%);</p>
+                <p class="txt">box-shadow:0 0 3px rgba(180,245,105,1),0 0 1px rgba(180,245,105,0.6);</p>
+                <p class="txt">这样就解决了上面的前面‘没有线’以及‘让设计师帮我设计’的两个问题，那么设计师会不会反感呢？</p>
+                <p class="txt">只要你确保自己做的改动，是在‘优化’，而不是在‘糟蹋’，产品跟设计师一般都OK的，不过记得修改后必须知悉设计师，因为你动了人家的产出；</p>
+                <p class="txt"><br/></p>
+                <p class="txt">那么根据设计稿的层叠关系，我们可以把所需的图片切割为如下切片：</p>
+                
+                <div class="img_area">
+                    <div class="img_box">
+                    	1、<img src="img/sprite_ori/flag_bg.png" class="demo_img" alt=""/>
+                    </div>
+                </div>
+                <div class="img_area">
+                    <div class="img_box">
+                        2、<img src="img/sprite_ori/hand.png" class="demo_img" alt=""/>
+                    </div>
+                </div>
+                <div class="img_area">
+                    <div class="img_box">
+                        3、<img src="img/sprite_ori/hand_1.png" class="demo_img" alt=""/>
+                    </div>
+                </div>
+                <div class="img_area">
+                    <div class="img_box">
+                        4、<img src="img/sprite_ori/hand_2.png" class="demo_img" alt=""/>
+                    </div>
+                </div>
+                <div class="img_area">
+                    <div class="img_box">
+                        5、<img src="img/sprite_ori/sprite_scan_ie.png" class="demo_img" alt=""/>
+                    </div>
+                </div>
+                
+                <p class="txt"><br/></p>
+                <p class="txt">然后我们按部就班，将各个零件定位，就得到了这样的效果：</p>
+                <div class="mod_iframe">
+                    <iframe class="iframe" src="demo_solve.html"></iframe>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="mod_con" id="link_color">
+        <h3 class="title">不要以为这样就结束了</h3>
+        
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/q&a_3.jpg" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="txt_con">
+        	<div class="mod_txt">
+        		<p class="txt">玄机？！！！！ 特效 不是已经做了好了么，还有什么玄机？</p>
+        		<p class="txt">忽略我蹭了一顿饭的事实，我们重点请放在‘玄机’二字。</p>
+                <p class="txt">如果我们不做这个动画特效，那我们只需要切一张图片，而现在，IE跟原来一样，但是做了特效的变成了需要请求4张图片，</p>
+                <p class="txt">所以，下一个环节需要做的，就是把切割开来的切片合并成 <strong>sprite</strong>。</p>
+                <p class="txt">那应该选 <strong>png8</strong> 还是 <strong>png24</strong> 呢？</p>
+                <p class="txt">手的边缘是弧状的，手的投影是半透明的，标题绸带也有个斜线的左右边缘，所以，用 <strong>png24</strong> ？</p>
+            </div>
+        </div>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="img/sprite_bg.png" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="txt_con">
+        	<div class="mod_txt">
+        		<p class="txt">如上图，我用的是 <strong>png8</strong>；</p>
+        		<p class="txt">因为我们可以发现，切片元素所处的背景都是纯色背景，所以可以将保存为 png8 然后再合并成 sprite</p>
+                <p class="txt"><br/></p>
+                <p class="txt">TIPS: 用Photoshop的话，可以按 ctrl+shift+alt+s 组合键，将图片存为web格式，然后杂色项色值设置为你需要的纯色背景色，如下图：</p>
+            </div>
+        </div>
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/ps.png" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div>
+        <div class="txt_con">
+        	<div class="mod_txt">
+                <p class="txt"><br/></p>
+                <p class="txt">所以你可以看到，我的 sprite 里面小切片是带杂边的，但是为什么不直接拼在一起后再保存呢？</p>
+                <p class="txt">因为保存的杂边颜色不一样，两只手的杂边是浅灰色的，所以要分开保存杂边再合并；</p>
+                <p class="txt"><br/></p>
+                <p class="txt">这个时候，不知道有没有人要问：最上面的 标题绸带 左右边缘 为什么要填三角形？</p>
+                <p class="txt">因为 标题绸带 左右边缘背景色是红色，而中间的弧形，其实就是被橙色大圆盖住的部分，是橙色</p>
+                <p class="txt">一个图要保存两个杂色边是不可能的</p>
+                <p class="txt">所以我用红色背景把它左右边缘填充成规则边缘，这样就只需要保存 橙色杂色 就可以满足需求了</p>
+                <p class="txt"><br/></p>
+                <p class="txt">做到这里，才算是搞定了，然后我们发现：</p>
+            </div>
+        </div> 
+        <div class="img_con">
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/sprite_size_1.png" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+            <div class="img_area">
+                <div class="img_box">
+                	<img src="data/sprite_size_2.png" class="demo_img" alt=""/>
+                    <p class="txt"></p>
+                </div>
+            </div>
+        </div> 
+        <div class="txt_con">
+        	<div class="mod_txt">
+                <p class="txt">发现，我们不仅做了动画特效，还做了带宽优化，切图的大小比直接用原来的设计稿切图，减少了 0.39k</p>
+                <p class="txt">0.39k 是少在哪里呢？</p>
+                <p class="txt">橙色背景，因为我们直接用 背景色+圆角 实现了</p>
+            </div>
+        </div> 
+          
+    </div>
+    
+</div>
+
+</body>
+</html>
