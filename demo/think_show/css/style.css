@@ -189,6 +189,13 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 .wrap_show .detail_wrap .txt_5{-webkit-animation-delay:1.5s;}
 .wrap_show .detail_wrap .txt_6{-webkit-animation-delay:1.8s;}
 
+.wrap_show .info_wrap .link_recommend{-webkit-animation:a_detail_wrap_txt 0.3s linear both;}
+.wrap_show .info_title{-webkit-animation:a_detail_wrap_txt 0.3s 0.3s linear both;}
+.wrap_show .info_detail{-webkit-animation:a_detail_wrap_txt 0.3s 0.6s linear both;}
+.wrap_show .logo_small{-webkit-animation:a_detail_wrap_txt 0.3s 0.9s linear both;}
+.wrap_show .info_script{-webkit-animation:a_detail_wrap_txt 0.3s 1.2s linear both;}
+
+
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
 	body{ line-height:1.7;}
