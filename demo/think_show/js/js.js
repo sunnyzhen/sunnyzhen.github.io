@@ -72,7 +72,7 @@ $(document).ready(function(){
 		$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
 	});
 	
-	$(".info_wrap .link_recommend .icon_star").click(function(){
+	$(".info_title").click(function(){
 		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 	});
