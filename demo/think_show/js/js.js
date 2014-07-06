@@ -32,6 +32,20 @@ $(document).ready(function(){
 			$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
 			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 		},
+		wipeDown: function() { 
+			$(".con_wrap_2").addClass("wrap_hide");
+			$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
+		},
+		min_move_x: 80,
+		min_move_y: 80,
+		preventDefaultEvents: true
+	});
+	
+	$(".con_wrap_3").touchwipe({
+		wipeUp: function() { 
+			$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
+			$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
+		},
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
@@ -48,6 +62,11 @@ $(document).ready(function(){
 		$(".con_wrap_2").removeClass("wrap_prepare").addClass("wrap_show");
 	});
 	
+	$(".link_next_3").click(function(){
+		$(".con_wrap_2").addClass("wrap_hide");
+		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
+	});
+	
 	$(".detail_star").click(function(){
 		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
@@ -56,6 +75,11 @@ $(document).ready(function(){
 	$(".info_wrap .link_recommend .icon_star").click(function(){
 		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	
+	$(".logo_middle").click(function(){
+		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
 	});
 	
 });
