@@ -106,22 +106,16 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 
 .con_wrap_1 .bg{ display:block; width:100%; height:100%; position:absolute; top:0px; left:0px; background:url(../images/bg_2.jpg) no-repeat center 0; background-size:contain; z-index:1;}
 
-.con_wrap .detail_wrap{ display:block; width:225px; position:absolute; top:65px; left:50%; margin-left:-80px; z-index:3; border-left:1px solid #dbe0ed; padding-left:11px; padding-top:11px; color:#fff; font-size:12px; font-family:"microsoft yahei"; height:0px; -webkit-animation:a_detail_wrap 1.8s 0.2s linear both;}
+.con_wrap .detail_wrap{ display:block; width:225px; position:absolute; top:65px; left:50%; margin-left:-80px; z-index:3; border-left:1px solid #dbe0ed; padding-left:11px; padding-top:11px; color:#fff; font-size:12px; font-family:"microsoft yahei"; height:0px;}
 
 @-webkit-keyframes a_detail_wrap{
 	0%{ height:0px;}
 	100%{ height:230px;}
 }
 
-.con_wrap .detail_wrap .txt{ margin-bottom:8px; position:relative; opacity:0; -webkit-animation:a_detail_wrap_txt 0.2s 0.3s linear both;}
+.con_wrap .detail_wrap .txt{ margin-bottom:8px; position:relative; opacity:0;}
 .con_wrap .detail_wrap .txt .dot{ display:block; height:5px; width:5px; position:absolute; left:-14px; top:6px; background:#fff; border-radius:4px;}
 .con_wrap .detail_wrap .tips{ color:#f4cd19;}
-
-.con_wrap .detail_wrap .txt_2{-webkit-animation-delay:0.6s;}
-.con_wrap .detail_wrap .txt_3{-webkit-animation-delay:0.9s;}
-.con_wrap .detail_wrap .txt_4{-webkit-animation-delay:1.2s;}
-.con_wrap .detail_wrap .txt_5{-webkit-animation-delay:1.5s;}
-.con_wrap .detail_wrap .txt_6{-webkit-animation-delay:1.8s;}
 
 @-webkit-keyframes a_detail_wrap_txt{
 	0%{ opacity:0;}
@@ -186,6 +180,14 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 .wrap_hide{ top:-100%; z-index:1;}
 .wrap_prepare{ top:100%;}
 
+.wrap_show .detail_wrap{-webkit-animation:a_detail_wrap 1.8s 0.2s linear both;}
+.wrap_show .detail_wrap .txt{-webkit-animation:a_detail_wrap_txt 0.2s 0.3s linear both;}
+
+.wrap_show .detail_wrap .txt_2{-webkit-animation-delay:0.6s;}
+.wrap_show .detail_wrap .txt_3{-webkit-animation-delay:0.9s;}
+.wrap_show .detail_wrap .txt_4{-webkit-animation-delay:1.2s;}
+.wrap_show .detail_wrap .txt_5{-webkit-animation-delay:1.5s;}
+.wrap_show .detail_wrap .txt_6{-webkit-animation-delay:1.8s;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
