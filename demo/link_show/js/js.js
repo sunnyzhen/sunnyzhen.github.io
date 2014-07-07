@@ -33,8 +33,9 @@ $(document).ready(function(){
 			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 		},
 		wipeDown: function() { 
-			$(".con_wrap_2").addClass("wrap_hide");
-			$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
+			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+			$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_prepare");
+			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 		},
 		min_move_x: 80,
 		min_move_y: 80,
@@ -63,8 +64,14 @@ $(document).ready(function(){
 	});
 	
 	$(".link_next_3").click(function(){
-		$(".con_wrap_2").addClass("wrap_hide");
-		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
+		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_prepare");
+		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	
+	$(".link_next_4").click(function(){
+		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
 	});
 	
 	$(".detail_star").click(function(){
@@ -80,6 +87,11 @@ $(document).ready(function(){
 	$(".logo_middle").click(function(){
 		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	
+	$(".logo_small").click(function(){
+		$(".con_wrap_2").addClass("wrap_hide");
+		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
 	});
 	
 	
