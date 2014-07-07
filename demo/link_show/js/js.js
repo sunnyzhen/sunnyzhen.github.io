@@ -82,9 +82,8 @@ $(document).ready(function(){
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
 	});
 	
-});
-
-(function(){
+	
+	/*微信转发图片*/
 	
 	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
 	var lineLink = location.href;
@@ -141,7 +140,7 @@ $(document).ready(function(){
 		});
 	}, false);
 	
-})();
+});
 
 
 
