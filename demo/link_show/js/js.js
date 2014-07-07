@@ -86,7 +86,7 @@ $(document).ready(function(){
 
 (function(){
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.png';
+	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
 	var lineLink = location.href;
 	var descContent = document.getElementsByName('description')[0].getAttribute('content');
 	var shareTitle = document.title;
