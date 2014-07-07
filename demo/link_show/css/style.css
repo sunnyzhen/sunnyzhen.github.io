@@ -148,7 +148,7 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 .info_script{ position:absolute; margin:0px 40px; left:0px; top:212px; text-align:left; color:#fcfcfd;  }
 .info_script .txt{ text-indent:2em;}
 
-.logo_recruit{ display:block; height:16px; width:48px; background:url(../images/logo_recruit.png) no-repeat 0 0; background-size:contain; position:absolute; right:50%; margin-right:-140px; bottom:15px; text-indent:-9999px; overflow:hidden; z-index:2;}
+.logo_recruit{ display:block; height:16px; width:48px; background:url(../images/logo_recruit.png) no-repeat 0 0; background-size:contain; position:absolute; right:50%; margin-right:-140px; bottom:15px; text-indent:-9999px; overflow:hidden; z-index:3;}
 .logo_small{ display:block; height:50px; width:85px; background:url(../images/logo_small.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-42px; top:290px; text-indent:-9999px; overflow:hidden;}
 .logo_middle{ display:block; height:113px; width:202px; background:url(../images/logo_m.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-101px; top:78px; text-indent:-9999px; overflow:hidden;}
 
