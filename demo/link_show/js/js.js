@@ -94,6 +94,11 @@ $(document).ready(function(){
 		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
 	});
 	
+	$(".link_intro").click(function(){
+		$(".con_wrap_2").addClass("wrap_hide");
+		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
+	});
+	
 	
 	/*微信转发图片*/
 	
