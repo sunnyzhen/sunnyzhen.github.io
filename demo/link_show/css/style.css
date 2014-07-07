@@ -67,7 +67,7 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 	100%{ -webkit-transform:scale(1); opacity:1;}
 }
 
-.item_o .circle_2{ display:block; height:20px; width:52px; background:url(../images/logo_circle_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:13px; -webkit-animation:a_star_circle_2 0.2s 1s linear both; opacity:0;}
+.item_o .circle_2{ display:block; height:23px; width:52px; background:url(../images/logo_circle_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:11px; -webkit-animation:a_star_circle_2 0.2s 1s linear both; opacity:0;}
 
 @-webkit-keyframes a_star_circle_2{
 	0%{opacity:0;}
@@ -149,8 +149,7 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 .info_script .txt{ text-indent:2em;}
 
 .logo_recruit{ display:block; height:16px; width:48px; background:url(../images/logo_recruit.png) no-repeat 0 0; background-size:contain; position:absolute; right:50%; margin-right:-140px; bottom:15px; text-indent:-9999px; overflow:hidden; z-index:3;}
-.logo_small{ display:block; height:50px; width:85px; background:url(../images/logo_small.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-42px; top:210px; text-indent:-9999px; overflow:hidden;}
-.logo_middle{ display:block; height:113px; width:202px; background:url(../images/logo_m.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-101px; top:78px; text-indent:-9999px; overflow:hidden;}
+.logo_small,.logo_middle{ display:block; height:50px; width:85px; background:url(../images/logo_m.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-42px; top:210px; text-indent:-9999px; overflow:hidden;}
 
 .star_array{ display:block; height:267px; width:265px; background:url(../images/star_array.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-132px; top:38px; z-index:2; -webkit-animation:a_star_array 30s linear infinite;}
 
