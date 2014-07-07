@@ -69,7 +69,7 @@ $(document).ready(function(){
 		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 	});*/
 	
-	$(".link_next_4").click(function(){
+	/*$(".link_next_4").click(function(){
 		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
 	});
@@ -87,7 +87,7 @@ $(document).ready(function(){
 	$(".logo_middle").click(function(){
 		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
-	});
+	});*/
 	
 	$(".logo_small").click(function(){
 		$(".con_wrap_2").addClass("wrap_hide");
