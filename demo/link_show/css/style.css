@@ -85,7 +85,7 @@ body{ background:url(../images/bg.jpg) 0 0; line-height:1.5;}
 }
 
 .cover_wrap .detail_wrap{ width:100%; text-align:center; color:#fff; font-size:14px; font-family:"microsoft yahei"; position:absolute; left:0; top:210px; z-index:2;}
-.cover_wrap .detail_wrap .tips{ color:#e0bf33;}
+.cover_wrap .detail_wrap .tips{ color:#e0bf33; font-weight:bold;}
 
 .link_next{ display:block; height:24px; width:24px; position:absolute; left:50%; bottom:20px; margin-left:-12px; background:rgba(160,160,160,0.3); border-radius:24px; z-index:2;}
 .link_next .inner{ display:block; height:24px; width:24px; border-radius:24px; position:absolute; left:0px; top:0px; background:rgba(160,160,160,0.3); opacity:0.6; -webkit-animation:a_link_next 1s linear infinite;}
