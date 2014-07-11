@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/*!
+ * 好莱坞影院 暑假版
+ *
+ * Author：Sunnycchen
+ *
+ */
+
+.head_wrap_summer_holiday{ background:#d5eeff url(../img/summer_holiday/bg.jpg) no-repeat center 0; _background:#d5eeff url(../img/summer_holiday/bg_1180_ie6.jpg) no-repeat center 0;}
+.head_wrap_summer_holiday .head{ padding-top:89px;}
+.head_wrap_summer_holiday .function{ top:89px; right:46px; z-index:2;}
+.head_wrap_summer_holiday .function_item .function_item_title .sperate_line{ display:none;}
+
+.logo_wrap{ display:none;}
+.head_wrap_summer_holiday .logo_wrap{ display:block; height:150px; width:588px; position:absolute; left:-320px; bottom:0px; background:url(../img/summer_holiday/sprite.png) no-repeat 0 0; z-index:1; _display:none;}
+.head_wrap_summer_holiday .hammock{ display:block; height:156px; width:307px; background: url(../img/summer_holiday/sprite.png) no-repeat -80px -155px; position:absolute; left:207px; top:-6px; -moz-animation:a_wind 3s infinite alternate; -moz-transform-origin:50% 100%; -webkit-animation:a_wind 3s infinite alternate; -webkit-transform-origin:50% 100%; z-index:3;}
+
+@-moz-keyframes a_wind{
+	0%{-moz-transform:skew(0deg,0deg);}
+	25%{-moz-transform:skew(-1deg,0deg);}
+	50%{-moz-transform:skew(0.5deg,0deg);}
+	75%{-moz-transform:skew(-0.5deg,0deg);}
+	100%{-moz-transform:skew(0deg,0deg);}
+}
+
+@-webkit-keyframes a_wind{
+	0%{-webkit-transform:skew(0deg,0deg);}
+	25%{-webkit-transform:skew(-1deg,0deg);}
+	50%{-webkit-transform:skew(0.5deg,0deg);}
+	75%{-webkit-transform:skew(-0.5deg,0deg);}
+	100%{-webkit-transform:skew(0deg,0deg);}
+}
+
+.head_wrap_summer_holiday .hammock .flag_z_1{ display:block; height:12px; line-height:12px; text-align:center; width:12px; color:#fff; position:absolute; left:145px; top:105px; -moz-animation:a_sleep 1.5s infinite; -moz-transform:scale(0.2); -webkit-animation:a_sleep 1.5s infinite; -webkit-transform:scale(0.2); opacity:0.2; left:147px\9; top:100px\9;}
+.head_wrap_summer_holiday .hammock .flag_z_2{ display:block; height:12px; line-height:12px; text-align:center; width:12px; color:#fff; position:absolute; left:145px; top:105px; -moz-animation:a_sleep 1.5s 0.5s infinite; -moz-transform:scale(0.2);  -webkit-animation:a_sleep 1.5s 0.5s infinite; -webkit-transform:scale(0.2); opacity:0.2; left:152px\9; top:93px\9;}
+
+@-moz-keyframes a_sleep{
+	0%{-moz-transform: scale(0.2) translate(0,0); opacity:0.2;}
+	25%{opacity:0.6;}
+	50%{opacity:1;}
+	75%{ opacity:0.6;}
+	100%{-moz-transform: scale(1) translate(15px,-15px); opacity:0;}
+}
+
+
+@-webkit-keyframes a_sleep{
+	0%{-webkit-transform: scale(0.2) translate(0,0); opacity:0.2;}
+	25%{opacity:0.6;}
+	50%{opacity:1;}
+	75%{ opacity:0.6;}
+	100%{-webkit-transform: scale(1) translate(15px,-15px); opacity:0;}
+}
+
+.head_wrap_summer_holiday .leg_1{ display:block; height:16px; width:18px; background:url(../img/summer_holiday/sprite_24.png) no-repeat 0 -90px; position:absolute; left:387px; top:105px; -moz-animation:a_leg_1 3s infinite; -moz-transform-origin:0% 100%; -webkit-animation:a_leg_1 3s infinite; -webkit-transform-origin:0% 100%; z-index:2;}
+.head_wrap_summer_holiday .leg_2{ display:block; height:16px; width:16px; border-radius:5px; background:#e5b67a; position:absolute; left:390px; top:112px; -moz-transform-origin:0% 50%; -moz-transform:rotate(45deg); -webkit-transform-origin:0% 50%; -webkit-transform:rotate(45deg); z-index:1;}
+
+@-moz-keyframes a_leg_1{
+	0%{-moz-transform:rotate(0deg);}
+	20%{-moz-transform:rotate(-5deg);}
+	40%{-moz-transform:rotate(20deg);}
+	60%{-moz-transform:rotate(0deg);}
+	80%{-moz-transform:rotate(10deg);}
+	100%{-moz-transform:rotate(0deg);}
+}
+
+@-webkit-keyframes a_leg_1{
+	0%{-webkit-transform:rotate(0deg);}
+	20%{-webkit-transform:rotate(-5deg);}
+	40%{-webkit-transform:rotate(20deg);}
+	60%{-webkit-transform:rotate(0deg);}
+	80%{-webkit-transform:rotate(10deg);}
+	100%{-webkit-transform:rotate(0deg);}
+}
+
+
+.head_wrap_summer_holiday .hammock .coco{ display:block; height:20px; width:18px; background: url(../img/summer_holiday/sprite_24.png) no-repeat -83px 0; position:absolute; left:43px; top:44px; -moz-animation:a_coco 5s linear infinite; -moz-transform-origin:50% 0%; -moz-transform:scale(0.2); -webkit-animation:a_coco 5s linear infinite; -webkit-transform-origin:50% 0%; -webkit-transform:scale(0.2); opacity:0;}
+
+@-moz-keyframes a_coco{
+	0%{-moz-transform:scale(0.2); opacity:0;}
+	15%{-moz-transform:scale(1) rotate(-2deg); opacity:1;}
+	20%{-moz-transform:scale(1) rotate(4deg); opacity:1;}
+	25%{-moz-transform:scale(1) rotate(-2deg); opacity:1;}
+	30%{-moz-transform:scale(1) rotate(0deg); opacity:1;}
+	35%{-moz-transform:scale(1) rotate(-2deg); opacity:1;}
+	40%{-moz-transform:scale(1) rotate(4deg); opacity:1;}
+	45%{-moz-transform:scale(1) rotate(-2deg); opacity:1;}
+	
+	50%{-moz-transform:scale(1) rotate(0deg); opacity:1;}
+	54%{-moz-transform:scale(1) rotate(0deg) translate(0,20px); opacity:1;}
+	58%{-moz-transform:scale(1) rotate(0deg) translate(0,45px); opacity:1;}
+	62%{-moz-transform:scale(1) rotate(0deg) translate(0,92px); opacity:1;}
+	
+	65%{-moz-transform:scale(1) rotate(0deg) translate(-3px,90px); opacity:1;}
+	68%{-moz-transform:scale(1) rotate(0deg) translate(-6px,88px); opacity:1;}
+	71%{-moz-transform:scale(1) rotate(0deg) translate(-9px,90px); opacity:1;}
+	74%{-moz-transform:scale(1) rotate(0deg) translate(-12px,92px); opacity:1;}
+	77%{-moz-transform:scale(1) rotate(0deg) translate(-20px,92px); opacity:0;}
+}
+
+
+@-webkit-keyframes a_coco{
+	0%{-webkit-transform:scale(0.2); opacity:0;}
+	15%{-webkit-transform:scale(1) rotate(-2deg); opacity:1;}
+	20%{-webkit-transform:scale(1) rotate(4deg); opacity:1;}
+	25%{-webkit-transform:scale(1) rotate(-2deg); opacity:1;}
+	30%{-webkit-transform:scale(1) rotate(0deg); opacity:1;}
+	35%{-webkit-transform:scale(1) rotate(-2deg); opacity:1;}
+	40%{-webkit-transform:scale(1) rotate(4deg); opacity:1;}
+	45%{-webkit-transform:scale(1) rotate(-2deg); opacity:1;}
+	
+	50%{-webkit-transform:scale(1) rotate(0deg); opacity:1;}
+	54%{-webkit-transform:scale(1) rotate(0deg) translate(0,20px); opacity:1;}
+	58%{-webkit-transform:scale(1) rotate(0deg) translate(0,45px); opacity:1;}
+	62%{-webkit-transform:scale(1) rotate(0deg) translate(0,92px); opacity:1;}
+	
+	65%{-webkit-transform:scale(1) rotate(0deg) translate(-3px,90px); opacity:1;}
+	68%{-webkit-transform:scale(1) rotate(0deg) translate(-6px,88px); opacity:1;}
+	71%{-webkit-transform:scale(1) rotate(0deg) translate(-9px,90px); opacity:1;}
+	74%{-webkit-transform:scale(1) rotate(0deg) translate(-12px,92px); opacity:1;}
+	77%{-webkit-transform:scale(1) rotate(0deg) translate(-20px,92px); opacity:0;}
+}
+
+
+.head_wrap_summer_holiday .head .logo{ position:relative; z-index:2;}
+.head_wrap_summer_holiday .head .logo a{ display:block; height:42px; width:120px; background: url(../img/summer_holiday/sprite_24.png) no-repeat -23px -91px; z-index:1; position:relative; top:-30px; left:-3px; _background:none;}
+.logo_title{ display:none;}
+.head_wrap_summer_holiday .logo_title{ display:block; height:40px; width:115px; position:absolute; left:0px; top:33px; z-index:2; _display:none;}
+.head_wrap_summer_holiday .logo_title .txt_1{ display:block; height:21px; width:19px; background: url(../img/summer_holiday/sprite_24.png) no-repeat 0 0; position:absolute; left:30px; top:6px; text-indent:-9999px; overflow:hidden; z-index:1; -moz-animation:a_logo_title_txt 0.15s 1s linear both; -webkit-animation:a_logo_title_txt 0.15s 1s linear both;}
+.head_wrap_summer_holiday .logo_title .txt_2{ display:block; height:21px; width:21px; background: url(../img/summer_holiday/sprite_24.png) no-repeat -24px 0; position:absolute; left:47px; top:4px; text-indent:-9999px; overflow:hidden; z-index:1; -moz-animation:a_logo_title_txt 0.15s 1.15s linear both; -webkit-animation:a_logo_title_txt 0.15s 1.15s linear both;}
+.head_wrap_summer_holiday .logo_title .txt_3{ display:block; height:23px; width:22px; background: url(../img/summer_holiday/sprite_24.png) no-repeat -50px 0; position:absolute; left:65px; top:6px; text-indent:-9999px; overflow:hidden; z-index:1; -moz-animation:a_logo_title_txt 0.15s 1.3s linear both; -webkit-animation:a_logo_title_txt 0.15s 1.3s linear both;}
+.head_wrap_summer_holiday .logo_title .rainbow{ display:block; height:30px; width:0px; width:114px\9; background:url(../img/summer_holiday/sprite_24.png) no-repeat 0 -28px; position:absolute; left:0px; top:10px; -moz-animation:a_rainbow 0.5s 0.5s linear both; -webkit-animation:a_rainbow 0.5s 0.5s linear both;}
+
+@-moz-keyframes a_rainbow{
+	0%{width:0px;}
+	100%{width:114px;}
+}
+
+@-moz-keyframes a_logo_title_txt{
+	0%{-moz-transform:scale(0.2); opacity:0;}
+	80%{-moz-transform:scale(1.1); opacity:1;}
+	90%{-moz-transform:scale(0.95); opacity:1;}
+	100%{-moz-transform:scale(1); opacity:1;}
+}
+
+@-webkit-keyframes a_rainbow{
+	0%{width:0px;}
+	100%{width:114px;}
+}
+
+@-webkit-keyframes a_logo_title_txt{
+	0%{-webkit-transform:scale(0.2); opacity:0;}
+	80%{-webkit-transform:scale(1.1); opacity:1;}
+	90%{-webkit-transform:scale(0.95); opacity:1;}
+	100%{-webkit-transform:scale(1); opacity:1;}
+}
+
+
+.head_wrap_summer_holiday .head .cloud_wrap{ _display:none;}
+.head_wrap_summer_holiday .head .cloud{ display:block; background:url(../img/summer_holiday/cloud.png) no-repeat 0 0; position:absolute; background-size:contain;}
+.head_wrap_summer_holiday .head .cloud_1{ height:42px; width:80px; left:-350px; top:43px; -moz-animation:a_cloud_1 90s linear infinite; -webkit-animation:a_cloud_1 90s linear infinite; background:url(../img/summer_holiday/cloud_1.png) no-repeat 0 0\9;}
+.head_wrap_summer_holiday .head .cloud_2{ height:89px; width:177px; left:-270px; top:13px; -moz-animation:a_cloud_2 110s linear infinite; -webkit-animation:a_cloud_2 110s linear infinite;}
+.head_wrap_summer_holiday .head .cloud_3{ height:40px; width:90px; left:535px; top:25px; -moz-animation:a_cloud_3 90s linear infinite; -webkit-animation:a_cloud_3 90s linear infinite; height:42px\9; width:80px\9; background:url(../img/summer_holiday/cloud_1.png) no-repeat 0 0\9;}
+.head_wrap_summer_holiday .head .cloud_4{ height:70px; width:136px; left:608px; top:8px; -moz-animation:a_cloud_3 110s linear infinite; -webkit-animation:a_cloud_3 110s linear infinite; height:89px\9; width:177px\9;}
+
+@-moz-keyframes a_cloud_1{
+	0%{-moz-transform: translate(0,0); opacity:1;}
+	5%{-moz-transform: translate(-100px,0); opacity:1;}
+	5.1%{-moz-transform: translate(-100px,-100px); opacity:0;}
+	5.2%{-moz-transform: translate(1520px,-100px); opacity:0;}
+	5.3%{-moz-transform: translate(1520px,0); opacity:0;}
+	10%{-moz-transform: translate(1420px,0); opacity:1;}
+	100%{-moz-transform: translate(0,0); opacity:1;}
+}
+
+@-moz-keyframes a_cloud_2{
+	0%{-moz-transform: translate(0,0); opacity:1;}
+	15%{-moz-transform: translate(-300px,0); opacity:1;}
+	15.1%{-moz-transform: translate(-300px,-100px); opacity:0;}
+	15.2%{-moz-transform: translate(1120px,-100px); opacity:0;}
+	15.3%{-moz-transform: translate(1120px,0); opacity:0;}
+	20%{-moz-transform: translate(1020px,0); opacity:1;}
+	100%{-moz-transform: translate(0,0); opacity:1;}
+}
+
+@-moz-keyframes a_cloud_3{
+	0%{-moz-transform: translate(0,0); opacity:1;}
+	60%{-moz-transform: translate(-1100px,0); opacity:1;}
+	60.1%{-moz-transform: translate(-1100px,-100px); opacity:0;}
+	60.2%{-moz-transform: translate(620px,-100px); opacity:0;}
+	60.3%{-moz-transform: translate(620px,0); opacity:0;}
+	65%{-moz-transform: translate(520px,0); opacity:1;}
+	100%{-moz-transform: translate(0,0); opacity:1;}
+}
+
+@-webkit-keyframes a_cloud_1{
+	0%{-webkit-transform: translate(0,0); opacity:1;}
+	5%{-webkit-transform: translate(-100px,0); opacity:1;}
+	5.1%{-webkit-transform: translate(-100px,-100px); opacity:0;}
+	5.2%{-webkit-transform: translate(1520px,-100px); opacity:0;}
+	5.3%{-webkit-transform: translate(1520px,0); opacity:0;}
+	10%{-webkit-transform: translate(1420px,0); opacity:1;}
+	100%{-webkit-transform: translate(0,0); opacity:1;}
+}
+
+@-webkit-keyframes a_cloud_2{
+	0%{-webkit-transform: translate(0,0); opacity:1;}
+	15%{-webkit-transform: translate(-300px,0); opacity:1;}
+	15.1%{-webkit-transform: translate(-300px,-100px); opacity:0;}
+	15.2%{-webkit-transform: translate(1120px,-100px); opacity:0;}
+	15.3%{-webkit-transform: translate(1120px,0); opacity:0;}
+	20%{-webkit-transform: translate(1020px,0); opacity:1;}
+	100%{-webkit-transform: translate(0,0); opacity:1;}
+}
+
+@-webkit-keyframes a_cloud_3{
+	0%{-webkit-transform: translate(0,0); opacity:1;}
+	60%{-webkit-transform: translate(-1100px,0); opacity:1;}
+	60.1%{-webkit-transform: translate(-1100px,-100px); opacity:0;}
+	60.2%{-webkit-transform: translate(620px,-100px); opacity:0;}
+	60.3%{-webkit-transform: translate(620px,0); opacity:0;}
+	65%{-webkit-transform: translate(520px,0); opacity:1;}
+	100%{-webkit-transform: translate(0,0); opacity:1;}
+}
+
+.head_wrap_summer_holiday .mod_search{ background:rgba(247,231,206,0.7); background:url(../img/summer_holiday/mod_search_bg.png) 0 0\9;  _background:#daf4d9; width:422px; height:44px; padding:26px 33px; position:absolute; top:55px; left:360px; z-index:2;}
+.head_wrap_summer_holiday .mod_search .btn_search{ background:#6ea418; border:1px solid #6ea418; top:26px;}
+.head_wrap_summer_holiday .mod_search .mod_search_txt{ border:1px solid #ededed; width:292px; position:absolute; left:33px; top:26px;}
+.head_wrap_summer_holiday .mod_search .icon_search{ left:45px; top:40px; background:url(../img/summer_holiday/sprite_24.png) no-repeat 0 -63px;}
+
+.head_wrap_summer_holiday .function_item .function_item_title .icon{ background-image:url(../img/summer_holiday/sprite_24.png); _background-image:url(../img/summer_holiday/icon_sprite_ie6.png);}
+
+.head_wrap_summer_holiday .function_item .function_item_title .icon_message{ background-position:-21px -60px; _background-position:0 3px;}
+.head_wrap_summer_holiday .function_item .function_item_title .icon_history{ background-position: -49px -62px; _background-position:-26px 0px;}
+.head_wrap_summer_holiday .function_item .function_item_title .icon_coupon{ background-position: -78px -62px; _background-position:-56px 0px;}
+
+
+.head_wrap_summer_holiday .function_item .function_item_title:hover .icon_message{_background-position:0 3px;}
+.head_wrap_summer_holiday .function_item .function_item_title:hover .icon_history{_background-position:-26px 0px;}
+.head_wrap_summer_holiday .function_item .function_item_title:hover .icon_coupon{_background-position:-56px 0px;}
+
+.head_wrap_summer_holiday .hover .function_item_title .icon_message{_background-position:0 3px;}
+.head_wrap_summer_holiday .hover .function_item_title .icon_history{_background-position:-26px 0px;}
+.head_wrap_summer_holiday .hover .function_item_title .icon_coupon{ _background-position:-56px 0px;}
+
+
+.head_wrap_summer_holiday .function_item .function_item_title:hover .function_name,.head_wrap_summer_holiday  .hover .function_item_title .function_name{ color:#578114;}
+.head_wrap_summer_holiday .function_item .function_item_title .function_name,.head_wrap_summer_holiday .function_item_title .function_name{ color:#578114;}
+
+.head_wrap_summer_holiday .head .sun{ display:block; height:84px; width:84px; background:#fef164; position:absolute; left:1224px; top:-38px; border-radius:84px; -moz-animation:a_sun 2s linear infinite; -webkit-animation:a_sun 2s linear infinite; display:none\9;}
+
+@-moz-keyframes a_sun{
+	0%{ box-shadow:0px 0px 0px rgba(254,241,100,0);}
+	50%{ box-shadow:0px 0px 100px rgba(254,241,100,1);}
+	100%{ box-shadow:0px 0px 0px rgba(254,241,100,0);}
+}
+
+@-webkit-keyframes a_sun{
+	0%{ box-shadow:0px 0px 0px rgba(254,241,100,0);}
+	50%{ box-shadow:0px 0px 100px rgba(254,241,100,1);}
+	100%{ box-shadow:0px 0px 0px rgba(254,241,100,0);}
+}
+
+.head_wrap_summer_holiday .head .boat{ display:block; height:127px; width:75px; background: url(../img/summer_holiday/sprite.png) no-repeat 0 -155px; position:absolute; left:233px; top:42px; -moz-animation:a_boat 5s linear infinite; -webkit-animation:a_boat 5s linear infinite; _display:none;}
+
+@-moz-keyframes a_boat{
+	0%{ -moz-transform:translate(0,0);}
+	10%{ -moz-transform:translate(-5px,-2px);}
+	50%{ -moz-transform:translate(10px,0);}
+	100%{ -moz-transform:translate(0,0);}
+}
+
+@-webkit-keyframes a_boat{
+	0%{ -webkit-transform:translate(0,0);}
+	10%{ -webkit-transform:translate(-5px,-2px);}
+	50%{ -webkit-transform:translate(10px,0);}
+	100%{ -webkit-transform:translate(0,0);}
+}
+
+.head_wrap_summer_holiday .umbrella{ display:block; height:58px; width:65px; background: url(../img/summer_holiday/sprite.png) no-repeat 0px -287px; position:absolute; left:1184px; top:67px; -moz-animation:a_wind 2s linear infinite; -moz-transform-origin:45% 100%; -webkit-animation:a_wind 2s linear infinite; -webkit-transform-origin:45% 100%; _display:none;}
+
+.head_wrap_summer_holiday .surfing_wrap{ display:block; height:130px; width:340px; position:absolute; left:835px; top:0px; _display:none;}
+.head_wrap_summer_holiday .surfing_wrap .wave{ display:block; background: url(../img/summer_holiday/sprite.png) no-repeat -392px -155px; position:absolute; -moz-transform-origin:0% 100%; -moz-transform:scale(0) translate(0,0); -webkit-transform-origin:0% 100%; -webkit-transform:scale(0) translate(0,0);}
+.head_wrap_summer_holiday .surfing_wrap .wave_1{ height:109px; width:205px; left:0px; bottom:0px; -moz-animation:a_wave 12s linear infinite; -webkit-animation:a_wave 12s linear infinite; z-index:1;}
+.head_wrap_summer_holiday .surfing_wrap .wave_2{ display:block; height:109px; width:205px; left:14px; bottom:0px; -moz-animation:a_wave 12s linear infinite; opacity:0.5; -webkit-animation:a_wave 12s linear infinite; opacity:0.5;}/*
+.head_wrap_summer_holiday .surfing_wrap .wave_3{ display:block; height:109px; width:205px; left:0px; bottom:0px; -moz-animation:a_wave 6s 1s linear infinite; z-index:1;}
+.head_wrap_summer_holiday .surfing_wrap .wave_4{ display:block; height:109px; width:205px; left:14px; bottom:0px; -moz-animation:a_wave 6s 1s linear infinite; opacity:0.5;}*/
+
+/*.head_wrap_summer_holiday .surfing_wrap .wave_2{ display:none; height:109px; width:205px; left:32px; bottom:3px; opacity:0.5;}
+.head_wrap_summer_holiday .surfing_wrap .wave_3{ display:none; height:37px; width:65px; left:200px; bottom:28px; z-index:1;}
+.head_wrap_summer_holiday .surfing_wrap .wave_4{ display:none; height:37px; width:65px; left:214px; bottom:30px; opacity:0.5;}*/
+
+
+@-moz-keyframes a_wave{
+	0%{ -moz-transform:scale(0) translate(0,0); -moz-transform-origin:0% 100%;}
+	22.5%{ -moz-transform:scale(1) translate(50px,20px); -moz-transform-origin:0% 100%;}
+	22.51%{ -moz-transform:scale(1) translate(50px,20px); -moz-transform-origin:110% 100%;}
+	45%{ -moz-transform:scale(0) translate(300px,-65px); -moz-transform-origin:110% 100%;}
+	50%{ -moz-transform:scale(0) translate(0,0); -moz-transform-origin:0% 100%;}
+	100%{ -moz-transform:scale(0) translate(0,0); -moz-transform-origin:0% 100%;}
+}
+
+
+@-webkit-keyframes a_wave{
+	0%{ -webkit-transform:scale(0) translate(0,0); -webkit-transform-origin:0% 100%;}
+	22.5%{ -webkit-transform:scale(1) translate(50px,20px); -webkit-transform-origin:0% 100%;}
+	22.51%{ -webkit-transform:scale(1) translate(50px,20px); -webkit-transform-origin:110% 100%;}
+	45%{ -webkit-transform:scale(0) translate(300px,-65px); -webkit-transform-origin:110% 100%;}
+	50%{ -webkit-transform:scale(0) translate(0,0); -webkit-transform-origin:0% 100%;}
+	100%{ -webkit-transform:scale(0) translate(0,0); -webkit-transform-origin:0% 100%;}
+}
+
+
+.head_wrap_summer_holiday .surfingman{ display:block; height:45px; width:42px; background: url(../img/summer_holiday/sprite_24.png) no-repeat -120px 0; position:absolute; left:2px; bottom:8px; z-index:1; -moz-animation:a_surfingman 12s linear infinite; -moz-transform:scale(0.3); -moz-transform-origin:50% 100%; -webkit-animation:a_surfingman 12s linear infinite; -webkit-transform:scale(0.3); -webkit-transform-origin:50% 100%; left:135px\9; bottom:80px\9;}
+.head_wrap_summer_holiday .surfingman .hand_1{ display:block; height:2px; width:12px; background:#ebb688; position:absolute; left:4px; bottom:22px; z-index:1; -moz-transform-origin:100% 50%; -moz-animation:a_hand_1 12s linear infinite; -webkit-transform-origin:100% 50%; -webkit-animation:a_hand_1 12s linear infinite; display:none\9;}
+.head_wrap_summer_holiday .surfingman .hand_2{ display:block; height:2px; width:10px; background:#ebb688; position:absolute; left:10px; top:10px; z-index:1; -moz-transform-origin:100% 50%; -moz-animation:a_hand_2 1.26s 0.63s linear infinite; -webkit-transform-origin:0% 50%; -webkit-animation:a_hand_2 1.26s 0.63s linear infinite;}
+.head_wrap_summer_holiday .hand_2_wrap{ display:block; height:14px; width:14px; position:absolute; left:22px; top:5px; -moz-transform:rotate(170deg); -moz-animation:a_hand_wrap 12s linear infinite; -webkit-animation:a_hand_wrap 12s linear infinite; display:none\9;}
+
+@-moz-keyframes a_surfingman{
+	0%{ -moz-transform:scale(0.3) translate(0,0);}
+	3%{ -moz-transform:scale(0.3) translate(2px,0);}
+	22%{ -moz-transform:scale(1) translate(170px,-65px);}
+	27%{ -moz-transform:scale(1) translate(200px,-65px);}
+	40%{ -moz-transform:scale(1) translate(300px,-10px);}
+	40.1%{ -moz-transform:translate(300px,-10px) scale(-1,1); background-position: -120px 0; height:45px; width:42px;}
+	45%{ -moz-transform: translate(290px,-10px) scale(-1,1); background-position: -120px 0; height:45px; width:42px;}
+	47%{ -moz-transform: translate(290px,-10px) scale(-1,1) rotate(30deg); background-position: -120px 0; height:45px; width:42px;}
+	47.1%{ -moz-transform: translate(290px,-10px); background-position: -120px -50px; height:33px; width:46px;}
+	99%{ -moz-transform: translate(0,3px) scale(0.3,0.3); background-position: -120px -50px; height:33px; width:46px;}
+	100%{ -moz-transform:scale(0.3) translate(0,3px);}
+}
+
+@-webkit-keyframes a_surfingman{
+	0%{ -webkit-transform:scale(0.3,0.3) translate(0,0);}
+	3%{ -webkit-transform:scale(0.3,0.3) translate(2px,0);}
+	22%{ -webkit-transform:scale(1,1) translate(170px,-65px);}
+	27%{ -webkit-transform:scale(1,1) translate(200px,-65px);}
+	40%{ -webkit-transform:scale(1,1) translate(300px,-10px);}
+	40.1%{ -webkit-transform:translate(300px,-10px) scale(-1,1); background-position: -120px 0; height:45px; width:42px;}
+	45%{ -webkit-transform: translate(290px,-10px) scale(-1,1); background-position: -120px 0; height:45px; width:42px;}
+	47%{ -webkit-transform: translate(290px,-10px) scale(-1,1); background-position: -120px 0; height:45px; width:42px;}
+	47.1%{ -webkit-transform: translate(290px,-10px); background-position: -120px -50px; height:33px; width:46px;}
+	99%{ -webkit-transform: translate(0,3px) scale(0.3,0.3); background-position: -120px -50px; height:33px; width:46px;}
+	100%{ -webkit-transform:scale(0.3,0.3) translate(0,3px);}
+}
+
+
+@-moz-keyframes a_hand_1{
+	0%{ -moz-transform: rotate(0deg); opacity:0;}
+	47%{ -moz-transform: rotate(0deg); opacity:0;}
+	47.1%{ -moz-transform: rotate(0deg); opacity:1;}
+	100%{ -moz-transform: rotate(-1800deg); opacity:1;}
+}
+
+@-moz-keyframes a_hand_2{
+	0%{ -moz-transform: rotate(0deg); opacity:1;}
+	29.9%{ -moz-transform: rotate(-108deg); opacity:1;}
+	30%{ -moz-transform: rotate(-108deg); opacity:0;}
+	100%{ -moz-transform: rotate(-360deg); opacity:0;}
+}
+
+@-moz-keyframes a_hand_wrap{
+	0%{ opacity:0;}
+	47%{ opacity:0;}
+	47.1%{ opacity:1;}
+	100%{ opacity:1;}
+}
+
+
+@-webkit-keyframes a_hand_1{
+	0%{ -webkit-transform: rotate(0deg); opacity:0;}
+	47%{ -webkit-transform: rotate(0deg); opacity:0;}
+	47.1%{ -webkit-transform: rotate(0deg); opacity:1;}
+	100%{ -webkit-transform: rotate(-1800deg); opacity:1;}
+}
+
+@-webkit-keyframes a_hand_2{
+	0%{ -webkit-transform: rotate(0deg); opacity:1;}
+	29.9%{ -webkit-transform: rotate(-108deg); opacity:1;}
+	30%{ -webkit-transform: rotate(-108deg); opacity:0;}
+	100%{ -webkit-transform: rotate(-360deg); opacity:0;}
+}
+
+@-webkit-keyframes a_hand_wrap{
+	0%{ opacity:0;}
+	47%{ opacity:0;}
+	47.1%{ opacity:1;}
+	100%{ opacity:1;}
+}
+
+/*940 4栏*/
+.version_940 .head_wrap_summer_holiday{ _background:#d5eeff url(../img/summer_holiday/bg_940_ie6.jpg) no-repeat center 0;}
+.version_940 .head_wrap_summer_holiday .mod_search{ left:200px; width:372px; padding:10px; top:87px;}
+.version_940 .head_wrap_summer_holiday .mod_search .mod_search_txt{ left:10px; top:10px;}
+.version_940 .head_wrap_summer_holiday .mod_search .btn_search{ top:10px;}
+.version_940 .head_wrap_summer_holiday .mod_search .icon_search{ left:23px; top:24px;}
+.version_940 .head_wrap_summer_holiday .surfing_wrap{ left:710px;}
+.version_940 .head_wrap_summer_holiday .head .sun{ left:1102px;}
+.version_940 .head_wrap_summer_holiday .umbrella{ left:1062px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
