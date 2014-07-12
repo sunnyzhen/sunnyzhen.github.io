@@ -6,6 +6,7 @@
  * Author：Sunnycchen
  *
  */
+body{overflow-x:hidden;}
 
 .head_wrap_summer_holiday{ background:#d5eeff url(../img/summer_holiday/bg.jpg) no-repeat center 0; _background:#d5eeff url(../img/summer_holiday/bg_1180_ie6.jpg) no-repeat center 0;}
 .head_wrap_summer_holiday .head{ padding-top:89px;}
