@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>摩天轮</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+.ferris_wheel_wrap{ display:block; height:200px; width:200px; position:relative; border-radius:200px; background:rgba(0,0,0,0.2); border:1px solid rgba(0,0,0,0.5); margin:100px; -moz-animation:a_wheel 10s linear infinite; -webkit-animation:a_wheel 10s linear infinite;}
+.ferris_wheel_wrap .room{ display:block; height:50px; width:50px; border-radius:5px; position:absolute; text-align:center; color:#fff; line-height:50px; -moz-animation:a_room 10s linear infinite; -webkit-animation:a_room 10s linear infinite;}
+.ferris_wheel_wrap .room_1{ background:#FCC; left:75px; top:-15px;}
+.ferris_wheel_wrap .room_2{ background:#FF6; left:175px; top:75px;}
+.ferris_wheel_wrap .room_3{ background:#0CC; left:75px; top:175px;}
+.ferris_wheel_wrap .room_4{ background:#996; left:-15px; top:75px;}
+
+@-moz-keyframes a_wheel{
+	0%{-moz-transform:rotate(0deg);}
+	100%{-moz-transform:rotate(360deg);}
+}
+
+@-moz-keyframes a_room{
+	0%{-moz-transform:rotate(0deg);}
+	100%{-moz-transform:rotate(-360deg);}
+}
+
+@-webkit-keyframes a_wheel{
+	0%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(360deg);}
+}
+
+@-webkit-keyframes a_room{
+	0%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(-360deg);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="ferris_wheel_wrap">
+    	<i class="room room_1">1</i>
+        <i class="room room_2">2</i>
+        <i class="room room_3">3</i>
+        <i class="room room_4">4</i>
+    </div>
+</div>
+
+</body>
+</html>
