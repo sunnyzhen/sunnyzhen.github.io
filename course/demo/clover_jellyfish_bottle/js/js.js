@@ -7,8 +7,7 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		 wipeLeft: function() { 
-		 	alert("left" + i);
-		 	if(i=-1){
+		 	if(i==-1){
 				$(".bottle").attr("class","bottle");
 				i=0;
 			}
@@ -16,32 +15,29 @@ $(document).ready(function(){
 				$(".bottle").attr("class","bottle water_yellow yellow");
 				i=1;
 			}
-			else if(i=1){
+			else if(i==1){
 				$(".bottle").attr("class","bottle water_pink pink");
 				i=2;
 			}
-			else if(i=2){
+			else if(i==2){
 				
 			}
-			alert(i + $(".bottle").attr("class"));
 		 },
 		 wipeRight: function() { 
-		 	alert("right" + i);
-			if(i=-1){
+			if(i==-1){
 			}
 		 	else if(i==0){
 				$(".bottle").attr("class","bottle water_green green");
 				i=-1;
 			}
-			else if(i=1){
+			else if(i==1){
 				$(".bottle").attr("class","bottle");
 				i=0;
 			}
-			else if(i=2){
+			else if(i==2){
 				$(".bottle").attr("class","bottle water_yellow yellow");
 				i=1;
 			}
-			alert(i + $(".bottle").attr("class"));
 		 },
 		 wipeUp: function() { 
 			$(".cloverTop").show();
