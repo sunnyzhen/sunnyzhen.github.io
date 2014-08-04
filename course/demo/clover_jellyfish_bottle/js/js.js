@@ -2,11 +2,86 @@
 
 $(document).ready(function(){
 	
+	var i=0;
 	
+	//触摸触发事件
+	$("body").touchwipe({
+		 wipeLeft: function() { 
+		 	if(i=-1){
+				$(".bottle").attr("class","bottle");
+				i=0;
+			}
+		 	else if(i==0){
+				$(".bottle").attr("class","bottle water_yellow yellow");
+				i=1;
+			}
+			else if(i=1){
+				$(".bottle").attr("class","bottle water_pink pink");
+				i=2;
+			}
+			else if(i=2){
+				
+			}
+			
+		 },
+		 wipeRight: function() { 
+			if(i=-1){
+			}
+		 	else if(i==0){
+				$(".bottle").attr("class","bottle water_green green");
+				i=-1;
+			}
+			else if(i=1){
+				$(".bottle").attr("class","bottle");
+				i=0;
+			}
+			else if(i=2){
+				$(".bottle").attr("class","bottle water_yellow yellow");
+				i=1;
+			}
+		 },
+		 wipeTop: function() { 
+			$(".cloverTop").show();
+			$(".cloverBottom").show();
+			$(".jellyfish").hide();
+		 },
+		 wipeBottom: function() { 
+			$(".cloverTop").hide();
+			$(".cloverBottom").hide();
+			$(".jellyfish").show();
+		 },
+		min_move_x: 80,
+		min_move_y: 80,
+		preventDefaultEvents: true
+	});
+	
+	$(".btn_1").click(function(){
+		$(".bottle").attr("class","bottle water_green green");
+	});
+	
+	$(".btn_2").click(function(){
+		$(".bottle").attr("class","bottle water_yellow yellow");
+	});
+	
+	$(".btn_3").click(function(){
+		$(".bottle").attr("class","bottle water_pink pink");
+	});
+	
+	$(".btn_4").click(function(){
+		$(".cloverTop").show();
+		$(".cloverBottom").show();
+		$(".jellyfish").hide();
+	});
+	
+	$(".btn_5").click(function(){
+		$(".cloverTop").hide();
+		$(".cloverBottom").hide();
+		$(".jellyfish").show();
+	});
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
 	var lineLink = location.href;
 	var descContent = "《四叶草、水母与玻璃瓶》 - 桑尼真出品";
 	var shareTitle = document.title;
