@@ -42,13 +42,13 @@ $(document).ready(function(){
 				i=1;
 			}
 		 },
-		 wipeTop: function() { 
+		 wipeUp: function() { 
 		 	alert("top");
 			$(".cloverTop").show();
 			$(".cloverBottom").show();
 			$(".jellyfish").hide();
 		 },
-		 wipeBottom: function() { 
+		 wipeDown: function() { 
 		 	alert("bottom");
 			$(".cloverTop").hide();
 			$(".cloverBottom").hide();
