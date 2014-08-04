@@ -54,7 +54,7 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
-	$(".btn_1").click(function(){
+/*	$(".btn_1").click(function(){
 		$(".bottle").attr("class","bottle water_green green");
 	});
 	
@@ -76,7 +76,7 @@ $(document).ready(function(){
 		$(".cloverTop").hide();
 		$(".cloverBottom").hide();
 		$(".jellyfish").show();
-	});
+	});*/
 	
 	/*微信转发图片*/
 	
