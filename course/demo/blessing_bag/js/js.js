@@ -21,6 +21,22 @@ $(document).ready(function(){
 	});
 	
 	
+	$("body").bind(touchEvents.touchstart, function (event) {
+            event.preventDefault();
+			
+            $(".blessing_bag").addClass("blessing_bag_touch");
+			
+					
+			$("body").bind(touchEvents.touchend, function (event) {
+				event.preventDefault();
+				
+				$(".blessing_bag").removeClass("blessing_bag_touch");
+				
+			});
+			
+        });
+
+
 
 	
 	/*微信转发图片*/
