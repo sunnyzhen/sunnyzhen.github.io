@@ -7,7 +7,7 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		 wipeLeft: function() { 
-		 	alert("left");
+		 	alert("left" + i);
 		 	if(i=-1){
 				$(".bottle").attr("class","bottle");
 				i=0;
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			
 		 },
 		 wipeRight: function() { 
-		 	alert("right");
+		 	alert("right" + i);
 			if(i=-1){
 			}
 		 	else if(i==0){
@@ -43,13 +43,11 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
-		 	alert("top");
 			$(".cloverTop").show();
 			$(".cloverBottom").show();
 			$(".jellyfish").hide();
 		 },
 		 wipeDown: function() { 
-		 	alert("bottom");
 			$(".cloverTop").hide();
 			$(".cloverBottom").hide();
 			$(".jellyfish").show();
