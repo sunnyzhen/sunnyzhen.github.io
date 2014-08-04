@@ -8,16 +8,20 @@
 <link rel="stylesheet" href="css/skin_new_year.css" type="text/css" />
 <style type="text/css">
 *{ margin:0px; padding:0px;}
-html,body{ background:#ddd; height:100%; width:100%;}
+html,body{ background:#000; height:100%; width:100%; overflow:hidden;}
 
 .intro_wrap{ font-family:"microsoft yahei"; padding:15px 20px; line-height:1.5;}
-.intro_wrap .title{ font-weight:normal; color:#333; font-size:14px; margin-bottom:8px;}
+.intro_wrap .title{ font-weight:normal; color:#fff; font-size:14px; margin-bottom:8px;}
 .intro_wrap .txt{ color:#888; font-size:12px;}
+
+.background{ display:block; width:320px; height:15px; position:absolute; left:50%; margin-left:-160px; bottom:0; overflow:hidden;}
+.background i{ display:block; width:320px; height:30px; background:-webkit-radial-gradient(#ddd 0%,#000 70%); position:absolute; left:0px; top:0px;}
 
 </style>
 </head>
 
 <body>
+<div class="background"><i></i></div>
 
 <div class="blessing_bag_wrap">
     <div class="blessing_bag">
@@ -27,6 +31,14 @@ html,body{ background:#ddd; height:100%; width:100%;}
         <i class="blessing_bag_foward"></i>
         <i class="blessing_bag_backward"></i>
     </div>
+</div>
+
+<div class="fireworks_swrap">
+    <i class="firework firework_1"></i>
+    <i class="firework firework_2"></i>
+    <i class="firework firework_3"></i>
+    <i class="firework firework_4"></i>
+    <i class="firework firework_5"></i>
 </div>
 
 <div class="intro_wrap">
