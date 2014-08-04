@@ -11,30 +11,15 @@ $(document).ready(function(){
 	});
 	
 	//触摸触发事件
-	$("body").ontouchstart(function(){
-		 $(".blessing_bag").addClass("blessing_bag_touch");
-		 
-		$("body").ontouchend(function(){
-			 $(".blessing_bag").removeClass("blessing_bag_touch");
+	$("body").bind("touchstart", function(event){
+		$(".blessing_bag").addClass("blessing_bag_touch");
+				
+		$("body").bind("touchend", function(event){
+			$(".blessing_bag").removeClass("blessing_bag_touch");
+			
 		});
 		
 	});
-	
-	
-	$("body").bind(touchEvents.touchstart, function (event) {
-            event.preventDefault();
-			
-            $(".blessing_bag").addClass("blessing_bag_touch");
-			
-					
-			$("body").bind(touchEvents.touchend, function (event) {
-				event.preventDefault();
-				
-				$(".blessing_bag").removeClass("blessing_bag_touch");
-				
-			});
-			
-        });
 
 
 
