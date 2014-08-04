@@ -1,10 +1,20 @@
 $(document).ready(function(){
 	
-	//触摸触发事件
+	//鼠标触发事件
 	$("body").mousedown(function(){
 		 $(".blessing_bag").addClass("blessing_bag_touch");
 		 
 		$("body").mouseup(function(){
+			 $(".blessing_bag").removeClass("blessing_bag_touch");
+		});
+		
+	});
+	
+	//触摸触发事件
+	$("body").ontouchstart(function(){
+		 $(".blessing_bag").addClass("blessing_bag_touch");
+		 
+		$("body").ontouchend(function(){
 			 $(".blessing_bag").removeClass("blessing_bag_touch");
 		});
 		
