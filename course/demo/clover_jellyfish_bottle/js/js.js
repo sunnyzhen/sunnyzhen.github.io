@@ -23,7 +23,7 @@ $(document).ready(function(){
 			else if(i=2){
 				
 			}
-			alert(i + $(".bottle").attr("class");
+			alert(i + $(".bottle").attr("class"));
 		 },
 		 wipeRight: function() { 
 		 	alert("right" + i);
@@ -41,7 +41,7 @@ $(document).ready(function(){
 				$(".bottle").attr("class","bottle water_yellow yellow");
 				i=1;
 			}
-			alert(i + $(".bottle").attr("class");
+			alert(i + $(".bottle").attr("class"));
 		 },
 		 wipeUp: function() { 
 			$(".cloverTop").show();
