@@ -6,7 +6,7 @@
  * Author：Sunnycchen
  *
  */
-
+.blessing_bag_wrap{pointer-events:none;}
 .blessing_bag_wrap{ width:140px; height:112px; background:url(../img/n_sprite.png) no-repeat 0 -53px; display:block; position:absolute; left:50%; bottom:4px; margin-left:-70px; margin-top:-56px;}
 .blessing_bag{display:block; height:83px; width:91px; position:absolute; position:absolute; left:19px; top:33px; -moz-transform-origin:50% 100%; -webkit-transform-origin:50% 100%; _display:none;}
 .blessing_bag_foward{ display:block; height:83px; width:91px; background:url(../img/n_sprite.png) no-repeat -140px 0; position:absolute; left:0px; top:0px; z-index:3;}
