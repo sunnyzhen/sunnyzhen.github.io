@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript">
+window.onload=function(){
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	var focusLength=500;
+	
+	function Point3d(x,y,z){
+		this.x=x;
+		this.y=y;
+		this.z=z;
+	}
+	Point3d.zero=new Point3d(0,0,0);
+	Point3d.prototype.copy=function(){
+	    return new Point3d(this.x,this.y,this.z);
+	}
+	
+	function Point2d(x,y){
+		this.x=x;
+		this.y=y;
+	}
+	
+	Point2d.prototype.copy=function(){
+	    return new Point2d(this.x,this.y);
+	}
+	
+	Point2d.zero=new Point2d(0,0);
+	
+	function Vertex(p2d,p3d,c3d){
+		this.p2d=p2d;
+		this.p3d=p3d;
+		this.c3d=c3d;
+		this.scale=1;
+		this.xpos=0;
+		this.ypos=0;
+		this.zpos=0;
+	}
+	
+	Vertex.prototype.projection=function(){
+		this.scale=focusLength/(focusLength+this.zpos);
+		this.p2d.x=this.p3d.x+(this.xpos)*this.scale;
+		this.p2d.y=this.p3d.y+(this.ypos)*this.scale;
+		
+	}
+	
+	Vertex.prototype.getPos=function(){
+		this.xpos=this.p3d.x-this.c3d.x;
+		this.ypos=this.p3d.y-this.c3d.y;
+		this.zpos=this.p3d.z-this.c3d.z;
+	}
+	
+	Vertex.prototype.rotate=function(angleX,angleY,angleZ){
+		if(angleX!=0){
+			var distance=Math.sqrt(this.ypos*this.ypos+this.zpos*this.zpos);
+			var angle=Math.atan2(this.ypos,this.zpos);
+			this.zpos=distance*Math.cos(angle+angleX);
+			this.ypos=distance*Math.sin(angle+angleX);
+			this.p3d.y=this.c3d.y+this.ypos;
+			this.p3d.z=this.c3d.z+this.zpos;
+		}
+		if(angleY!=0){
+			var distance=Math.sqrt(this.xpos*this.xpos+this.zpos*this.zpos);
+			var angle=Math.atan2(this.zpos,this.xpos);
+			this.xpos=distance*Math.cos(angle+angleY);
+			this.zpos=distance*Math.sin(angle+angleY);
+			this.p3d.x=this.c3d.x+this.xpos;
+			this.p3d.z=this.c3d.z+this.zpos;
+			
+		}
+		if(angleZ!=0){
+			var distance=Math.sqrt(this.xpos*this.xpos+this.ypos*this.ypos);
+			var angle=Math.atan2(this.xpos,this.ypos);
+			this.ypos=distance*Math.cos(angle+angleZ);
+			this.xpos=distance*Math.sin(angle+angleZ);
+			this.p3d.x=this.c3d.x+this.xpos;
+			this.p3d.y=this.c3d.y+this.ypos;
+		}
+	}
+	
+	function Color(r,g,b,a){
+		this.r=r;
+		this.g=g;
+		this.b=b;
+		this.a=a;
+	}
+	
+	Color.black=new Color(0,0,0,1);
+	Color.red=new Color(255,0,0,1);
+	Color.green=new Color(0,255,0,1);
+	Color.blue=new Color(0,0,255,1);
+	
+	function Diamond(vertexArray,c3d,color){
+		this.Vertexs=vertexArray;
+		this.c3d=c3d;
+		this.color=color;
+	}
+	
+	Diamond.prototype.projection=function(){
+		for(var i=0;i<this.Vertexs.length;i++){
+			this.Vertexs[i].projection();
+		}
+		
+	}
+	
+	Diamond.prototype.getPos=function(){
+		for(var i=0;i<this.Vertexs.length;i++){
+			this.Vertexs[i].getPos();
+		}
+	}
+	
+	Diamond.prototype.setCenter=function(){
+		for(var i=0;i<this.Vertexs.length;i++){
+			this.Vertexs[i].c3d=this.c3d;
+		}
+	}
+	
+	Diamond.prototype.init=function(){
+	    this.setCenter();
+		this.getPos();
+		this.projection();
+	}
+	
+	Diamond.prototype.rotate=function(angleX,angleY,angleZ){
+		var angle_r=Math.PI/180;
+		angleX=angleX||0;
+		angleY=angleY||0;
+		angleZ=angleZ||0;
+		
+		for(var i=0;i<this.Vertexs.length;i++){
+			this.Vertexs[i].rotate(angleX*angle_r,angleY*angle_r,angleZ*angle_r);
+		}
+	}
+	
+	Diamond.prototype.draw=function(pointNum){
+	    var fill=true;
+	    ctx.strokeStyle="rgba("+this.color.r+","+this.color.g+","+this.color.b+","+this.color.a+")";
+		ctx.beginPath();
+		
+		ctx.moveTo(this.Vertexs[0].p2d.x,this.Vertexs[0].p2d.y);
+		for(var i=1;i<pointNum;i++){
+			ctx.lineTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+		}
+		ctx.lineTo(this.Vertexs[0].p2d.x,this.Vertexs[0].p2d.y);
+		
+		ctx.moveTo(this.Vertexs[pointNum].p2d.x,this.Vertexs[pointNum].p2d.y);
+		for(var i=pointNum;i<pointNum*2;i++){
+			ctx.lineTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+		}
+		ctx.lineTo(this.Vertexs[pointNum].p2d.x,this.Vertexs[pointNum].p2d.y);
+		
+		
+		for(var i=0;i<pointNum;i++){
+	     	ctx.moveTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+			ctx.lineTo(this.Vertexs[i+pointNum].p2d.x,this.Vertexs[i+pointNum].p2d.y);
+			ctx.lineTo(this.Vertexs[pointNum*2].p2d.x,this.Vertexs[pointNum*2].p2d.y);
+			
+		}
+		ctx.moveTo(this.Vertexs[pointNum].p2d.x,this.Vertexs[pointNum].p2d.y);
+		
+		ctx.closePath();
+		ctx.stroke();
+		
+		if(fill){
+			ctx.fillStyle="rgba("+this.color.r+","+this.color.g+","+this.color.b+","+this.color.a/10*2+")";
+			ctx.beginPath();
+			ctx.moveTo(this.Vertexs[0].p2d.x,this.Vertexs[0].p2d.y);
+			for(var i=1;i<pointNum;i++){
+				ctx.lineTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+			}
+			ctx.closePath();
+		    ctx.fill();
+			
+			for(var i=0;i<pointNum;i++){
+				ctx.beginPath();
+				ctx.moveTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+				if(i==pointNum-1){
+					ctx.lineTo(this.Vertexs[0].p2d.x,this.Vertexs[0].p2d.y);
+					ctx.lineTo(this.Vertexs[pointNum].p2d.x,this.Vertexs[pointNum].p2d.y);
+					ctx.lineTo(this.Vertexs[pointNum*2-1].p2d.x,this.Vertexs[pointNum*2-1].p2d.y);
+				}
+				else{
+					ctx.lineTo(this.Vertexs[i+1].p2d.x,this.Vertexs[i+1].p2d.y);
+					ctx.lineTo(this.Vertexs[i+pointNum+1].p2d.x,this.Vertexs[i+pointNum+1].p2d.y);
+					ctx.lineTo(this.Vertexs[i+pointNum].p2d.x,this.Vertexs[i+pointNum].p2d.y);
+				}
+				ctx.closePath();
+				ctx.fill();
+			}
+			
+			for(var i=pointNum;i<pointNum*2;i++){
+				ctx.beginPath();
+				ctx.moveTo(this.Vertexs[i].p2d.x,this.Vertexs[i].p2d.y);
+				if(i==pointNum*2-1){
+					ctx.lineTo(this.Vertexs[pointNum].p2d.x,this.Vertexs[pointNum].p2d.y);
+					ctx.lineTo(this.Vertexs[pointNum*2].p2d.x,this.Vertexs[pointNum*2].p2d.y);
+				}
+				else{
+					ctx.lineTo(this.Vertexs[i+1].p2d.x,this.Vertexs[i+1].p2d.y);
+					ctx.lineTo(this.Vertexs[pointNum*2].p2d.x,this.Vertexs[pointNum*2].p2d.y);
+				}
+				ctx.closePath();
+				ctx.fill();
+			}
+			
+			
+		}
+	}
+	
+	function getDiamond(c3d,pointNum,hpos,height,sRadius,bRadius){
+		var pointArray=[];
+		pointArray.pointNum=pointNum;
+		
+		var angle_r=Math.PI*2/pointNum;
+		var angle=0;
+		for(var i=0;i<pointNum;i++){
+			pointArray.push(new Point3d(c3d.x+sRadius*Math.cos(angle),c3d.y,c3d.z+sRadius*Math.sin(angle)));
+			angle+=angle_r;
+		} 
+		angle=0;
+		for(var i=0;i<pointNum;i++){
+			pointArray.push(new Point3d(c3d.x+bRadius*Math.cos(angle),c3d.y+hpos,c3d.z+bRadius*Math.sin(angle)));
+			angle+=angle_r;
+		} 
+		
+		pointArray.push(new Point3d(c3d.x,c3d.y+height,c3d.z));
+		var vertexArray=[];
+		for(var i=0;i<pointArray.length;i++){
+			vertexArray.push(new Vertex((Point2d.zero).copy(),pointArray[i],(Point3d.zero).copy()));
+		}
+		vertexArray.pointNum=pointArray.pointNum;
+		return vertexArray;
+	}
+	
+	var vertexArray=getDiamond(new Point3d(200,200,200),8,20,80,40,60);
+	
+	var diamond=new Diamond(vertexArray,new Point3d(200,220,200),Color.blue);
+	diamond.init();
+	diamond.draw(vertexArray.pointNum);
+	
+	var angle=0.5;//setInterval setTimeout
+	setInterval(function(){
+		diamond.rotate(angle,angle,angle);
+		diamond.projection();
+		ctx.clearRect(0,0,canvas.width,canvas.height);
+	    diamond.draw(vertexArray.pointNum);
+	},50);
+	
+}
+</script>
+</head>
+
+<body>
+<canvas id="canvas" height="500" width="600">
+
+</body>
+</html>
