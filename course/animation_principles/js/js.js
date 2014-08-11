@@ -38,9 +38,6 @@ $(document).ready(function(){
 					if(y==0){
 						$("#link_1 .animation_area").addClass("swipeLeft");
 					}
-					else if(y==1){
-						$("#link_1 .animation_area").removeClass("swipeLeft");
-					}
 					break;
 				}
 				case 2: break;
@@ -49,7 +46,14 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeRight: function() { 
-			
+			switch(i){
+				case 1: {
+					if(y==1){
+						$("#link_1 .animation_area").removeClass("swipeLeft");
+					}
+					break;
+				}
+			}
 		 },
 		 wipeUp: function() { 
 		 	
