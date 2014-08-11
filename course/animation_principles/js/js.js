@@ -37,6 +37,7 @@ $(document).ready(function(){
 				case 1: {
 					if(y==0){
 						$("#link_1 .animation_area").addClass("swipeLeft");
+						y=1;
 					}
 					break;
 				}
@@ -50,6 +51,7 @@ $(document).ready(function(){
 				case 1: {
 					if(y==1){
 						$("#link_1 .animation_area").removeClass("swipeLeft");
+						y=0;
 					}
 					break;
 				}
