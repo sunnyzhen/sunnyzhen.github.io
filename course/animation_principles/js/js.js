@@ -3,8 +3,8 @@
 
 $(document).ready(function(){
 	
-	var address=window.location;
-	window.location=address+"#link_2";
+	//var address=window.location;
+	//window.location=address+"#link_2";
 	
 	//鼠标触发事件
 	$("body").mousedown(function(){
