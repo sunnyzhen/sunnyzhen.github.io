@@ -95,6 +95,9 @@ $(document).ready(function(){
 					$(".content_wrap").css({
 						"margin-top":"-"+416*(i-1)+"px"
 					});
+					
+					i=1;
+					
 					break;
 				}
 			}
@@ -105,6 +108,9 @@ $(document).ready(function(){
 					$(".content_wrap").css({
 						"margin-top":"-"+416*i+"px"
 					});
+					
+					i=2;
+					
 					break;
 				}
 				case 2: {
