@@ -86,20 +86,25 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
-		 	alert("up");
+		 	
+		 },
+		 wipeDown: function() { 
 		 	switch(i){
 				case 1: {
 					var str_address=window.location;
-					alert(str_address);
 					var adderss=str_address.split("#")[0];
-					alert(address);
+					alert(address+"#link_2");
 					window.location=address+"#link_2";
 					break;
 				}
+				case 2: {
+					var str_address=window.location;
+					var adderss=str_address.split("#")[0];
+					alert(address+"#link_3");
+					window.location=address+"#link_3";
+					break;
+				}
 			}
-		 },
-		 wipeDown: function() { 
-		 	
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
