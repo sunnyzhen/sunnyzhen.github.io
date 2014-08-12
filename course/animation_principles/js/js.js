@@ -9,9 +9,9 @@ $(document).ready(function(){
 	//触按触发事件
 	$("body").bind("touchstart", function(event){
 		
-		if($(".menu_wrap").hasClass("hover")){
+/*		if($(".menu_wrap").hasClass("hover")){
 			$(".menu_wrap").removeClass("hover");
-		}
+		}*/
 		
 		if(y==0){
 			$("#link_"+i+" .animation_box:first-child").addClass("hover");
