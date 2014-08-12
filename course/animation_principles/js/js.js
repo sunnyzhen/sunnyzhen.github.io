@@ -6,23 +6,6 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
-	//点击触发事件
-/*	$("body").bind("click", function(event){
-		
-		switch(i){
-			case 1: {
-				if(y==0){
-					$("#link_1 .animation_box:first-child").addClass("hover");	
-				}
-				break;
-			}
-			case 2: break;
-			case 3: System.out.println("haha"); break;
-			case 4: System.out.println("hehe"); break;
-		}
-		
-	});*/
-	
 	//触摸触发事件
 	$("body").bind("touchstart", function(event){
 		
@@ -44,34 +27,6 @@ $(document).ready(function(){
 			});
 						
 		}
-		
-		/*switch(i){
-			
-			case 1: {
-				if(y==0){
-					$("#link_1 .animation_box:first-child").addClass("hover");
-					
-					$("body").bind("touchend", function(event){
-						$("#link_1 .animation_box:first-child").removeClass("hover");
-						
-					});
-								
-				}
-				else if(y==1){
-					$("#link_1 .animation_box:last-child").addClass("hover");
-					
-					$("body").bind("touchend", function(event){
-						$("#link_1 .animation_box:last-child").removeClass("hover");
-						
-					});
-								
-				}
-				break;
-			}
-			case 2: break;
-			case 3: System.out.println("haha"); break;
-			case 4: System.out.println("hehe"); break;
-		}*/
 		
 	});
 
@@ -106,22 +61,13 @@ $(document).ready(function(){
 				}
 			}
 			
+			if(y==1){
+				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+				y=0;
+			} 
+			
 			i--;
-		 	/*switch(i){
-				case 1: {
-					
-					break;
-				}
-				case 2: {
-					$(".content_wrap").css({
-						"margin-top":"-"+416*(i-2)+"px"
-					});
-					
-					i=1;
-					
-					break;
-				}
-			}*/
+			
 		 },
 		 wipeDown: function() { 
 		 
@@ -132,23 +78,14 @@ $(document).ready(function(){
 					});
 				}
 			}
-		 	
+			
+		 	if(y==1){
+				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+				y=0;
+			}
+			 
 			i++;
 			
-		 	/*switch(i){
-				case 1: {
-					$(".content_wrap").css({
-						"margin-top":"-"+416*i+"px"
-					});
-					
-					i=2;
-					
-					break;
-				}
-				case 2: {
-					break;
-				}
-			}*/
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
