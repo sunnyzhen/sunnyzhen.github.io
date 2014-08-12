@@ -86,11 +86,20 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
-		 	
+		 	switch(i){
+				case 1: {
+					alert("up");
+					break;
+				}
+				case 2: {
+					break;
+				}
+			}
 		 },
 		 wipeDown: function() { 
 		 	switch(i){
 				case 1: {
+					alert("down");
 					var str_address=window.location;
 					alert(str_address.split("#")[0]);
 					var adderss=str_address.split("#")[0];
@@ -99,10 +108,6 @@ $(document).ready(function(){
 					break;
 				}
 				case 2: {
-					var str_address=window.location;
-					var adderss=str_address.split("#")[0];
-					alert(address+"#link_3");
-					window.location=address+"#link_3";
 					break;
 				}
 			}
