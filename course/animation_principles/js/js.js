@@ -26,7 +26,27 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").bind("touchstart", function(event){
 		
-		switch(i){
+		if(y==0){
+			$("#link_"+i+" .animation_box:first-child").addClass("hover");
+			
+			$("body").bind("touchend", function(event){
+				$("#link_"+i+" .animation_box:first-child").removeClass("hover");
+				
+			});
+						
+		}
+		else if(y==1){
+			$("#link_"+i+" .animation_box:last-child").addClass("hover");
+			
+			$("body").bind("touchend", function(event){
+				$("#link_"+i+" .animation_box:last-child").removeClass("hover");
+				
+			});
+						
+		}
+		
+		/*switch(i){
+			
 			case 1: {
 				if(y==0){
 					$("#link_1 .animation_box:first-child").addClass("hover");
@@ -51,7 +71,7 @@ $(document).ready(function(){
 			case 2: break;
 			case 3: System.out.println("haha"); break;
 			case 4: System.out.println("hehe"); break;
-		}
+		}*/
 		
 	});
 
