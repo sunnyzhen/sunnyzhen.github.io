@@ -85,6 +85,8 @@ $(document).ready(function(){
 					});
 				}
 			}
+			
+			i--;
 		 	/*switch(i){
 				case 1: {
 					
@@ -110,7 +112,9 @@ $(document).ready(function(){
 					});
 				}
 			}
-		 
+		 	
+			i++;
+			
 		 	/*switch(i){
 				case 1: {
 					$(".content_wrap").css({
