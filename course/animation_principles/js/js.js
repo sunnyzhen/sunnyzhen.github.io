@@ -61,29 +61,12 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		 wipeLeft: function() { 
+		 
 		 	if(y==0){
 				$("#link_"+i+" .animation_area").addClass("swipeLeft");
 				y=1;
 			}
-			/*break;
-		 	switch(i){
-				case 1:{
-					if(y==0){
-						$("#link_1 .animation_area").addClass("swipeLeft");
-						y=1;
-					}
-					break;
-				}
-				case 2:{
-					if(y==0){
-						$("#link_2 .animation_area").addClass("swipeLeft");
-						y=1;
-					}
-					break;
-				}
-				case 3: System.out.println("haha"); break;
-				case 4: System.out.println("hehe"); break;
-			}*/
+
 		 },
 		 wipeRight: function() {
 			 
@@ -92,18 +75,17 @@ $(document).ready(function(){
 				y=0;
 			} 
 			
-			/*switch(i){
-				case 1: {
-					if(y==1){
-						$("#link_1 .animation_area").removeClass("swipeLeft");
-						y=0;
-					}
-					break;
-				}
-			}*/
 		 },
 		 wipeUp: function() { 
-		 	switch(i){
+		 	
+			for(var j=1;j<15;j++){
+				if(j==i){
+					$(".content_wrap").css({
+						"margin-top":"-"+416*(i-2)+"px"
+					});
+				}
+			}
+		 	/*switch(i){
 				case 1: {
 					
 					break;
@@ -117,10 +99,19 @@ $(document).ready(function(){
 					
 					break;
 				}
-			}
+			}*/
 		 },
 		 wipeDown: function() { 
-		 	switch(i){
+		 
+			for(var j=1;j<15;j++){
+				if(j==i){
+					$(".content_wrap").css({
+						"margin-top":"-"+416*i+"px"
+					});
+				}
+			}
+		 
+		 	/*switch(i){
 				case 1: {
 					$(".content_wrap").css({
 						"margin-top":"-"+416*i+"px"
@@ -133,7 +124,7 @@ $(document).ready(function(){
 				case 2: {
 					break;
 				}
-			}
+			}*/
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
