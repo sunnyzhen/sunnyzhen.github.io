@@ -93,7 +93,7 @@ $(document).ready(function(){
 				}
 				case 2: {
 					$(".content_wrap").css({
-						"margin-top":"-"+416*(i-1)+"px"
+						"margin-top":"-"+416*(i-2)+"px"
 					});
 					
 					i=1;
