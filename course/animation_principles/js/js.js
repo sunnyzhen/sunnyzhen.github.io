@@ -86,10 +86,13 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
+		 	alert("up");
 		 	switch(i){
 				case 1: {
 					var str_address=window.location;
+					alert(str_address);
 					var adderss=str_address.split("#")[0];
+					alert(address);
 					window.location=address+"#link_2";
 					break;
 				}
