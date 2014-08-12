@@ -61,21 +61,38 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		 wipeLeft: function() { 
+		 	if(y==0){
+				$("#link_"+i+" .animation_area").addClass("swipeLeft");
+				y=1;
+			}
+			/*break;
 		 	switch(i){
-				case 1: {
+				case 1:{
 					if(y==0){
 						$("#link_1 .animation_area").addClass("swipeLeft");
 						y=1;
 					}
 					break;
 				}
-				case 2: break;
+				case 2:{
+					if(y==0){
+						$("#link_2 .animation_area").addClass("swipeLeft");
+						y=1;
+					}
+					break;
+				}
 				case 3: System.out.println("haha"); break;
 				case 4: System.out.println("hehe"); break;
-			}
+			}*/
 		 },
-		 wipeRight: function() { 
-			switch(i){
+		 wipeRight: function() {
+			 
+			if(y==0){
+				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+				y=0;
+			} 
+			
+			/*switch(i){
 				case 1: {
 					if(y==1){
 						$("#link_1 .animation_area").removeClass("swipeLeft");
@@ -83,7 +100,7 @@ $(document).ready(function(){
 					}
 					break;
 				}
-			}
+			}*/
 		 },
 		 wipeUp: function() { 
 		 	switch(i){
