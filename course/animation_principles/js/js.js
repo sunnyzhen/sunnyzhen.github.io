@@ -88,10 +88,13 @@ $(document).ready(function(){
 		 wipeUp: function() { 
 		 	switch(i){
 				case 1: {
-					alert("up");
+					
 					break;
 				}
 				case 2: {
+					$(".content_wrap").css({
+						"margin-top":"-"+416*(i-1)+"px"
+					});
 					break;
 				}
 			}
@@ -99,12 +102,9 @@ $(document).ready(function(){
 		 wipeDown: function() { 
 		 	switch(i){
 				case 1: {
-					alert("down");
-					var str_address=window.location;
-					alert(str_address.split("#")[0]);
-					var adderss=str_address.split("#")[0];
-					alert(adderss);
-					window.location=address+"#link_2";
+					$(".content_wrap").css({
+						"margin-top":"-"+416*i+"px"
+					});
 					break;
 				}
 				case 2: {
