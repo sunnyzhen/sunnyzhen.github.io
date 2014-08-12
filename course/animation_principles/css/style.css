@@ -508,6 +508,7 @@ body{ background:#e0e0e0; font-size:12px; color:#333;}
 	
 	.menu_wrap{ top:0px;}
 	.menu_wrap:hover{ left:-120px;}
+	.menu_wrap.hover{ left:0px;}
 	.menu_list{ padding:3px 10px;}
 	.menu_list li{ margin-bottom:2px;}
 	.menu_list .tit{ font-size:12px;}
@@ -557,6 +558,7 @@ body{ background:#e0e0e0; font-size:12px; color:#333;}
 	.animation_box.hover .demo_balance_system_hover .demo_rect_1{ -webkit-animation:a_demo_rect_1 0.5s linear both; -webkit-transform-origin:50% 100%;}
 	.animation_box.hover .demo_balance_system_hover .demo_ball_7{ -webkit-animation:a_demo_ball_7 1s linear both; -webkit-transform-origin:100px 40px;}
 	.animation_box.hover .demo_balance_system_hover .demo_ball_8{ -webkit-animation:a_demo_ball_8 1s linear both; -webkit-transform-origin:-40px 70px;}
+	
 }
 
 

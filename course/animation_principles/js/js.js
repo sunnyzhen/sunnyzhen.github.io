@@ -6,8 +6,12 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
-	//触摸触发事件
+	//触按触发事件
 	$("body").bind("touchstart", function(event){
+		
+		if($(".menu_wrap").hasClass("hover")){
+			$(".menu_wrap").removeClass("hover");
+		}
 		
 		if(y==0){
 			$("#link_"+i+" .animation_box:first-child").addClass("hover");
@@ -33,7 +37,7 @@ $(document).ready(function(){
 	var i=1;
 	var y=0;
 	
-	//触摸触发事件
+	//划屏触发事件
 	$("body").touchwipe({
 		 wipeLeft: function() { 
 		 
@@ -150,6 +154,16 @@ $(document).ready(function(){
 		});
 	}, false);
 	
+	//菜单触按触发事件
+	$(".menu_wrap").bind("touchstart", function(event){
+		
+		$(".menu_wrap").addClass("hover");
+		
+		if($(".menu_wrap").hasClass("hover")){
+			$(".menu_wrap").removeClass("hover");
+		}
+		
+	});
 	
 });
 
