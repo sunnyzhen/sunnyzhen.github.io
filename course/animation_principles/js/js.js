@@ -6,24 +6,27 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
-	//鼠标触发事件
-	$("body").mousedown(function(){
-		 $(".blessing_bag").addClass("blessing_bag_touch");
-		 
-		$("body").mouseup(function(){
-			 $(".blessing_bag").removeClass("blessing_bag_touch");
-		});
-		
-	});
-	
 	//触摸触发事件
 	$("body").bind("touchstart", function(event){
-		$(".blessing_bag").addClass("blessing_bag_touch");
-				
-		$("body").bind("touchend", function(event){
-			$(".blessing_bag").removeClass("blessing_bag_touch");
-			
-		});
+		
+		switch(i){
+			case 1: {
+				if(y==0){
+					$("#link_1 .animation_box:first-child").addClass("hover");
+					y=1;
+					
+					$("body").bind("touchend", function(event){
+						$("#link_1 .animation_box:first-child").removeClass("hover");
+						
+					});
+								
+				}
+				break;
+			}
+			case 2: break;
+			case 3: System.out.println("haha"); break;
+			case 4: System.out.println("hehe"); break;
+		}
 		
 	});
 
