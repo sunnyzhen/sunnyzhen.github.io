@@ -86,7 +86,14 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
-		 	
+		 	switch(i){
+				case 1: {
+					var str_address=window.location;
+					var adderss=str_address.split("#")[0];
+					window.location=address+"#link_2";
+					break;
+				}
+			}
 		 },
 		 wipeDown: function() { 
 		 	
