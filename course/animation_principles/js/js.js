@@ -87,7 +87,7 @@ $(document).ready(function(){
 		 },
 		 wipeRight: function() {
 			 
-			if(y==0){
+			if(y==1){
 				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
 				y=0;
 			} 
