@@ -92,8 +92,9 @@ $(document).ready(function(){
 		 	switch(i){
 				case 1: {
 					var str_address=window.location;
+					alert(str_address.split("#")[0]);
 					var adderss=str_address.split("#")[0];
-					alert(address+"#link_2");
+					alert(adderss);
 					window.location=address+"#link_2";
 					break;
 				}
