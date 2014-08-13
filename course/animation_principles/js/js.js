@@ -6,25 +6,6 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
-	function BindMenuItem(){
-		var menu_list=$(".menu_list li .txt");
-		for(var i=0;i<menu_list.length;i++){
-			$(menu_list[i]).removeAttr("href");
-			$(menu_list[i]).data("num",i);
-			
-			$(menu_list[i]).bind("touchstart",function(event){
-				$(".content_wrap").css({
-					"margin-top":"-"+416*$(this).data("num")+"px"
-				});
-			});
-		}
-		$(".menu_wrap .tri").removeAttr("href");
-		
-	}
-	
-	BindMenuItem();
-	
-	
 	//触按触发事件
 	$("body").bind("touchstart", function(event){
 		
@@ -117,6 +98,40 @@ $(document).ready(function(){
 	});
 
 	
+	//菜单触按触发事件
+	$(".menu_wrap .tri").bind("touchstart", function(event){
+		
+		if($(".menu_wrap").hasClass("hover")){
+			$(".menu_wrap").removeClass("hover");
+		}
+		else{
+			$(".menu_wrap").addClass("hover");
+		}
+		
+		event.stopPropagation();
+	});
+	
+	function BindMenuItem(){
+		var menu_list=$(".menu_list li .txt");
+		for(var i=0;i<menu_list.length;i++){
+			$(menu_list[i]).removeAttr("href");
+			$(menu_list[i]).data("num",i);
+			
+			$(menu_list[i]).bind("touchstart",function(event){
+				$(".content_wrap").css({
+					"margin-top":"-"+416*$(this).data("num")+"px"
+				});
+			});
+		}
+		$(".menu_wrap .tri").removeAttr("href");
+		
+	}
+	
+	BindMenuItem();
+	
+	
+
+	
 	/*微信转发图片*/
 	
 	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
@@ -174,18 +189,6 @@ $(document).ready(function(){
 		});
 	}, false);
 	
-	//菜单触按触发事件
-	$(".menu_wrap .tri").bind("touchstart", function(event){
-		
-		if($(".menu_wrap").hasClass("hover")){
-			$(".menu_wrap").removeClass("hover");
-		}
-		else{
-			$(".menu_wrap").addClass("hover");
-		}
-		
-		event.stopPropagation();
-	});
 	
 });
 
