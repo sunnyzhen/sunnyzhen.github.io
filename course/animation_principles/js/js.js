@@ -157,8 +157,9 @@ $(document).ready(function(){
 	//菜单触按触发事件
 	$(".menu_wrap").bind("touchstart", function(event){
 		
+		alert("menu_wrap");
 		$(".menu_wrap").addClass("hover");
-		
+		alert("menu_wrap_2");
 		if($(".menu_wrap").hasClass("hover")){
 			$(".menu_wrap").removeClass("hover");
 		}
