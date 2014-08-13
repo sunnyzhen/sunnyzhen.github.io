@@ -113,14 +113,22 @@ $(document).ready(function(){
 	
 	function BindMenuItem(){
 		var menu_list=$(".menu_list li .txt");
-		for(var i=0;i<menu_list.length;i++){
-			$(menu_list[i]).removeAttr("href");
-			$(menu_list[i]).data("num",i);
+		for(var x=0;x<menu_list.length;x++){
+			$(menu_list[x]).removeAttr("href");
+			$(menu_list[x]).data("num",x);
 			
-			$(menu_list[i]).bind("touchstart",function(event){
+			$(menu_list[x]).bind("touchstart",function(event){
 				$(".content_wrap").css({
 					"margin-top":"-"+416*$(this).data("num")+"px"
 				});
+				
+				if(y==1){
+					$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+					y=0;
+				}
+				
+				i=$(this).data("num");
+				
 			});
 		}
 		$(".menu_wrap .tri").removeAttr("href");
