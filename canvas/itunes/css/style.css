@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i,canvas{margin:0;padding:0;}
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+.clear{ clear:both;}
+.clearfix{zoom:1;}
+.clearfix:after{clear:both; content:"";display:block;height:0;line-height:0;visibility:hidden;}
+
+body{ font-size:12px;}
+
+.itune_box{ border:1px solid #333; overflow:hidden; zoom:1; padding:10px;}
+.itune_box .itune_img{ float:left; margin-right:10px; height:350px; width:250px; position:relative; }
+.itune_box .itune_img .itune_shadow{ height:350px; width:250px; position:absolute; left:0px; top:0px; /*box-shadow:0px 0px 10px 5px rgba(255,230,18,1) inset,0px 0px 20px 15px rgba(255,230,18,1) inset;*/}
+.itune_box .itune_con{ float:left;}
+.itune_box .itune_con .itune_title{ font-size:16px; font-family:'微软雅黑'}
+.itune_box .itune_con .itune_subTitle{ font-size:14px; margin-bottom:10px; font-family:arial; font-weight:normal;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

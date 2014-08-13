@@ -6,6 +6,8 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
+	$(".menu_list li a").attr("href","##");
+	
 	//触按触发事件
 	$("body").bind("touchstart", function(event){
 		
