@@ -6,7 +6,24 @@ $(document).ready(function(){
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
-	$(".menu_list li a").attr("href","##");
+	function BindMenuItem(){
+		var menu_list=$(".menu_list li .txt");
+		for(var i=0;i<menu_list.length;i++){
+			$(menu_list[i]).removeAttr("href");
+			$(menu_list[i]).data("num",i);
+			
+			$(menu_list[i]).bind("touchstart",function(event){
+				$(".content_wrap").css({
+					"margin-top":"-"+416*$(this).data("num")+"px"
+				});
+			});
+		}
+		$(".menu_wrap .tri").removeAttr("href");
+		
+	}
+	
+	BindMenuItem();
+	
 	
 	//触按触发事件
 	$("body").bind("touchstart", function(event){
@@ -16,6 +33,7 @@ $(document).ready(function(){
 		}
 		
 		if(y==0){
+			
 			$("#link_"+i+" .animation_box:first-child").addClass("hover");
 			
 			$("body").bind("touchend", function(event){
