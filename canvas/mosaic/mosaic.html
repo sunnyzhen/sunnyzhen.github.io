@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>马赛克效果</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+canvas{ border:1px solid #000;}
+</style>
+<script language="javascript">
+window.onload=function(){
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	
+	var image=new Image();
+	image.src='head.jpg';
+	image.height=500;
+	image.width=500;
+	
+	ctx.drawImage(image,0,0,500,500);
+	
+	var mosaic={x:10,y:10};
+	var imageData=ctx.getImageData(0,0,image.width,image.height);
+	var pixelArray=imageData.data;
+	
+	//像素赋值
+	for(var i=0;i<image.height;i+=mosaic.y)
+		for(var j=0;j<image.width;j+=mosaic.x){
+		    var num=Math.random();
+			var randomPixel={x:Math.floor(num*mosaic.x+i),y:Math.floor(num*mosaic.y+j)};
+			
+			for(var k=j;k<j+mosaic.x;k++)
+				for(var l=i;l<i+mosaic.y;l++){
+					pixelArray[(l*image.width+k)*4]=pixelArray[(randomPixel.x*image.width+randomPixel.y)*4];
+					pixelArray[(l*image.width+k)*4+1]=pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+1];
+					pixelArray[(l*image.width+k)*4+2]=pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+2];
+					pixelArray[(l*image.width+k)*4+3]=pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+3];
+				}
+		}
+	
+	ctx.putImageData(imageData,0,0);
+	
+	//填充矩形
+	/*for(var i=0;i<image.height;i+=mosaic.y)
+		for(var j=0;j<image.width;j+=mosaic.x){
+		    var num=Math.random();
+			var randomPixel={x:Math.floor(num*mosaic.x+i),y:Math.floor(num*mosaic.y+j)};
+			
+			ctx.fillStyle="rgba("+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+1]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+2]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+3]+")";
+			ctx.fillRect(j,i,mosaic.x,mosaic.y);
+			
+		}*/
+		
+	//画圆
+	/*ctx.clearRect(0,0,500,500);
+	for(var i=0;i<image.height;i+=mosaic.y)
+		for(var j=0;j<image.width;j+=mosaic.x){
+		    var num=Math.random();
+			var randomPixel={x:Math.floor(num*mosaic.x+i),y:Math.floor(num*mosaic.y+j)};
+			
+			ctx.fillStyle="rgba("+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+1]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+2]+","+pixelArray[(randomPixel.x*image.width+randomPixel.y)*4+3]+")";
+			ctx.beginPath();
+			ctx.arc(j+mosaic.x/2,i+mosaic.y/2,mosaic.x/2,0,Math.PI*2,false);
+			ctx.fill();
+			
+		}*/
+	
+}
+
+</script>
+</head>
+
+<body>
+<canvas id="canvas" height="500" width="500"></canvas>
+</body>
+</html>

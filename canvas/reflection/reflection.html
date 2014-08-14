@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>水波倒影</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+canvas{ border:1px solid #000;}
+
+</style>
+<script language="javascript">
+window.onload=function(){
+var canvas=document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
+
+var image=new Image();
+image.src="head.jpg";
+var t=0;
+var height=120;//setTimeout setInterval
+var timer=setInterval(function(){
+    ctx.clearRect(0,0,600,500);
+	ctx.drawImage(image,0,0);
+	t++;
+	for(var i=height;i>0;i--){
+		ctx.putImageData(ctx.getImageData(0,180-i+Math.sin(t/5+i/10)*i/10,180,1),Math.sin(t/5+i/10)*i/10,180+i-1);
+	}
+	
+},100);
+
+}
+</script>
+</head>
+
+<body>
+<canvas id="canvas" height="500" width="600">
+
+</canvas>
+</body>
+</html>

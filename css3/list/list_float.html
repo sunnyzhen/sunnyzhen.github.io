@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>颤抖效果</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+ul,li{ list-style:none;}
+body{ background:#eee;}
+.main{ width:852px; margin:20px auto;}
+.listBox{ border:1px solid #aaa; height:220px; position:relative;}
+.listBox .listCon{ width:10000px; display:block; height:220px;}
+.listBox .showBox{ width:852px; display:block; height:220px; overflow:hidden; position:relative;}
+.listBox .listItem{ display:inline; float:left; position:relative; margin-left:9px; margin-top:8px; width:180px; border:1px solid #999999; padding:10px; background:#fff;background:rgba(255,255,255,0.9); -moz-box-shadow:0px 0px 3px rgba(0,0,0,0.4);-webkit-box-shadow:0px 0px 3px rgba(0,0,0,0.4);}
+.listBox .listItem .close{ display:none; position:absolute; height:15px; width:15px; text-indent:-9999px; overflow:hidden; border:1px solid #aaa; background:#eee; background:rgba(0,0,0,0.2); right:10px; top:10px;}
+.listBox .listItem .num{ display:block; height:15px; width:15px; color:rgba(0,0,0,0.5); font-size:12px; text-align:center; line-height:15px; position:absolute; right:10px; bottom:10px;}
+
+/*.listBox .listItem:hover .close{ display:block; IE不兼容item:hover}*/
+.closeAnimation{ -moz-animation:close 0.5s linear both; -webkit-animation:close 0.5s linear both;}
+
+@-moz-keyframes close{
+
+0%{ -moz-transform:translate(3px,0px);}
+15%{ -moz-transform:translate(-3px,0px);}
+30%{ -moz-transform:translate(2px,1px);}
+45%{ -moz-transform:translate(-2px,1px);}
+60%{ -moz-transform:translate(2px,0px);}
+75%{ -moz-transform:translate(-2px,0px);}
+90%{ -moz-transform:translate(2px,1px); opacity:1;}
+100%{ -moz-transform:translate(0px,100px); opacity:0;}
+
+}
+
+@-webkit-keyframes close{
+
+0%{ -webkit-transform:translate(3px,0px); opacity:1;}
+25%{ -webkit-transform:translate(-3px,0px);}
+50%{ -webkit-transform:translate(2px,1px);}
+75%{ -webkit-transform:translate(-2px,1px); opacity:1;}
+100%{ -webkit-transform:translate(0px,100px); opacity:0;}
+
+}
+
+</style>
+<script language="javascript" type="text/javascript">
+window.onload=function(){
+    var listNode=document.getElementById("listCon").childNodes;
+	var num=0;
+	for(var i=0;i<listNode.length;i++){
+		if(/li/gi.test(listNode[i].nodeName)){//listNode[i].nodeName=="LI"
+			num++;
+		}
+	}
+	var array=new Array();
+	var array2=new Array();
+	for(var i=0;i<num;i++){
+		array[i]=document.getElementById("close"+i);
+		array2[i]=document.getElementById("li"+i);
+	}
+	for(var i=0;i<num;i++){
+	    array[i].index=i;
+		array[i].onclick=function(){
+			var liObj=document.getElementById("li"+this.index);
+			liObj.className="listItem closeAnimation";
+			liObj.timer=setTimeout(function(){
+			liObj.style.display="none";
+			},700)
+		}
+		//for ie
+		array2[i].index=i;
+		array2[i].onmouseover=function(){
+			var closeObj=document.getElementById("close"+this.index);
+			closeObj.style.display="block";
+		}
+		array2[i].onmouseout=function(){
+			var closeObj=document.getElementById("close"+this.index);
+			closeObj.style.display="none";
+		}
+		
+	}
+	
+	
+	
+}
+</script>
+</head>
+
+<body>
+<div class="main">
+    <div class="listBox"><div class="showBox"><ul class="listCon" id="listCon">
+    <li class="listItem" id="li0"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close0">close</a><i class="num">1</i></li>
+    <li class="listItem" id="li1"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close1">close</a><i class="num">2</i></li>
+    <li class="listItem" id="li2"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close2">close</a><i class="num">3</i></li>
+    <li class="listItem" id="li3"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close3">close</a><i class="num">4</i></li>
+    <li class="listItem" id="li4"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close4">close</a><i class="num">5</i></li>
+    <li class="listItem" id="li5"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close5">close</a><i class="num">6</i></li>
+    <li class="listItem" id="li6"><img src="head.jpg" alt=""/><a href="javascript:void(0);" class="close" id="close6">close</a><i class="num">7</i></li>
+    </ul></div></div>
+</div>
+</body>
+</html>

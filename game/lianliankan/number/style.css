@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0px; padding:0px;}
+body{ font-size:12px;}
+ul,ol,li{ list-style:none;}
+.main{ width:1000px; margin:10px auto;}
+.displayBox{ border:1px solid #999999; height:409px; width:409px; position:relative;-moz-box-shadow:inset 0px 0px 3px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 0px 3px rgba(0,0,0,0.3);}
+.displayBox i{ display:block; height:40px; width:40px; background:rgba(0,0,0,0.2); z-index:2; position:absolute; cursor:pointer; text-align:center; line-height:40px; font-style:normal; font-size:16px;}
+.displayBox .selected{ background:rgba(0,0,255,0.3); color:#fff; -moz-box-shadow:0px 0px 2px rgba(0,0,0,0.5);-webkit-box-shadow:0px 0px 2px rgba(0,0,0,0.5);}
+.displayBox .pathItem{ background:rgba(255,153,0,0.3); color:#fff;}
+.cooperBox{ padding:10px;}
+.check{ opacity:0.1; position:absolute; left:0px; top:0px; z-index:1;}
+.check td{ height:40px; width:40px; text-align:center; line-height:40px; border:1px solid #999; border-top:none; border-left:none;}
+.check .last{ border-right:none;}
+
+.holdOnLayer{ position:absolute; height:409px; width:409px; background:rgba(0,0,0,0.1); z-index:99; line-height:450px; text-align:center; color:#000; font-size:14px; display:none;}
+
+.box{ position:absolute; left:430px; border:1px solid rgba(0,0,0,0.5); width:100px; height:30px; text-align:center; line-height:30px; font-size:18px; font-family:"微软雅黑"; -moz-box-shadow:inset 0px 0px 3px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 0px 3px rgba(0,0,0,0.3); text-shadow:0px 0px 2px rgba(0,0,0,0.5); background:rgba(0,0,0,0.1);}
+.countDownBox{ top:10px;}
+.scoreBox{ top:50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

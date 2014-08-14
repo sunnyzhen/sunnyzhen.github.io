@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>连连看表情版</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script language="javascript" type="text/javascript" src="js.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div class="displayBox" id="displayBox">
+        <div class="showBox">
+        <div class="holdOnLayer">暂停ing</div>
+        <table class="check"></table>
+        <div class="iBlockContainer"></div>
+        <div class="pathContainer"></div>
+        </div>
+        <div class="countDownBox box">60</div>
+        <div class="scoreBox box">0</div>
+    </div>
+    <div class="cooperBox">
+        <form>
+        <input type="button" name="startBtn" value="开 始"/>
+        <input type="button" name="stopBtn" value="暂 停"/>
+        <input type="button" name="resetBtn" value="重 开"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script language="javascript" type="text/javascript">
+createMap();
+document.forms[0].startBtn.onclick=startGame;
+document.forms[0].stopBtn.onclick=stopGame;
+document.forms[0].resetBtn.onclick=resetGame;
+var holdOnLayer=getElementsByClassName("holdOnLayer")[0];
+var iBlockContainer=getElementsByClassName("iBlockContainer")[0];
+var pathContainer=getElementsByClassName("pathContainer")[0];
+resetGame();
+</script>

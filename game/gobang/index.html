@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>五子棋初级版</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script language="javascript" type="text/javascript" src="js.js"></script>
+</head>
+
+<body>
+<div class="piece black" style="margin:50px; top:100px; left:20px;"><i></i></div>
+<div class="piece white" style="margin:50px; top:300px; left:20px;"><i></i></div>
+
+<div class="chessboardBox"><div class="pieceBox"></div><div class="holdOnLayer">暂停ing</div></div>
+<div class="cooperBox">
+    <form>
+    <input type="button" name="startBtn" value="开 始"/>
+    <input type="button" name="stopBtn" value="暂 停"/>
+    <input type="button" name="resetBtn" value="重 开"/>
+    <input type="button" name="saveBtn" value="保 存"/>
+    <input type="button" name="restoreBtn" value="恢 复"/>
+    </form>
+</div>
+</body>
+</html>
+
+<script language="javascript">
+document.forms[0].startBtn.onclick=startGame;
+document.forms[0].stopBtn.onclick=stopGame;
+document.forms[0].resetBtn.onclick=resetGame;
+document.forms[0].saveBtn.disabled="disabled";
+document.forms[0].stopBtn.disabled="disabled";
+
+var chessboardBox=getElement(".chessboardBox")[0];
+var holdOnLayer=getElementsByClassName("holdOnLayer")[0];
+var pieceBox=getElementsByClassName("pieceBox")[0];
+createMap();
+canCookie();
+</script>
+
+
