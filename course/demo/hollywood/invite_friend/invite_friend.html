@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<title>邀请好友开会员</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+
+<link rel="stylesheet" type="text/css" href="css/invite_friend.css" />
+
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="cover_wrap">
+    	<div class="gift_box_wrap"><!-- 添加类名 gift_box_open 打开盒子 -->
+            
+            <span class="gift_box_top"></span>
+            <span class="gift_box_bottom">
+            
+            	<span class="bottom_after"></span>
+                <span class="bottom_before"></span>
+                
+                <h1 class="slogan_txt">邀请好友开会员 赚Q币赢好礼</h1>
+                <span class="icon_video"></span>
+                <span class="icon_gold"></span>
+                <span class="icon_logo"></span>
+                
+            </span>
+            
+        </div>
+        <div class="shine_light"></div>
+        <a href="#" class="slide_up"><i class="icon_up"></i><span class="slide_txt">向上滑动了解</span></a>
+        
+        
+    </div>
+</div>    
+
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
+<script language="javascript" type="text/javascript">
+	(function(){
+		$(document).ready(function(e) {
+			
+			$(".gift_box_wrap").click(function(){
+				var that=$(this);
+				$(that).addClass("gift_box_open");
+				$(".cover_wrap .slide_up").addClass("slide_up_1");
+			});
+			
+        });
+	})();
+</script>
+
+</body>
+</html>
