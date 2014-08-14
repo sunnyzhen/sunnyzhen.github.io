@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{ margin:0px; padding:0px;}
+canvas{position:absolute; left:0px; top:0px;}
+</style>
+<script language="javascript">
+window.onload=function(){
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	
+	var clearArray=new Array();
+	var paintFlag=false;
+	frosting();
+	function frosting(){
+		var time=1;
+		var x=0;
+		var y=0;
+		var height=20;
+		var width=1000;
+		var frozenArray=new Array();
+		var timer=setInterval(function(){
+			if(!(time%130)){
+			y+=15; height+=15;  console.log(y+" "+height);
+			}
+			time++;
+			(new frozen(x,y,width,height,time,Math.random()*5+20)).frost();
+			
+			if(height>=350){
+			    ctx.clearRect(0,0,1000,700);
+				ctx.fillStyle="rgba(255,255,255,0.8)";
+				ctx.fillRect(0,0,1000,700);
+				clearInterval(timer);
+				
+				canvas.onmousedown=function(){
+					paintFlag=true;
+				}
+				canvas.onmouseup=function(){
+					paintFlag=false;
+				}
+				
+				canvas.onmousemove=function(eve){
+					if(paintFlag){
+						clearArray.push(new shape(eve.pageX,eve.pageY,30));
+						clean();
+					}
+				}
+			}
+			
+		},20);
+		
+	}
+	
+	function frozen(x,y,width,height,time,radius){
+		this.x=x;
+		this.y=y;
+		this.width=width;
+		this.height=height;
+		this.time=time;
+		this.radius=radius;
+		
+	}   
+	
+	frozen.prototype.frost=function(){
+		ctx.fillStyle="rgba(255,255,255,0.35)";
+		ctx.shadowBlur=5;
+		ctx.shadowColor="rgba(255,255,255,1)";
+		ctx.beginPath();
+		ctx.arc(Math.random()*this.width+this.x,Math.random()*this.height+this.y,this.radius,0,Math.PI*2,false);
+		ctx.closePath();
+		ctx.fill();
+	} 
+	
+	function shape(x,y,radius){
+		this.x=x;
+		this.y=y;
+		this.radius=radius;
+	}
+	
+	function clean(){
+		for(var i=0;i<clearArray.length;i++){
+			ctx.beginPath();
+			ctx.arc(clearArray[i].x,clearArray[i].y,clearArray[i].radius,0,Math.PI*2,false);
+			ctx.closePath();
+			ctx.globalCompositeOperation="destination-out";
+			ctx.fill();
+		}
+	}
+	
+	
+	
+}
+
+</script>
+</head>
+
+<body>
+<canvas id="canvas" height="700" width="1000"></canvas>
+<img src="sunny.jpg" alt=""/>
+</body>
+</html>
