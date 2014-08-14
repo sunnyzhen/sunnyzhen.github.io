@@ -127,7 +127,7 @@ $(document).ready(function(){
 					y=0;
 				}
 				
-				i=$(this).data("num");
+				i=$(this).data("num")+1;
 				
 			});
 		}

@@ -58,11 +58,11 @@ body{ background:#ccc; background:-moz-radial-gradient(circle,#ccc,#a8a8a8);}
 .mask3{-moz-transform: rotate(-5deg);left: 712px;top: 74.5px;}
 .mask4{-moz-transform:rotate(-10deg);left: 919px;top: 56.5px;}
 
-.rope{ width:1000px; height:230px; -moz-border-radius:500px/115px; border:3px solid rgba(0,0,0,0.1); margin:-150px auto 0px;}
-.rope:before{ content:""; display:block; width:1000px; height:220px; -moz-border-radius:500px/110px; border:3px solid rgba(255,255,255,1); margin-left:-5px;}
+.rope{ width:1000px; height:230px; border-radius:500px/115px; border:3px solid rgba(0,0,0,0.1); margin:-150px auto 0px;}
+.rope:before{ content:""; display:block; width:1000px; height:220px; border-radius:500px/110px; border:3px solid rgba(255,255,255,1); margin-left:-5px;}
 
-.paper{ height:300px;  width:100px; background:rgba(255,255,255,1); -moz-box-shadow:0px 0px 5px rgba(0,0,0,0.5),inset 0px 0px 1px rgba(255,255,255,0.8); text-align:center; line-height:300px; font-size:60px; font-family: Arial; font-weight:bold; position:absolute; z-index:1; padding:10px; -moz-border-radius:5px; color:#fff; text-shadow:0px 0px 3px rgba(0,0,0,0.6); background:-moz-linear-gradient(left top,#f4e68d,#c28032);}
-.paperInner{ -moz-box-shadow: inset 0px 0px 3px rgba(0,0,0,0.6),0px 0px 1px rgba(255,255,255,0.8); -moz-border-radius:5px; }
+.paper{ height:300px;  width:100px; background:rgba(255,255,255,1); box-shadow:0px 0px 5px rgba(0,0,0,0.5),inset 0px 0px 1px rgba(255,255,255,0.8); text-align:center; line-height:300px; font-size:60px; font-family: Arial; font-weight:bold; position:absolute; z-index:1; padding:10px; border-radius:5px; color:#fff; text-shadow:0px 0px 3px rgba(0,0,0,0.6); background:-moz-linear-gradient(left top,#f4e68d,#c28032);}
+.paperInner{ box-shadow: inset 0px 0px 3px rgba(0,0,0,0.6),0px 0px 1px rgba(255,255,255,0.8); border-radius:5px; }
 .redInner{background:-moz-radial-gradient(circle,#e11224,#991b1e);background:-moz-repeating-linear-gradient(left,#e11224,#e11224 1px,#991b1e 1px,#991b1e 3px)}
 .orangeInner{ background:-moz-repeating-linear-gradient(left,#e9842c,#e9842c 1px,#e26b29 1px,#e26b29 3px)}
 .greenInner{ background:-moz-repeating-linear-gradient(left,#cbd736,#cbd736 1px,#a0ac2e 1px,#a0ac2e 3px)}
