@@ -89,7 +89,7 @@ body{ background:#ebebeb;}
 
 .sign_txt{ display:block; height:167px; width:29px; background:url(../image/intro_time.png) no-repeat 0 0; position:absolute; left:50%; top:50%; margin-left:-190px; margin-top:20px; z-index:3; -moz-animation:a_sign_txt 0.5s 7.4s linear both; opacity:0; -moz-transform:translate(-20px,0);}
 .spot_bg{ display:block; height:400px; width:391px; background:url(../image/intro_bg.png) no-repeat 0 0; position:absolute; left:50%; top:50%; margin-left:-255px; margin-top:-190px; z-index:1; -moz-animation:a_spot_bg 3.6s ease-in both; opacity:0; -moz-transform:scale(0.15);}
-.spot_bg:after{ content:""; display:block; height:400px; width:391px; background:url(../image/intro_bg.png) no-repeat 0 0; position:absolute; left:0px; top:0xp; z-index:1; -moz-animation:a_spot_bg 3s 0.5s ease-in both; opacity:0; -moz-transform:scale(0.15);}
+.spot_bg .spot_inner{ display:block; height:400px; width:391px; background:url(../image/intro_bg.png) no-repeat 0 0; position:absolute; left:0px; top:0xp; z-index:1; -moz-animation:a_spot_bg 3s 0.5s ease-in both; opacity:0; -moz-transform:scale(0.15);}
 
 .spot_bg_2{ display:block; height:475px; width:441px; background:url(../image/intro_drops.png) no-repeat 0 0; position:absolute; left:50%; top:50%; margin-left:-220px; margin-top:-237px; z-index:2; -moz-animation:a_spot_bg_2 0.5s 3.6s linear both;}
 .spot_1{ display:block; height:42px; width:37px; background:url(../image/spot_1.png) no-repeat 0 0; position:absolute; left:171px; top:221px; z-index:2; -moz-animation:a_spot_1 0.2s 4.0s linear both; opacity:0; -moz-transform:scale(0.2);}
@@ -211,7 +211,7 @@ body{ background:#ebebeb;}
 
 .sign_txt{-webkit-animation:a_sign_txt 0.5s 7.4s linear both; -webkit-transform:translate(-20px,0);}
 .spot_bg{-webkit-animation:a_spot_bg 3.6s ease-in both; -webkit-transform:scale(0.15);}
-.spot_bg:after{-webkit-animation:a_spot_bg 3s 0.5s ease-in both; -webkit-transform:scale(0.15);}
+.spot_bg .spot_inner{-webkit-animation:a_spot_bg 3s 0.5s ease-in both; -webkit-transform:scale(0.15);}
 
 .spot_bg_2{-webkit-animation:a_spot_bg_2 0.5s 3.6s linear both;}
 .spot_1{-webkit-animation:a_spot_1 0.2s 4.0s linear both; -webkit-transform:scale(0.2);}
