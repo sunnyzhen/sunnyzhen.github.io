@@ -20,8 +20,8 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 body{ background:#162632; line-height:1.5;}
 
 /*style*/
-.star_wrap{ width:100%; margin-top:-416px;}
-.cover_wrap{ display:block; width:100%; height:100%; height:416px; background:url(../images/cover_bg.png) no-repeat 0 0; background-size:320px 416px;}
+.star_wrap{ width:100%; position:absolute; left:0px; top:0px; z-index:1;}
+.cover_wrap{ display:block; width:100%; height:100%; height:416px; background-size:320px 416px;}
 
 .link_next{ display:block; height:24px; width:24px; position:absolute; left:50%; bottom:20px; margin-left:-12px; background:rgba(160,160,160,0.3); border-radius:24px; z-index:2;}
 .link_next .inner{ display:block; height:24px; width:24px; border-radius:24px; position:absolute; left:0px; top:0px; background:rgba(160,160,160,0.3); opacity:0.6; -webkit-animation:a_link_next 1s linear infinite;}
@@ -32,7 +32,43 @@ body{ background:#162632; line-height:1.5;}
 	100%{ opacity:0; -webkit-transform:scale(2);}
 }
 
-.logo_wrap{ display:none;}
+.star_area{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px;}
+.star_area .star{ display:block; height:10px; width:10px; border-radius:10px; background:#fff; box-shadow:0px 0px 3px rgba(255,255,255,0.5); position:absolute; left:0px; top:0px;}
+.star_area .star_2{ height:5px; width:5px; border-radius:5px; left:100px; top:50px;}
+.star_area .star_3{ height:3px; width:3px; border-radius:3px; left:30px; top:230px;}
+
+.logo_wrap .title{ display:none;}
+.logo_wrap .logo_txt_wrap{ width:240px; height:90px; display:block; position:absolute; left:50%; top:68px; margin-left:-120px;}
+.logo_txt_wrap .txt_1{ display:block; height:38px; width:199px; background:url(../images/cover_txt_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:40px; top:0px;}
+.logo_txt_wrap .txt_2{ display:block; height:38px; width:36px; background:url(../images/cover_txt_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:40px; top:49px;}
+.logo_txt_wrap .txt_3{ display:block; height:38px; width:43px; background:url(../images/cover_txt_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:76px; top:49px;}
+.logo_txt_wrap .txt_4{ display:block; height:51px; width:42px; background:url(../images/cover_txt_4.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:39px;}
+.logo_txt_wrap .txt_5{ display:block; height:42px; width:42px; background:url(../images/cover_txt_5.png) no-repeat 0 0; background-size:contain; position:absolute; left:119px; top:49px;}
+.logo_txt_wrap .txt_6{ display:block; height:40px; width:41px; background:url(../images/cover_txt_6.png) no-repeat 0 0; background-size:contain; position:absolute; left:161px; top:49px;}
+.logo_txt_wrap .txt_7{ display:block; height:39px; width:39px; background:url(../images/cover_txt_7.png) no-repeat 0 0; background-size:contain; position:absolute; left:200px; top:49px;}
+
+.mine_wrap_1{ display:block; height:62px; width:218px; background:url(../images/mine_bg_2.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-109px; top:328px; background-size:contain;}
+.phone_wrap{ display:block; height:164px; width:82px; position:absolute; left:0px; top:-150px; }
+.phone_wrap .phone_show{display:block; height:164px; width:82px; background:url(../images/phone_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1;}
+.phone_wrap .phone_photo{display:block; height:164px; width:82px; background:url(../data/photo_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .con_wrap{ height:416px; position:relative;}
 .tab_wrap{ width:125px; height:82px; border:2px solid #f7f1e0; border-left:none; border-right:none; position:absolute; left:50%; margin-left:-62px; top:50px;}
