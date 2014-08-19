@@ -74,7 +74,7 @@ body{ background:#162632; line-height:1.5;}
 .mine_wrap_1{ display:block; height:62px; width:218px; background:url(../images/mine_bg_2.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-109px; top:328px; background-size:contain;}
 .phone_wrap{ display:block; height:164px; width:82px; position:absolute; left:0px; top:-150px; }
 .phone_wrap .phone_show{display:block; height:164px; width:82px; background:url(../images/phone_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:1;}
-.phone_wrap .phone_photo{display:block; height:122px; width:73px; background:url(../data/photo_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:5px; top:21px; z-index:1;}
+.phone_wrap .phone_photo{display:block; height:122px; width:73px; background:url(../data/photo_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:5px; top:21px; z-index:1; display:none;}
 
 .plane_wrap{ display:block; height:70px; width:115px; position:absolute; left:-10px; top:15px; z-index:1;}
 .plane_wrap .line_1{ display:block; height:21px; width:15px; background:url(../images/line_1_1.png) no-repeat 0 0; position:absolute; left:0px; top:40px; background-size:contain;}
