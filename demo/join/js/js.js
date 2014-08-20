@@ -103,9 +103,9 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
 	var lineLink = location.href;
-	var descContent = "首期Linkshow，力邀9款产品，多个招聘岗位，邀你听产品故事，荐优秀人才！";
+	var descContent = "校招";
 	var shareTitle = document.title;
 	var appid = '';
 	
