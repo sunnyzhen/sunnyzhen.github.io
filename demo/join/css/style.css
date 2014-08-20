@@ -180,7 +180,7 @@ body{ background:#193953; line-height:1.5;}
 
 .con_wrap{ height:416px; position:relative;}
 .con_title{ color:#f9c741;}
-.con_title .num{ display:block; position:absolute; top:35px; left:50%; margin-left:-115px;}
+.con_title .num{ display:block; position:absolute; top:35px; left:50%; margin-left:-115px; text-indent:-9999px; overflow:hidden;}
 .con_title .num_1{ height:85px; width:48px; background:url(../images/num_1.png) no-repeat 0 0; background-size:contain;}
 .con_title .num_2{ height:87px; width:53px; background:url(../images/num_2.png) no-repeat 0 0; background-size:contain;}
 .con_title .num_3{ height:88px; width:51px; background:url(../images/num_3.png) no-repeat 0 0; background-size:contain;}
@@ -313,9 +313,14 @@ body{ background:#193953; line-height:1.5;}
 	100%{ -webkit-transform:translate(0,0);}
 }
 
+.con_title_2 .title{ top:45px;}
+.con_title_2 .txt{ top:83px;}
 
+.flag_new{ display:inline-block; height:25px; width:26px; background:url(../images/flag_2.png) no-repeat 0 0; margin-left:10px; background-size:contain; position:relative; top:2px;}
 
-
+.con_wrap_2 .phone_wrap{ left:50%; top:162px; margin-left:-120px;}
+.con_wrap_3 .phone_wrap{ left:50%; top:162px; margin-left:-120px;}
+.con_wrap_4 .phone_wrap{ left:50%; top:162px; margin-left:-120px;}
 
 
 
