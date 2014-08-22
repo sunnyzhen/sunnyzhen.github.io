@@ -315,6 +315,8 @@ body{ background:#193953; line-height:1.5;}
 
 .con_title_2 .title{ top:45px;}
 .con_title_2 .txt{ top:83px;}
+.con_title_3 .title{ top:45px; margin-left:-45px;}
+.con_title_3 .txt{ top:83px; margin-left:-45px;}
 
 .flag_new{ display:inline-block; height:25px; width:26px; background:url(../images/flag_2.png) no-repeat 0 0; margin-left:6px; background-size:contain; position:relative; top:2px; -webkit-animation:a_icon_qq 2s 1s linear both infinite alternate; -webkit-transform-origin:0% 100%; opacity:0; -webkit-transform:scale(0.1);}
 
