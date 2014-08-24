@@ -72,7 +72,30 @@ $(document).ready(function(){
 	
 	
 	
+	function bindClickEvent(){
+		for(var i=1;i<=6;i++){
+			var name=".link_next_"+i;
+			(function(){   
+				var index_num = i;
+				$(name).bind("click",function(){
+					
+					if(screen_num==index_num){
+						$(".star_wrap").css({
+							"margin-top": screen_h*screen_num*(-1)
+						});
+						screen_num=index_num+1;
+					}
+					
+				});
+			
+			})(); 
+		}
+		
+	}
 	
+	bindClickEvent();
+
+	/*
 	$(".link_next_1").click(function(){
 		if(screen_num==1){
 			$(".star_wrap").css({
@@ -91,6 +114,16 @@ $(document).ready(function(){
 		}
 	});
 	
+	
+	$(".link_next_3").click(function(){
+		if(screen_num==3){
+			$(".star_wrap").css({
+				"margin-top": screen_h*screen_num*(-1)
+			});
+			screen_num=4;
+		}
+	});
+	*/
 	
 	//触摸触发事件
 	/*$(".cover_wrap").touchwipe({
