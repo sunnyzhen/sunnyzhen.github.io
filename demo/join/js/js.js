@@ -35,15 +35,26 @@ $(document).ready(function(){
 	
 	$("body").touchwipe({
 		wipeUp: function() { 
-			if(screen_num==1){
-				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
-				});
-				screen_num=2;
+			
+			for(var i=1;i<=6;i++){
+				if(i<6){
+					$(".star_wrap").css({
+						"margin-top": screen_h*screen_num*(-1)
+					});
+					screen_num=i+1;
+				}
 			}
+			
 		},
 		wipeDown: function() { 
-			
+			for(var i=1;i<=6;i++){
+				if(i>1){
+					screen_num=i-1;
+					$(".star_wrap").css({
+						"margin-top": screen_h*screen_num*(-1)
+					});
+				}
+			}
 		},
 		min_move_x: 80,
 		min_move_y: 80,
