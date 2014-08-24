@@ -2,6 +2,70 @@
 
 $(document).ready(function(){
 	
+	//生成星星
+	function CreateStar(num,area){
+		var size_s=2;
+		var size_m=5;
+		var size_l=10;
+		var star_area=area;
+		var star_tri="";
+		var star_size="";
+		
+		for(var i=0;i<num;i++){
+			var p_left=Math.round(Math.random()*$(window).width())+"px";
+			var p_top=Math.round(Math.random()*$(window).height())+"px";
+			if(i<size_s){ star_size=" ";}
+			else if(i>=size_s&&i<size_m){ star_size=" star_2";}
+			else if(i>=size_m){ star_size=" star_3";}
+			star_tri+="<i class='star"+star_size+"' style='left:"+p_left+"; top:"+p_top+"'></i>";
+		}
+		$(star_area).html(star_tri);
+	}
+	function Create_stararea(){
+		for(var j=0;j<6;j++){
+			CreateStar(18,$(".star_area")[j]);
+		}
+	}
+	
+	// 初始化星空背景
+	Create_stararea();
+	
+	var screen_num=1;
+	var screen_h=$(window).height();
+	
+	$("body").touchwipe({
+		wipeUp: function() { 
+			if(screen_num==1){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=2;
+			}
+		},
+		wipeDown: function() { 
+			
+		},
+		min_move_x: 80,
+		min_move_y: 80,
+		preventDefaultEvents: true
+	});
+	
+	$(".tab_item_1").click(function(){
+		$(".pliers_wrap").removeClass("get_diamond_2").addClass("get_diamond_1");
+	});
+	$(".tab_item_2").click(function(){
+		$(".pliers_wrap").removeClass("get_diamond_1").addClass("get_diamond_2");
+	});
+	
+	$("body").click(function(){
+		if(screen_num==1){
+			$(".star_wrap").css({
+				"margin-top": screen_h*screen_num*(-1)
+			});
+			screen_num=2;
+		}
+	});
+	
 	//触摸触发事件
 	$(".cover_wrap").touchwipe({
 		wipeDown: function() { 
