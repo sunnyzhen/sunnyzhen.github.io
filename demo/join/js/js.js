@@ -42,6 +42,7 @@ $(document).ready(function(){
 						"margin-top": screen_h*screen_num*(-1)
 					});
 					screen_num=i+1;
+					break;
 				}
 			}
 			
@@ -53,6 +54,7 @@ $(document).ready(function(){
 					$(".star_wrap").css({
 						"margin-top": screen_h*screen_num*(-1)
 					});
+					break;
 				}
 			}
 		},
