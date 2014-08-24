@@ -60,6 +60,7 @@ $(document).ready(function(){
 	
 	$("body").touchwipe({
 		wipeUp: function() { 
+			alert(screen_num);
 			if(screen_num!=1){
 				$(".con_wrap_1").removeClass("con_wrap_1_show");
 				$(".con_wrap_2").removeClass("con_wrap_2_show");
