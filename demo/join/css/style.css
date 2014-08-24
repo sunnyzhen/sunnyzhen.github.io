@@ -619,7 +619,7 @@ body{ background:#193953; line-height:1.5;}
 
 .info_wrap .info_2{ position:absolute; left:75px; top:87px; width:70px;}
 .icon_rect{ display:block; height:4px; width:4px; border:1px solid #8ecf51; position:absolute; left:0; top:0;}
-.info_wrap .info_2 .line_area{ width:11px; height:0px; left:0px; top:0px; -webkit-animation:a_line_area 0.2s 0.8s linear both;}
+.info_wrap .info_2 .line_area{ width:11px; height:0px; left:0px; top:0px;}
 .info_wrap .info_2 .line_area .line{ -webkit-transform: skew(40deg,0); border-right:1px solid #8ecf51; border-top:1px solid #8ecf51; left:-37px;}
 .info_wrap .info_2 .icon_rect{ left:8px; top:3px; opacity:0;}
 .info_wrap .info_2 .txt{ margin-top:9px; margin-left:8px; opacity:0;}
@@ -645,7 +645,7 @@ body{ background:#193953; line-height:1.5;}
 	0%{ width:0;}
 	100%{  width:26px;}
 }
-
+.con_wrap_3_show .info_wrap .info_2 .line_area{-webkit-animation:a_line_area 0.2s 1.3s linear both;}
 .con_wrap_3_show .info_wrap .info_2 .icon_rect{ -webkit-animation:a_info_txt 0.2s 1.5s linear both;}
 .con_wrap_3_show .info_wrap .info_2 .txt{ -webkit-animation:a_info_txt 0.2s 1.7s linear both;}
 .con_wrap_3_show .info_wrap .info_2 .txt_line_1{ -webkit-animation:a_txt_line_4 0.2s 1.9s linear both;}
@@ -654,7 +654,7 @@ body{ background:#193953; line-height:1.5;}
 
 .info_wrap .info_3{ position:absolute; left:30px; top:90px; width:30px; text-align:right;}
 .icon_rect{ display:block; height:4px; width:4px; border:1px solid #8ecf51; position:absolute; left:0; top:0;}
-.info_wrap .info_3 .line_area{ width:11px; height:6px; left:0px; top:0px; -webkit-animation:a_line_area 0.2s 2s linear both;}
+.info_wrap .info_3 .line_area{ width:11px; height:0px; left:0px; top:0px;}
 .info_wrap .info_3 .line_area .line{ -webkit-transform: skew(-40deg,0); border-left:1px solid #8ecf51; border-top:1px solid #8ecf51;}
 .info_wrap .info_3 .icon_rect{ left:-2px; top:3px; opacity:0; }
 .info_wrap .info_3 .txt{ margin-top:9px; margin-left:8px;}
@@ -664,6 +664,7 @@ body{ background:#193953; line-height:1.5;}
 .info_wrap .info_3 .txt_line_2{ top:18px; width:0;}
 .info_wrap .info_3 .txt_line_3{ top:22px; width:0;}
 
+.con_wrap_3_show .info_wrap .info_3 .line_area{-webkit-animation:a_line_area 0.2s 2.5s linear both;}
 .con_wrap_3_show .info_wrap .info_3 .icon_rect{-webkit-animation:a_info_txt 0.2s 2.7s linear both;}
 .con_wrap_3_show .info_wrap .info_3 .txt_line_1{-webkit-animation:a_txt_line_4 0.2s 2.9s linear both;}
 .con_wrap_3_show .info_wrap .info_3 .txt_line_2{-webkit-animation:a_txt_line_5 0.2s 3.1s linear both;}
