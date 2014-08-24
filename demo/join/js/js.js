@@ -33,8 +33,7 @@ $(document).ready(function(){
 	var screen_num=1;
 	var screen_h=$(window).height();
 	
-	$("body").touchwipe({
-		wipeUp: function() { 
+	/*wipeUp: function() { 
 			
 			for(var i=1;i<=6;i++){
 				if(i<6){
@@ -56,6 +55,74 @@ $(document).ready(function(){
 					});
 					break;
 				}
+			}
+		},*/
+	
+	$("body").touchwipe({
+		wipeUp: function() { 
+			if(screen_num==1){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=2;
+			}
+			else if(screen_num==2){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=3;
+			}
+			else if(screen_num==3){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=4;
+			}
+			else if(screen_num==4){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=5;
+			}
+			else if(screen_num==5){
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+				screen_num=6;
+			}
+			else if(screen_num==6){}
+		},
+		wipeDown: function() { 
+			if(screen_num==1){}
+			else if(screen_num==2){
+				screen_num=1;
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+			}
+			else if(screen_num==3){
+				screen_num=2;
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+			}
+			else if(screen_num==4){
+				screen_num=3;
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+			}
+			else if(screen_num==5){
+				screen_num=4;
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
+			}
+			else if(screen_num==6){
+				screen_num=5;
+				$(".star_wrap").css({
+					"margin-top": screen_h*screen_num*(-1)
+				});
 			}
 		},
 		min_move_x: 80,
