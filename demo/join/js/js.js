@@ -232,7 +232,7 @@ $(document).ready(function(){
 	}
 	
 	bindClickEvent();
-
+	
 	/*
 	$(".link_next_1").click(function(){
 		if(screen_num==1){
