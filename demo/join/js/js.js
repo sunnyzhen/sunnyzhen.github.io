@@ -74,7 +74,7 @@ $(document).ready(function(){
 			else if(screen_num==2){
 				screen_num=1;
 				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
+					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".cover_wrap").addClass("cover_wrap_show");
 				
@@ -82,7 +82,7 @@ $(document).ready(function(){
 			else if(screen_num==3){
 				screen_num=2;
 				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
+					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".con_wrap_1").addClass("con_wrap_1_show");
 				
@@ -90,7 +90,7 @@ $(document).ready(function(){
 			else if(screen_num==4){
 				screen_num=3;
 				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
+					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".con_wrap_2").addClass("con_wrap_2_show");
 				
@@ -98,7 +98,7 @@ $(document).ready(function(){
 			else if(screen_num==5){
 				screen_num=4;
 				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
+					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".con_wrap_3").addClass("con_wrap_3_show");
 				
@@ -106,7 +106,7 @@ $(document).ready(function(){
 			else if(screen_num==6){
 				screen_num=5;
 				$(".star_wrap").css({
-					"margin-top": screen_h*screen_num*(-1)
+					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".con_wrap_4").addClass("con_wrap_4_show");
 				
