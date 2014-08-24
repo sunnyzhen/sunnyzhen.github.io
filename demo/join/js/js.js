@@ -21,6 +21,7 @@ $(document).ready(function(){
 		}
 		$(star_area).html(star_tri);
 	}
+	
 	function Create_stararea(){
 		for(var j=0;j<6;j++){
 			CreateStar(18,$(".star_area")[j]);
@@ -29,6 +30,17 @@ $(document).ready(function(){
 	
 	// 初始化星空背景
 	Create_stararea();
+	
+	function setHeight(){
+		var w_height=$(window).height();
+		if(w_height>504){
+			$(".cover_wrap").height(w_height);
+			$(".con_wrap").height(w_height);
+			$(".back_cover_wrap").height(w_height);
+		}
+	}
+	
+	setHeight();
 	
 	var screen_num=1;
 	var screen_h=$(window).height();
