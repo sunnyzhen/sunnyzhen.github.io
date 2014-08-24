@@ -214,7 +214,7 @@ body{ background:#193953; line-height:1.5;}
 .line_area .line{ display:block; height:5px; width:45px; border:2px solid #f05f6c; border-right:none; border-bottom:none; -webkit-transform:skew(-50deg,0); position:absolute; left:0px; top:0px;}
 
 .pliers_wrap{ position:relative; height:91px; width:82px; display:block; position:absolute; left:50%; margin-left:-25px; top:222px; z-index:1;}
-.pliers{ height:130px; width:120px; display:block; position:absolute; left:50%; margin-left:-43px; top:0; overflow:hidden; z-index:1;}
+.pliers{ height:130px; width:120px; display:block; position:absolute; left:50%; margin-left:-43px; top:0; overflow:hidden; z-index:1; -webkit-animation:a_pliers_select 3s linear infinite;}
 .pliers .pulley{ display:block; height:20px; width:26px; background: url(../images/pliers_hand_top.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-13px; top:2px; z-index:1;}
 .pliers .handle{ display:block; height:56px; width:51px; background: url(../images/pliers_hand_handle.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-26px; top:-20px;}
 .pliers .handle .palm{ display:block; height:27px; width:12px; background: url(../images/pliers_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-27px; top:46px; -webkit-transform-origin:70% 0%;}
@@ -233,6 +233,16 @@ body{ background:#193953; line-height:1.5;}
 	25%{ -webkit-transform:translate(-2px,1px);}
 	50%{ -webkit-transform:translate(1px,-1px);}
 	75%{ -webkit-transform:translate(-1px,1px);}
+	100%{ -webkit-transform:translate(0,0);}
+}
+
+
+
+@-webkit-keyframes a_pliers_select{
+	0%{ -webkit-transform:translate(0,0);}
+	25%{ -webkit-transform:translate(-27px,0);}
+	50%{ -webkit-transform:translate(0,0);}
+	75%{ -webkit-transform:translate(27px,0);}
 	100%{ -webkit-transform:translate(0,0);}
 }
 
