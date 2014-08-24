@@ -45,7 +45,7 @@ body{ background:#193953; line-height:1.5;}
 
 .logo_wrap{ position:relative; z-index:1;}
 .logo_wrap .title{ display:none;}
-.logo_wrap .logo_txt_wrap{ width:240px; height:90px; display:block; position:absolute; left:50%; top:68px; margin-left:-120px;}
+.logo_wrap .logo_txt_wrap{ width:240px; height:90px; display:block; position:absolute; left:50%; top:55px; margin-left:-120px;}
 .logo_txt_wrap .txt_1{ display:block; height:38px; width:199px; background:url(../images/cover_txt_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:40px; top:0px; -webkit-transform: scale(3.5); opacity:0; -webkit-animation:a_txt_1 0.2s linear both;}
 .logo_txt_wrap .txt_2{ display:block; height:38px; width:36px; background:url(../images/cover_txt_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:40px; top:49px; -webkit-transform: scale(3.5); opacity:0; -webkit-animation:a_txt_1 0.2s 0.15s linear both;}
 .logo_txt_wrap .txt_3{ display:block; height:38px; width:43px; background:url(../images/cover_txt_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:76px; top:49px; -webkit-transform: scale(0.1); opacity:0;-webkit-animation:a_txt_1 0.2s 0.35s linear both;}
@@ -78,7 +78,7 @@ body{ background:#193953; line-height:1.5;}
 	100%{ -webkit-transform:scale(1) rotate(0deg); opacity:1;}
 }
 
-.mine_wrap_1{ display:block; height:62px; width:218px; background:url(../images/mine_bg_1.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-109px; top:328px; background-size:contain; z-index:1;}
+.mine_wrap_1{ display:block; height:62px; width:218px; background:url(../images/mine_bg_1.png) no-repeat 0 0; position:absolute; left:50%; margin-left:-109px; top:315px; background-size:contain; z-index:1;}
 .phone_wrap{ display:block; height:164px; width:82px; position:absolute; left:0px; top:-150px; z-index:1; }
 .phone_wrap .phone_show{display:block; height:164px; width:82px; background:url(../images/phone_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:2;}
 .phone_wrap .phone_photo{display:block; height:122px; width:73px; background:url(../data/photo_1.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:5px; top:21px; z-index:1;}

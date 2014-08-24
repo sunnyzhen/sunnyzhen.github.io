@@ -57,7 +57,23 @@ $(document).ready(function(){
 		$(".pliers_wrap").removeClass("get_diamond_1").addClass("get_diamond_2");
 	});
 	
-	$("body").click(function(){
+	$(".link_apply").click(function(){
+		$(".link_share").removeClass("link_share_show");
+		$(".link_apply").addClass("link_apply_show");
+		
+	});
+	
+	$(".link_share").click(function(){
+		$(".link_apply").removeClass("link_apply_show");
+		$(".link_share").addClass("link_share_show");
+		
+	});
+	
+	
+	
+	
+	
+	$(".link_next_1").click(function(){
 		if(screen_num==1){
 			$(".star_wrap").css({
 				"margin-top": screen_h*screen_num*(-1)
@@ -66,8 +82,18 @@ $(document).ready(function(){
 		}
 	});
 	
+	$(".link_next_2").click(function(){
+		if(screen_num==2){
+			$(".star_wrap").css({
+				"margin-top": screen_h*screen_num*(-1)
+			});
+			screen_num=3;
+		}
+	});
+	
+	
 	//触摸触发事件
-	$(".cover_wrap").touchwipe({
+	/*$(".cover_wrap").touchwipe({
 		wipeDown: function() { 
 			$(".cover_wrap").addClass("wrap_hide");
 			$(".con_wrap_1").removeClass("wrap_prepare").addClass("wrap_show");
@@ -101,7 +127,7 @@ $(document).ready(function(){
 			$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_prepare");
 			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
 		},*/
-		min_move_x: 80,
+	/*	min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
 	});
@@ -114,10 +140,10 @@ $(document).ready(function(){
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
-	});
+	});*/
 	
 	//点击触发事件
-	$(".link_next_1").click(function(){
+/*	$(".link_next_1").click(function(){
 		$(".cover_wrap").addClass("wrap_hide");
 		$(".con_wrap_1").removeClass("wrap_prepare").addClass("wrap_show");
 	});
@@ -130,7 +156,7 @@ $(document).ready(function(){
 	$(".link_next_4").click(function(){
 		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
-	});
+	});*/
 	
 	/*
 	$(".link_next_3").click(function(){
