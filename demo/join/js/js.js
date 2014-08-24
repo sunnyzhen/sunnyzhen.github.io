@@ -76,6 +76,7 @@ $(document).ready(function(){
 					"margin-top": screen_h*(screen_num-1)*(-1)
 				});
 				$(".cover_wrap").addClass("cover_wrap_show");
+				$(".pliers_wrap").removeClass("get_diamond_2").removeClass("get_diamond_1");
 				
 			}
 			else if(screen_num==3){
@@ -135,6 +136,7 @@ $(document).ready(function(){
 					"margin-top": screen_h*screen_num*(-1)
 				});
 				$(".con_wrap_2").addClass("con_wrap_2_show");
+				$(".pliers_wrap").removeClass("get_diamond_2").removeClass("get_diamond_1");
 				
 				screen_num=3;
 			}
@@ -211,6 +213,7 @@ $(document).ready(function(){
 						$(".con_wrap_3").removeClass("con_wrap_3_show");
 						$(".con_wrap_4").removeClass("con_wrap_4_show");
 						$(".back_cover_wrap").removeClass("back_cover_wrap_show");
+						$(".pliers_wrap").removeClass("get_diamond_2").removeClass("get_diamond_1");
 						
 						if(index_num==5){
 							$(".back_cover_wrap").addClass("back_cover_wrap_show");
