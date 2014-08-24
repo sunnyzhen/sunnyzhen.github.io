@@ -196,7 +196,7 @@ body{ background:#193953; line-height:1.5;}
 .cover_wrap .icon_area i{-webkit-animation:none; -webkit-transform:translate(0,0);}
 
 
-.con_wrap{ height:416px; position:relative;}
+.con_wrap{ height:416px; position:relative; opacity:0; -webkit-transition:opacity 0.2s linear;}
 .con_title{ color:#f9c741; z-index:1; position:relative;}
 .con_title .num{ display:block; position:absolute; top:35px; left:50%; margin-left:-115px; text-indent:-9999px; overflow:hidden;}
 .con_title .num_1{ height:85px; width:48px; background:url(../images/num_1.png) no-repeat 0 0; background-size:contain;}
@@ -777,10 +777,12 @@ body{ background:#193953; line-height:1.5;}
 .back_cover_wrap .mine_wrap_1 .logo_s .logo_txt{ display:none;}
 
 .hire_tips{ display:block; text-align:center; position:absolute; top:335px; left:50%; margin-left:-160px; font-size:14px; font-family:'microsoft yahei'; color:#f9c741; width:320px; z-index:1;}
+.back_cover_wrap{ opacity:0; -webkit-transition:opacity 0.2s linear;}
 .back_cover_wrap .hire_logo{ display:block; background:url(../images/tx_logo_link.png) no-repeat 0 0; height:23px; width:71px; background-size:contain; left:50%; margin-left:-35px; bottom:10px; position:absolute; text-indent:-9999px; overflow:hidden; z-index:1;}
 
 .flag_click{ display:block; height:36px; width:41px; background:url(../images/flag_new_big.png) no-repeat 0 0; background-size:contain; position:absolute; left:63px; top:-17px; text-align:center; color:#fff; line-height:1; font-size:14px; font-family:'microsoft yahei'; padding-top:5px; -webkit-animation:a_icon_qq 2s 0s linear both infinite alternate; -webkit-transform-origin:0% 100%; opacity:0; -webkit-transform:scale(0.1);}
 
+.back_cover_wrap_show{ opacity:1;}
 .back_cover_wrap_show .icon_area .icon_1{-webkit-animation:a_icon_area 0.4s 2.0s linear both;}
 .back_cover_wrap_show .icon_area .icon_2{-webkit-animation:a_icon_area 0.4s 1.6s linear both;}
 .back_cover_wrap_show .icon_area .icon_3{-webkit-animation:a_icon_area 0.4s 1.2s linear both;}
@@ -788,6 +790,7 @@ body{ background:#193953; line-height:1.5;}
 
 .back_cover_wrap_show .mine_wrap_1 .logo_s{-webkit-animation:a_txt_1 0.2s 0.6s linear both;}
 
+.con_wrap_1_show,.con_wrap_2_show,.con_wrap_3_show,.con_wrap_4_show{ opacity:1;}
 
 /*5s 640x1136分辨率兼容*/
 /*@media all and (min-height:480px){
