@@ -376,7 +376,7 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
+	var imgUrl = '../images/join.png';
 	var lineLink = location.href;
 	var descContent = "校招";
 	var shareTitle = document.title;
