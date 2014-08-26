@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
+.calendar_wrap{ height:100%; width:100%; display:block; position:absolute; left:50%; top:0; margin-left:-160px;}
+.calendar_wrap .calendar_page{ height:100%; width:100%; display:block; position:absolute; left:0; top:0; background:url(../images/1.jpg) no-repeat center top; background-size:320px auto;}
+.calendar_wrap .calendar_page_1{ background-image:url(../images/1.jpg); z-index:12;}
+.calendar_wrap .calendar_page_2{ background-image:url(../images/2.jpg); z-index:11;}
+.calendar_wrap .calendar_page_3{ background-image:url(../images/3.jpg); z-index:10;}
+.calendar_wrap .calendar_page_4{ background-image:url(../images/4.jpg); z-index:9;}
+.calendar_wrap .calendar_page_5{ background-image:url(../images/5.jpg); z-index:8;}
+.calendar_wrap .calendar_page_6{ background-image:url(../images/6.jpg); z-index:7;}
+.calendar_wrap .calendar_page_7{ background-image:url(../images/7.jpg); z-index:6;}
+.calendar_wrap .calendar_page_8{ background-image:url(../images/8.jpg); z-index:5;}
+.calendar_wrap .calendar_page_9{ background-image:url(../images/9.jpg); z-index:4;}
+.calendar_wrap .calendar_page_10{ background-image:url(../images/10.jpg); z-index:3;}
+.calendar_wrap .calendar_page_11{ background-image:url(../images/11.jpg); z-index:2;}
+.calendar_wrap .calendar_page_12{ background-image:url(../images/12.jpg); z-index:1;}
+
+.calendar_wrap .current{ -webkit-animation:a_turning 12s linear both;}
+.calendar_wrap .hook{ display:block; width:316px; height:120px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:1px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%);-webkit-animation:a_corner 0.5s linear both; opacity:0;}
+
+.calendar_wrap .corner{ display: block; height:105px; width:316px; background:url(../images/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px; bottom:-40px; bottom:13px;  right:1px;
+ -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); -webkit-animation:a_corner 0.5s linear both; opacity:0;}
+
+@-webkit-keyframes a_corner{
+	0%{-webkit-transform: translate(0,0); opacity:0;}
+	5%{-webkit-transform: translate(0,53px); opacity:1;}
+	100%{-webkit-transform: translate(0,53px); opacity:1;}
+}
+
+@-webkit-keyframes a_turning{
+	0%{ height:100%;}
+	90%{ height:0px; -webkit-transform:translate(0,0px);}
+	100%{ height:0px; -webkit-transform:translate(0,-40px);}
+}
+
+
+/*5s 640x1136分辨率兼容*/
+@media all and (min-height:480px){
+	
+	
+	
+}
+
+
+
+
+
+
