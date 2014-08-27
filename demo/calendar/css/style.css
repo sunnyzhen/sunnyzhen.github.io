@@ -32,11 +32,12 @@ html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
 .calendar_wrap .calendar_page_11{ background-image:url(../images/11.jpg); z-index:2;}
 .calendar_wrap .calendar_page_12{ background-image:url(../images/12.jpg); z-index:1;}
 
-.calendar_wrap .current{ -webkit-animation:a_turning 12s linear both;}
+.calendar_wrap .current{ -webkit-animation:a_turning_1 12s linear both;}
 .calendar_wrap .hook{ display:block; width:316px; height:120px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:1px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%);-webkit-animation:a_corner 0.5s linear both; opacity:0;}
 
 .calendar_wrap .corner{ display: block; height:105px; width:316px; background:url(../images/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px; bottom:-40px; bottom:13px;  right:1px;
  -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); -webkit-animation:a_corner 0.5s linear both; opacity:0;}
+.calendar_wrap .hook,.calendar_wrap .corner{ height:70px; bottom:66px; right:2px;}
 
 @-webkit-keyframes a_corner{
 	0%{-webkit-transform: translate(0,0); opacity:0;}
