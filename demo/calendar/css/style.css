@@ -32,23 +32,56 @@ html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
 .calendar_wrap .calendar_page_11{ background-image:url(../images/11.jpg); z-index:2;}
 .calendar_wrap .calendar_page_12{ background-image:url(../images/12.jpg); z-index:1;}
 
-.calendar_wrap .current{ -webkit-animation:a_turning_1 12s linear both;}
-.calendar_wrap .hook{ display:block; width:316px; height:120px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:1px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%);-webkit-animation:a_corner 0.5s linear both; opacity:0;}
+.calendar_wrap .hook{ display:block; width:316px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:2px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%); opacity:0;}
 
-.calendar_wrap .corner{ display: block; height:105px; width:316px; background:url(../images/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px; bottom:-40px; bottom:13px;  right:1px;
- -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); -webkit-animation:a_corner 0.5s linear both; opacity:0;}
-.calendar_wrap .hook,.calendar_wrap .corner{ height:70px; bottom:66px; right:2px;}
+.calendar_wrap .corner{ display: block; width:316px; background:url(../images/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px;  right:2px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); opacity:0; height:70px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
 
-@-webkit-keyframes a_corner{
-	0%{-webkit-transform: translate(0,0); opacity:0;}
-	5%{-webkit-transform: translate(0,53px); opacity:1;}
-	100%{-webkit-transform: translate(0,53px); opacity:1;}
+.calendar_wrap .page_up{ -webkit-animation:a_turning_up 1s linear both;}
+.calendar_wrap .page_up .hook{ -webkit-animation:a_hook_up 0.2s linear both;}
+.calendar_wrap .page_up .corner{  -webkit-animation:a_corner_up 0.2s linear both;}
+
+@-webkit-keyframes a_corner_up{
+	0%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	20%{-webkit-transform: translate(0,0px); opacity:1; height:105px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	100%{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px;-webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
 }
 
-@-webkit-keyframes a_turning{
-	0%{ height:100%;}
-	90%{ height:0px; -webkit-transform:translate(0,0px);}
-	100%{ height:0px; -webkit-transform:translate(0,-40px);}
+@-webkit-keyframes a_hook_up{
+	0%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px;}
+	20%{-webkit-transform: translate(0,0px); opacity:1; height:120px; bottom:13px;}
+	100%{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+}
+
+@-webkit-keyframes a_turning_up{
+	0%{ height:100%;  -webkit-transform:translate(0,0);}
+	80%{ height:0;  -webkit-transform:translate(0,0);}
+	100%{ height:0;  -webkit-transform:translate(0,-40px);}
+}
+
+.calendar_wrap .calendar_page_upend{ height:0;  -webkit-transform:translate(0,-40px);}
+.calendar_wrap .calendar_page_upend .hook{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+.calendar_wrap .calendar_page_upend .corner{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
+
+.calendar_wrap .page_down{ -webkit-animation:a_turning_down 1s linear both;}
+.calendar_wrap .page_down .hook{ -webkit-animation:a_hook_down 0.2s 0.85s linear both;}
+.calendar_wrap .page_down .corner{  -webkit-animation:a_corner_down 0.2s 0.85s linear both;}
+
+@-webkit-keyframes a_corner_down{
+	0%{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px;-webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
+	80%{-webkit-transform: translate(0,0px); opacity:0.8; height:105px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+	100%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
+}
+
+@-webkit-keyframes a_hook_down{
+	0%{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
+	80%{-webkit-transform: translate(0,0px); opacity:0.8; height:120px; bottom:13px;}
+	100%{-webkit-transform: translate(0,0px); opacity:0; height:70px; bottom:13px;}
+}
+
+@-webkit-keyframes a_turning_down{
+	0%{ height:0;  -webkit-transform:translate(0,-40px);}
+	20%{ height:0;  -webkit-transform:translate(0,0);}
+	100%{ height:100%;  -webkit-transform:translate(0,0);}
 }
 
 
