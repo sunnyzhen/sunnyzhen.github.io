@@ -382,7 +382,7 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/join/images/join.png';
+	var imgUrl = 'http://sunnyzhen.github.io/demo/join/images/join.jpg';
 	var lineLink = location.href;
 	var descContent = "腾讯招聘官方微信全新改版，小腾姐带你四步玩转校招！";
 	var shareTitle = document.title;
