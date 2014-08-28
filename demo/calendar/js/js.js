@@ -3,24 +3,27 @@
 $(document).ready(function(){
 	
 	var page_index=1;
+	var total_num=12;
 	
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() { 
-			if(page_index==1){
-				$(".calendar_page_1").addClass("page_up");
+			var page_object=".calendar_page_"+page_index;
+			if(page_index!=total_num){
+				$(page_object).addClass("page_up");
 				var timer=setTimeout(function(){
-					$(".calendar_page_1").removeClass("page_up").addClass("calendar_page_upend");
-					page_index=2;
+					$(page_object).removeClass("page_up").addClass("calendar_page_upend");
+					page_index++;
 				},800);
 			}
 		 },
 		 wipeUp: function() { 
-			if(page_index==2){
-				$(".calendar_page_1").addClass("page_down");
+			var page_object=".calendar_page_"+page_index;
+			if(page_index!=1){
+				$(page_object).addClass("page_down");
 				var timer=setTimeout(function(){
-					$(".calendar_page_1").removeClass("calendar_page_upend").removeClass("page_down");
-					page_index=1;
+					$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
+					page_index--;
 				},800);
 			}
 		 },
