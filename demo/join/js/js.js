@@ -378,7 +378,7 @@ $(document).ready(function(){
 	
 	var imgUrl = '../images/join.png';
 	var lineLink = location.href;
-	var descContent = "校招";
+	var descContent = "腾讯招聘官方微信全新改版，小腾姐带你四步玩转校招！";
 	var shareTitle = document.title;
 	var appid = '';
 	
