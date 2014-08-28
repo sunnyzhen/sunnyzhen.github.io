@@ -21,7 +21,7 @@ body{ background:#193953; line-height:1.5;}
 
 /*style*/
 .star_wrap{ width:100%; position:absolute; left:0px; top:0px; z-index:1; -webkit-transition:margin-top 0.5s ease;}
-.cover_wrap,.back_cover_wrap{ display:block; width:100%; height:100%; height:416px; position:relative;}
+.cover_wrap,.back_cover_wrap,.qr_code_wrap{ display:block; width:100%; height:100%; height:416px; position:relative;}
 
 .link_next{ display:block; height:24px; width:24px; position:absolute; left:50%; bottom:10px; margin-left:-12px; background:rgba(160,160,160,0.3); border-radius:24px; z-index:2;}
 .link_next .inner{ display:block; height:24px; width:24px; border-radius:24px; position:absolute; left:0px; top:0px; background:rgba(160,160,160,0.3); opacity:0.6; -webkit-animation:a_link_next 1s linear infinite;}
@@ -812,6 +812,13 @@ body{ background:#193953; line-height:1.5;}
 
 .back_cover_wrap_show .mine_wrap_1 .logo_s{-webkit-animation:a_txt_1 0.2s 0.6s linear both;}
 
+.qr_code_wrap .qr_code_pop{ display:block; height:210px; width:210px; position: absolute; left:50%; margin-left:-105px; top:118px; z-index:2;}
+.qr_code_wrap .qr_code_pop .qr_img{display:block; height:210px; width:210px;}
+.qr_code_wrap .qr_code_pop .qr_code_tips{ display:block; height:50px; width:184px; border-radius:5px; background:#f9c742; color:#1c385d; font-size:16px; font-family:'microsoft yahei'; line-height:1.3; position:absolute; left:50%; top:-80px; margin-left:-102px; padding-left:20px; padding-top:8px;}
+.qr_code_wrap .qr_code_pop .qr_code_tips .txt_addition{ display:block; height:40px; width:45px;  background:#f9c742; border-radius:50px; font-size:12px; line-height:1.3; padding:10px 0 0 5px; position:absolute; right:-25px; top:-25px;}
+.qr_code_wrap .qr_code_pop .qr_code_tips .tri{ display:block; height:16px; width:14px; position:absolute; left:50%; margin-left:-7px; bottom:-16px; background:url(../images/qr_tips_tri.png) no-repeat 0 0; background-size:contain;}
+.qr_code_wrap .feedback_txt{ font-size:12px; font-family:'microsoft yahei'; color:#fafbfd; position:absolute; left:50%; width:210px; margin-left:-105px; top:340px;}
+.qr_code_wrap .feedback_txt .tips{ color:#ffcc30;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
