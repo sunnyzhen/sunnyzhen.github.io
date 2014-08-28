@@ -13,9 +13,9 @@ $(document).ready(function(){
 				$(page_object).addClass("page_up");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("page_up").addClass("calendar_page_upend");
-					page_index++;
+					page_index+=1;
 					clearTimeout(timer);
-				},800);
+				},600);
 			}
 			else{}
 		 },
@@ -25,9 +25,9 @@ $(document).ready(function(){
 				$(page_object).addClass("page_down");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
-					page_index--;
+					page_index-=1;
 					clearTimeout(timer);
-				},800);
+				},600);
 			}
 			else{}
 		 },
