@@ -84,7 +84,7 @@ html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
 @-webkit-keyframes a_turning_down{
 	0%{ height:0;  -webkit-transform:translate(0,-40px);}
 	20%{ height:0;  -webkit-transform:translate(0,0);}
-	100%{ height:100%;  -webkit-transform:translate(0,0);}
+	100%{ height:416px;  -webkit-transform:translate(0,0);}
 }
 
 
