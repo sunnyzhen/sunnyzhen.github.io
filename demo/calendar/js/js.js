@@ -36,9 +36,24 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
+	$(".link_1").bind("click",function(){
+		var page_object=".calendar_page_1";
+		$(page_object).addClass("page_down");
+		var timer=setTimeout(function(){
+			$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
+			page_index=1;
+			var upend_set=$(".calendar_page_upend");
+			for(var i=0;i<upend_set.length;i++){
+				$(upend_set[i]).removeClass("calendar_page_upend");
+			}
+			clearTimeout(timer);
+		},600);
+		
+	});
+	
 	/*微信转发图片*/
 	
-	var imgUrl = '../images/calendar.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/demo/calendar/images/calendar.jpg';
 	var lineLink = location.href;
 	var descContent = "腾讯2015校园招聘火热启动！送上鹅历一本，助你校招大丰收！";
 	var shareTitle = document.title;
