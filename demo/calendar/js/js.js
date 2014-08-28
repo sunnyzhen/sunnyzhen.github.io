@@ -8,8 +8,8 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() { 
-			var page_object=".calendar_page_"+page_index;
 			if(page_index<total_num){
+				var page_object=".calendar_page_"+page_index;
 				$(page_object).addClass("page_up");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("page_up").addClass("calendar_page_upend");
@@ -20,8 +20,8 @@ $(document).ready(function(){
 			else{}
 		 },
 		 wipeUp: function() { 
-			var page_object=".calendar_page_"+page_index;
 			if(page_index>1){
+				var page_object=".calendar_page_"+(page_index-1);
 				$(page_object).addClass("page_down");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
