@@ -31,7 +31,7 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = '../images/calendar.jpg';
+	var imgUrl = 'images/calendar.jpg';
 	var lineLink = location.href;
 	var descContent = "腾讯2015校园招聘火热启动！送上鹅历一本，助你校招大丰收！";
 	var shareTitle = document.title;
