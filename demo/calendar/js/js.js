@@ -9,23 +9,27 @@ $(document).ready(function(){
 	$("body").touchwipe({
 		wipeDown: function() { 
 			var page_object=".calendar_page_"+page_index;
-			if(page_index!=total_num){
+			if(page_index<total_num){
 				$(page_object).addClass("page_up");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("page_up").addClass("calendar_page_upend");
 					page_index++;
+					clearTimeout(timer);
 				},800);
 			}
+			else{}
 		 },
 		 wipeUp: function() { 
 			var page_object=".calendar_page_"+page_index;
-			if(page_index!=1){
+			if(page_index>1){
 				$(page_object).addClass("page_down");
 				var timer=setTimeout(function(){
 					$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
 					page_index--;
+					clearTimeout(timer);
 				},800);
 			}
+			else{}
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
