@@ -245,11 +245,11 @@ $(document).ready(function(){
 	
 	bindClickEvent();
 	
-	$(".logo_s").bind("click",function(){
+/*	$(".logo_s").bind("click",function(){
 		$(".star_wrap").css({
 			"margin-top": screen_h*(screen_num)*(-1)
 		});
-	});
+	});*/
 	
 	/*
 	$(".link_next_1").click(function(){
