@@ -36,9 +36,9 @@ html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
 
 .calendar_wrap .corner{ display: block; width:316px; background:url(../images/corner.png) no-repeat right bottom; background-size:contain; position:absolute; bottom:13px;  right:2px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4)); opacity:0; height:70px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
 
-.calendar_wrap .page_up{ -webkit-animation:a_turning_up 1s linear both;}
-.calendar_wrap .page_up .hook{ -webkit-animation:a_hook_up 0.2s linear both;}
-.calendar_wrap .page_up .corner{  -webkit-animation:a_corner_up 0.2s linear both;}
+.calendar_wrap .page_up{ -webkit-animation:a_turning_up 0.6s linear both;}
+.calendar_wrap .page_up .hook{ -webkit-animation:a_hook_up 0.12s linear both;}
+.calendar_wrap .page_up .corner{  -webkit-animation:a_corner_up 0.12s linear both;}
 
 @-webkit-keyframes a_corner_up{
 	0%{-webkit-transform: translate(0,0); opacity:0; height:70px; bottom:13px; -webkit-filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));}
@@ -62,9 +62,9 @@ html,body{ height:100%; width:100%; overflow:hidden; background:#ebe7db;}
 .calendar_wrap .calendar_page_upend .hook{-webkit-transform: translate(0,53px); opacity:1; height:120px; bottom:22px;}
 .calendar_wrap .calendar_page_upend .corner{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px; -webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}
 
-.calendar_wrap .page_down{ -webkit-animation:a_turning_down 1s linear both;}
-.calendar_wrap .page_down .hook{ -webkit-animation:a_hook_down 0.2s 0.85s linear both;}
-.calendar_wrap .page_down .corner{  -webkit-animation:a_corner_down 0.2s 0.85s linear both;}
+.calendar_wrap .page_down{ -webkit-animation:a_turning_down 0.6s linear both;}
+.calendar_wrap .page_down .hook{ -webkit-animation:a_hook_down 0.12s 0.5s linear both;}
+.calendar_wrap .page_down .corner{  -webkit-animation:a_corner_down 0.12s 0.5s linear both;}
 
 @-webkit-keyframes a_corner_down{
 	0%{-webkit-transform: translate(0,53px); opacity:1; height:105px; bottom:20px;-webkit-filter: drop-shadow(0 2px 2px rgba(0,0,0,0.4));}

@@ -12,7 +12,7 @@ $(document).ready(function(){
 				var timer=setTimeout(function(){
 					$(".calendar_page_1").removeClass("page_up").addClass("calendar_page_upend");
 					page_index=2;
-				},1000);
+				},800);
 			}
 		 },
 		 wipeUp: function() { 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 				var timer=setTimeout(function(){
 					$(".calendar_page_1").removeClass("calendar_page_upend").removeClass("page_down");
 					page_index=1;
-				},1000);
+				},800);
 			}
 		 },
 		min_move_x: 80,
