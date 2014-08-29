@@ -675,7 +675,7 @@ body{ background:#193953; line-height:1.5;}
 
 .address_wrap{ display:block; height:121px; width:75px; background:url(../images/sprite.png) no-repeat 0 -103px; background-size:380px 260px; position:absolute; left:50%; margin-left:-9px; top:164px; z-index:2;}
 .address_wrap .show_area{ display:block; height:58px; width:58px; border-radius:58px; position:absolute; left:8px; top:10px; overflow:hidden; z-index:2;}
-.address_wrap .show_area .address{ display:block; height:59px; width:59px; border-radius:59px; position:absolute; left:0px; top:0px; opacity:0; z-index:1; background:url(../images/address_icon.png) no-repeat 0 0; background-size:59px 432px;}
+.address_wrap .show_area .address{ display:block; height:59px; width:59px; position:absolute; left:0px; top:0px; opacity:0; z-index:1; background:url(../images/address_icon.png) no-repeat 0 0; background-size:59px 432px;}
 .address_wrap .show_area .address_1{ background-position:0 0;}
 .address_wrap .show_area .address_2{ background-position:0 -62px;}
 .address_wrap .show_area .address_3{ background-position:0 -124px;}
@@ -814,14 +814,6 @@ body{ background:#193953; line-height:1.5;}
 .back_cover_wrap_show .icon_area .icon_4{-webkit-animation:a_icon_area 0.4s 0.8s linear both;}
 
 .back_cover_wrap_show .mine_wrap_1 .logo_s{-webkit-animation:a_txt_1 0.2s 0.6s linear both;}
-
-/*.qr_code_wrap .qr_code_pop{ display:block; height:210px; width:210px; position: absolute; left:50%; margin-left:-105px; top:118px; z-index:2;}
-.qr_code_wrap .qr_code_pop .qr_img{display:block; height:210px; width:210px;}
-.qr_code_wrap .qr_code_pop .qr_code_tips{ display:block; height:50px; width:184px; border-radius:5px; background:#f9c742; color:#1c385d; font-size:16px; font-family:'microsoft yahei'; line-height:1.3; position:absolute; left:50%; top:-80px; margin-left:-102px; padding-left:20px; padding-top:8px;}
-.qr_code_wrap .qr_code_pop .qr_code_tips .txt_addition{ display:block; height:40px; width:45px;  background:#f9c742; border-radius:50px; font-size:12px; line-height:1.3; padding:10px 0 0 5px; position:absolute; right:-25px; top:-25px;}
-.qr_code_wrap .qr_code_pop .qr_code_tips .tri{ display:block; height:16px; width:14px; position:absolute; left:50%; margin-left:-7px; bottom:-16px; background:url(../images/qr_tips_tri.png) no-repeat 0 0; background-size:contain;}
-.qr_code_wrap .feedback_txt{ font-size:12px; font-family:'microsoft yahei'; color:#fafbfd; position:absolute; left:50%; width:210px; margin-left:-105px; top:340px;}
-.qr_code_wrap .feedback_txt .tips{ color:#ffcc30;}*/
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
