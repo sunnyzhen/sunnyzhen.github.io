@@ -675,7 +675,7 @@ body{ background:#193953; line-height:1.5;}
 
 .address_wrap{ display:block; height:121px; width:75px; background:url(../images/sprite.png) no-repeat 0 -103px; background-size:380px 260px; position:absolute; left:50%; margin-left:-9px; top:164px; z-index:2;}
 .address_wrap .show_area{ display:block; height:58px; width:58px; border-radius:58px; position:absolute; left:8px; top:10px; overflow:hidden; z-index:2;}
-.address_wrap .show_area .address{ display:block; height:59px; width:59px; position:absolute; left:0px; top:0px; opacity:0; z-index:1; background:#f9c741 url(../images/address_icon.png) no-repeat 0 0; background-size:59px 432px;}
+.address_wrap .show_area .address{ display:block; height:59px; width:59px; position:absolute; left:0px; top:0px; opacity:0; z-index:1; background:url(../images/address_icon.png) no-repeat 0 0; background-size:59px 432px;}
 .address_wrap .show_area .address_1{ background-position:0 0;}
 .address_wrap .show_area .address_2{ background-position:0 -62px;}
 .address_wrap .show_area .address_3{ background-position:0 -124px;}

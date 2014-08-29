@@ -55,7 +55,7 @@ $(document).ready(function(){
 	
 	var imgUrl = 'http://sunnyzhen.github.io/demo/calendar/images/calendar.jpg';
 	var lineLink = location.href;
-	var descContent = "腾讯2015校园招聘火热启动！送上鹅历一本，助你校招大丰收！";
+	var descContent = "腾讯2015校园招聘火热启动！送你一本小鹅历，助你校招大丰收！";
 	var shareTitle = document.title;
 	var appid = '';
 	
