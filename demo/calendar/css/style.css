@@ -34,7 +34,7 @@ body{ background:url(../images/bg.jpg) repeat center center; background-size:195
 .calendar_wrap .calendar_page_12{ background-image:url(../images/12.jpg); z-index:1;}
 .calendar_wrap .calendar_page_12 .link_1{ display:block; height:40px; width:100px; position:absolute; left:50%; margin-left:-113px; top:334px; text-indent:-9999px; overflow:hidden; z-index:3;}
 .calendar_wrap .calendar_page_12 .link_2{ display:block; height:40px; width:100px; position:absolute; left:50%; margin-left:15px; top:334px; text-indent:-9999px; overflow:hidden; z-index:3;}
-.calendar_wrap .hr_logo{ display:block; height:30px; width:93px; background:url(../images/hr_logo.png) no-repeat 0 0; background-size:93px 30px; position:absolute; left:50%; margin-left:-46px; top:446px; text-indent:-9999px; overflow:hidden;}
+.calendar_wrap .hr_logo{ display:block; height:41px; width:125px; background:url(../images/hr_logo.png) no-repeat 0 0; background-size:125px 41px; position:absolute; left:50%; margin-left:-62px; top:440px; text-indent:-9999px; overflow:hidden;}
 
 
 .calendar_wrap .hook{ display:block; width:316px; position:absolute; background:-webkit-linear-gradient(top,#dbd9d2,#e0dcd2); bottom:-40px; bottom:13px; right:2px;  -webkit-mask:-webkit-linear-gradient(-263deg,rgba(0,0,0,0) 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 45%,rgba(0,0,0,0) 80%); opacity:0;}
