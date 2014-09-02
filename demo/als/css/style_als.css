@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+body{ background:#f8f7f3;}
+
+/*style*/
+.donation_bg_wrap{ display:block; width:320px; height:267px;}
+.donation_bg{ display:block; width:320px; height:267px; position:absolute; z-index:1; left:50%; margin-left:-160px; top:0px; background:url(../images/bg.jpg) no-repeat 0 0; background-size:320px 267px;}
+.people_wrap{ position:absolute; display:block; width:320px; top:85px; left:0px;}
+.people_wrap .person{ display:block; height:103px; width:37px; background: url(../images/sprite_8.png) no-repeat 0px -125px; background-size: 238px 228px; position:absolute; z-index:1;}
+.people_wrap .person_1{height:103px; width:37px; left:100px; top:1px; z-index:2;}
+.people_wrap .person_2{height:84px; width:30px; left:44px; top:36px; background-size:210px 190px; background-position:0 -105px; -webkit-transform:rotate(-6deg); -webkit-transform-origin:0% 0%;}
+.people_wrap .person_3{height:103px; width:37px; left:202px; top:3px; -webkit-transform:rotate(5deg); -webkit-transform-origin:50% 0%;z-index:2;}
+.people_wrap .person_4{height:84px; width:30px; left:254px; top:36px; background-size:210px 190px; background-position:0 -105px; -webkit-transform:rotate(14deg); -webkit-transform-origin:50% 0%;}
+.people_wrap .person_5{height:90px; width:34px; opacity:0.6; left:68px; top:14px; background-size:220px 200px; background-position:0 -110px; -webkit-transform:rotate(-2deg); -webkit-transform-origin:0% 0%;}
+.people_wrap .person_6{height:90px; width:34px; opacity:0.6; left:126px; top:0px; background-size:220px 200px; background-position:0 -110px; }
+.people_wrap .person_7{height:90px; width:34px; opacity:0.6; left:179px; top:0px; background-size:220px 200px; background-position:0 -110px; }
+.people_wrap .person_8{height:90px; width:34px; opacity:0.6; left:230px; top:14px; background-size:220px 200px; background-position:0 -110px;  -webkit-transform:rotate(2deg); -webkit-transform-origin:0% 0%;}
+
+.people_wrap .person_1{ -webkit-animation:a_person 1.5s linear infinite;}
+.people_wrap .person_3{ -webkit-animation:a_person_1 1.5s 1s linear infinite;}
+
+@-webkit-keyframes a_person{
+	0%{-webkit-transform: translate(0,0);}
+	25%{-webkit-transform: translate(2px,1px);}
+	50%{-webkit-transform: translate(0px,0px);}
+	75%{-webkit-transform: translate(-2,-2px);}
+	100%{-webkit-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_person_1{
+	0%{-webkit-transform:rotate(5deg) translate(0,0);}
+	25%{-webkit-transform:rotate(5deg) translate(2px,1px);}
+	50%{-webkit-transform:rotate(5deg) translate(0px,0px);}
+	75%{-webkit-transform:rotate(5deg) translate(-2,-2px);}
+	100%{-webkit-transform:rotate(5deg) translate(0,0);}
+}
+
+.donation_box{ display:block; width:126px; height:96px; background:url(../images/sprite_24.png) no-repeat 0 -66px; background-size:130px 95px; position:absolute; left:100px; top:153px; z-index:4; opacity:0; -webkit-animation:a_donation_box_1 3.25s linear both; /* -webkit-animation:a_donation_box 2.6s linear infinite; -webkit-transform-origin:50% 100%;*/}
+.donation_box:after{ content:""; display:block; height:68px; width:126px; background:#c7220e; position:absolute; left:0px; top:27px; z-index:1;}
+
+@-webkit-keyframes a_donation_box{
+	0%{-webkit-transform: scale(1,1);}
+	50%{-webkit-transform: scale(1,1);}
+	55%{-webkit-transform: scale(1.02,0.97);}
+	60%{-webkit-transform: scale(0.98,1);}
+	65%{-webkit-transform: scale(1.02,1);}
+	70%{-webkit-transform: scale(1,1);}
+	100%{-webkit-transform: scale(1,1);}
+}
+
+@-webkit-keyframes a_donation_box_1{
+	0%{ opacity:0;}
+	90%{ opacity:0;}
+	91%{ opacity:1;}
+	100%{ opacity:1;}
+}
+
+.box_shadow{ display:block; height:42px; width:165px; background:#e3ddce; border-radius:82px/21px; position:absolute; left:80px; top:204px; z-index:2;/* -webkit-animation:a_donation_box 2.6s linear infinite;*/ }
+
+.donation_box .heart{ display:block; height:61px; width:85px; background:url(../images/sprite_8.png) no-repeat -96px -125px; background-size:238px 228px; position:absolute; left:20px; top:32px; z-index:2;}
+.donation_box .heart:before{ content:""; display:block; height:61px; width:85px; background:url(../images/sprite_8.png) no-repeat -96px -125px; background-size:238px 228px; position:absolute; left:0px; top:0px; opacity:0; -webkit-animation:a_box_heart 1.6s linear infinite; z-index:2;}
+
+@-webkit-keyframes a_box_heart{
+	0%{ opacity:0; -webkit-transform:scale(1);}
+	40%{ opacity:0; -webkit-transform:scale(1);}
+	60%{ opacity:0.5; -webkit-transform:scale(1);}
+	80%{ opacity:0.5; -webkit-transform:scale(1.2);}
+	100%{ opacity:0; -webkit-transform:scale(1.2);}
+}
+
+.donation_box .donation_txt{ display:block; height:21px; width:68px; background:url(../images/sprite_24.png) no-repeat 0 -42px; background-size:130px 95px; position:absolute; left:27px; top:48px; text-indent:-9999px; overflow:hidden; z-index:3;}
+
+
+.donation_con{ display:block; position:absolute; top:8px; left:50%; margin-left:-160px; z-index:1; text-align:center; width:320px; color:#ff6713; font-size:16px; font-family:"microsoft yahei"; -webkit-transition:top 0.15s ease; display:none;}
+.donation_con .sub_txt{ color:#6a6561; margin-top:3px; -webkit-transition:opacity 0.3s linear;}
+
+.main_person{ display:block; height:185px; width:92px; position:absolute; left:50%; margin-left:-41px; top:25px; background:url(../images/als_1.png) no-repeat center bottom; background-size:92px 185px; z-index:3; -webkit-animation:a_main_person 3.25s step-end both;  }
+
+@-webkit-keyframes a_main_person{
+	0%{ background-image:url(../images/als_1.png);}
+	8%{ background-image:url(../images/als_2.png);}
+	28%{ background-image:url(../images/als_3.png);}
+	40%{ background-image:url(../images/als_4.png);}
+	80%{ background-image:url(../images/als_4.png);}
+	90%{ background-image:url(../images/als_3.png);}
+	100%{ background-image:url(../images/als_1.png);}
+}
+
+.water_area{ display:block; height:133px; width:63px; position:absolute; left:14px; top:55px; overflow:hidden;}
+.water_area .water{ display:block; height:133px; width:63px; background: url(../images/water.png) no-repeat center bottom; background-size:63px 133px; position:absolute; left:0; bottom:0; -webkit-transform:translate(0,-133px); -webkit-animation:a_waterfall 1.5s 1.3s ease both;}
+
+@-webkit-keyframes a_waterfall{
+	0%{-webkit-transform:translate(0,-140px);}
+	20%{-webkit-transform:translate(0,0); height:133px;}
+	80%{-webkit-transform:translate(0,0); height:133px;}
+	100%{-webkit-transform:translate(0,0); height:0px;}
+}
+
+.eye_area_1{ display:block; height:10px; width:25px; position:absolute; left:34px; top:67px; opacity:0; -webkit-animation:a_eye_area_1 1s 1.5s step-end both;}
+.eye_area_1 .eye{ display:block; height:10px; width:10px; background:#fff; border-radius:10px; position:absolute; left:0px; top:0px;}
+.eye_area_1 .eye_2{ left:12px;}
+.eye_area_1 .eye i{ display:block; height:3px; width:3px; border-radius:3px; background:#000; position:absolute; left:4px; top:4px;}
+.eye_area_1 .eye_2 i{left:3px;}
+
+@-webkit-keyframes a_eye_area_1{
+	0%{ opacity:0;}
+	20%{ opacity:1;}
+	40%{ opacity:0;}
+	60%{ opacity:1;}
+	80%{ opacity:0;}
+	100%{ opacity:0;}
+}
+
+.eye_area_2{ display:block; height:10px; width:25px; position:absolute; left:34px; top:72px; opacity:0; -webkit-animation:a_eye_area_2 1s 1.5s step-end both;}
+.eye_area_2 .eye_c{ display:block; height:1px; width:10px; background:#000; position:absolute; left:0px; top:0px;}
+.eye_area_2 .eye_c_2{left:13px;}
+
+@-webkit-keyframes a_eye_area_2{
+	0%{ opacity:0;}
+	20%{ opacity:0;}
+	40%{ opacity:1;}
+	60%{ opacity:0;}
+	80%{ opacity:1;}
+	100%{ opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
