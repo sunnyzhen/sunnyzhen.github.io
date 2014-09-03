@@ -28,11 +28,13 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 .qq_toy_list{ display:block; width:100%;}
 .qq_toy_list li{ float:left;}
-.qq_toy_list li .toy_img{ display:block; height:28px; width:28px; margin-right:2px; margin-bottom:2px; opacity:0.2; -webkit-animation:a_img 4s linear infinite;}
+.qq_toy_list li .toy_img{ display:block; height:28px; width:28px; margin-right:2px; margin-bottom:2px; opacity:0.2; -webkit-animation:a_img 2s linear infinite;}
 .qq_toy_list .show_word .toy_img{ -webkit-animation: none; opacity:1;}
 .qq_toy_show_word li .toy_img{-webkit-animation: none;}
+.qq_toy_list .special_key_weak .toy_img{ -webkit-animation:a_img_2 2s linear infinite;}
+.qq_toy_list .special_key_strong .toy_img{ -webkit-animation:a_img_3 2s linear infinite;}
 
-@-webkit-keyframes a_img{
+@-webkit-keyframes a_img1{
 	0%{ opacity:0.2;}
 	10%{ opacity:1;}
 	20%{ opacity:0.1;}
@@ -46,7 +48,23 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	100%{ opacity:0;}
 }
 
+@-webkit-keyframes a_img{
+	0%{ opacity:0.2;}
+	50%{ opacity:0.05;}
+	100%{ opacity:0.2;}
+}
 
+@-webkit-keyframes a_img_2{
+	0%{ opacity:0.2;}
+	50%{ opacity:0;}
+	100%{ opacity:0.2;}
+}
+
+@-webkit-keyframes a_img_3{
+	0%{ opacity:0.2;}
+	50%{ opacity:0.4;}
+	100%{ opacity:0.2;}
+}
 
 
 
