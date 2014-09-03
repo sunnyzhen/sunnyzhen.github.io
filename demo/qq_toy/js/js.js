@@ -106,9 +106,20 @@ $(document).ready(function(){
 					
 				};
 	
-	function adb(){
-		
+	function setLiList(){
+		var list=$(".qq_toy_list");
+		var li_string="";
+		for(var i=0;i<100;i++){
+			var num=Math.ceil(Math.random()*12);
+			if(num<10){
+				num="0"+num;
+			}
+			li_string+="<li><a href='#'><img src='data/"+num+".jpg' class='toy_img' alt=''/></a></li>";
+		}
+		$(list).html(li_string);
 	}
+	
+	setLiList();
 	
 	function SetWord(word){
 		
@@ -119,7 +130,6 @@ $(document).ready(function(){
 			for(var j=0;j<10;j++){
 				if(word_list[word+"_list"][i][j]==1){
 					$($(img_list)[i*10+j]).addClass("show_word");
-					
 				}
 			}
 		}
@@ -128,8 +138,8 @@ $(document).ready(function(){
 	
 	function ShowString(words){
 		var string_array=words.split("");
-		console.log(string_array);
-		var index=0;
+		
+		var index=-1;
 		
 		var timer=setInterval(function(){
 			if(index<string_array.length-1){
@@ -141,7 +151,7 @@ $(document).ready(function(){
 			
 			SetWord(string_array[index]);
 			
-		},1000);
+		},4000);
 	}
 	
 	ShowString(word_string);

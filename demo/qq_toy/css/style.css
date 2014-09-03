@@ -28,13 +28,22 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 .qq_toy_list{ display:block; width:100%;}
 .qq_toy_list li{ float:left;}
-.qq_toy_list li .toy_img{ display:block; height:28px; width:28px; margin-right:2px; margin-bottom:2px; opacity:0.1; -webkit-animation:a_img 1s linear infinite;}
+.qq_toy_list li .toy_img{ display:block; height:28px; width:28px; margin-right:2px; margin-bottom:2px; opacity:0.2; -webkit-animation:a_img 4s linear infinite;}
 .qq_toy_list .show_word .toy_img{ -webkit-animation: none; opacity:1;}
 .qq_toy_show_word li .toy_img{-webkit-animation: none;}
 
 @-webkit-keyframes a_img{
-	0%{ opacity:1;}
-	100%{ opacity:0.2;}
+	0%{ opacity:0.2;}
+	10%{ opacity:1;}
+	20%{ opacity:0.1;}
+	30%{ opacity:0.3;}
+	40%{ opacity:0.6;}
+	50%{ opacity:0.1;}
+	60%{ opacity:0.5;}
+	70%{ opacity:0.1;}
+	80%{ opacity:0.3;}
+	90%{ opacity:0.2;}
+	100%{ opacity:0;}
 }
 
 
