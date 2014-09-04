@@ -126,14 +126,14 @@ $(document).ready(function(){
 		var img_list=$(".qq_toy_list li");
 		$(img_list).removeClass("show_word");
 		
-		for(var k=0;k<5;k++){
+	/*	for(var k=0;k<5;k++){
 			var tem_num_weak=Math.round(Math.random()*100);
 			$($(img_list)[tem_num_weak]).addClass("special_key_weak");
 			
 			var tem_num_strong=Math.round(Math.random()*100);
 			$($(img_list)[tem_num_strong]).addClass("special_key_strong");
 
-		}
+		}*/
 		
 		for(var i=0;i<10;i++){
 			for(var j=0;j<10;j++){
