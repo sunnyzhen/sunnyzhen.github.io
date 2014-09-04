@@ -147,27 +147,42 @@ $(document).ready(function(){
 				
 	}
 	
-	SetWord('q');
+	//SetWord('q');
 	
 	function ShowString(words){
-		/*var string_array=words.split("");
+		var string_array=words.split("");
 		
 		var index=-1;
+		var flag=0;
 		
 		var timer=setInterval(function(){
-			if(index<string_array.length-1){
+			
+			if(flag==1){
+				clearInterval(timer);
+			}
+			
+			if(index<string_array.length-1){ 
 				index++;
+				
+				SetWord(string_array[index]);
 			}
 			else{
-				index=0;
+				flag=1;
+				var img_list=$(".qq_toy_list li");
+				$(img_list).removeClass("show_word");
+				clearInterval(timer);
+				setRipple();
+				//index=0;
 			}
 			
-			SetWord(string_array[index]);
+			//SetWord(string_array[index]);
 			
-		},2000);*/
+		},2000);
 	}
 	
-	ShowString(word_string);
+	function ShowString2(){}
+	
+	//ShowString(word_string);
 	
 	function setOpacity(){
 		
@@ -183,7 +198,26 @@ $(document).ready(function(){
 		}
 	}
 	
-	
+	function setRipple(){
+		var img_list=$(".qq_toy_list li");
+		
+		for(var k=0;k<10/2;k++){
+			for(var i=k;i<10-k;i++){
+				for(var j=k;j<10-k;j++){
+					$(img_list[i*10+j]).data("a_num",10/2-k);
+				}
+			}
+		}
+		
+		for(var i=0;i<10;i++){
+			for(var j=0;j<10;j++){
+				$(img_list[i*10+j]).addClass("ripple_word");
+				$(img_list[i*10+j]).children().children(".toy_img").css("-webkit-animation-delay",$(img_list[i*10+j]).data("a_num")/10+"s");
+				//$(img_list[i*10+j]).data("a_num")
+			}
+		}
+		
+	}
 	
 	
 	//触摸触发事件

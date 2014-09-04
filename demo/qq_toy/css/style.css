@@ -18,21 +18,21 @@ button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden;}
 
-.qq_toy_wrap{}
-.qq_toy_family_logo { display:block; height:44px; width:206px; background:url(../images/logo.png) no-repeat 0 0; background-size:contain; margin:20px 10px 10px;}
+.qq_toy_wrap{ width:1000px; margin:0px auto;}
+.qq_toy_family_logo { display:block; height:44px; width:206px; background:url(../images/logo.png) no-repeat 0 0; background-size:contain; margin:20px 20px 10px; z-index:3; position:relative;}
 .qq_toy_family_logo .qq_toy_family_logo_txt{ display:none;}
 
 .qq_toy_family_content{ padding:10px;}
 .qq_toy_family_content .show_area_title{ display:none;}
+.qq_toy_family_content .show_area{ width:1000px;}
 
 
-.qq_toy_list{ display:block; width:100%;}
-.qq_toy_list li{ float:left;}
-.qq_toy_list li .toy_img{ display:block; height:28px; width:28px; margin-right:2px; margin-bottom:2px; opacity:0.2; -webkit-animation:a_img 2s linear infinite;}
-.qq_toy_list .show_word .toy_img{ -webkit-animation: none; opacity:1;}
+.qq_toy_list{ display:block; width:100%; overflow:hidden;}
+.qq_toy_list li{ float:left; width:10%;}
+.qq_toy_list li .toy_img{ display:block; height:100%; width:100%; opacity:0.2; -webkit-animation:a_img 2s linear infinite;}
+.qq_toy_list .show_word .toy_img{ -webkit-animation:a_img_2 2s linear infinite; opacity:1;}
+.qq_toy_list .ripple_word .toy_img{ -webkit-animation:a_img_3 1s linear both;}
 .qq_toy_show_word li .toy_img{-webkit-animation: none;}
-.qq_toy_list .special_key_weak .toy_img{ -webkit-animation:a_img_2 2s linear infinite;}
-.qq_toy_list .special_key_strong .toy_img{ -webkit-animation:a_img_3 2s linear infinite;}
 
 @-webkit-keyframes a_img1{
 	0%{ opacity:0.2;}
@@ -55,17 +55,22 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 }
 
 @-webkit-keyframes a_img_2{
-	0%{ opacity:0.2;}
-	50%{ opacity:0;}
-	100%{ opacity:0.2;}
+	0%{ opacity:1;}
+	80%{ opacity:1;}
+	100%{ opacity:0;}
 }
 
 @-webkit-keyframes a_img_3{
 	0%{ opacity:0.2;}
-	50%{ opacity:0.4;}
-	100%{ opacity:0.2;}
+	50%{ opacity:1;}
+	100%{ opacity:0;}
 }
 
+.toy_area{ display:block; height:100%; width:100%; background:#10803f; position:absolute; left:0px; top:0px;}
+.toy_area .title{ display:block; height:133px; width:285px; background:url(../data/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-142px; top:95px; text-indent:-9999px; overflow:hidden; z-index:1;}
+.toy_area .toy_boy{ display:block; height:150px; width:120px; background:url(../data/boy.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-120px; z-index:2; top:200px;}
+.toy_area .toy_girl{ display:block; height:150px; width:130px; background:url(../data/girl.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-66px; z-index:3; top:213px;}
+.toy_area .bg{ display:block; height:212px; width:320px; background:url(../data/youth_slider_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-160px; z-index:1; bottom:0; z-index:1;}
 
 
 
@@ -75,13 +80,19 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 
 
-
-
-
+/*4s 320宽度兼容*/
+@media all and (max-width:320px){
+	.qq_toy_wrap{ width:320px; margin:0px auto;}
+	.qq_toy_family_content .show_area{ width: auto;}
+	.qq_toy_list li{ float:left; width:auto;}
+	.qq_toy_list li .toy_img{height:28px; width:28px; margin-right:2px; margin-bottom:2px;}
+}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
-	
+	.toy_area .title{top:135px;}
+	.toy_area .toy_boy{top:240px;}
+	.toy_area .toy_girl{top:253px;}
 }
 
 
