@@ -183,7 +183,6 @@ $(document).ready(function(){
 		},1000);
 	}
 	
-	function ShowString2(){}
 	
 	ShowString(word_string);
 	
@@ -226,7 +225,7 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
+	var imgUrl = ' ';
 	var lineLink = location.href;
 	var descContent = "QQ Toy Family";
 	var shareTitle = document.title;
