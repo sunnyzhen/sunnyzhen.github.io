@@ -29,9 +29,9 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 .qq_toy_list{ display:block; width:100%; overflow:hidden;}
 .qq_toy_list li{ float:left; width:10%;}
-.qq_toy_list li .toy_img{ display:block; height:100%; width:100%; opacity:0.2; -webkit-animation:a_img 2s linear infinite;}
-.qq_toy_list .show_word .toy_img{ -webkit-animation:a_img_2 2s linear infinite; opacity:1;}
-.qq_toy_list .ripple_word .toy_img{ -webkit-animation:a_img_3 1s linear both;}
+.qq_toy_list li .toy_img{ display:block; height:100%; width:100%; opacity:0.2; -webkit-animation:a_img 1s linear infinite;}
+.qq_toy_list .show_word .toy_img{ -webkit-animation:a_img_2 1s linear infinite; opacity:1;}
+.qq_toy_list .ripple_word .toy_img{ -webkit-animation:a_img_3 0.8s linear both;}
 .qq_toy_show_word li .toy_img{-webkit-animation: none;}
 
 @-webkit-keyframes a_img1{
@@ -66,15 +66,39 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	100%{ opacity:0;}
 }
 
-.toy_area{ display:block; height:100%; width:100%; background:#10803f; position:absolute; left:0px; top:0px;}
-.toy_area .title{ display:block; height:133px; width:285px; background:url(../data/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-142px; top:95px; text-indent:-9999px; overflow:hidden; z-index:1;}
-.toy_area .toy_boy{ display:block; height:150px; width:120px; background:url(../data/boy.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-120px; z-index:2; top:200px;}
-.toy_area .toy_girl{ display:block; height:150px; width:130px; background:url(../data/girl.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-66px; z-index:3; top:213px;}
-.toy_area .bg{ display:block; height:212px; width:320px; background:url(../data/youth_slider_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-160px; z-index:1; bottom:0; z-index:1;}
+.toy_area{ display:block; height:100%; width:100%; background:#10803f; position:absolute; left:0px; top:0px; -webkit-transform:scale(0.1); opacity:0;}
+.toy_area .title{ display:block; height:133px; width:285px; position:absolute; left:50%; margin-left:-142px; top:95px; z-index:1; -webkit-transform: translate(0,-300px); opacity:0;}
+.toy_area .title .txt{ display:block; height:133px; width:285px; background:url(../data/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; text-indent:-9999px; overflow:hidden; z-index:2;}
+.toy_area .title .plane{ display:block; height:48px; width:45px; background:url(../data/plane.png) no-repeat 0 0; z-index:1; position:absolute; left:0px; top:32px; background-size:contain; -webkit-transform-origin:76px -22px; -webkit-transform:rotate(-73deg); opacity:0;}
+.toy_area .toy_boy{ display:block; height:150px; width:120px; background:url(../data/boy.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-120px; z-index:2; top:200px; -webkit-transform: translate(0,-300px); opacity:0;}
+.toy_area .toy_girl{ display:block; height:150px; width:130px; background:url(../data/girl.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-66px; z-index:3; top:213px; -webkit-transform: translate(0,-300px); opacity:0;}
+.toy_area .bg{ display:block; height:212px; width:320px; background:url(../data/youth_slider_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-160px; z-index:1; bottom:0; z-index:1; -webkit-transform: translate(0,-300px); opacity:0;}
 
+.show_cover .toy_area{ -webkit-animation:a_toy_area 0.2s ease both;}
+.show_cover .toy_area .bg{ -webkit-animation:a_toy_area_title 0.2s 0.3s linear both;}
+.show_cover .toy_area .toy_boy{ -webkit-animation:a_toy_area_title 0.2s 0.5s linear both;}
+.show_cover .toy_area .toy_girl{ -webkit-animation:a_toy_area_title 0.2s 0.7s linear both;}
+.show_cover .toy_area .title{ -webkit-animation:a_toy_area_title 0.2s 0.9s linear both;}
+.show_cover .toy_area .title .plane{ -webkit-animation:a_plane 0.5s 1.1s linear both;}
 
+@-webkit-keyframes a_toy_area{
+	0%{ -webkit-transform:scale(0.01); opacity:0;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
 
+@-webkit-keyframes a_toy_area_title{
+	0%{ -webkit-transform: translate(0,-300px); opacity:0;}
+	20%{ -webkit-transform: translate(0,-240px); opacity:1;}
+	90%{ -webkit-transform: translate(0,20px); opacity:1;}
+	95%{ -webkit-transform: translate(0,-10px); opacity:1;}
+	100%{ -webkit-transform: translate(0,0); opacity:1;}
+}
 
+@-webkit-keyframes a_plane{
+	0%{ -webkit-transform-origin:76px -22px; -webkit-transform:rotate(-73deg); opacity:0;}
+	20%{ -webkit-transform-origin:76px -22px; -webkit-transform:rotate(-73deg); opacity:1;}
+	100%{ -webkit-transform-origin:50% 50%; -webkit-transform:rotate(0deg); opacity:1;}
+}
 
 
 

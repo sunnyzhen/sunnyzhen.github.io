@@ -172,17 +172,20 @@ $(document).ready(function(){
 				$(img_list).removeClass("show_word");
 				clearInterval(timer);
 				setRipple();
+				var timer=setTimeout(function(){
+					$(".qq_toy_wrap").addClass("show_cover");
+				},1200);
 				//index=0;
 			}
 			
 			//SetWord(string_array[index]);
 			
-		},2000);
+		},1000);
 	}
 	
 	function ShowString2(){}
 	
-	//ShowString(word_string);
+	ShowString(word_string);
 	
 	function setOpacity(){
 		
