@@ -223,110 +223,12 @@ $(document).ready(function(){
 	}
 	
 	
-	//触摸触发事件
-	$(".cover_wrap").touchwipe({
-		wipeDown: function() { 
-			$(".cover_wrap").addClass("wrap_hide");
-			$(".con_wrap_1").removeClass("wrap_prepare").addClass("wrap_show");
-		 },
-		min_move_x: 80,
-		min_move_y: 80,
-		preventDefaultEvents: true
-	});
-	
-	$(".con_wrap_1").touchwipe({
-		wipeUp: function() { 
-			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-			$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
-		},
-		wipeDown: function() { 
-			$(".con_wrap_1").addClass("wrap_hide");
-			$(".con_wrap_2").removeClass("wrap_prepare").addClass("wrap_show");
-		},
-		min_move_x: 80,
-		min_move_y: 80,
-		preventDefaultEvents: true
-	});
-	
-	$(".con_wrap_2").touchwipe({
-		wipeUp: function() { 
-			$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
-			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
-		},
-/*		wipeDown: function() { 
-			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-			$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_prepare");
-			$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
-		},*/
-		min_move_x: 80,
-		min_move_y: 80,
-		preventDefaultEvents: true
-	});
-	
-	$(".con_wrap_3").touchwipe({
-		wipeUp: function() { 
-			$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
-			$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
-		},
-		min_move_x: 80,
-		min_move_y: 80,
-		preventDefaultEvents: true
-	});
-	
-	//点击触发事件
-	$(".link_next_1").click(function(){
-		$(".cover_wrap").addClass("wrap_hide");
-		$(".con_wrap_1").removeClass("wrap_prepare").addClass("wrap_show");
-	});
-	
-	$(".link_next_2").click(function(){
-		$(".con_wrap_1").addClass("wrap_hide");
-		$(".con_wrap_2").removeClass("wrap_prepare").addClass("wrap_show");
-	});
-	
-	$(".link_next_4").click(function(){
-		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
-		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
-	});
-	
-	/*
-	$(".link_next_3").click(function(){
-		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_prepare");
-		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
-	});
-	
-	$(".detail_star").click(function(){
-		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-		$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
-	});
-	
-	$(".info_title").click(function(){
-		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
-		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
-	});
-	
-	$(".logo_middle").click(function(){
-		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
-		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
-	});*/
-	
-	$(".logo_small").click(function(){
-		$(".con_wrap_2").addClass("wrap_hide");
-		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
-	});
-	
-	$(".link_intro").click(function(){
-		$(".con_wrap_2").addClass("wrap_hide");
-		$(".con_wrap_3").removeClass("wrap_prepare").addClass("wrap_show");
-	});
-	
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
 	var lineLink = location.href;
-	var descContent = "首期Linkshow，力邀9款产品，多个招聘岗位，邀你听产品故事，荐优秀人才！";
+	var descContent = "QQ Toy Family";
 	var shareTitle = document.title;
 	var appid = '';
 	
