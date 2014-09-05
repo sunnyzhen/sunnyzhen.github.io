@@ -67,6 +67,7 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 .show_cover .toy_area .title{ -webkit-animation:a_toy_area_title 0.2s 0.9s linear both;}
 .show_cover .toy_area .title .plane{ -webkit-animation:a_plane_2 0.7s 1.1s linear both;}
 
+
 @-webkit-keyframes a_toy_area{
 	0%{ -webkit-transform:scale(0.01); opacity:0;}
 	100%{ -webkit-transform:scale(1); opacity:1;}
@@ -94,6 +95,8 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 
 
+.link_qq_toy{ display:block; height:30px; width:100px; border:1px solid #fff; text-align:center; line-height:30px; font-family:'microsoft yahei'; font-size:14px; color:#fff; position:absolute; left:50%; margin-left:-50px; bottom:30px; z-index:5;}
+.link_qq_toy:hover{ text-decoration:none;}
 
 
 /*4s 320宽度兼容*/
