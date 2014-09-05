@@ -18,13 +18,13 @@ button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden;}
 
-.qq_toy_wrap{ width:1000px; margin:0px auto;}
+.qq_toy_wrap{ width:700px; margin:0px auto;}
 .qq_toy_family_logo { display:block; height:44px; width:206px; background:url(../images/logo.png) no-repeat 0 0; background-size:contain; margin:20px 20px 10px; z-index:3; position:relative;}
 .qq_toy_family_logo .qq_toy_family_logo_txt{ display:none;}
 
 .qq_toy_family_content{ padding:10px;}
 .qq_toy_family_content .show_area_title{ display:none;}
-.qq_toy_family_content .show_area{ width:1000px;}
+.qq_toy_family_content .show_area{ width:700px;}
 
 
 .qq_toy_list{ display:block; width:100%; overflow:hidden;}
@@ -52,13 +52,13 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	100%{ opacity:0;}
 }
 
-.toy_area{ display:block; height:100%; width:100%; background:#10803f; position:absolute; left:0px; top:0px; -webkit-transform:scale(0.1); opacity:0;}
+.toy_area{ display:block; height:100%; width:100%; background:#10803f; position:absolute; left:0px; top:0px; -webkit-transform:scale(0.1); opacity:0; overflow:hidden;}
 .toy_area .title{ display:block; height:360px; width:880px; position:absolute; left:50%; margin-left:-440px; top:95px; z-index:1; -webkit-transform: translate(0,-300px); opacity:0;}
 .toy_area .title .txt{ display:block; height:360px; width:880px; background:url(../data/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; text-indent:-9999px; overflow:hidden; z-index:2;}
 .toy_area .title .plane{ display:block; height:150px; width:156px; background:url(../data/plane.png) no-repeat 0 0; z-index:1; position:absolute; left:-20px; top:32px; background-size:contain; -webkit-transform-origin:184px -22px; -webkit-transform:rotate(-44deg) translate(89px,242px); opacity:0;}
 .toy_area .toy_boy{ display:block; height:357px; width:258px; background:url(../data/boy.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-300px; z-index:2; top:400px; -webkit-transform: translate(0,-300px); opacity:0;}
 .toy_area .toy_girl{ display:block; height:360px; width:262px; background:url(../data/girl.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-166px; z-index:3; top:413px; -webkit-transform: translate(0,-300px); opacity:0;}
-.toy_area .bg{ display:block; height:776px; width:2493px; background:url(../data/youth_slider_bg_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-1246px; z-index:1; top:450px; z-index:1; -webkit-transform: translate(0,-300px); opacity:0;}
+.toy_area .bg{ display:block; height:776px; width:2493px; background:url(../data/youth_slider_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-1246px; z-index:1; top:450px; z-index:1; -webkit-transform: translate(0,-300px); opacity:0;}
 
 .show_cover .toy_area{ -webkit-animation:a_toy_area 0.2s ease both;}
 .show_cover .toy_area .bg{ -webkit-animation:a_toy_area_title 0.2s 0.3s linear both;}
