@@ -455,26 +455,4 @@ opacity:0
 }
 to { -webkit-transform: scale(1, 1); opacity: 1 }
 }
-@media (min-height: 400px) and (max-height: 480px) {
-#tea_warp .md .page_two_notice { -webkit-transform: scale(0.8, 0.8); top: 45px; margin-left: -130px }
-#tea_warp .md .page_two_top20 { -webkit-transform: scale(0.8, 0.8); top: 110px }
-#tea_warp .md .page_two_horn { top: 85px }
-#tea_warp .md .page_two_scal { -webkit-transform: scale(0.8, 0.8); position: relative; top: 20px }
-#tea_warp .md .page_three_scal { -webkit-transform: scale(0.8, 0.8); position: relative; top: 20px }
-#tea_warp .md .page_three_button { -webkit-transform: scale(0.9, 0.9); position: relative; top: -20px }
-#tea_warp .page_one_md { background-size: 320px 416px }
-#tea_warp .page_one_all { position: relative; top: -30px }
-#tea_warp .page_two_md .page_two_md_pic1 { -webkit-transform: scale(0.9, 0.9); top: 10px }
-#tea_warp .page_two_md .page_two_md_pic2 { -webkit-transform: scale(0.9, 0.9); top: 160px }
-#tea_warp .page_two_md .page_two_md_pic3 { -webkit-transform: scale(0.9, 0.9); top: 310px }
-#tea_warp .page_three_md .page_two_md_pic3 { -webkit-transform: scale(0.9, 0.9) }
-#tea_warp .page_three_md .page_two_md_pic4 { -webkit-transform: scale(0.9, 0.9); top: 60px }
-#tea_warp .page_three_md .page_two_md_pic5 { -webkit-transform: scale(0.9, 0.9); top: 220px }
-#tea_warp .page_two_md { background-size: 320px 416px }
-#tea_warp .page_three_md { background-size: 320px 416px }
-#tea_warp .md .page_five_text { opacity: 0 }
-#tea_warp .md_page_six .ribbon_two { display: none }
-#tea_warp .md .page_seven_scal { -webkit-transform: scale(0.8, 0.8) }
-#tea_warp .md .page_six_title { top: 88px }
-#tea_warp .md .page_seven_scal { -webkit-transform: scale(0.9, 0.9); position: relative; left: -20px }
-}
+
