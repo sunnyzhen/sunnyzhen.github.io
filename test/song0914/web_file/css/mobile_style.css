@@ -52,8 +52,8 @@ li { list-style:none; }
 .cover-box *, .video-box h1, .video-box h2, .video-box h3, .voting-box h2, .voting-box .tips, .download-box h2 { text-indent: -9999em; position: absolute; background-size:cover;   }
 .cover-box h1 { right:50%; top:164px; width:199px; height:168px; margin-right: -99px;  background-image:url(../images/bg_cover_h1.png); z-index: 3;  
 
-    animation:bounceIn 0.6s 1 linear both; 
-    -webkit-animation:bounceIn 0.6s 1 linear both; 
+    animation:bounceIn 0.6s 1s linear both; 
+    -webkit-animation:bounceIn 0.6s 1s linear both; 
  
  }
 
