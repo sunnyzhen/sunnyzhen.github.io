@@ -1,0 +1,85 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline }
+html { line-height: 1 }
+ol, ul { list-style: none }
+table { border-collapse: collapse; border-spacing: 0 }
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle }
+q, blockquote { quotes: none }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none }
+a img { border: none }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block }
+h1, h2, h3, h4, h5, h6 { font-family: "Microsoft yahei" }
+.center_area { width: 980px; margin: 0 auto ; position:relative;}
+.header { background:#e7e7e7 url(../images/bg_hd.jpg) no-repeat center 0; height:376px; width:100%; }
+.content .tab_title, .content .tab_main .tab_item { zoom: 1 }
+.content .tab_title:after, .content .tab_main .tab_item:after { content: ""; display: block; clear: both; height: 0 }
+.video { background: #6fa53f; padding: 40px 0 }
+.video h3 { font-size: 32px; color: #ffffff; margin-bottom: 20px }
+.video .video_content { overflow: hidden }
+.video .video_content .video_main { float: left; width: 745px; position: relative }
+.video .video_content .video_main a i { position: absolute; width: 130px; height: 130px; display: block; right: 40px; bottom: 40px; z-index: 1; background: url(../images/bg_play.png) no-repeat; cursor:pointer; }
+.video .video_content .video_main a:hover i{-moz-animation:a_play_icon 0.5s linear both; -webkit-animation:a_play_icon 0.5s linear both;}
+.video .video_content .video_sidebar { float: right; width: 215px }
+.video .video_content .video_sidebar ul li a{ display:block; height:75px; width:213px; position:relative; margin-bottom:13px;}
+.video .video_content .video_sidebar ul li a:hover{ text-decoration:none;}
+.video .video_content .video_sidebar ul li a img { height: 75px; width: 213px }
+.video .video_content .video_sidebar ul li a span { position: absolute; width: 193px; height: 75px; background:rgba(255,255,255,0.6); left:0px; top:0px; z-index:1; font-size:16px; font-weight:normal; color:#fff; line-height:75px; padding:0 10px; font-family:'microsoft yahei'; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; opacity:0; visibility:hidden; -moz-transition:opacity 0.3s ease; -webkit-transition:opacity 0.3s ease;}
+.video .video_content .video_sidebar ul li a:hover span{ opacity:1; visibility:visible;}
+.content { background: #e8e8e8; padding: 40px 0 }
+.content .title h3 { overflow: hidden; color: #79b344; font-size: 40px; margin-bottom: 20px }
+.content .title h3 span { font-size: 30px; margin-left: 15px }
+.content .title h3 b { width: 10px; height: 40px; display: block; float: left; margin-right: 8px; margin-top: 3px; background: #79b344 }
+.content .tab_title { position: relative; top: 3px; padding-left: 10px }
+.content .tab_title a { width: 233px; height: 46px; display: block; text-align: center; font-size: 24px; line-height: 46px; font-family: "Microsoft yahei"; color: #ffe8cd; text-decoration: none; float: left; background: url(../images/bg_tab_title.png) no-repeat -243px 0 }
+.content .tab_title .current { background-position: 0 0; color: #fff; font-weight: bold }
+.content .tab_main { margin-bottom: 40px; height: 382px; background: url(../images/bg_tab.png) no-repeat }
+.content .tab_main .tab_item { display: none; padding: 50px }
+.content .tab_main .tab_item .pic { float: left; position: relative; width: 323px; height: 225px; margin-right: 35px }
+.content .tab_main .tab_item .pic b { width: 42px; height: 42px; background: url(../images/bg_play1.png) no-repeat; position: absolute; display: block; right: 20px; bottom: 20px; cursor:pointer;}
+.content .tab_main .tab_item .pic a:hover b{-moz-animation:a_play_icon 0.5s linear both; -webkit-animation:a_play_icon 0.5s linear both;}
+.content .tab_main .tab_item .text { overflow: hidden }
+.content .tab_main .tab_item .text h4 { font-size: 24px; color: #3c3c3c; margin-bottom: 15px }
+.content .tab_main .tab_item .text p { line-height: 26px; font-size: 16px; color: #666 }
+.content .tab_main .block { display: block }
+.content .con_list ul { overflow: hidden; position: relative; margin-right: -20px }
+.content .con_list ul li { float: left; margin-right: 20px; width: 292px; margin-bottom: 50px }
+.content .con_list ul li a { position: relative }
+.content .con_list ul li a b { width: 42px; height: 42px; background: url(../images/bg_play1.png) no-repeat; position: absolute; display: block; right: 20px; bottom: 20px; cursor:pointer;}
+.content .con_list ul li a:hover b{-moz-animation:a_play_icon 0.5s linear both; -webkit-animation:a_play_icon 0.5s linear both;}
+.content .con_list ul li img { width: 292px }
+.content .con_list ul li h4{ margin-top: 10px; font-size: 18px;  margin-bottom: 10px }
+.content .con_list ul li h4 a{color: #3c3c3c; text-decoration:none;}
+.content .con_list ul li h4 a:hover{color: #245eae;}
+.content .con_list ul li p { font-size: 14px; }
+.content .con_list ul li p a{color: #3c3c3c; text-decoration:none;}
+.content .con_list ul li p a:hover{color: #225aa8;}
+.footer { height:256px; width:100%; background: #6da13e url(../images/footer_bg.jpg) no-repeat center top; }
+
+@-moz-keyframes a_play_icon{
+	0%{ -moz-transform:scale(1);}
+	25%{ -moz-transform:scale(1.1); }
+	50%{ -moz-transform:scale(0.95); }
+	75%{ -moz-transform:scale(1.05); }
+	100%{ -moz-transform:scale(1); }
+}
+
+@-webkit-keyframes a_play_icon{
+	0%{ -webkit-transform:scale(1);}
+	25%{ -webkit-transform:scale(1.1); }
+	50%{ -webkit-transform:scale(0.95); }
+	75%{ -webkit-transform:scale(1.05); }
+	100%{ -webkit-transform:scale(1); }
+}
+
+.flag_link{ display:block; height:440px; width:270px; background:url(../images/flag_bg.jpg) no-repeat; position:absolute; right:-300px; top:35px;}
+.flag_link .link{ display:block; height:100%; width:100%;}
+
+
+
+
+
+
+
+
+
+
+
