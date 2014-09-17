@@ -53,7 +53,6 @@ h1, h2, h3, h4, h5, h6 { font-family: "Microsoft yahei" }
 .content .con_list ul li p { font-size: 14px; width:290px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
 .content .con_list ul li p a{color: #3c3c3c; text-decoration:none;}
 .content .con_list ul li p a:hover{color: #225aa8;}
-.footer { height:256px; width:100%; background: #6da13e url(../images/footer_bg.jpg) no-repeat center top; }
 
 @-moz-keyframes a_play_icon{
 	0%{ -moz-transform:scale(1);}
@@ -74,8 +73,10 @@ h1, h2, h3, h4, h5, h6 { font-family: "Microsoft yahei" }
 .flag_link{ display:block; height:136px; width:115px; background:url(../images/qr_code.png) no-repeat; position:absolute; right:-120px; top:65px;}
 .flag_link .link{ display:block; height:100%; width:100%;}
 
-
-
+.intro_wrap { height:256px; width:100%; background: #6da13e url(../images/footer_bg.jpg) no-repeat center top; color:#fff;}
+.intro_wrap .intro_area{ width:980px; margin:0px auto; padding-top:40px;}
+.intro_wrap .intro_title{ font-size: 40px;  margin-bottom: 20px; font-family:'microsoft yahei';}
+.intro_wrap .intro_txt{ font-size:16px; font-family:'microsoft yahei'; line-height:1.5;}
 
 
 
