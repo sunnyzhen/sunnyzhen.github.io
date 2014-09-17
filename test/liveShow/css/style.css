@@ -15,15 +15,15 @@ h1, h2, h3, h4, h5, h6 { font-family: "Microsoft yahei" }
 .video { background: #6fa53f; padding: 40px 0 }
 .video h3 { font-size: 32px; color: #ffffff; margin-bottom: 20px }
 .video .video_content { overflow: hidden }
-.video .video_content .video_main { float: left; width: 980px; position: relative }
-.video .video_content .video_main a img{ height:520px; width: 980px; }
+.video .video_content .video_main { float: left; width: 746px; position: relative }
+.video .video_content .video_main a img{ height:520px; width: 746px; }
 .video .video_content .video_main a i { position: absolute; width: 130px; height: 130px; display: block; right: 40px; bottom: 40px; z-index: 1; background: url(../images/bg_play.png) no-repeat; cursor:pointer; }
 .video .video_content .video_main a:hover i{-moz-animation:a_play_icon 0.5s linear both; -webkit-animation:a_play_icon 0.5s linear both;}
 .video .video_content .video_sidebar { float: right; width: 215px }
-.video .video_content .video_sidebar ul li a{ display:block; height:75px; width:213px; position:relative; margin-bottom:13px;}
+.video .video_content .video_sidebar ul li a{ display:block; height:75px; width:213px; position:relative; margin-bottom:14px;}
 .video .video_content .video_sidebar ul li a:hover{ text-decoration:none;}
 .video .video_content .video_sidebar ul li a img { height: 75px; width: 213px }
-.video .video_content .video_sidebar ul li a span { position: absolute; width: 193px; height: 75px; background:rgba(255,255,255,0.6); left:0px; top:0px; z-index:1; font-size:16px; font-weight:normal; color:#fff; line-height:75px; padding:0 10px; font-family:'microsoft yahei'; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; opacity:0; visibility:hidden; -moz-transition:opacity 0.3s ease; -webkit-transition:opacity 0.3s ease;}
+.video .video_content .video_sidebar ul li a span { position: absolute; width: 193px; height: 75px; background:rgba(255,255,255,0.8); left:0px; top:0px; z-index:1; font-size:16px; font-weight:normal; color:#57832e; line-height:75px; padding:0 10px; font-family:'microsoft yahei'; text-overflow:ellipsis; text-align:center; overflow:hidden; white-space:nowrap; opacity:0; visibility:hidden; -moz-transition:opacity 0.3s ease; -webkit-transition:opacity 0.3s ease;}
 .video .video_content .video_sidebar ul li a:hover span{ opacity:1; visibility:visible;}
 .content { background: #e8e8e8; padding: 40px 0 }
 .content .title h3 { overflow: hidden; color: #79b344; font-size: 40px; margin-bottom: 20px }
