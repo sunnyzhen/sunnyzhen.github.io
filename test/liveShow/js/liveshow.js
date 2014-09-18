@@ -30,4 +30,117 @@ $(function(){
 	
 	ScrollQrCode();
 	
+	var PLAYSTATE=1;
+	
+	$(".tab_1").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_1").show();
+		PLAYSTATE=0;
+	});
+	$(".tab_2").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_2").show();
+		PLAYSTATE=1;
+	});
+	$(".tab_3").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_3").show();
+		PLAYSTATE=2;
+	});
+	$(".tab_4").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_4").show();
+		PLAYSTATE=3;
+	});
+	$(".tab_5").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_5").show();
+		PLAYSTATE=4;
+	});
+	$(".tab_6").bind("click",function(){
+		$(".video_iframe").hide();
+		$("#video_6").show();
+		PLAYSTATE=5;
+	});
+	
+	$(".pop_iframe_wrap .close").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").hide();
+		$(".mask").hide();
+		var video_list=$(".video_iframe");
+		$(video_list[PLAYSTATE]).show();
+	});
+	
+	$("#tab_7").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_7").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_8").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_8").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_9").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_9").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_10").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_10").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_11").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_11").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_12").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_12").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_13").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_13").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_14").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_14").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_15").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_15").show();
+		$(".mask").show();
+	});
+	
+	$("#tab_16").bind("click",function(){
+		$(".video_iframe").hide();
+		$(".pop_iframe_wrap").show();
+		$("#video_16").show();
+		$(".mask").show();
+	});
+	
+	
+	
 })
