@@ -124,16 +124,26 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	100%{ -webkit-transform:translate(0,0px);}
 }
 
+.con_wrap{ display:block; height:100%; width:100%; background:url(../images/bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px;}
+.poster_wrap{ display:block; height:336px; width:239px; background:url(../images/poster_bg.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-119px; top:10px;}
+.poster_wrap .title{ display:none;}
+.poster_wrap .penguin_poster{ display: block; height:157px; width:213px; background:url(../images/penguin_poster_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:61px;}
+.poster_wrap .name{ display:block; height:71px; width:43px; background:url(../images/name_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:222px; text-indent:-9999px;}
+.poster_wrap .name_1{ background-image:url(../images/name_1.png);}
+.poster_wrap .name_2{ background-image:url(../images/name_2.png);}
+.poster_wrap .name_3{ background-image:url(../images/name_3.png);}
+.poster_wrap .name_4{ background-image:url(../images/name_4.png);}
 
+.poster_wrap .detail{ display:block; height:68px; width:164px; background:url(../images/detail_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:61px; top:224px; text-indent:-9999px;}
+.poster_wrap .detail_1{ background-image:url(../images/detail_1.png);}
+.poster_wrap .detail_2{ background-image:url(../images/detail_2.png);}
+.poster_wrap .detail_3{ background-image:url(../images/detail_3.png);}
+.poster_wrap .detail_4{ background-image:url(../images/detail_4.png);}
 
+.poster_wrap .stamp{ display:block; height:58px; width:59px; background:url(../images/stamp.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:6px; text-indent:-9999px; overflow:hidden;}
 
-
-
-
-
-
-
-
+.tab_wrap{ display:block; height:54px; width:320px; position:absolute; bottom:0px; left:50%; margin-left:-160px;}
+.tab_list{}
 
 
 
