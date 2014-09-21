@@ -105,8 +105,8 @@ $(document).ready(function(){
 	
 	var imgUrl = 'http://sunnyzhen.github.io/demo/link_show/images/linkshow.jpg';
 	var lineLink = location.href;
-	var descContent = "Linkshow 第二期，4款重量级产品，80+招聘岗位，邀你听产品故事，荐优秀人才！";
-	var shareTitle = document.title;
+	var descContent = "Linkshow第二期，4款重量级产品，80+招聘岗位，邀你听产品故事，荐优秀人才！";
+	var shareTitle = "LinkShow第二期邀请函";
 	var appid = '';
 	
 	function shareFriend() {
