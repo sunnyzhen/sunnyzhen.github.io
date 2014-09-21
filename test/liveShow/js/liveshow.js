@@ -30,7 +30,7 @@ $(function(){
 	
 	ScrollQrCode();
 	
-	var PLAYSTATE=1;
+	var PLAYSTATE=0;
 	
 	$(".tab_1").bind("click",function(){
 		$(".video_iframe").hide();
