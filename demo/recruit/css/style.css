@@ -124,8 +124,8 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	100%{ -webkit-transform:translate(0,0px);}
 }
 
-.con_wrap{ display:block; height:100%; width:100%; background:url(../images/bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px;}
-.poster_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3);}
+.con_wrap{ display:block; height:100%; width:100%; background:url(../images/bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; overflow:hidden;}
+.poster_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-119px; /*top:10px;*/ box-shadow:-2px 2px 3px rgba(0,0,0,0.3);}
 .poster_wrap .poster_con{ display:block; position:relative; z-index:1;}
 .poster_wrap .title{ display:none;}
 .poster_wrap .penguin_poster{ display: block; height:157px; width:213px; background:url(../images/penguin_poster_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:61px;}
@@ -202,6 +202,19 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 	50%{ -webkit-transform:rotate(25deg) translate(1px,-1px) scale(1,0.90);}
 	75%{ -webkit-transform:rotate(25deg) translate(1px,-1px) scale(1,0.95);}
 	100%{ -webkit-transform:rotate(25deg) translate(0,0) scale(1,1);}
+}
+
+.tear_page_wrap{ display:block; height:545px; width:410px; overflow:hidden; position:absolute; left:50%; margin-left:-159px; top:-35px; -webkit-transform:rotate(-65deg) translate(0px,0px); -webkit-animation:a_tear_page_wrap 2s linear both;}
+.tear_page_balance{display:block; height:336px; width:239px; position:absolute; right:51px; top:39px;  -webkit-transform:rotate(65deg) translate(0px,0px); -webkit-animation:a_tear_page_balance 2s linear both;}
+
+@-webkit-keyframes a_tear_page_wrap{
+	0%{ -webkit-transform:rotate(-65deg) translate(0px,0px);}
+	100%{ -webkit-transform:rotate(-65deg) translate(-400px,0px);}
+}
+
+@-webkit-keyframes a_tear_page_balance{
+	0%{ -webkit-transform:rotate(65deg) translate(0px,0px);}
+	100%{ -webkit-transform:rotate(65deg) translate(168px,-360px);}
 }
 
 
