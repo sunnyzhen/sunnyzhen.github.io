@@ -8,48 +8,101 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() { 
-			if(page_index<total_num){
-				var page_object=".calendar_page_"+page_index;
-				$(page_object).addClass("page_up");
-				var timer=setTimeout(function(){
-					$(page_object).removeClass("page_up").addClass("calendar_page_upend");
-					page_index+=1;
-					clearTimeout(timer);
-				},600);
-			}
-			else{}
+			
 		 },
 		 wipeUp: function() { 
-			if(page_index>1){
-				var page_object=".calendar_page_"+(page_index-1);
-				$(page_object).addClass("page_down");
-				var timer=setTimeout(function(){
-					$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
-					page_index-=1;
-					clearTimeout(timer);
-				},600);
-			}
-			else{}
+			
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
 	});
 	
-	$(".link_1").bind("click",function(){
-		var page_object=".calendar_page_1";
-		$(page_object).addClass("page_down");
-		var timer=setTimeout(function(){
-			$(page_object).removeClass("calendar_page_upend").removeClass("page_down");
-			page_index=1;
-			var upend_set=$(".calendar_page_upend");
-			for(var i=0;i<upend_set.length;i++){
-				$(upend_set[i]).removeClass("calendar_page_upend");
-			}
-			clearTimeout(timer);
-		},600);
+	var sub_page_index=1;
 		
+	$(".con_wrap_1 .detail_title").bind("click",function(){
+		$(".con_wrap_1").addClass("tearing");
 	});
+	
+	$(".con_wrap_1 .surrender_tips").bind("click",function(){
+		$(".con_wrap_1").addClass("tearing");
+	});
+	
+	//切换 详细岗位列表
+	function SwitchSubList(list,index){ 
+		for(var i=0;i<list.length;i++){
+			if($(list[i]).data("index")<index){
+				$(list[i]).removeClass("wrap_after").addClass("wrap_before");
+			}
+			else if($(list[i]).data("index")>index){
+				$(list[i]).addClass("wrap_after").removeClass("wrap_before");
+			}
+			else if($(list[i]).data("index")==index){
+				$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
+			}
+		}
+		
+		sub_page_index=index;
+	}
+	
+	//绑定切换详细岗位事件
+	function BindTabEvent(list,wrapList){ 
+	 	var tabList=$(list).children("li").children(".tab_item");
+		for(var i=0;i<tabList.length;i++){
+			
+			(function(){
+				var index=i;
+				$(tabList[index]).bind("click",function(){
+					SwitchSubList(wrapList,index+1);
+					
+					$(list).children("li").removeClass("current");
+					$(this).parent().addClass("current");
+				});
+			})();
+			
+		}
+	}
+	
+	BindTabEvent($("#tab_list_1"),$(".con_wrap_1 .tear_page_wrap"));
+	
+	/*$(".tab_list_1 .tab_item_1").bind("click",function(){
+		var sub_list=$(".con_wrap_1 .tear_page_wrap");
+		SwitchSubList(sub_list,1);
+		
+		$(".tab_list_1 li").removeClass("current");
+		$(this).parent().addClass("current");
+	});
+	
+	$(".tab_list_1 .tab_item_2").bind("click",function(){
+		var sub_list=$(".con_wrap_1 .tear_page_wrap");
+		SwitchSubList(sub_list,2);
+		
+		$(".tab_list_1 li").removeClass("current");
+		$(this).parent().addClass("current");
+	});
+	$(".tab_list_1 .tab_item_3").bind("click",function(){
+		var sub_list=$(".con_wrap_1 .tear_page_wrap");
+		SwitchSubList(sub_list,3);
+		
+		$(".tab_list_1 li").removeClass("current");
+		$(this).parent().addClass("current");
+	});
+	$(".tab_list_1 .tab_item_4").bind("click",function(){
+		var sub_list=$(".con_wrap_1 .tear_page_wrap");
+		SwitchSubList(sub_list,4);
+		
+		$(".tab_list_1 li").removeClass("current");
+		$(this).parent().addClass("current");
+	});
+	$(".tab_list_1 .tab_item_5").bind("click",function(){
+		var sub_list=$(".con_wrap_1 .tear_page_wrap");
+		SwitchSubList(sub_list,5);
+		
+		$(".tab_list_1 li").removeClass("current");
+		$(this).parent().addClass("current");
+	});*/
+	
+	
 	
 	/*微信转发图片*/
 	
