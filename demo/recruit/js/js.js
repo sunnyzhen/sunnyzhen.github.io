@@ -176,7 +176,7 @@ $(document).ready(function(){
 			else{
 					
 			}
-			
+			sub_page_index=0;
 		 },
 		 wipeUp: function() { 
 			if(page_index==2){
@@ -202,6 +202,21 @@ $(document).ready(function(){
 			else{
 				
 			}
+			sub_page_index=0;
+		 },
+		 wipeLeft: function() { 
+			if(page_index==1){
+				SwitchSubList($(str_name_1),0);
+			}
+			else if(page_index>1){
+				var str_name_1=".con_wrap_"+(page_index-1);
+				SwitchSubList($(str_name_1),sub_page_index);
+				
+				sub_page_index+=1;
+			}
+			else{
+				
+			}
 		 },
 		 wipeRight: function() { 
 			if(page_index==1){
@@ -211,7 +226,7 @@ $(document).ready(function(){
 				var str_name_1=".con_wrap_"+(page_index-1);
 				SwitchSubList($(str_name_1),sub_page_index);
 				
-				sub_page_index+=1;
+				sub_page_index-=1;
 			}
 			else{
 				
