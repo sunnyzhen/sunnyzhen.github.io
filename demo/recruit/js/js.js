@@ -201,13 +201,13 @@ $(document).ready(function(){
 		 wipeLeft: function() {
 			$(".static .txt").html(sub_page_index); 
 			if(page_index==1){
-				SwitchSubList($(str_name_1),0);
+				
 			}
 			else if(page_index>1){
 				var str_name_1=".con_wrap_"+(page_index-1);
 				var str_name_2="#tab_list_"+(page_index-1);
 				var list_length=$(str_name_2).children("li").length;
-				if(sub_page_index<list_length){
+				if(sub_page_index<=list_length){
 					SwitchSubList($(str_name_1),sub_page_index);
 					sub_page_index+=1;
 				}
