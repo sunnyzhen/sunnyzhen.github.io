@@ -145,6 +145,7 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					page_index+=1;
+					alert(page_index);
 					
 				},300);
 				
@@ -158,13 +159,13 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					page_index+=1;
+					alert(page_index);
 					
 				},300);
 			}
 			else{
 					
 			}
-			
 			
 		 },
 		 wipeUp: function() { 
@@ -174,13 +175,18 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index-=1;
+				alert(page_index);
 			}
-			else if(page_index<=5){
+			else if(page_index>2&&page_index<=5){
 				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
 				$(".con_wrap_"+page_index).removeClass("wrap_show").addClass("wrap_prepare");
 				
 				ResetWrapState();
 				page_index-=1;
+				alert(page_index);
+			}
+			else{
+				
 			}
 		 },
 		min_move_x: 80,
