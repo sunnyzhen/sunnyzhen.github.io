@@ -69,11 +69,11 @@ $(document).ready(function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
 		$(wrap).find(".detail_title").bind("click",function(){
-			$(this).parentsUntil("con_wrap").addClass("tearing");
+			$(this).parents(".con_wrap").addClass("tearing");
 		})
 		
 		$(wrap).find(".surrender_tips").bind("click",function(){
-			$(this).parentsUntil("con_wrap").addClass("tearing");
+			$(this).parents(".con_wrap").addClass("tearing");
 		})
 	}
 	
@@ -123,12 +123,21 @@ $(document).ready(function(){
 		$(this).parent().addClass("current");
 	});*/
 	
+	function ResetWrapState(){
+		$(".poster_wrap").removeClass("wrap_before");
+		$(".tear_page_wrap").removeClass("wrap_before").addClass("wrap_after");
+		$(".tab_list li").removeClass("current");
+		$(".con_wrap").removeClass("detail_wrap_show");
+	}
+	
 	$(".cover_wrap .hook_down").bind("click",function(){
 		$(".cover_wrap").addClass("wrap_hide");
 		$(".con_wrap_1").addClass("wrap_show");
+		
 		var timer=setTimeout(function(){
 			$(".cover_wrap").removeClass("wrap_show");
 			$(".con_wrap_1").removeClass("wrap_prepare");
+			ResetWrapState();
 		},300);
 	});
 	
@@ -138,6 +147,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			$(".con_wrap_1").removeClass("wrap_show");
 			$(".con_wrap_2").removeClass("wrap_prepare");
+			ResetWrapState();
 		},300);
 	});
 	$(".con_wrap_2 .hook_down").bind("click",function(){
@@ -146,6 +156,7 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			$(".con_wrap_2").removeClass("wrap_show");
 			$(".con_wrap_3").removeClass("wrap_prepare");
+			ResetWrapState();
 		},300);
 	});
 	$(".con_wrap_3 .hook_down").bind("click",function(){
@@ -154,24 +165,39 @@ $(document).ready(function(){
 		var timer=setTimeout(function(){
 			$(".con_wrap_3").removeClass("wrap_show");
 			$(".con_wrap_4").removeClass("wrap_prepare");
+			ResetWrapState();
 		},300);
 	});
 	
 	$(".con_wrap_1 .hook_up").bind("click",function(){
 		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+		ResetWrapState();
 	});
 	$(".con_wrap_2 .hook_up").bind("click",function(){
 		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
+		ResetWrapState();
 	});
 	$(".con_wrap_3 .hook_up").bind("click",function(){
 		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
+		ResetWrapState();
 	});
 	$(".con_wrap_4 .hook_up").bind("click",function(){
 		$(".con_wrap_3").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_4").removeClass("wrap_show").addClass("wrap_prepare");
+		ResetWrapState();
+	});
+	
+	$(".tab_list_3 .tab_item_8").bind("click",function(){
+		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap").removeClass("wrap_show").addClass("wrap_prepare");
+		
+		var timer=setTimeout(function(){
+			$(".con_wrap").removeClass("wrap_hide").removeClass("wrap_show").removeClass("tearing").removeClass("detail_wrap_show").addClass("wrap_prepare");
+			ResetWrapState();
+		},300);
 	});
 	
 	

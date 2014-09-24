@@ -17,6 +17,7 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden;}
+body{ background: url(../images/bg_hook.jpg) repeat center 0 ; background-size:225px 150px;}
 
 .cover_wrap{ height:100%; width:100%; background:#08090e url(../images/index_bg.jpg) no-repeat center bottom; background-size:320px 416px; overflow:hidden; position:relative; -webkit-transition:top 0.3s ease;}
 .cover_wrap .building_1{ display:block;  height:140px; width:185px;  position:absolute; left:50%; margin-left:-85px; bottom:200px; overflow:hidden;}
@@ -153,7 +154,7 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 .wrap_show .time_hook{ -webkit-animation:a_opacity 0.5s 6.5s linear both;}
 
 
-.con_wrap{ display:block; height:100%; width:100%; background:url(../images/bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; overflow:hidden; -webkit-transition:top 0.3s ease;}
+.con_wrap{ display:block; height:100%; width:100%; background:url(../images/bg.jpg) no-repeat center 0; background-size:100% 100%; position:absolute; left:0px; top:0px; overflow:hidden; -webkit-transition:top 0.3s ease;}
 .poster_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3); -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; z-index:1;}
 .poster_wrap .poster_con{ display:block; position:relative; z-index:1;}
 .poster_wrap .title{ display:none;}
@@ -219,13 +220,13 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 
 .detail_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg_2.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; box-shadow:-1px 1px 2px rgba(0,0,0,0.3);}
-.detail_wrap .detail_title{ font-size:16px; font-family:'microsoft yahei'; padding:20px 0 10px 20px; margin:0px auto;}
-.detail_wrap .detail_txt{ font-size:14px; font-family:'microsoft yahei'; margin:0px auto 10px; width:200px;}
+.detail_wrap .detail_title{ font-size:14px; font-family:'microsoft yahei'; padding:40px 0 10px 25px; margin:0px auto;}
+.detail_wrap .detail_txt{ font-size:12px; font-family:'microsoft yahei'; margin:0px auto 10px; width:190px;}
 .detail_wrap .bg,.poster_wrap .bg{ display:block; height:276px; width:239px; background:url(../images/poster_bottom_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; bottom:0px;}
 .detail_wrap .bg .repeat_bg{ width:224px; height:268px; position:absolute; top:0px; left:7px; background:url(../images/poster_repeat_bg.jpg) repeat 0 0; background-size:70px 70px;}
 .detail_wrap .detail_con{ display:block; position:relative; z-index:2;}
 
-.surrender_tips{ display:block; height:34px; width:71px; background:url(../images/surrender_tips.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:62px; top:13px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear; pointer-events:none; }
+.surrender_tips{ display:block; height:34px; width:71px; background:url(../images/surrender_tips.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:62px; top:13px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear; pointer-events:none; z-index:1;}
 .page_angle{ position:absolute; right:-16px; top:0px; display:block; height:35px; width:97px; background:url(../images/page_angle.png) no-repeat 0 0; background-size:contain; -webkit-transform:rotate(25deg); -webkit-transform-origin:0% 0%; z-index:1; -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
 
 @-webkit-keyframes a_page_angle{
@@ -279,7 +280,7 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 .wrap_before{ margin-left:-450px; opacity:0; z-index:1;}
 .tearing .wrap_before,.tearing .wrap_after{-webkit-animation:none;}
 
-.bg_hook{ display:block; height:150px; width:225px; background: url(../images/bg_hook.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-112px; top:64px;}
+.bg_hook{ display:block; height:80%; width:90%; background: url(../images/bg_hook.jpg) no-repeat 0 0; background-size:100%; position:absolute; left:50%; margin-left:-45%; top:64px;}
 
 .wrap_prepare{ top:100%;}
 .wrap_show{ top:0%;}
@@ -290,9 +291,10 @@ html,body{ height:100%; width:100%; overflow:hidden;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
-	
-	
-	
+	.poster_wrap{ top:50px;}
+	.tear_page_wrap{ top:5px;}
+	.tab_wrap{ bottom:20px;}
+	.surrender_tips{ top:51px;}
 }
 
 
