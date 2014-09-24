@@ -272,6 +272,9 @@ $(document).ready(function(){
 		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap").removeClass("wrap_show").addClass("wrap_prepare");
 		
+		page_index=1;
+		sub_page_index=1;
+		
 		var timer=setTimeout(function(){
 			$(".con_wrap").removeClass("wrap_hide").removeClass("wrap_show").removeClass("tearing").removeClass("detail_wrap_show").addClass("wrap_prepare");
 			ResetWrapState();
