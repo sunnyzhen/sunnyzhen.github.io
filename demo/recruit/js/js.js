@@ -135,7 +135,6 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() { 
-			alert(page_index);
 			if(page_index==1){
 				$(".cover_wrap").addClass("wrap_hide");
 				$(".con_wrap_1").addClass("wrap_show");
@@ -163,7 +162,6 @@ $(document).ready(function(){
 			
 		 },
 		 wipeUp: function() { 
-		 	alert(page_index);
 			if(page_index==2){
 				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
