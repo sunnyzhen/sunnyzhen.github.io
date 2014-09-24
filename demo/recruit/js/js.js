@@ -3,10 +3,10 @@
 $(document).ready(function(){
 	
 	var page_index=1;
-	var total_num=12;
+	var sub_page_index=0;
 	
 	//触摸触发事件
-	$("body").touchwipe({
+	/*$("body").touchwipe({
 		wipeDown: function() { 
 			
 		 },
@@ -16,9 +16,8 @@ $(document).ready(function(){
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
-	});
+	});*/
 	
-	var sub_page_index=0;
 	
 	//切换 详细岗位列表
 	function SwitchSubList(wrap,index){
@@ -70,10 +69,12 @@ $(document).ready(function(){
 		});*/
 		$(wrap).find(".detail_title").bind("click",function(){
 			$(this).parents(".con_wrap").addClass("tearing");
+			$(".email_wrap").addClass("tearing");
 		})
 		
 		$(wrap).find(".surrender_tips").bind("click",function(){
 			$(this).parents(".con_wrap").addClass("tearing");
+			$(".email_wrap").addClass("tearing");
 		})
 	}
 	
@@ -128,7 +129,56 @@ $(document).ready(function(){
 		$(".tear_page_wrap").removeClass("wrap_before").addClass("wrap_after");
 		$(".tab_list li").removeClass("current");
 		$(".con_wrap").removeClass("detail_wrap_show");
+		$(".email_wrap").removeClass("tearing");
 	}
+	
+	//触摸触发事件
+	$("body").touchwipe({
+		wipeDown: function() { 
+			
+			if(page_index==1){
+				$(".cover_wrap").addClass("wrap_hide");
+				$(".con_wrap_1").addClass("wrap_show");
+				
+				var timer=setTimeout(function(){
+					$(".cover_wrap").removeClass("wrap_show");
+					$(".con_wrap_1").removeClass("wrap_prepare");
+					ResetWrapState();
+				},300);
+				
+			}
+			else if(page_index>1&&page_index<5){
+				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
+				$(".con_wrap_"+page_index).addClass("wrap_show");
+				var timer=setTimeout(function(){
+					$(".con_wrap_"+(page_index-1)).removeClass("wrap_show");
+					$(".con_wrap_"+page_index).removeClass("wrap_prepare");
+					ResetWrapState();
+				},300);
+				
+				
+			}
+			
+			page_index+=1;
+			
+		 },
+		 wipeUp: function() { 
+			if(page_index==2){
+				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+				ResetWrapState();
+			}
+			else if(page_index<=5){
+				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
+				$(".con_wrap_"+page_index).removeClass("wrap_show").addClass("wrap_prepare");
+				ResetWrapState();
+			}
+			page_index-=1;
+		 },
+		min_move_x: 80,
+		min_move_y: 80,
+		preventDefaultEvents: true
+	});
 	
 	$(".cover_wrap .hook_down").bind("click",function(){
 		$(".cover_wrap").addClass("wrap_hide");
