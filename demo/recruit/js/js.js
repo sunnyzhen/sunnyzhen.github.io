@@ -203,12 +203,26 @@ $(document).ready(function(){
 				
 			}
 		 },
+		 wipeRight: function() { 
+			if(page_index==1){
+				SwitchSubList($(str_name_1),0);
+			}
+			else if(page_index>1){
+				var str_name_1=".con_wrap_"+(page_index-1);
+				SwitchSubList($(str_name_1),sub_page_index);
+				
+				sub_page_index+=1;
+			}
+			else{
+				
+			}
+		 },
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
 	});
 	
-	$(".cover_wrap .hook_down").bind("click",function(){
+	/*$(".cover_wrap .hook_down").bind("click",function(){
 		$(".cover_wrap").addClass("wrap_hide");
 		$(".con_wrap_1").addClass("wrap_show");
 		
@@ -266,7 +280,7 @@ $(document).ready(function(){
 		$(".con_wrap_3").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_4").removeClass("wrap_show").addClass("wrap_prepare");
 		ResetWrapState();
-	});
+	});*/
 	
 	$(".tab_list_3 .tab_item_8").bind("click",function(){
 		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
