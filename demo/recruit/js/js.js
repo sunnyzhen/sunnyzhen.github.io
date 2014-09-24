@@ -212,9 +212,8 @@ $(document).ready(function(){
 				if(sub_page_index<list_length){
 					SwitchSubList($(str_name_1),sub_page_index+1);
 					
-					$(".static .txt").html($(str_name_2).children("li"));
 					$(str_name_2).children("li").removeClass("current");
-					$(str_name_2).children("li")[sub_page_index+1].addClass("current");
+					$($(str_name_2).children("li"))[sub_page_index+1].addClass("current");
 				}
 			}
 			else{
