@@ -145,7 +145,7 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					page_index+=1;
-					alert(page_index);
+					clearTimeout(timer);
 					
 				},300);
 				
@@ -159,7 +159,7 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					page_index+=1;
-					alert(page_index);
+					clearTimeout(timer);
 					
 				},300);
 			}
@@ -175,7 +175,6 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index-=1;
-				alert(page_index);
 			}
 			else if(page_index>2&&page_index<=5){
 				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
@@ -183,7 +182,6 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index-=1;
-				alert(page_index);
 			}
 			else{
 				
