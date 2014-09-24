@@ -209,7 +209,6 @@ $(document).ready(function(){
 				var list_length=$(str_name_2).children("li").length;
 				if(sub_page_index<=list_length){
 					SwitchSubList($(str_name_1),sub_page_index);
-					sub_page_index+=1;
 				}
 			}
 			else{
@@ -224,8 +223,6 @@ $(document).ready(function(){
 			}
 			else if(page_index>1){
 				var str_name_1=".con_wrap_"+(page_index-1);
-				
-				sub_page_index-=1;
 				
 				SwitchSubList($(str_name_1),sub_page_index);
 				
