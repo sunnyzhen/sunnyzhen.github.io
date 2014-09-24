@@ -153,12 +153,17 @@ $(document).ready(function(){
 			else if(page_index>1&&page_index<5){
 				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
 				$(".con_wrap_"+page_index).addClass("wrap_show");
+				
+				var str_name_1=".con_wrap_"+(page_index-1);
+				var str_name_2=".con_wrap_"+page_index;
+				
+				page_index+=1;
+				
 				var timer=setTimeout(function(){
-					$(".con_wrap_"+(page_index-1)).removeClass("wrap_show");
-					$(".con_wrap_"+page_index).removeClass("wrap_prepare");
+					$(str_name_1).removeClass("wrap_show");
+					$(str_name_2).removeClass("wrap_prepare");
 					
 					ResetWrapState();
-					page_index+=1;
 					clearTimeout(timer);
 					
 				},300);
