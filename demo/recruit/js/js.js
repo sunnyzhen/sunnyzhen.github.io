@@ -233,6 +233,8 @@ $(document).ready(function(){
 			else{
 				
 			}
+			
+			$(".static .txt").html(sub_page_index);
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
