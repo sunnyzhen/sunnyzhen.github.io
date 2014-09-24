@@ -18,52 +18,73 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
-	var sub_page_index=1;
-		
-	$(".con_wrap_1 .detail_title").bind("click",function(){
-		$(".con_wrap_1").addClass("tearing");
-	});
-	
-	$(".con_wrap_1 .surrender_tips").bind("click",function(){
-		$(".con_wrap_1").addClass("tearing");
-	});
+	var sub_page_index=0;
 	
 	//切换 详细岗位列表
-	function SwitchSubList(list,index){ 
-		for(var i=0;i<list.length;i++){
-			if($(list[i]).data("index")<index){
-				$(list[i]).removeClass("wrap_after").addClass("wrap_before");
+	function SwitchSubList(wrap,index){
+		var list=$(wrap).children(".tear_page_wrap");
+		if(index==0){
+			$(wrap).removeClass("detail_wrap_show");
+			$(list[i]).removeClass("wrap_before").addClass("wrap_after");
+			$(wrap).children(".poster_wrap").removeClass("wrap_before");
+		}else{
+			$(wrap).addClass("detail_wrap_show");
+			for(var i=0;i<list.length;i++){
+				if($(list[i]).data("index")<index){
+					$(list[i]).removeClass("wrap_after").addClass("wrap_before");
+				}
+				else if($(list[i]).data("index")>index){
+					$(list[i]).addClass("wrap_after").removeClass("wrap_before");
+				}
+				else if($(list[i]).data("index")==index){
+					$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
+				}
 			}
-			else if($(list[i]).data("index")>index){
-				$(list[i]).addClass("wrap_after").removeClass("wrap_before");
-			}
-			else if($(list[i]).data("index")==index){
-				$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
-			}
+			$(wrap).children(".poster_wrap").addClass("wrap_before");
 		}
 		
 		sub_page_index=index;
 	}
 	
 	//绑定切换详细岗位事件
-	function BindTabEvent(list,wrapList){ 
+	function BindTabEvent(list,wrap){ 
 	 	var tabList=$(list).children("li").children(".tab_item");
 		for(var i=0;i<tabList.length;i++){
-			
 			(function(){
 				var index=i;
 				$(tabList[index]).bind("click",function(){
-					SwitchSubList(wrapList,index+1);
+					SwitchSubList(wrap,index+1);
 					
 					$(list).children("li").removeClass("current");
 					$(this).parent().addClass("current");
 				});
 			})();
-			
 		}
+		
+		/*$(".con_wrap_1 .detail_title").bind("click",function(){
+			$(".con_wrap_1").addClass("tearing");
+		});
+		
+		$(".con_wrap_1 .surrender_tips").bind("click",function(){
+			$(".con_wrap_1").addClass("tearing");
+		});*/
+		$(wrap).find(".detail_title").bind("click",function(){
+			$(this).parentsUntil("con_wrap").addClass("tearing");
+		})
+		
+		$(wrap).find(".surrender_tips").bind("click",function(){
+			$(this).parentsUntil("con_wrap").addClass("tearing");
+		})
 	}
 	
-	BindTabEvent($("#tab_list_1"),$(".con_wrap_1 .tear_page_wrap"));
+	BindTabEvent($("#tab_list_1"),$(".con_wrap_1"));
+	BindTabEvent($("#tab_list_2"),$(".con_wrap_2"));
+	BindTabEvent($("#tab_list_3"),$(".con_wrap_3"));
+	BindTabEvent($("#tab_list_4"),$(".con_wrap_4"));
+	
+	/*$(".con_wrap_1").find(".detail_title").bind("click",function(){
+		$(this).parentsUntil("con_wrap").addClass("tearing");
+	})*/
 	
 	/*$(".tab_list_1 .tab_item_1").bind("click",function(){
 		var sub_list=$(".con_wrap_1 .tear_page_wrap");
@@ -102,6 +123,56 @@ $(document).ready(function(){
 		$(this).parent().addClass("current");
 	});*/
 	
+	$(".cover_wrap .hook_down").bind("click",function(){
+		$(".cover_wrap").addClass("wrap_hide");
+		$(".con_wrap_1").addClass("wrap_show");
+		var timer=setTimeout(function(){
+			$(".cover_wrap").removeClass("wrap_show");
+			$(".con_wrap_1").removeClass("wrap_prepare");
+		},300);
+	});
+	
+	$(".con_wrap_1 .hook_down").bind("click",function(){
+		$(".con_wrap_1").addClass("wrap_hide");
+		$(".con_wrap_2").addClass("wrap_show");
+		var timer=setTimeout(function(){
+			$(".con_wrap_1").removeClass("wrap_show");
+			$(".con_wrap_2").removeClass("wrap_prepare");
+		},300);
+	});
+	$(".con_wrap_2 .hook_down").bind("click",function(){
+		$(".con_wrap_2").addClass("wrap_hide");
+		$(".con_wrap_3").addClass("wrap_show");
+		var timer=setTimeout(function(){
+			$(".con_wrap_2").removeClass("wrap_show");
+			$(".con_wrap_3").removeClass("wrap_prepare");
+		},300);
+	});
+	$(".con_wrap_3 .hook_down").bind("click",function(){
+		$(".con_wrap_3").addClass("wrap_hide");
+		$(".con_wrap_4").addClass("wrap_show");
+		var timer=setTimeout(function(){
+			$(".con_wrap_3").removeClass("wrap_show");
+			$(".con_wrap_4").removeClass("wrap_prepare");
+		},300);
+	});
+	
+	$(".con_wrap_1 .hook_up").bind("click",function(){
+		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	$(".con_wrap_2 .hook_up").bind("click",function(){
+		$(".con_wrap_1").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_2").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	$(".con_wrap_3 .hook_up").bind("click",function(){
+		$(".con_wrap_2").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_3").removeClass("wrap_show").addClass("wrap_prepare");
+	});
+	$(".con_wrap_4 .hook_up").bind("click",function(){
+		$(".con_wrap_3").removeClass("wrap_hide").addClass("wrap_show");
+		$(".con_wrap_4").removeClass("wrap_show").addClass("wrap_prepare");
+	});
 	
 	
 	/*微信转发图片*/
