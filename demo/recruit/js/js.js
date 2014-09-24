@@ -43,6 +43,7 @@ $(document).ready(function(){
 		}
 		
 		sub_page_index=index;
+		$(".static .txt").html(sub_page_index);
 	}
 	
 	//绑定切换详细岗位事件
@@ -218,7 +219,6 @@ $(document).ready(function(){
 				
 			}
 			
-			$(".static .txt").html(sub_page_index);
 		 },
 		 wipeRight: function() { 
 			if(page_index==1){
