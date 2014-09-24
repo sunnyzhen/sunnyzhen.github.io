@@ -142,7 +142,10 @@ $(document).ready(function(){
 				var timer=setTimeout(function(){
 					$(".cover_wrap").removeClass("wrap_show");
 					$(".con_wrap_1").removeClass("wrap_prepare");
+					
 					ResetWrapState();
+					page_index+=1;
+					
 				},300);
 				
 			}
@@ -152,27 +155,33 @@ $(document).ready(function(){
 				var timer=setTimeout(function(){
 					$(".con_wrap_"+(page_index-1)).removeClass("wrap_show");
 					$(".con_wrap_"+page_index).removeClass("wrap_prepare");
+					
 					ResetWrapState();
+					page_index+=1;
+					
 				},300);
-				
-				
+			}
+			else{
+					
 			}
 			
-			page_index+=1;
 			
 		 },
 		 wipeUp: function() { 
 			if(page_index==2){
 				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+				
 				ResetWrapState();
+				page_index-=1;
 			}
 			else if(page_index<=5){
 				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
 				$(".con_wrap_"+page_index).removeClass("wrap_show").addClass("wrap_prepare");
+				
 				ResetWrapState();
+				page_index-=1;
 			}
-			page_index-=1;
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
