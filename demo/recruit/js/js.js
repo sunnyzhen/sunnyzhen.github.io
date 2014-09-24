@@ -132,6 +132,8 @@ $(document).ready(function(){
 		$(".email_wrap").removeClass("tearing");
 	}
 	
+	
+	
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() { 
@@ -146,9 +148,10 @@ $(document).ready(function(){
 					ResetWrapState();
 					page_index=2;
 					clearTimeout(timer);
+					$(".static .txt").html(page_index);
 					
 				},300);
-				
+				$(".static .txt").html(page_index);
 			}
 			else if(page_index>1&&page_index<5){
 				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
@@ -158,6 +161,7 @@ $(document).ready(function(){
 				var str_name_2=".con_wrap_"+page_index;
 				
 				page_index+=1;
+				$(".static .txt").html(page_index);
 				
 				var timer=setTimeout(function(){
 					$(str_name_1).removeClass("wrap_show");
@@ -165,6 +169,7 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					clearTimeout(timer);
+					$(".static .txt").html(page_index);
 					
 				},300);
 			}
@@ -180,6 +185,7 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index=1;
+				$(".static .txt").html(page_index);
 			}
 			else if(page_index>2&&page_index<=5){
 				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
@@ -187,6 +193,7 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index-=1;
+				$(".static .txt").html(page_index);
 			}
 			else{
 				
