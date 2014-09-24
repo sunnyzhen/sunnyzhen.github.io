@@ -128,7 +128,7 @@ $(document).ready(function(){
 		$(".poster_wrap").removeClass("wrap_before");
 		$(".tear_page_wrap").removeClass("wrap_before").addClass("wrap_after");
 		$(".tab_list li").removeClass("current");
-		$(".con_wrap").removeClass("detail_wrap_show").addClass("wrap_prepare");
+		$(".con_wrap").removeClass("detail_wrap_show");
 		$(".email_wrap").removeClass("tearing");
 	}
 	
