@@ -188,8 +188,8 @@ $(document).ready(function(){
 				$(".static .txt").html(page_index);
 			}
 			else if(page_index>2&&page_index<=5){
-				var str_name_1=".con_wrap_"+(page_index-1);
-				var str_name_2=".con_wrap_"+page_index;
+				var str_name_1=".con_wrap_"+(page_index-2);
+				var str_name_2=".con_wrap_"+(page_index-1);
 				
 				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
 				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
