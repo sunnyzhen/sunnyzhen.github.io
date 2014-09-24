@@ -188,12 +188,16 @@ $(document).ready(function(){
 				$(".static .txt").html(page_index);
 			}
 			else if(page_index>2&&page_index<=5){
-				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
-				$(".con_wrap_"+page_index).removeClass("wrap_show").addClass("wrap_prepare");
+				var str_name_1=".con_wrap_"+(page_index-1);
+				var str_name_2=".con_wrap_"+page_index;
+				
+				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
+				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
 				
 				ResetWrapState();
 				page_index-=1;
 				$(".static .txt").html(page_index);
+				$(".static .txt").html(str_name_1+" "+str_name_2);
 			}
 			else{
 				
