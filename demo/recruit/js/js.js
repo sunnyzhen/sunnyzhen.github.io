@@ -148,10 +148,8 @@ $(document).ready(function(){
 					ResetWrapState();
 					page_index=2;
 					clearTimeout(timer);
-					$(".static .txt").html(page_index);
 					
 				},300);
-				$(".static .txt").html(page_index);
 			}
 			else if(page_index>1&&page_index<5){
 				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
@@ -169,7 +167,6 @@ $(document).ready(function(){
 					
 					ResetWrapState();
 					clearTimeout(timer);
-					$(".static .txt").html(page_index);
 					
 				},300);
 			}
@@ -185,7 +182,6 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index=1;
-				$(".static .txt").html(page_index);
 			}
 			else if(page_index>2&&page_index<=5){
 				var str_name_1=".con_wrap_"+(page_index-2);
@@ -196,15 +192,14 @@ $(document).ready(function(){
 				
 				ResetWrapState();
 				page_index-=1;
-				$(".static .txt").html(page_index);
-				$(".static .txt").html(str_name_1+" "+str_name_2);
 			}
 			else{
 				
 			}
 			sub_page_index=0;
 		 },
-		 wipeLeft: function() { 
+		 wipeLeft: function() {
+			$(".static .txt").html(sub_page_index); 
 			if(page_index==1){
 				SwitchSubList($(str_name_1),0);
 			}
@@ -220,6 +215,8 @@ $(document).ready(function(){
 			else{
 				
 			}
+			
+			$(".static .txt").html(sub_page_index);
 		 },
 		 wipeRight: function() { 
 			if(page_index==1){
