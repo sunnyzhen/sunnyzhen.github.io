@@ -128,7 +128,7 @@ $(document).ready(function(){
 		$(".poster_wrap").removeClass("wrap_before");
 		$(".tear_page_wrap").removeClass("wrap_before").addClass("wrap_after");
 		$(".tab_list li").removeClass("current");
-		$(".con_wrap").removeClass("detail_wrap_show");
+		$(".con_wrap").removeClass("detail_wrap_show").addClass("wrap_prepare");
 		$(".email_wrap").removeClass("tearing");
 	}
 	
@@ -144,7 +144,7 @@ $(document).ready(function(){
 					$(".con_wrap_1").removeClass("wrap_prepare");
 					
 					ResetWrapState();
-					page_index+=1;
+					page_index=2;
 					clearTimeout(timer);
 					
 				},300);
@@ -174,7 +174,7 @@ $(document).ready(function(){
 				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
 				
 				ResetWrapState();
-				page_index-=1;
+				page_index=1;
 			}
 			else if(page_index>2&&page_index<=5){
 				$(".con_wrap_"+(page_index-1)).removeClass("wrap_hide").addClass("wrap_show");
