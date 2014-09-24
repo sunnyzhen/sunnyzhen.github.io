@@ -19,7 +19,7 @@ button {cursor:pointer;}
 html,body{ height:100%; width:100%; overflow:hidden;}
 body{ background: url(../images/bg_hook.jpg) repeat center 0 ; background-size:225px 150px;}
 
-.cover_wrap{ height:100%; width:100%; background:#08090e url(../images/index_bg.jpg) no-repeat center bottom; background-size:320px 416px; overflow:hidden; position:relative; -webkit-transition:top 0.3s ease;}
+.cover_wrap{ height:100%; width:100%; background:#08090e url(../images/index_bg.jpg) no-repeat center bottom; background-size:320px 416px; overflow:hidden; position:relative; -webkit-transition:top 0.3s ease; z-index:1;}
 .cover_wrap .building_1{ display:block;  height:140px; width:185px;  position:absolute; left:50%; margin-left:-85px; bottom:200px; overflow:hidden;}
 .cover_wrap .building_1 .b_body{display:block; background: url(../images/building_bg2.png) no-repeat 0 0; height:140px; width:185px; background-size:contain; position:absolute; left:0px; top:0px; opacity:0;}
 
