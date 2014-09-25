@@ -286,14 +286,17 @@ body{ background:#5a5a5a;}
 .wrap_show{ top:0%; opacity:1;}
 .wrap_hide{ top:-100%; opacity:0;}
 
-.hook_down{ display:block; height:30px; width:30px; background:rgba(0,0,0,0.5); position:absolute; right:0px; bottom:0px; z-index:9;}
-.hook_up{ display:block; height:30px; width:30px; background:rgba(0,0,0,0.5); position:absolute; right:0px; top:0px; z-index:9;}
+.hook_down{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; bottom:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
+.hook_up{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; top:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
+.hook_left{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden;}
+.hook_right{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; right:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden;}
 
 .email_wrap{ display:block; height:100%; width:100%; overflow:hidden; position:absolute; left:0px; top:0px; background:url(../images/bg.jpg) no-repeat center 0; background-size:100% 100%;}
 .email_wrap .title{ display:none;}
 .email_wrap .email_link{ display:none;}
 
-.static{ display:block; height:20px; width:320px; background:rgba(0,0,0,0.3); position: absolute; left:0px; top:0px; z-index:99; color:#fff; line-height:20px; padding-left:10px;}
+.tear_page_wrap .poster_wrap{ top:0px;}
+
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){

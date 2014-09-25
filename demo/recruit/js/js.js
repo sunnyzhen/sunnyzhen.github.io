@@ -24,7 +24,9 @@ $(document).ready(function(){
 		var list=$(wrap).children(".tear_page_wrap");
 		if(index==0){
 			$(wrap).removeClass("detail_wrap_show");
-			$(list[i]).removeClass("wrap_before").addClass("wrap_after");
+			for(var i=0;i<list.length;i++){
+				$(list[i]).removeClass("wrap_before").addClass("wrap_after");
+			}
 			$(wrap).children(".poster_wrap").removeClass("wrap_before");
 		}
 		else{
@@ -40,11 +42,12 @@ $(document).ready(function(){
 					$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
 				}
 			}
+			
 			$(wrap).children(".poster_wrap").addClass("wrap_before");
 		}
 		
+		$(".design_wrap").removeClass("wrap_after");
 		sub_page_index=index;
-		$(".static .txt").html(sub_page_index);
 	}
 	
 	//绑定切换详细岗位事件
@@ -70,20 +73,28 @@ $(document).ready(function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
 		$(wrap).find(".detail_title").bind("click",function(){
-			$(this).parents(".con_wrap").addClass("tearing");
-			$(".email_wrap").addClass("tearing");
-		})
+			GetEmailPage(wrap);
+		});
 		
 		$(wrap).find(".surrender_tips").bind("click",function(){
-			$(this).parents(".con_wrap").addClass("tearing");
-			$(".email_wrap").addClass("tearing");
-		})
+			GetEmailPage(wrap);
+		});
+		
 	}
 	
 	BindTabEvent($("#tab_list_1"),$(".con_wrap_1"));
 	BindTabEvent($("#tab_list_2"),$(".con_wrap_2"));
 	BindTabEvent($("#tab_list_3"),$(".con_wrap_3"));
 	BindTabEvent($("#tab_list_4"),$(".con_wrap_4"));
+	
+	//撕下通缉令 出现邮箱页
+	function GetEmailPage(wrap){
+		$(wrap).addClass("tearing");
+		$(".email_wrap").addClass("tearing");
+		
+		page_index=0;
+	 	sub_page_index=0;
+	}
 	
 	/*$(".con_wrap_1").find(".detail_title").bind("click",function(){
 		$(this).parentsUntil("con_wrap").addClass("tearing");
@@ -132,6 +143,8 @@ $(document).ready(function(){
 		$(".tab_list li").removeClass("current");
 		$(".con_wrap").removeClass("detail_wrap_show");
 		$(".email_wrap").removeClass("tearing");
+		
+		$(".design_wrap").removeClass("wrap_after");
 	}
 	
 	
@@ -161,7 +174,6 @@ $(document).ready(function(){
 				var str_name_2=".con_wrap_"+page_index;
 				
 				page_index+=1;
-				$(".static .txt").html(page_index);
 				
 				var timer=setTimeout(function(){
 					$(str_name_1).removeClass("wrap_show");
@@ -172,12 +184,18 @@ $(document).ready(function(){
 					
 				},300);
 			}
+			else if(page_index==5){
+				GetEmailPage($(".con_wrap_4"));
+			}
 			else{
 					
 			}
 			sub_page_index=0;
 		 },
 		 wipeUp: function() { 
+			var str_name_1=".con_wrap_"+(page_index-2);
+			var str_name_2=".con_wrap_"+(page_index-1);
+			
 			if(page_index==2){
 				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
 				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
@@ -186,8 +204,6 @@ $(document).ready(function(){
 				page_index=1;
 			}
 			else if(page_index>2&&page_index<=5){
-				var str_name_1=".con_wrap_"+(page_index-2);
-				var str_name_2=".con_wrap_"+(page_index-1);
 				
 				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
 				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
@@ -201,36 +217,40 @@ $(document).ready(function(){
 			sub_page_index=0;
 		 },
 		 wipeLeft: function() {
-			$(".static .txt").html(sub_page_index); 
-			if(page_index==1){
+			 
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2="#tab_list_"+(page_index-1);
+			
+			if(page_index==0||page_index==1){
 				
 			}
 			else if(page_index>1){
-				var str_name_1=".con_wrap_"+(page_index-1);
-				var str_name_2="#tab_list_"+(page_index-1);
 				var list_length=$(str_name_2).children("li").length;
 				if(sub_page_index<list_length){
 					SwitchSubList($(str_name_1),sub_page_index+1);
-					
-					$(str_name_2).children("li").removeClass("current");
-					$(".static .txt").html("remove");
-					$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-					$(".static .txt").html("add");
 				}
 			}
 			else{
 				
 			}
 			
+			$(str_name_2).children("li").removeClass("current");
+			if(sub_page_index!=0){
+				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			}
+			
 		 },
 		 wipeRight: function() { 
-			if(page_index==1){
-				SwitchSubList($(str_name_1),0);
+			
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2="#tab_list_"+(page_index-1);
+			
+			if(page_index==0||page_index==1){
+				
 			}
 			else if(page_index>1){
-				var str_name_1=".con_wrap_"+(page_index-1);
-				var str_name_2="#tab_list_"+(page_index-1);
 				var list_length=$(str_name_2).children("li").length;
+				
 				if(sub_page_index>0){
 					SwitchSubList($(str_name_1),sub_page_index-1);
 				}
@@ -240,13 +260,17 @@ $(document).ready(function(){
 				
 			}
 			
-			$(".static .txt").html(sub_page_index);
+			$(str_name_2).children("li").removeClass("current");
+			if(sub_page_index!=0){
+				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			}
+			
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
 		preventDefaultEvents: true
 	});
-	
+	/*
 	$(".cover_wrap .hook_down").bind("click",function(){
 		$(".cover_wrap").addClass("wrap_hide");
 		$(".con_wrap_1").addClass("wrap_show");
@@ -305,7 +329,7 @@ $(document).ready(function(){
 		$(".con_wrap_3").removeClass("wrap_hide").addClass("wrap_show");
 		$(".con_wrap_4").removeClass("wrap_show").addClass("wrap_prepare");
 		ResetWrapState();
-	});
+	});*/
 	
 	$(".tab_list_3 .tab_item_8").bind("click",function(){
 		$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
@@ -318,6 +342,126 @@ $(document).ready(function(){
 			$(".con_wrap").removeClass("wrap_hide").removeClass("wrap_show").removeClass("tearing").removeClass("detail_wrap_show").addClass("wrap_prepare");
 			ResetWrapState();
 		},300);
+	});
+	
+	$(".hook_right").bind("click",function(){
+		
+		var str_name_1=".con_wrap_"+(page_index-1);
+		var str_name_2="#tab_list_"+(page_index-1);
+		
+		if(page_index==0||page_index==1){
+			
+		}
+		else if(page_index>1){
+			var list_length=$(str_name_2).children("li").length;
+			if(sub_page_index<list_length){
+				SwitchSubList($(str_name_1),sub_page_index+1);
+			}
+		}
+		else{
+			
+		}
+		
+		$(str_name_2).children("li").removeClass("current");
+		if(sub_page_index!=0){
+			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+		}
+		
+	});
+	
+	$(".hook_left").bind("click",function(){
+		
+		var str_name_1=".con_wrap_"+(page_index-1);
+		var str_name_2="#tab_list_"+(page_index-1);
+		
+		if(page_index==0||page_index==1){
+			
+		}
+		else if(page_index>1){
+			var list_length=$(str_name_2).children("li").length;
+			
+			if(sub_page_index>0){
+				SwitchSubList($(str_name_1),sub_page_index-1);
+			}
+			
+		}
+		else{
+			
+		}
+		
+		$(str_name_2).children("li").removeClass("current");
+		if(sub_page_index!=0){
+			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+		}
+		
+	});
+	
+	$(".hook_up").bind("click",function(){
+		
+		var str_name_1=".con_wrap_"+(page_index-2);
+		var str_name_2=".con_wrap_"+(page_index-1);
+		
+		if(page_index==2){
+			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+			$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+			
+			ResetWrapState();
+			page_index=1;
+		}
+		else if(page_index>2&&page_index<=5){
+			
+			$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
+			$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
+			
+			ResetWrapState();
+			page_index-=1;
+		}
+		else{
+			
+		}
+		sub_page_index=0;
+	});
+	
+	$(".hook_down").bind("click",function(){
+		if(page_index==1){
+			$(".cover_wrap").addClass("wrap_hide");
+			$(".con_wrap_1").addClass("wrap_show");
+			
+			var timer=setTimeout(function(){
+				$(".cover_wrap").removeClass("wrap_show");
+				$(".con_wrap_1").removeClass("wrap_prepare");
+				
+				ResetWrapState();
+				page_index=2;
+				clearTimeout(timer);
+				
+			},300);
+		}
+		else if(page_index>1&&page_index<5){
+			$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
+			$(".con_wrap_"+page_index).addClass("wrap_show");
+			
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2=".con_wrap_"+page_index;
+			
+			page_index+=1;
+			
+			var timer=setTimeout(function(){
+				$(str_name_1).removeClass("wrap_show");
+				$(str_name_2).removeClass("wrap_prepare");
+				
+				ResetWrapState();
+				clearTimeout(timer);
+				
+			},300);
+		}
+		else if(page_index==5){
+			GetEmailPage($(".con_wrap_4"));
+		}
+		else{
+				
+		}
+		sub_page_index=0;
 	});
 	
 	
