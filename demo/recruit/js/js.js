@@ -471,12 +471,12 @@ $(document).ready(function(){
 			$(".static .txt").html("123");
 			var wrap=$(this).parents(".con_wrap");
 			$(".static .txt").html($(wrap).attr("class"));
-			GetEmailPage(wrap);
+			/*GetEmailPage(wrap);*/
 		},
 		wipeLeft:function(){
 			$(".static .txt").html("456");
-			var wrap=$(this).parents(".con_wrap");
-			GetEmailPage($(wrap));
+			/*var wrap=$(this).parents(".con_wrap");
+			GetEmailPage($(wrap));*/
 		},
 		min_move_x: 60,
 		min_move_y: 60,
