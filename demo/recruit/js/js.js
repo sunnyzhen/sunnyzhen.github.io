@@ -467,9 +467,9 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/calendar/images/calendar.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/demo/recruit/images/forward_icon.jpg';
 	var lineLink = location.href;
-	var descContent = "腾讯2015校园招聘火热启动！送你一本小鹅历，助你校招大丰收！";
+	var descContent = "腾讯TEG招聘！神鹅通缉令，等你来揭榜！";
 	var shareTitle = document.title;
 	var appid = '';
 	
