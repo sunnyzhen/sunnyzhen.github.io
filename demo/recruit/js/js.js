@@ -471,7 +471,6 @@ $(document).ready(function(){
 			var wrap=$(this).parents(".con_wrap");
 			$(".static .txt").html($(wrap).attr("class"));*/
 			$(".static .txt").html("123");
-			debugger
 			eve.stopPropagation();
 			eve.preventDefault();
 			eve.cancleBubble=true;
