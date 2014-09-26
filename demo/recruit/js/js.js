@@ -468,11 +468,12 @@ $(document).ready(function(){
 	$(".detail_wrap .detail_title").touchwipe({
 		wipeUp:function(){
 			var wrap=$(this).parents(".con_wrap");
+			$(".static .txt").html($(wrap).attr("class"));
 			GetEmailPage(wrap);
 		},
 		wipeLeft:function(){
 			var wrap=$(this).parents(".con_wrap");
-			GetEmailPage(wrap);
+			GetEmailPage($(wrap));
 		},
 		min_move_x: 60,
 		min_move_y: 60,
