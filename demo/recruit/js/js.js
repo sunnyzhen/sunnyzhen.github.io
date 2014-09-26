@@ -466,23 +466,33 @@ $(document).ready(function(){
 	});
 	
 	$(".detail_wrap .detail_title").touchwipe({
-		wipeUp:function(){
-			
-			$(".static .txt").html("123");
+		wipeUp:function(eve){
+			/*
 			var wrap=$(this).parents(".con_wrap");
-			alert($(this).parents(".con_wrap"));
-			$(".static .txt").html($(wrap).attr("class"));
+			$(".static .txt").html($(wrap).attr("class"));*/
+			$(".static .txt").html("123");
+			
+			e.stopPropagation();
+			return false;
+			
 			/*GetEmailPage(wrap);*/
 		},
-		wipeLeft:function(){
+		wipeLeft:function(eve){
 			$(".static .txt").html("456");
 			/*var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
+			e.stopPropagation();
+			return false;
 		},
 		min_move_x: 60,
 		min_move_y: 60,
 		preventDefaultEvents: true
 	});
+	
+/*	$(".detail_wrap .detail_title").bind("click",function(){
+		var wrap=$(this).parents(".con_wrap");
+		$(".static .txt").html($(wrap).attr("class"));
+	});*/
 	
 	/*微信转发图片*/
 	
