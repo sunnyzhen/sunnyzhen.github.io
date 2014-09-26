@@ -72,6 +72,7 @@ $(document).ready(function(){
 		$(".con_wrap_1 .surrender_tips").bind("click",function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
+		
 		$(wrap).find(".detail_title").bind("click",function(){
 			GetEmailPage(wrap);
 		});
@@ -466,20 +467,17 @@ $(document).ready(function(){
 	
 	$(".detail_wrap .detail_title").touchwipe({
 		wipeUp:function(){
-			var wrap=$(this).parentsUntil(".con_wrap");
+			var wrap=$(this).parents(".con_wrap");
 			GetEmailPage(wrap);
-			$(".static .txt").html("up");
 		},
 		wipeLeft:function(){
-			var wrap=$(this).parentsUntil(".con_wrap");
-			$(".static .txt").html("left");
+			var wrap=$(this).parents(".con_wrap");
 			GetEmailPage(wrap);
 		},
 		min_move_x: 60,
 		min_move_y: 60,
 		preventDefaultEvents: true
 	});
-	
 	
 	/*微信转发图片*/
 	
