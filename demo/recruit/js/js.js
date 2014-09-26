@@ -464,6 +464,18 @@ $(document).ready(function(){
 		sub_page_index=0;
 	});
 	
+	$(".detail_wrap .detail_title").touchwipe({
+		wipeUp:function(){
+			alert("a");
+		},
+		wipeRight:function(){
+			alert("b");
+		},
+		min_move_x: 60,
+		min_move_y: 60,
+		preventDefaultEvents: true
+	});
+	
 	
 	/*微信转发图片*/
 	
