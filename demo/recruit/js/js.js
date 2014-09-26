@@ -467,8 +467,8 @@ $(document).ready(function(){
 	$(".detail_wrap .detail_title").touchwipe({
 		wipeUp:function(){
 			var wrap=$(this).parentsUntil(".con_wrap");
-			$(".static .txt").html("up");
 			GetEmailPage(wrap);
+			$(".static .txt").html("up");
 		},
 		wipeLeft:function(){
 			var wrap=$(this).parentsUntil(".con_wrap");
