@@ -469,7 +469,7 @@ $(document).ready(function(){
 	
 	var imgUrl = 'http://sunnyzhen.github.io/demo/recruit/images/forward_icon.jpg';
 	var lineLink = location.href;
-	var descContent = "腾讯TEG招聘！神鹅通缉令，等你来揭榜！";
+	var descContent = "奉天承运,皇帝诏曰！鹅厂有旨，全球追寻神鹅下落，提供线索者封侯拜相，重赏！";
 	var shareTitle = document.title;
 	var appid = '';
 	
