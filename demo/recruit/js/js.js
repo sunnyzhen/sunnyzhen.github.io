@@ -470,6 +470,7 @@ $(document).ready(function(){
 			
 			$(".static .txt").html("123");
 			var wrap=$(this).parents(".con_wrap");
+			alert($(this).parents(".con_wrap"));
 			$(".static .txt").html($(wrap).attr("class"));
 			/*GetEmailPage(wrap);*/
 		},
