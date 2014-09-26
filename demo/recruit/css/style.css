@@ -311,6 +311,7 @@ body{ background:#5a5a5a;}
 
 .tear_page_wrap .poster_wrap{ top:0px;}
 
+.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
