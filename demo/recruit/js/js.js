@@ -472,7 +472,8 @@ $(document).ready(function(){
 			$(".static .txt").html($(wrap).attr("class"));*/
 			$(".static .txt").html("123");
 			
-			e.stopPropagation();
+			eve.stopPropagation();
+			eve.preventDefault();
 			return false;
 			
 			/*GetEmailPage(wrap);*/
@@ -481,7 +482,9 @@ $(document).ready(function(){
 			$(".static .txt").html("456");
 			/*var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
-			e.stopPropagation();
+			
+			eve.stopPropagation();
+			eve.preventDefault();
 			return false;
 		},
 		min_move_x: 60,
