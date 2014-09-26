@@ -466,10 +466,12 @@ $(document).ready(function(){
 	
 	$(".detail_wrap .detail_title").touchwipe({
 		wipeUp:function(){
-			alert("a");
+			var wrap=$(this).parentsUntil(".con_wrap");
+			GetEmailPage(wrap);
 		},
-		wipeRight:function(){
-			alert("b");
+		wipeLeft:function(){
+			var wrap=$(this).parentsUntil(".con_wrap");
+			GetEmailPage(wrap);
 		},
 		min_move_x: 60,
 		min_move_y: 60,
