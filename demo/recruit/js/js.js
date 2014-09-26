@@ -73,13 +73,13 @@ $(document).ready(function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
 		
-		$(wrap).find(".detail_title").bind("click",function(){
+		/*$(wrap).find(".detail_title").bind("click",function(){
 			GetEmailPage(wrap);
 		});
 		
 		$(wrap).find(".surrender_tips").bind("click",function(){
 			GetEmailPage(wrap);
-		});
+		});*/
 		
 	}
 	
