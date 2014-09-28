@@ -478,7 +478,7 @@ $(document).ready(function(){
 			wipe_hook=1;
 			$(".static .txt").html("1231  "+ $(this).attr("class") + $(e.currentTarget).attr("class"));
 			
-			var wrap=$(this).parents(".con_wrap");
+			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));
 			
 			/*GetEmailPage(wrap);*/
@@ -487,6 +487,10 @@ $(document).ready(function(){
 			
 			wipe_hook=1;
 			$(".static .txt").html("4561  "+ $(this).attr("class"));
+			
+			var wrap=$(e.currentTarget).parents(".con_wrap");
+			GetEmailPage($(wrap));
+			
 			/*var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
 			
