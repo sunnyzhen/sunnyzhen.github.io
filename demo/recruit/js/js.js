@@ -476,7 +476,7 @@ $(document).ready(function(){
 			$(".static .txt").html($(wrap).attr("class"));*/
 			
 			wipe_hook=1;
-			$(".static .txt").html("1231  "+ $(this).attr("class") + e.targetTouches[0]);
+			$(".static .txt").html("1231  "+ $(this).attr("class") + $(e.currentTarget).attr("class"));
 			
 			var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));
