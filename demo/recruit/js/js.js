@@ -73,9 +73,14 @@ $(document).ready(function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
 		
-		$(wrap).find(".detail_title").bind("click",function(){
+		/*$(wrap).find(".detail_title").bind("click",function(){
 			GetEmailPage(wrap);
-		});
+		});*/
+		
+		$(wrap).find(".detail_title").addEventListener("click", function (e) {
+			GetEmailPage(wrap);
+		}, false);
+		
 		
 /*		$(wrap).find(".surrender_tips").bind("click",function(){
 			GetEmailPage(wrap);
