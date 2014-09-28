@@ -73,11 +73,11 @@ $(document).ready(function(){
 			$(".con_wrap_1").addClass("tearing");
 		});*/
 		
-		/*$(wrap).find(".detail_title").bind("click",function(){
+		$(wrap).find(".detail_title").bind("click",function(){
 			GetEmailPage(wrap);
 		});
 		
-		$(wrap).find(".surrender_tips").bind("click",function(){
+/*		$(wrap).find(".surrender_tips").bind("click",function(){
 			GetEmailPage(wrap);
 		});*/
 		
@@ -472,28 +472,17 @@ $(document).ready(function(){
 	
 	$(".detail_wrap .detail_title").touchwipe({
 		wipeUp:function(e){
-			/*
-			var wrap=$(this).parents(".con_wrap");
-			$(".static .txt").html($(wrap).attr("class"));*/
-			
 			wipe_hook=1;
-			$(".static .txt").html("123  " + $(e.currentTarget).attr("class"));
 			
 			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));
 			
-			/*GetEmailPage(wrap);*/
 		},
-		wipeLeft:function(){
-			
+		wipeLeft:function(e){
 			wipe_hook=1;
-			$(".static .txt").html("456  " + $(e.currentTarget).attr("class"));
-			/*
-			var wrap=$(e.currentTarget).parents(".con_wrap");
-			GetEmailPage($(wrap));*/
 			
-			/*var wrap=$(this).parents(".con_wrap");
-			GetEmailPage($(wrap));*/
+			var wrap=$(e.currentTarget).parents(".con_wrap");
+			GetEmailPage($(wrap));
 			
 /*			eve.stopPropagation();
 			eve.preventDefault();

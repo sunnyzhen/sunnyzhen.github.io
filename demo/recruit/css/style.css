@@ -238,7 +238,7 @@ body{ background:#5a5a5a;}
 .detail_wrap .bg .repeat_bg{ width:224px; height:268px; position:absolute; top:0px; left:7px; background:url(../images/poster_repeat_bg.jpg) repeat 0 0; background-size:70px 70px;}
 .detail_wrap .detail_con{ display:block; position:relative; z-index:2;}
 
-.surrender_tips{ display:block; height:34px; width:71px; background:url(../images/surrender_tips.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:62px; top:13px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear; pointer-events:none; z-index:1;}
+.surrender_tips{ display:block; height:34px; width:71px; background:url(../images/surrender_tips.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:62px; top:13px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear; pointer-events:none;}
 .page_angle{ position:absolute; right:-16px; top:0px; display:block; height:35px; width:97px; background:url(../images/page_angle.png) no-repeat 0 0; background-size:contain; -webkit-transform:rotate(25deg); -webkit-transform-origin:0% 0%; z-index:1; -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
 
 @-webkit-keyframes a_page_angle{
@@ -276,7 +276,7 @@ body{ background:#5a5a5a;}
 	100%{ -webkit-transform:rotate(-140deg) translate(-283px,-720px);}
 }
 
-.detail_wrap_show .surrender_tips{ opacity:1; pointer-events:auto;}
+.detail_wrap_show .surrender_tips{ opacity:1;/* pointer-events:auto;*/}
 
 .tearing .tear_page_wrap{ -webkit-animation:a_tear_page_wrap 2.1s ease both;}
 .tearing .tear_page_balance{ -webkit-animation:a_tear_page_balance 2s ease both;}
