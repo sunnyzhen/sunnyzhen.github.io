@@ -476,7 +476,7 @@ $(document).ready(function(){
 			$(".static .txt").html($(wrap).attr("class"));*/
 			
 			wipe_hook=1;
-			$(".static .txt").html("123  "+wipe_hook);
+			$(".static .txt").html("1231  "+$(this));
 			
 			var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));
@@ -486,7 +486,7 @@ $(document).ready(function(){
 		wipeLeft:function(){
 			
 			wipe_hook=1;
-			$(".static .txt").html("456  "+wipe_hook);
+			$(".static .txt").html("4561  "+$(this));
 			/*var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
 			
