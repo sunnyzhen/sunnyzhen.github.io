@@ -318,7 +318,7 @@ body{ background:#5a5a5a;}
 
 /*.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}*/
 
-.share_tips{ display:block; height:102px; width:151px; background:url(../images/share_tips.png) no-repeat 0 0; background-size:contain; position:absolute; right:13px; top:10px; text-indent:-9999px; overflow:hidden; opacity:0; pointer-events:none; -webkit-transition:opacity 0.2s linear;}
+.share_tips{ display:block; height:102px; width:151px; background:url(../images/share_tips.png) no-repeat 0 0; background-size:contain; position:absolute; right:26px; top:10px; text-indent:-9999px; overflow:hidden; opacity:0; pointer-events:none; -webkit-transition:opacity 0.2s linear;}
 .mask{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; background:rgba(0,0,0,0.8); opacity:0; -webkit-transition:opacity 0.2s linear;}
 
 .share_tips_show .share_tips{ opacity:1; z-index:100;}
