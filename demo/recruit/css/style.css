@@ -23,7 +23,7 @@ body{ background:#5a5a5a;}
 .cover_wrap .building_1{ display:block;  height:140px; width:185px;  position:absolute; left:50%; margin-left:-85px; top:66px; overflow:hidden;}
 .cover_wrap .building_1 .b_body{display:block; background: url(../images/building_bg2.png) no-repeat 0 0; height:140px; width:185px; background-size:contain; position:absolute; left:0px; top:0px; opacity:0;}
 
-.cover_wrap .main_title{ display:block; height:50px; width:254px; background:url(../images/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; bottom:100px; margin-left:-127px; text-indent:-9999px; overflow:hidden; z-index:2; opacity:0; -webkit-transform:translate(0,-500px);}
+.cover_wrap .main_title{ display:block; height:50px; width:254px; background:url(../images/logo_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; bottom:100px; margin-left:-127px; text-indent:-9999px; overflow:hidden; z-index:2; opacity:0; -webkit-transform:translate(0,-500px); -webkit-filter: drop-shadow(-3px 3px 3px rgba(0,0,0,0.7)); }
 
 @-webkit-keyframes a_main_title{
 	0%{ -webkit-transform:translate(0,-500px); opacity:0;}
