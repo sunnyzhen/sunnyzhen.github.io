@@ -77,9 +77,11 @@ $(document).ready(function(){
 			GetEmailPage(wrap);
 		});*/
 		
-/*		$(wrap).find(".detail_title").addEventListener("click", function (e) {
-			GetEmailPage(wrap);
-		}, false);*/
+		$(wrap).find(".detail_title").each(function(index,value){
+			value.addEventListener("click", function (e) {
+				GetEmailPage(wrap);
+			}, false);
+		})
 		
 		
 /*		$(wrap).find(".surrender_tips").bind("click",function(){
