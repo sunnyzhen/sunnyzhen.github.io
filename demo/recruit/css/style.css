@@ -168,11 +168,11 @@ body{ background:#5a5a5a;}
 .poster_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3); -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; z-index:1;}
 .poster_wrap .poster_con{ display:block; position:relative; z-index:1;}
 .poster_wrap .title{ display:none;}
-.poster_wrap .penguin_poster{ display: block; height:157px; width:213px; background:url(../images/penguin_poster_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:61px;}
-.poster_wrap .penguin_poster_1{ background-image:url(../images/penguin_poster_1.png);}
-.poster_wrap .penguin_poster_2{ background-image:url(../images/penguin_poster_2.png);}
-.poster_wrap .penguin_poster_3{ background-image:url(../images/penguin_poster_3.png);}
-.poster_wrap .penguin_poster_4{ background-image:url(../images/penguin_poster_4.png);}
+.poster_wrap .penguin_poster{ display: block; height:157px; width:213px; background:url(../images/penguin_poster_1.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:61px;}
+.poster_wrap .penguin_poster_1{ background-image:url(../images/penguin_poster_1.jpg);}
+.poster_wrap .penguin_poster_2{ background-image:url(../images/penguin_poster_2.jpg);}
+.poster_wrap .penguin_poster_3{ background-image:url(../images/penguin_poster_3.jpg);}
+.poster_wrap .penguin_poster_4{ background-image:url(../images/penguin_poster_4.jpg);}
 
 .poster_wrap .name{ display:block; height:71px; width:43px; background:url(../images/name_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:222px; text-indent:-9999px;}
 .poster_wrap .name_1{ background-image:url(../images/name_1.png);}
