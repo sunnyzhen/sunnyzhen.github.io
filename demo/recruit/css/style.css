@@ -232,7 +232,7 @@ body{ background:#5a5a5a;}
 
 
 .detail_wrap{ display:block; height:336px; width:239px; background: url(../images/poster_top_bg_2.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; box-shadow:-1px 1px 2px rgba(0,0,0,0.3);}
-.detail_wrap .detail_title{ font-size:14px; font-family:'microsoft yahei'; padding:40px 0 60px 25px; margin:0px auto -50px;}
+.detail_wrap .detail_title{ font-size:14px; font-family:'microsoft yahei'; padding:40px 0 60px 25px; margin:0px auto -50px; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 .detail_wrap .detail_txt{ font-size:12px; font-family:'microsoft yahei'; margin:0px auto 10px; width:190px;}
 .detail_wrap .bg,.poster_wrap .bg{ display:block; height:276px; width:239px; background:url(../images/poster_bottom_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:0px; bottom:0px;}
 .detail_wrap .bg .repeat_bg{ width:224px; height:268px; position:absolute; top:0px; left:7px; background:url(../images/poster_repeat_bg.jpg) repeat 0 0; background-size:70px 70px;}
