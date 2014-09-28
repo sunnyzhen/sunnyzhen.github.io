@@ -477,7 +477,7 @@ $(document).ready(function(){
 			$(".static .txt").html($(wrap).attr("class"));*/
 			
 			wipe_hook=1;
-			$(".static .txt").html("1231  " + $(e.currentTarget).attr("class"));
+			$(".static .txt").html("123  " + $(e.currentTarget).attr("class"));
 			
 			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));
@@ -487,7 +487,7 @@ $(document).ready(function(){
 		wipeLeft:function(){
 			
 			wipe_hook=1;
-			$(".static .txt").html("4561  ");
+			$(".static .txt").html("456  " + $(e.currentTarget).attr("class"));
 			/*
 			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
