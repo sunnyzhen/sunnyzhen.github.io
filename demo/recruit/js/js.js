@@ -488,9 +488,9 @@ $(document).ready(function(){
 			
 			wipe_hook=1;
 			$(".static .txt").html("4561  "+ $(e.currentTarget).attr("class"));
-			
+			/*
 			var wrap=$(e.currentTarget).parents(".con_wrap");
-			GetEmailPage($(wrap));
+			GetEmailPage($(wrap));*/
 			
 			/*var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));*/
