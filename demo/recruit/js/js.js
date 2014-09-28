@@ -474,9 +474,12 @@ $(document).ready(function(){
 			/*
 			var wrap=$(this).parents(".con_wrap");
 			$(".static .txt").html($(wrap).attr("class"));*/
+			
 			wipe_hook=1;
 			$(".static .txt").html("123  "+wipe_hook);
 			
+			var wrap=$(this).parents(".con_wrap");
+			GetEmailPage($(wrap));
 			
 			/*GetEmailPage(wrap);*/
 		},
