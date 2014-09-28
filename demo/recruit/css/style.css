@@ -324,7 +324,7 @@ body{ background:#5a5a5a;}
 .share_tips_show .share_tips{ opacity:1; z-index:100;}
 .share_tips_show .mask{ opacity:1; z-index:99;}
 
-.share_click_area{ display:none; height:280px; width:240px; position:absolute; left:50%; top:64px; margin-left:-120px;}
+.share_click_area{ display:none; height:280px; width:240px; position:absolute; left:50%; top:64px; margin-left:-120px; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
