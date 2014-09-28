@@ -292,6 +292,7 @@ body{ background:#5a5a5a;}
 .tearing .tab_list_3{ opacity:1; pointer-events:auto;}
 .tearing .email_connect_bg{ opacity:1;}
 .tearing .arrow_up{ opacity:0;}
+.tearing .share_click_area{ display:block; z-index:1;}
 
 .wrap_after{ margin-left:150px; opacity:0; z-index:1;}
 .wrap_before{ margin-left:-450px; opacity:0; z-index:1;}
@@ -315,7 +316,15 @@ body{ background:#5a5a5a;}
 
 .tear_page_wrap .poster_wrap{ top:0px;}
 
-.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}
+/*.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}*/
+
+.share_tips{ display:block; height:102px; width:151px; background:url(../images/share_tips.png) no-repeat 0 0; background-size:contain; position:absolute; right:13px; top:10px; text-indent:-9999px; overflow:hidden; opacity:0; pointer-events:none; -webkit-transition:opacity 0.2s linear;}
+.mask{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; background:rgba(0,0,0,0.8); opacity:0; -webkit-transition:opacity 0.2s linear;}
+
+.share_tips_show .share_tips{ opacity:1; z-index:100;}
+.share_tips_show .mask{ opacity:1; z-index:99;}
+
+.share_click_area{ display:none; height:280px; width:240px; position:absolute; left:50%; top:64px; margin-left:-120px;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){

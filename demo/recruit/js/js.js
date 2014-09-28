@@ -501,10 +501,13 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
-/*	$(".detail_wrap .detail_title").bind("click",function(){
-		var wrap=$(this).parents(".con_wrap");
-		$(".static .txt").html($(wrap).attr("class"));
-	});*/
+	$(".share_click_area").bind("click",function(){
+		$(".email_wrap").addClass("share_tips_show");
+	});
+	
+	$(".mask").bind("click",function(){
+		$(this).parents(".email_wrap").removeClass("share_tips_show");
+	});
 	
 	/*微信转发图片*/
 	
