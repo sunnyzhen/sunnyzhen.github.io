@@ -58,7 +58,7 @@ body{ background:#5a5a5a;}
 .cover_wrap .logo_teg{ display:block; height:9px; width:70px; background:url(../images/logo_teg.png) no-repeat 0 0; background-size:contain; position:absolute; right:15px; bottom:12px; text-indent:-9999px; overflow:hidden; z-index:2;}
 .cover_wrap .arrow_up{ bottom:20px;}
 
-.penguin_wrap{ display:block; height:88px; width:178px; position:absolute; left:50%; top:114px; margin-left:-89px; z-index:1;}
+.penguin_wrap{ display:block; height:88px; width:178px; position:absolute; left:50%; top:115px; margin-left:-89px; z-index:1;}
 .penguin_wrap .power_gas{ display:block; height:120px; width:216px; background:url(../images/power_gas.png) no-repeat 0 0; background-size:contain; position:absolute; left:-18px; top:-21px; -webkit-transform-origin:50% 100%; -webkit-animation:a_power_gas 1.8s linear alternate infinite;}
 
 .penguin_wrap .penguin_1{ display:block; height:68px; width:51px; position:absolute; left:0px; bottom:4px; z-index:1;}
@@ -174,11 +174,11 @@ body{ background:#5a5a5a;}
 .poster_wrap .penguin_poster_3{ background-image:url(../images/penguin_poster_3.jpg);}
 .poster_wrap .penguin_poster_4{ background-image:url(../images/penguin_poster_4.jpg);}
 
-.poster_wrap .name{ display:block; height:71px; width:43px; background:url(../images/name_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:222px; text-indent:-9999px;}
-.poster_wrap .name_1{ background-image:url(../images/name_1.png);}
-.poster_wrap .name_2{ background-image:url(../images/name_2.png);}
-.poster_wrap .name_3{ background-image:url(../images/name_3.png);}
-.poster_wrap .name_4{ background-image:url(../images/name_4.png);}
+.poster_wrap .name{ display:block; height:71px; width:43px; background:url(../images/name_1.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:222px; text-indent:-9999px;}
+.poster_wrap .name_1{ background-image:url(../images/name_1.jpg);}
+.poster_wrap .name_2{ background-image:url(../images/name_2.jpg);}
+.poster_wrap .name_3{ background-image:url(../images/name_3.jpg);}
+.poster_wrap .name_4{ background-image:url(../images/name_4.jpg);}
 
 .poster_wrap .detail{ display:block; height:68px; width:164px; background:url(../images/detail_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:61px; top:224px; text-indent:-9999px;}
 .poster_wrap .detail_1{ background-image:url(../images/detail_1.png);}
