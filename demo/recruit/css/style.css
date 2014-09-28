@@ -180,11 +180,11 @@ body{ background:#5a5a5a;}
 .poster_wrap .name_3{ background-image:url(../images/name_3.jpg);}
 .poster_wrap .name_4{ background-image:url(../images/name_4.jpg);}
 
-.poster_wrap .detail{ display:block; height:68px; width:164px; background:url(../images/detail_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:61px; top:224px; text-indent:-9999px;}
-.poster_wrap .detail_1{ background-image:url(../images/detail_1.png);}
-.poster_wrap .detail_2{ background-image:url(../images/detail_2.png);}
-.poster_wrap .detail_3{ background-image:url(../images/detail_3.png);}
-.poster_wrap .detail_4{ background-image:url(../images/detail_4.png);}
+.poster_wrap .detail{ display:block; height:68px; width:164px; background:url(../images/detail_1.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:61px; top:224px; text-indent:-9999px;}
+.poster_wrap .detail_1{ background-image:url(../images/detail_1.jpg);}
+.poster_wrap .detail_2{ background-image:url(../images/detail_2.jpg);}
+.poster_wrap .detail_3{ background-image:url(../images/detail_3.jpg);}
+.poster_wrap .detail_4{ background-image:url(../images/detail_4.jpg);}
 
 .poster_wrap .stamp{ display:block; height:58px; width:59px; background:url(../images/stamp.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transform:scale(5);}
 .poster_wrap .brush{ display:block;  position:absolute; background-size:contain; z-index:2;}
