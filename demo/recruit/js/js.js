@@ -470,13 +470,13 @@ $(document).ready(function(){
 	var wipe_hook=0;
 	
 	$(".detail_wrap .detail_title").touchwipe({
-		wipeUp:function(){
+		wipeUp:function(e){
 			/*
 			var wrap=$(this).parents(".con_wrap");
 			$(".static .txt").html($(wrap).attr("class"));*/
 			
 			wipe_hook=1;
-			$(".static .txt").html("1231  "+ $(this).attr("class"));
+			$(".static .txt").html("1231  "+ $(this).attr("class") + e.targetTouches[0]);
 			
 			var wrap=$(this).parents(".con_wrap");
 			GetEmailPage($(wrap));
