@@ -77,9 +77,9 @@ $(document).ready(function(){
 			GetEmailPage(wrap);
 		});*/
 		
-		$(wrap).find(".detail_title").addEventListener("click", function (e) {
+/*		$(wrap).find(".detail_title").addEventListener("click", function (e) {
 			GetEmailPage(wrap);
-		}, false);
+		}, false);*/
 		
 		
 /*		$(wrap).find(".surrender_tips").bind("click",function(){
