@@ -340,6 +340,7 @@ $(document).ready(function(){
 		
 		page_index=1;
 		sub_page_index=0;
+		wipe_hook=0;
 		
 		var timer=setTimeout(function(){
 			$(".con_wrap").removeClass("wrap_hide").removeClass("wrap_show").removeClass("tearing").removeClass("detail_wrap_show").addClass("wrap_prepare");
@@ -476,7 +477,7 @@ $(document).ready(function(){
 			$(".static .txt").html($(wrap).attr("class"));*/
 			
 			wipe_hook=1;
-			$(".static .txt").html("1231  "+ $(this).attr("class") + $(e.currentTarget).attr("class"));
+			$(".static .txt").html("1231  " + $(e.currentTarget).attr("class"));
 			
 			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));
@@ -486,7 +487,7 @@ $(document).ready(function(){
 		wipeLeft:function(){
 			
 			wipe_hook=1;
-			$(".static .txt").html("4561  "+ $(this).attr("class"));
+			$(".static .txt").html("4561  "+ $(e.currentTarget).attr("class"));
 			
 			var wrap=$(e.currentTarget).parents(".con_wrap");
 			GetEmailPage($(wrap));
