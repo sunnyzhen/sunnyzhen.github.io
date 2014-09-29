@@ -83,10 +83,9 @@ $(document).ready(function(){
 			}, false);
 		})
 		
-		
-/*		$(wrap).find(".surrender_tips").bind("click",function(){
+		$(wrap).find(".surrender_tips").bind("click",function(){
 			GetEmailPage(wrap);
-		});*/
+		});
 		
 	}
 	
