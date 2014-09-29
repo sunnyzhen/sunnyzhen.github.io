@@ -199,6 +199,8 @@ $(document).ready(function(){
 					
 			}
 			sub_page_index=0;
+			
+			$(".android_version .tab_wrap").css("z-index","auto");
 		 },
 		 wipeUp: function() { 
 		 	if(wipe_hook==0){
