@@ -152,12 +152,7 @@ $(document).ready(function(){
 		$(".email_wrap").removeClass("tearing");
 		
 		$(".design_wrap").removeClass("wrap_after");
-		$(".tab_wrap").css({
-			"z-index":"auto"
-		});
-		$(".tab_wrap").css({
-			"z-index":3
-		});
+
 	}
 	
 	
@@ -229,6 +224,8 @@ $(document).ready(function(){
 					
 				}
 				sub_page_index=0;
+				
+				$(".android_version .tab_wrap").css("z-index",3);
 			}
 		 },
 		 wipeLeft: function() {
