@@ -152,6 +152,12 @@ $(document).ready(function(){
 		$(".email_wrap").removeClass("tearing");
 		
 		$(".design_wrap").removeClass("wrap_after");
+		$(".tab_wrap").css({
+			"z-index":"auto"
+		});
+		$(".tab_wrap").css({
+			"z-index":3
+		});
 	}
 	
 	
