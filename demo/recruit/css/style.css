@@ -135,21 +135,21 @@ body{ background:#5a5a5a;}
 
 .time_hook_2{ -webkit-transform-origin:50% 100%; display:block; height:120px; width:216px; opacity:0;}
 
-.wrap_show .building_1 .b_body{-webkit-animation:a_opacity 0.5s linear both;}
-.wrap_show .penguin_wrap .penguin_1 .p_body{ -webkit-animation:a_penguin 0.3s 0.5s ease-in both;}
-.wrap_show .penguin_wrap .penguin_1 .p_shadow{ -webkit-animation:a_penguin_1_shadow 0.3s 0.5s ease-in both;}
-.wrap_show .penguin_wrap .penguin_2 .p_body{-webkit-animation:a_penguin 0.3s 0.6s ease-in both;}
-.wrap_show .penguin_wrap .penguin_2 .p_shadow{-webkit-animation:a_penguin_2_shadow 0.3s 0.6s ease-in both;}
-.wrap_show .penguin_wrap .penguin_3 .p_body{ -webkit-animation:a_penguin 0.3s 0.7s ease-in both;}
-.wrap_show .penguin_wrap .penguin_3 .p_shadow{ -webkit-animation:a_penguin_3_shadow 0.3s 0.7s ease-in both;}
-.wrap_show .penguin_wrap .penguin_4 .p_body{ -webkit-animation:a_penguin 0.3s 0.8s ease-in both;}
-.wrap_show .penguin_wrap .penguin_4 .p_shadow{ -webkit-animation:a_penguin_4_shadow 0.3s 0.8s ease-in both;}
+.wrap_show .building_1 .b_body{-webkit-animation:a_opacity 0.5s 0.3s linear both;}
+.wrap_show .penguin_wrap .penguin_1 .p_body{ -webkit-animation:a_penguin 0.3s 0.8s ease-in both;}
+.wrap_show .penguin_wrap .penguin_1 .p_shadow{ -webkit-animation:a_penguin_1_shadow 0.3s 0.8s ease-in both;}
+.wrap_show .penguin_wrap .penguin_2 .p_body{-webkit-animation:a_penguin 0.3s 0.9s ease-in both;}
+.wrap_show .penguin_wrap .penguin_2 .p_shadow{-webkit-animation:a_penguin_2_shadow 0.3s 0.9s ease-in both;}
+.wrap_show .penguin_wrap .penguin_3 .p_body{ -webkit-animation:a_penguin 0.3s 1s ease-in both;}
+.wrap_show .penguin_wrap .penguin_3 .p_shadow{ -webkit-animation:a_penguin_3_shadow 0.3s 1s ease-in both;}
+.wrap_show .penguin_wrap .penguin_4 .p_body{ -webkit-animation:a_penguin 0.3s 1.1s ease-in both;}
+.wrap_show .penguin_wrap .penguin_4 .p_shadow{ -webkit-animation:a_penguin_4_shadow 0.3s 1.1s ease-in both;}
 .wrap_show .time_hook_2{ -webkit-animation:a_time_hook_2 0.1s 1.2s linear both;}
-.wrap_show .main_title{-webkit-animation:a_main_title 0.3s 1.1s linear both;}
-.wrap_show .hr_title{ -webkit-animation:a_main_title 0.3s 1.2s linear both;}
-.wrap_show .txt_wrap .txt_1{ -webkit-animation:a_txt 3s 1.7s linear both;}
-.wrap_show .txt_wrap .txt_2{ -webkit-animation:a_txt_last 0.3s 5s linear both;}
-.wrap_show .time_hook{ -webkit-animation:a_opacity 0.5s 5.5s linear both;}
+.wrap_show .main_title{-webkit-animation:a_main_title 0.3s 1.4s linear both;}
+.wrap_show .hr_title{ -webkit-animation:a_main_title 0.3s 1.5s linear both;}
+.wrap_show .txt_wrap .txt_1{ -webkit-animation:a_txt 3s 2s linear both;}
+.wrap_show .txt_wrap .txt_2{ -webkit-animation:a_txt_last 0.3s 5.3s linear both;}
+.wrap_show .time_hook{ -webkit-animation:a_opacity 0.5s 5.8s linear both;}
 .wrap_show .brush .brush_left{ -webkit-animation:a_brush_left 0.3s 0.3s linear both;}
 .wrap_show .brush .brush_right{ -webkit-animation:a_brush_left 0.3s 0.6s linear both;}
 .wrap_show .stamp{ -webkit-animation:a_stamp 0.2s 0.9s linear both;}
