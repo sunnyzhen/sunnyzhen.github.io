@@ -354,12 +354,8 @@ body{ background:#5a5a5a;}
 }
 
 /* 安卓兼容 4.0+兼容*/
-.android_version .tab_list{ background:#f00;}
-/*.android_version .tab_list{ opacity:1; display:block; -webkit-transition:none;}
-.android_version .tab_list_3{ opacity:1; display:none;}
-.android_version .tearing .tab_list_1,.tearing .tab_list_2{ opacity:1; display:none;}
-.android_version .tearing .tab_list_3{ opacity:1; display:block;}
-*/
+.android_version .tab_wrap{ z-index:auto;}
+
 
 
 
