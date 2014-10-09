@@ -270,7 +270,7 @@ body{ background:#5a5a5a;}
 	100%{ -webkit-transform:rotate(25deg) translate(0,0) scale(1,1);}
 }
 
-.tear_page_wrap{ display:block; height:545px; width:410px; overflow:hidden; position:absolute; left:50%; margin-left:-159px; top:-35px; -webkit-transform:rotate(-65deg) translate(0px,0px); z-index:2; -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1;}
+.tear_page_wrap{ display:block; height:545px; width:410px; overflow:hidden; position:absolute; left:50%; margin-left:-159px; top:-35px; -webkit-transform:rotate(-65deg) translate(0px,0px); z-index:2; -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; }
 .tear_page_balance{display:block; height:336px; width:239px; position:absolute; right:50px; top:40px;  -webkit-transform:rotate(65deg) translate(0px,0px);}
 
 @-webkit-keyframes a_tear_page_wrap{
@@ -356,6 +356,20 @@ body{ background:#5a5a5a;}
 /* 安卓兼容 4.0+兼容*/
 .android_version .tab_wrap{ z-index:auto;}
 
+/* 安卓兼容 4.2兼容*/
+.android_version_4_2 .surrender_tips{ z-index:2; margin-left:83px;}
+.android_version_4_2 .tearing .tear_page_wrap{ -webkit-animation:a_tear_page_wrap2 1s ease both;}
+.android_version_4_2 .tearing .tear_page_balance{ -webkit-animation:a_tear_page_balance2 1s ease both;}
+.android_version_4_2 .back_cover_wrap{ display:none;}
+.android_version_4_2 .tearing .page_angle{ opacity:1;}
+.android_version_4_2 .tab_list_3{ -webkit-transition:opacity 0.3s 0.5s linear;}
 
+@-webkit-keyframes a_tear_page_wrap2{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
 
-
+@-webkit-keyframes a_tear_page_balance2{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
