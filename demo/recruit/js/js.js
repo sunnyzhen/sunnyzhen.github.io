@@ -265,6 +265,7 @@ $(document).ready(function(){
 					$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
 				}
 			}
+			
 		 },
 		 wipeRight: function() { 
 			
@@ -289,6 +290,26 @@ $(document).ready(function(){
 			$(str_name_2).children("li").removeClass("current");
 			if(sub_page_index!=0){
 				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			}
+			
+			if($("body").hasClass("android_version")){
+				$(".android_version .poster_wrap .brush").css({
+					"z-index":"auto"
+				});
+				$(".android_version .poster_wrap .reward").css({
+					"background":"none",
+					"background-size":"none"
+				});
+				
+				var timer=setTimeout(function(){
+					$(".android_version .poster_wrap .brush").css({
+						"z-index":"2"
+					});
+					$(".android_version .poster_wrap .reward").css({
+						"background":"url(../images/poster_bg_1.jpg) no-repeat 0 -928px",
+						"background-size":"213px 955px"
+					});
+				},1);
 			}
 			
 		 },
