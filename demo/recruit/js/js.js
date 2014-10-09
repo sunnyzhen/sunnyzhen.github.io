@@ -306,7 +306,7 @@ $(document).ready(function(){
 						"z-index": 2
 					});
 					$(".android_version .poster_wrap .reward").css({
-						"background":"url(../images/poster_bg_1.jpg) no-repeat 0 -928px",
+						"background":"url(../recruit/images/poster_bg_1.jpg) no-repeat 0 -928px",
 						"background-size":"213px 955px"
 					});
 				},1);
