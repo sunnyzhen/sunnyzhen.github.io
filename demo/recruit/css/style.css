@@ -306,7 +306,7 @@ body{ background:#5a5a5a;}
 .tearing .page_angle{ opacity:0;}
 .tearing .surrender_tips{ opacity:0; pointer-events:auto;}
 .tearing .tab_list_1,.tearing .tab_list_2{ opacity:0; pointer-events:none;}
-.tearing .tab_list_3{ opacity:1; pointer-events:auto;}
+.tearing .tab_list_3{ opacity:1; pointer-events:auto; z-index:3;}
 .tearing .email_connect_bg{ opacity:1;}
 .tearing .arrow_up{ opacity:0;}
 .tearing .share_click_area{ display:block; z-index:1;}
