@@ -201,7 +201,7 @@ body{ background:#5a5a5a;}
 .poster_wrap .detail_3{ background-position:0 -776px;}
 .poster_wrap .detail_4{ background-position:0 -846px;}
 
-.poster_wrap .stamp{ display:block; height:58px; width:59px; background:url(../images/page_png24.png) no-repeat -199px -37px; background-size:260px 98px; position:absolute; left:12px; top:6px; text-indent:-9999px; overflow:hidden; opacity:1; -webkit-transform:scale(9);}
+.poster_wrap .stamp{ display:block; height:58px; width:59px; background:url(../images/page_png24.png) no-repeat -199px -37px; background-size:260px 98px; position:absolute; left:12px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transform:scale(9);}
 .poster_wrap .brush{ display:block;  position:absolute; background-size:contain; z-index:2;}
 .poster_wrap .brush .brush_left{ display:block; width:26px; height:98px; position:absolute; left:0px; bottom:0px; background:url(../images/page_png24.png) no-repeat 0 bottom; background-size:260px 98px;}
 .poster_wrap .brush .brush_right{ display:block; width:35px; height:98px; position:absolute; left:26px; top:0px; background:url(../images/page_png24.png) no-repeat -26px 0; background-size:260px 98px;}
