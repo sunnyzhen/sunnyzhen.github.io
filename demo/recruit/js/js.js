@@ -303,7 +303,7 @@ $(document).ready(function(){
 				
 				var timer=setTimeout(function(){
 					$(".android_version .poster_wrap .brush").css({
-						"z-index":"2"
+						"z-index": 2
 					});
 					$(".android_version .poster_wrap .reward").css({
 						"background":"url(../images/poster_bg_1.jpg) no-repeat 0 -928px",
