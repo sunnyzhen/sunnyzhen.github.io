@@ -205,7 +205,13 @@ $(document).ready(function(){
 			sub_page_index=0;
 			
 			//安卓4.4兼容，按钮滑屏隐藏bug
-			//$(".android_version .tab_wrap").css("z-index","auto");
+			$(".android_version .tab_wrap").css("z-index","auto");
+			if($("body").hasClass("android_version")){
+				var timer=setTimeout(function(){
+					$(".android_version .tab_wrap").css("z-index","3");
+				},1);
+			}
+			
 		 },
 		 wipeUp: function() { 
 		 	if(wipe_hook==0){
@@ -233,7 +239,7 @@ $(document).ready(function(){
 				sub_page_index=0;
 				
 				//安卓4.4兼容，按钮滑屏隐藏bug
-				//$(".android_version .tab_wrap").css("z-index",3);
+				$(".android_version .tab_wrap").css("z-index",3);
 			}
 		 },
 		 wipeLeft: function() {
