@@ -356,7 +356,7 @@ body{ background:#5a5a5a;}
 }
 
 /* 安卓兼容 4.0+兼容*/
-.android_version .tab_wrap{/* z-index:auto;*/}
+.android_version .tab_wrap{ z-index:3;}
 
 /* 安卓兼容 4.2兼容*/
 .android_version_4_2 .surrender_tips{ z-index:2; margin-left:83px;}
