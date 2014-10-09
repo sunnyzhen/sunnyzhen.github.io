@@ -45,13 +45,9 @@ $(document).ready(function(){
 			
 			$(wrap).children(".poster_wrap").addClass("wrap_before");
 		}
+		
 		$(".design_wrap").removeClass("wrap_after");
 		sub_page_index=index;
-		
-		if($("body").hasClass("android_version_4_2")&&$(".poster_wrap").hasClass("wrap_before")){
-			$(".con_wrap").css("display","inline");
-			var time=setTimeout(function(){ $(".con_wrap").css("display","block"); },1);
-		}
 	}
 	
 	//绑定切换详细岗位事件
@@ -577,12 +573,7 @@ $(document).ready(function(){
 	
 	var system=brower.versions();
 	if(system.type=="Android"){
-		if(system.version==4.2){
-			$("body").addClass("android_version_4_2");
-		}
-		else{
-			$("body").addClass("android_version");
-		}
+		$("body").addClass("android_version");
 	}
 	
 	/*微信转发图片*/
