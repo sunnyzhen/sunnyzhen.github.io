@@ -698,6 +698,11 @@ $(document).ready(function(){
 	  window.addEventListener("deviceorientation", orientationHandler, false);  
 	}
 	
+	//设置缓存
+	window.applicationCache.addEventListener('updateready', onUpdateReady);
+	if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+	  window.reload();
+	}
 	
 	/*微信转发图片*/
 	
