@@ -317,9 +317,9 @@ body{ background:#5a5a5a;}
 
 /*.bg_hook{ display:block; height:80%; width:90%; background: url(../images/bg_hook.jpg) no-repeat 0 0; background-size:100%; position:absolute; left:50%; margin-left:-45%; top:64px;}*/
 
-.wrap_prepare{ top:100%; opacity:0;}
-.wrap_show{ top:0%; opacity:1;}
-.wrap_hide{ top:-100%; opacity:0;}
+.wrap_prepare{/* top:100%;*/ -webkit-transform:translate(0,100%); opacity:0;}
+.wrap_show{ /*top:0%;*/ -webkit-transform:translate(0,0%); opacity:1;}
+.wrap_hide{ /*top:-100%;*/ -webkit-transform:translate(0,-100%); opacity:0;}
 
 .hook_down{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; bottom:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
 .hook_up{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; top:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
