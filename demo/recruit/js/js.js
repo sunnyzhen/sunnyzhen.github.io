@@ -612,6 +612,93 @@ $(document).ready(function(){
 		}
 	}
 	
+	//首页背景移动
+	
+	function orientationHandler(event) { 
+		if(Math.round(event.beta)>-100&&Math.round(event.beta)<100){
+			if(Math.round(event.gamma)<30&&Math.round(event.gamma)>-30){
+			
+				var scale_num=Math.round(event.beta)/140;
+				var skew_num=Math.round(event.gamma)*(-1);
+				
+				var translate_y=Math.floor(Math.round(event.beta)/15)*(-1);
+				
+				if(event.gamma>0){
+					var translate_x=Math.floor(Math.round(event.gamma)/5);
+				}
+				else{
+					var translate_x=Math.floor(Math.round(event.gamma)/10);
+				}
+					
+				$(".penguin_1 .slide_hook").css({
+					"-webkit-transform":"skew("+skew_num+"deg,0) scale(1,"+(1+scale_num)+") translate("+translate_x+"px,"+translate_y+"px)"
+				});
+				$(".penguin_2 .slide_hook").css({
+					"-webkit-transform":"skew("+skew_num+"deg,0) scale(1,"+(1+scale_num)+") translate("+translate_x+"px,"+translate_y+"px)"
+				});
+				$(".penguin_3 .slide_hook").css({
+					"-webkit-transform":"skew("+skew_num+"deg,0) scale(1,"+(1+scale_num)+") translate("+translate_x+"px,"+translate_y+"px)"
+				});
+				$(".penguin_4 .slide_hook").css({
+					"-webkit-transform":"skew("+skew_num+"deg,0) scale(1,"+(1+scale_num)+") translate("+translate_x+"px,"+translate_y+"px)"
+				});
+			}
+			
+			
+			/*$(".penguin_1 .slide_hook").css({
+				"-webkit-transform":"scale(1,"+(1+num)+") translate(0px,"+Math.floor(Math.round(event.beta)/15)*(-1)+"px)"
+			});
+			$(".penguin_2 .slide_hook").css({
+				"-webkit-transform":"scale(1,"+(1+num)+") translate(0px,"+Math.floor(Math.round(event.beta)/15)*(-1)+"px)"
+			});
+			$(".penguin_3 .slide_hook").css({
+				"-webkit-transform":"scale(1,"+(1+num)+") translate(0px,"+Math.floor(Math.round(event.beta)/15)*(-1)+"px)"
+			});
+			$(".penguin_4 .slide_hook").css({
+				"-webkit-transform":"scale(1,"+(1+num)+") translate(0px,"+Math.floor(Math.round(event.beta)/15)*(-1)+"px)"
+			});*/
+		}
+		
+		
+		//$(".static .txt").html(/*"左右："+Math.round(event.gamma)+" "+Math.floor(Math.round(event.gamma)/10)+*/" 上下："+Math.round(event.gamma));
+
+		/*if(Math.round(event.gamma)<30&&Math.round(event.gamma)>-30){
+			$(".penguin_1 .slide_hook").css({
+				"-webkit-transform":"skew("+Math.round(event.gamma)*(-1)+"deg,0) translate("+Math.floor(Math.round(event.gamma)/10)+"px,0px)"
+			});
+			$(".penguin_2 .slide_hook").css({
+				"-webkit-transform":"skew("+Math.round(event.gamma)*(-1)+"deg,0) translate("+Math.floor(Math.round(event.gamma)/10)+"px,0px)"
+			});
+			$(".penguin_3 .slide_hook").css({
+				"-webkit-transform":"skew("+Math.round(event.gamma)*(-1)+"deg,0) translate("+Math.floor(Math.round(event.gamma)/10)+"px,0px)"
+			});
+			$(".penguin_4 .slide_hook").css({
+				"-webkit-transform":"skew("+Math.round(event.gamma)*(-1)+"deg,0) translate("+Math.floor(Math.round(event.gamma)/10)+"px,0px)"
+			});
+		}*/
+		
+	
+		/*for(var i=0;i<shadow_hook_list.length;i++){
+			
+		}*/
+		
+		/*if(Math.round(event.gamma)>10){
+			$(".cover_wrap").addClass("shadow_right");
+		}
+		else if(Math.round(event.gamma)<10&&Math.round(event.gamma)>-10){
+			$(".cover_wrap").removeClass("shadow_right").removeClass("shadow_left");
+		}
+		else if(Math.round(event.gamma)<-10){
+			$(".cover_wrap").addClass("shadow_left");
+		}*/
+		
+	}  
+	  
+	if (window.DeviceOrientationEvent) {  
+	  window.addEventListener("deviceorientation", orientationHandler, false);  
+	}
+	
+	
 	/*微信转发图片*/
 	
 	var imgUrl = 'http://sunnyzhen.github.io/demo/recruit/images/forward_icon.jpg';

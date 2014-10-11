@@ -333,7 +333,7 @@ body{ background:#5a5a5a;}
 
 .tear_page_wrap .poster_wrap{ top:0px;}
 
-/*.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}*/
+/**/.static{ position:absolute; left:0px; top:0px; z-index:99; background:rgba(0,0,0,0.8); color:#fff; height:30px; line-height:30px; padding-left:10px; width:100%;}
 
 .share_tips{ display:block; height:102px; width:151px; background:url(../images/share_tips.png) no-repeat 0 0; background-size:contain; position:absolute; right:26px; top:10px; text-indent:-9999px; overflow:hidden; opacity:0; pointer-events:none; -webkit-transition:opacity 0.2s linear;}
 .mask{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; background:rgba(0,0,0,0.8); opacity:0; -webkit-transition:opacity 0.2s linear;}
@@ -344,6 +344,24 @@ body{ background:#5a5a5a;}
 .share_click_area{ display:none; height:280px; width:240px; position:absolute; left:50%; top:64px; margin-left:-120px; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 
 .design_wrap .poster_con{ overflow:hidden;}
+
+.penguin_wrap .slide_hook{ -webkit-transition:-webkit-transform 0.3s linear;}
+.penguin_wrap .penguin_1 .slide_hook{display:block; height:225px; width:165px; position:absolute; left:-132px; top:59px; -webkit-transform-origin:80% 0%;}
+.penguin_wrap .penguin_2 .slide_hook{display:block; height:210px; width:150px; position:absolute; left:-88px; top:57px; -webkit-transform-origin:70% 0%;}
+.penguin_wrap .penguin_3 .slide_hook{display:block; height:220px; width:115px; position:absolute; left:-9px; top:77px; -webkit-transform-origin:70% 0%;}
+.penguin_wrap .penguin_4 .slide_hook{display:block; height:220px; width:171px; position:absolute; left:6px; top:72px; -webkit-transform-origin:50% 0%;}
+
+.penguin_wrap .penguin_1 .p_shadow,.penguin_wrap .penguin_2 .p_shadow,.penguin_wrap .penguin_3 .p_shadow,.penguin_wrap .penguin_4 .p_shadow{position:absolute; left:0; top:0;}
+
+.shadow_right .penguin_1 .slide_hook{-webkit-transform:skew(-15deg,0) translate(3px,0px);}
+.shadow_right .penguin_2 .slide_hook{-webkit-transform:skew(-20deg,0) translate(4px,0px);}
+.shadow_right .penguin_3 .slide_hook{-webkit-transform:skew(-23deg,0) translate(2px,0px);}
+.shadow_right .penguin_4 .slide_hook{-webkit-transform:skew(-25deg,0) translate(2px,0px);}
+
+.shadow_left .penguin_1 .slide_hook{-webkit-transform:skew(30deg,0) translate(-4px,0px);}
+.shadow_left .penguin_2 .slide_hook{-webkit-transform:skew(23deg,0) translate(-3px,0px);}
+.shadow_left .penguin_3 .slide_hook{-webkit-transform:skew(20deg,0) translate(-2px,0px);}
+.shadow_left .penguin_4 .slide_hook{-webkit-transform:skew(15deg,0);}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
