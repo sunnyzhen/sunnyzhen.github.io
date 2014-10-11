@@ -19,7 +19,7 @@ button {cursor:pointer;}
 html,body{ height:100%; width:100%; overflow:hidden;}
 body{ background:#5a5a5a;}
 
-.cover_wrap{ height:100%; width:100%; background:#08090e url(../images/index_bg.jpg) no-repeat center top; background-size:320px 416px; overflow:hidden; position:relative; -webkit-transition:top 0.3s ease,opacity 0.3s ease; z-index:2;}
+.cover_wrap{ height:100%; width:100%; background:#08090e url(../images/index_bg.jpg) no-repeat center top; background-size:320px 416px; overflow:hidden; position:relative; -webkit-transition:top 0.3s ease,opacity 0.3s ease,-webkit-transform 0.3s ease; z-index:2;}
 .cover_wrap .building_1{ display:block;  height:140px; width:185px;  position:absolute; left:50%; margin-left:-85px; top:66px; overflow:hidden;}
 .cover_wrap .building_1 .b_body{display:block; background:url(../images/index_png24.png) no-repeat -220px -230px; background-size:800px 370px; height:140px; width:185px; position:absolute; left:0px; top:0px; opacity:0;}
 
@@ -164,7 +164,7 @@ body{ background:#5a5a5a;}
 	100%{ -webkit-transform:scale(1); opacity:1;}
 }
 
-.con_wrap{ display:block; height:100%; width:100%; /*background:url(../images/bg.jpg) no-repeat center 0; background-size:100% 100%;*/ position:absolute; left:0px; top:0px; overflow:hidden; -webkit-transition:top 0.3s ease,opacity 0.3s ease; z-index:1;}
+.con_wrap{ display:block; height:100%; width:100%; /*background:url(../images/bg.jpg) no-repeat center 0; background-size:100% 100%;*/ position:absolute; left:0px; top:0px; overflow:hidden; -webkit-transition:top 0.3s ease,opacity 0.3s ease,-webkit-transform 0.3s ease; z-index:1;}
 .poster_wrap{ display:block; height:336px; width:239px; background:url(../images/poster_bg_2.jpg) no-repeat 0 0; background-size:239px 400px; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3); -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; z-index:1;}
 .poster_wrap .poster_con{ display:block; position:relative; z-index:1; height:336px; width:239px; }
 .poster_wrap .title{ display:none;}
