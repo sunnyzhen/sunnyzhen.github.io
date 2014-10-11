@@ -700,9 +700,14 @@ $(document).ready(function(){
 	
 	//设置缓存
 	window.applicationCache.addEventListener('updateready', onUpdateReady);
-	if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
-	  window.reload();
+	
+	var onUpdateReady = function(){
+		if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+		  window.reload();
+		}		
 	}
+	
+
 	
 	/*微信转发图片*/
 	
