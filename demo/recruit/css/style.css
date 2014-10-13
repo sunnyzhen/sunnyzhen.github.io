@@ -165,7 +165,7 @@ body{ background:#5a5a5a;}
 }
 
 .con_wrap{ display:block; height:100%; width:100%; /*background:url(../images/bg.jpg) no-repeat center 0; background-size:100% 100%;*/ position:absolute; left:0px; top:0px; overflow:hidden; -webkit-transition:top 0.3s ease,opacity 0.3s ease,-webkit-transform 0.3s ease; z-index:1;}
-.poster_wrap{ display:block; height:336px; width:239px; background:url(../images/poster_bg_2.jpg) no-repeat 0 0; background-size:239px 400px; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3); -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; z-index:1;}
+.poster_wrap{ display:block; height:336px; width:239px; background:url(../images/poster_bg_2.jpg) no-repeat 0 0; background-size:239px 400px; position:absolute; left:50%; margin-left:-119px; top:10px; box-shadow:-2px 2px 3px rgba(0,0,0,0.3); -webkit-transition:margin-left 0.3s ease,opacity 0.3s ease; opacity:1; z-index:1; overflow:hidden;}
 .poster_wrap .poster_con{ display:block; position:relative; z-index:1; height:336px; width:239px; }
 .poster_wrap .title{ display:none;}
 .poster_wrap .penguin_poster{ display: block; height:157px; width:213px; background:url(../images/poster_bg_1.jpg) no-repeat 0 0; background-size:213px 955px; position:absolute; left:13px; top:61px;}
@@ -317,9 +317,9 @@ body{ background:#5a5a5a;}
 
 /*.bg_hook{ display:block; height:80%; width:90%; background: url(../images/bg_hook.jpg) no-repeat 0 0; background-size:100%; position:absolute; left:50%; margin-left:-45%; top:64px;}*/
 
-.wrap_prepare{ top:100%; /*-webkit-transform:translate(0,100%);*/ opacity:0;}
-.wrap_show{ top:0%; /*-webkit-transform:translate(0,0%);*/ opacity:1;}
-.wrap_hide{ top:-100%; /*-webkit-transform:translate(0,-100%);*/ opacity:0;}
+.wrap_prepare{/* top:100%;*/ -webkit-transform:translate(0%,100%); opacity:0;}
+.wrap_show{ /*top:0%;*/ -webkit-transform:translate(0%,0%); opacity:1;}
+.wrap_hide{ /*top:-100%;*/ -webkit-transform:translate(0%,-100%); opacity:0;}
 
 .hook_down{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; bottom:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
 .hook_up{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; top:0px; z-index:9; text-indent:-9999px; overflow:hidden;}
