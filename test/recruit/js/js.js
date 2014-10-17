@@ -699,7 +699,7 @@ $(document).ready(function(){
 	}
 	
 	//设置缓存
-	window.addEventListener('load', function(e) {
+/*	window.addEventListener('load', function(e) {
 	 
 	  window.applicationCache.addEventListener('updateready', function(e) {
 		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
@@ -712,14 +712,14 @@ $(document).ready(function(){
 		}
 	  }, false);
 	 
-	}, false);
+	}, false);*/
 	
 	/**
 	 * 统计代码
 	 * author：bobbli
 	 */
 	
-	var appKey = '6d22f29b760c672ebef90ff35117112aofea543c857f4202b';
+/*	var appKey = '6d22f29b760c672ebef90ff35117112aofea543c857f4202b';
 
 	ofea.creat('',{
 		appKey: appKey
@@ -739,7 +739,7 @@ $(document).ready(function(){
 			}
 		});
 		
-	},5000);
+	},5000);*/
 	
 	/*function setListNum(){
 		var pvTimer=setTimeout(function(){
