@@ -18,6 +18,22 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});*/
 	
+	//默认隐藏内页，1s后还原
+	/*var wrap_prepare_timer=setTimeout(function(){
+		$(".wrap_prepare").css({
+			"display":"block"
+		});
+	},1500);*/
+	
+	
+	/*var loadpage_timer=setTimeout(function(){
+		$(".sub_page_container").load("sub_page.html");
+	},2000);
+	
+	$.ajaxSetup ({  
+		cache: false //关闭AJAX相应的缓存  
+	});*/
+	
 	
 	//切换 详细岗位列表
 	function SwitchSubList(wrap,index){
@@ -158,8 +174,6 @@ $(document).ready(function(){
 		$(".design_wrap").removeClass("wrap_after");
 
 	}
-	
-	
 	
 	//触摸触发事件
 	$("body").touchwipe({
