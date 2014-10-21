@@ -261,7 +261,7 @@ body{ background:#5a5a5a;}
 
 .surrender_tips{ display:block; height:49px; width:80px; background:url(../images/index_png8.png) no-repeat 0 -52px; background-size:254px 101px; position:absolute; left:50%; margin-left:67px; top:7px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 /*1*/
-.page_angle{ position:absolute; right:-16px; top:0px; display:block; height:35px; width:97px; background:url(../images/page_png24.png) no-repeat -63px 0; background-size:260px 98px; -webkit-transform:rotate(25deg); -webkit-transform-origin:0% 0%; z-index:1; -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
+.page_angle{ position:absolute; right:-16px; top:0px; display:block; height:35px; width:97px; background:url(../images/page_png24.png) no-repeat -63px 0; background-size:260px 98px; -webkit-transform:rotate(25deg); -webkit-transform-origin:0% 0%; z-index:1; /*-webkit-animation:a_page_angle 1.8s linear alternate infinite;*/}
 /*1*/
 @-webkit-keyframes a_page_angle{
 	0%{ -webkit-transform:rotate(25deg) translate(0,0) scale(1,1);}
