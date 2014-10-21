@@ -801,7 +801,7 @@ $(document).ready(function(){
 			style.appendChild(document.createTextNode(styles));
 		}
 	}
-	var styles = ".poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail{background-image:url(images/poster_bg_txt.jpg);}";
+	var styles = ".poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(images/poster_bg_txt.jpg);}";
 	
 	/*微信转发图片*/
 	

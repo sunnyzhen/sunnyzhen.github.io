@@ -210,7 +210,7 @@ body{ background:#5a5a5a;}
 .poster_wrap .brush_3{height:95px; width:58px; background-image:url(../images/brush_3.png); left:4px; top:210px;}
 .poster_wrap .brush_4{height:98px; width:62px; background-image:url(../images/brush_4.png); left:2px; top:206px;}*/
 
-.poster_wrap .reward{ display:block; height:25px; width:214px; background:url(../images/poster_bg_txt.jpg) no-repeat 0 -292px; background-size:213px 319px; position:absolute; left:12px; top:298px;}
+.poster_wrap .reward{ display:block; height:25px; width:214px; /*background:url(../images/poster_bg_txt.jpg) no-repeat 0 -292px; */background-position:0 -292px; background-repeat:no-repeat; background-size:213px 319px; position:absolute; left:12px; top:298px;}
 
 .tab_wrap{ display:block; height:54px; width:320px; position:absolute; bottom:5px; left:50%; margin-left:-160px; z-index:3;}
 .tab_list_1{ margin-left:7px;}
