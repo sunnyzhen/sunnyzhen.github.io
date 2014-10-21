@@ -153,6 +153,7 @@ body{ background:#5a5a5a;}
 .wrap_show .brush .brush_left{ -webkit-animation:a_brush_left 0.3s 0.3s linear both;}
 .wrap_show .brush .brush_right{ -webkit-animation:a_brush_left 0.3s 0.6s linear both;}
 .wrap_show .stamp{ -webkit-animation:a_stamp 0.2s 1s linear both;}
+.wrap_show .page_angle{ -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
 
 @-webkit-keyframes a_brush_left{
 	0%{ height:0px;}
