@@ -211,7 +211,7 @@ body{ background:#5a5a5a;}
 .poster_wrap .brush_4{height:98px; width:62px; background-image:url(../images/brush_4.png); left:2px; top:206px;}*/
 
 .poster_wrap .reward{ display:block; height:25px; width:214px; /*background:url(../images/poster_bg_txt.jpg) no-repeat 0 -292px; */background-position:0 -292px; background-repeat:no-repeat; background-size:213px 319px; position:absolute; left:12px; top:298px;}
-/*1*/
+
 .tab_wrap{ display:block; height:54px; width:320px; position:absolute; bottom:5px; left:50%; margin-left:-160px; z-index:3;}
 .tab_list_1{ margin-left:7px;}
 .tab_list_2{ margin-left:66px;}
@@ -260,8 +260,9 @@ body{ background:#5a5a5a;}
 .detail_wrap .detail_con{ display:block; position:relative; z-index:2;}
 
 .surrender_tips{ display:block; height:49px; width:80px; background:url(../images/index_png8.png) no-repeat 0 -52px; background-size:254px 101px; position:absolute; left:50%; margin-left:67px; top:7px; text-indent:-9999px; overflow:hidden; opacity:0; -webkit-transition:opacity 0.3s linear;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+/*1*/
 .page_angle{ position:absolute; right:-16px; top:0px; display:block; height:35px; width:97px; background:url(../images/page_png24.png) no-repeat -63px 0; background-size:260px 98px; -webkit-transform:rotate(25deg); -webkit-transform-origin:0% 0%; z-index:1; -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
-
+/*1*/
 @-webkit-keyframes a_page_angle{
 	0%{ -webkit-transform:rotate(25deg) translate(0,0) scale(1,1);}
 	25%{ -webkit-transform:rotate(25deg) translate(0px,0px) scale(1,0.94);}
@@ -283,7 +284,6 @@ body{ background:#5a5a5a;}
 	0%{ -webkit-transform:rotate(65deg) translate(0px,0px);}
 	100%{ -webkit-transform:rotate(65deg) translate(158px,-340px);}
 }
-/*1*/
 .back_cover_wrap{ display:block; height:500px; width:337px; position:absolute; left:0; top:0; -webkit-transform:rotate(65deg); overflow:hidden; pointer-events:none; opacity:0;}
 .back_cover{ display:block; /*background: #c5b293 url(../images/watermark.png) repeat 10px 10px;*/ background-color:#c5b293; background-repeat:repeat; background-position:10px 10px; background-size:105px 50px; border:1px solid #897d6a; box-shadow: -2px -2px 3px rgba(0,0,0,0.2); height:336px; width:254px; position:absolute; left:266px; top:56px; -webkit-transform:rotate(-140deg); -webkit-transform-origin:0% 0%;}
 
