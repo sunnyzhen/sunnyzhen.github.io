@@ -175,12 +175,19 @@ $(document).ready(function(){
 
 	}
 	
+	var style_load=0;
+	
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() {
 			if(page_index==1){
 				$(".cover_wrap").addClass("wrap_hide");
 				$(".con_wrap_1").addClass("wrap_show");
+				
+				if(style_load==0){
+					includeStyleElement(styles,"newstyle");
+					style_load=1;
+				}
 				
 				var timer=setTimeout(function(){
 					$(".cover_wrap").removeClass("wrap_show");
@@ -489,6 +496,11 @@ $(document).ready(function(){
 			$(".cover_wrap").addClass("wrap_hide");
 			$(".con_wrap_1").addClass("wrap_show");
 			
+			if(style_load==0){
+				includeStyleElement(styles,"newstyle");
+				style_load=1;
+			}
+			
 			var timer=setTimeout(function(){
 				$(".cover_wrap").removeClass("wrap_show");
 				$(".con_wrap_1").removeClass("wrap_prepare");
@@ -774,6 +786,22 @@ $(document).ready(function(){
 	}
 	setListNum();*/
 
+	/*加载内页背景图*/
+	function includeStyleElement(styles,styleId) {
+		if (document.getElementById(styleId)) {
+			return ;
+		}
+		var style = document.createElement("style");
+		style.id = styleId;
+	
+		(document.getElementsByTagName("head")[0] || document.body).appendChild(style);
+		if (style.styleSheet) { //for ie
+			style.styleSheet.cssText = styles;
+		} else {//for w3c
+			style.appendChild(document.createTextNode(styles));
+		}
+	}
+	var styles = ".poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail{background-image:url(images/poster_bg_txt.jpg);}";
 	
 	/*微信转发图片*/
 	
