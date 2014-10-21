@@ -357,6 +357,8 @@ body{ background:#5a5a5a;}
 /* 分享人数 */
 .get_list_num{ display:block; height:30px; width:50px; position:absolute; top:153px; left:72px; line-height:30px; font-size:16px; text-align:center; color:#fdff7b; }
 
+.poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(images/poster_bg_txt.jpg);}.back_cover{ background-image:url(images/watermark.png);}.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(images/poster_bg_2.jpg);}
+
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
 	.poster_wrap{ top:50px;}

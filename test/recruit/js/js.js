@@ -801,7 +801,8 @@ $(document).ready(function(){
 			style.appendChild(document.createTextNode(styles));
 		}
 	}
-	var styles = ".poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(images/poster_bg_txt.jpg);}.back_cover{ background-image:url(images/watermark.png);}.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(images/poster_bg_2.jpg);}";
+	var styles = "";
+	//.poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(images/poster_bg_txt.jpg);}.back_cover{ background-image:url(images/watermark.png);}.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(images/poster_bg_2.jpg);}
 	
 	/*微信转发图片*/
 	
