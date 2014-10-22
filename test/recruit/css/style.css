@@ -154,6 +154,7 @@ body{ background:#5a5a5a;}
 .wrap_show .brush .brush_right{ -webkit-animation:a_brush_left 0.3s 0.6s linear both;}
 .wrap_show .stamp{ -webkit-animation:a_stamp 0.2s 1s linear both;}
 .wrap_show .page_angle{ -webkit-animation:a_page_angle 1.8s linear alternate infinite;}
+.wrap_show .wrap_before .page_angle,.wrap_show .wrap_after .page_angle{ -webkit-animation: none;}
 
 @-webkit-keyframes a_brush_left{
 	0%{ height:0px;}
@@ -357,7 +358,11 @@ body{ background:#5a5a5a;}
 /* 分享人数 */
 .get_list_num{ display:block; height:30px; width:50px; position:absolute; top:153px; left:72px; line-height:30px; font-size:16px; text-align:center; color:#fdff7b; }
 
-.poster_wrap .penguin_poster{ background-image:url(../images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(../images/poster_bg_txt.jpg);}.back_cover{ background-image:url(../images/watermark.png);}.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(../images/poster_bg_2.jpg);}
+/*图片提取*/
+.poster_wrap .penguin_poster{ background-image:url(../images/poster_bg_banner.jpg);}
+.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(../images/poster_bg_txt.jpg);}
+.back_cover{ background-image:url(../images/watermark.png);}
+.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(../images/poster_bg_2.jpg);}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
