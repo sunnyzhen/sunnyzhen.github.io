@@ -18,6 +18,22 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});*/
 	
+	//默认隐藏内页，1s后还原
+	/*var wrap_prepare_timer=setTimeout(function(){
+		$(".wrap_prepare").css({
+			"display":"block"
+		});
+	},1500);*/
+	
+	
+	/*var loadpage_timer=setTimeout(function(){
+		$(".sub_page_container").load("sub_page.html");
+	},2000);
+	
+	$.ajaxSetup ({  
+		cache: false //关闭AJAX相应的缓存  
+	});*/
+	
 	
 	//切换 详细岗位列表
 	function SwitchSubList(wrap,index){
@@ -159,7 +175,7 @@ $(document).ready(function(){
 
 	}
 	
-	
+	var style_load=0;
 	
 	//触摸触发事件
 	$("body").touchwipe({
@@ -167,6 +183,11 @@ $(document).ready(function(){
 			if(page_index==1){
 				$(".cover_wrap").addClass("wrap_hide");
 				$(".con_wrap_1").addClass("wrap_show");
+				
+				if(style_load==0){
+					includeStyleElement(styles,"newstyle");
+					style_load=1;
+				}
 				
 				var timer=setTimeout(function(){
 					$(".cover_wrap").removeClass("wrap_show");
@@ -475,6 +496,11 @@ $(document).ready(function(){
 			$(".cover_wrap").addClass("wrap_hide");
 			$(".con_wrap_1").addClass("wrap_show");
 			
+			if(style_load==0){
+				includeStyleElement(styles,"newstyle");
+				style_load=1;
+			}
+			
 			var timer=setTimeout(function(){
 				$(".cover_wrap").removeClass("wrap_show");
 				$(".con_wrap_1").removeClass("wrap_prepare");
@@ -699,7 +725,7 @@ $(document).ready(function(){
 	}
 	
 	//设置缓存
-	window.addEventListener('load', function(e) {
+/*	window.addEventListener('load', function(e) {
 	 
 	  window.applicationCache.addEventListener('updateready', function(e) {
 		if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
@@ -712,14 +738,14 @@ $(document).ready(function(){
 		}
 	  }, false);
 	 
-	}, false);
+	}, false);*/
 	
 	/**
 	 * 统计代码
 	 * author：bobbli
 	 */
 	
-	var appKey = '6d22f29b760c672ebef90ff35117112aofea543c857f4202b';
+/*	var appKey = '6d22f29b760c672ebef90ff35117112aofea543c857f4202b';
 
 	ofea.creat('',{
 		appKey: appKey
@@ -739,7 +765,7 @@ $(document).ready(function(){
 			}
 		});
 		
-	},5000);
+	},5000);*/
 	
 	/*function setListNum(){
 		var pvTimer=setTimeout(function(){
@@ -760,6 +786,23 @@ $(document).ready(function(){
 	}
 	setListNum();*/
 
+	/*加载内页背景图*/
+	function includeStyleElement(styles,styleId) {
+		if (document.getElementById(styleId)) {
+			return ;
+		}
+		var style = document.createElement("style");
+		style.id = styleId;
+	
+		(document.getElementsByTagName("head")[0] || document.body).appendChild(style);
+		if (style.styleSheet) { //for ie
+			style.styleSheet.cssText = styles;
+		} else {//for w3c
+			style.appendChild(document.createTextNode(styles));
+		}
+	}
+	var styles = "";
+	//.poster_wrap .penguin_poster{ background-image:url(images/poster_bg_banner.jpg);}.poster_wrap .name,.poster_wrap .detail,.poster_wrap .reward{background-image:url(images/poster_bg_txt.jpg);}.back_cover{ background-image:url(images/watermark.png);}.poster_wrap,.detail_wrap,.detail_wrap .bg,.poster_wrap .bg{background-image:url(images/poster_bg_2.jpg);}
 	
 	/*微信转发图片*/
 	

@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2014-10-13 10:60
+# 2014-10-13 10:40
 # cache data
 
 CACHE:
@@ -13,11 +13,13 @@ ofea.js
 ../images/index_png8.png
 ../images/index_png24.png
 ../images/page_png24.png
-../images/poster_bg_1.jpg
+../images/poster_bg_banner.jpg
+../images/poster_bg_txt.jpg
 ../images/poster_bg_2.jpg
 ../images/poster_repeat_bg.jpg
 ../images/share_tips.png
 ../images/watermark.png
+../images/arrow_bg.png
 ../css/style.css
 
 NETWORK:
