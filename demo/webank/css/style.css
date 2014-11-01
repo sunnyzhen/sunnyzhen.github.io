@@ -99,7 +99,7 @@ body{ background:#1e54a4;}
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
-	.arrow_up{ bottom:90px;}
+	.arrow_up{ bottom:20px;}
 }
 
 /* 安卓兼容 兼容*/
