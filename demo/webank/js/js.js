@@ -2,15 +2,152 @@
 
 $(document).ready(function(){
 	
+	/*翻页标识*/
+	var page_index=1;//当前在那个页面
+	var subpage_index=9;//页面总共有多少个子页
 	
+	//触摸触发事件
+	$("body").touchwipe({
+		wipeDown: function() {
+			if(page_index==1){
+				$(".cover_wrap").addClass("wrap_hide");
+				$(".con_wrap_1").addClass("wrap_show");
+				
+				var timer=setTimeout(function(){
+					$(".cover_wrap").removeClass("wrap_show");
+					$(".con_wrap_1").removeClass("wrap_prepare");
+					page_index=2;
+					clearTimeout(timer);
+					
+				},300);
+			}
+			else if(page_index>1&&page_index<subpage_index){
+				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
+				$(".con_wrap_"+page_index).addClass("wrap_show");
+				
+				var str_name_1=".con_wrap_"+(page_index-1);
+				var str_name_2=".con_wrap_"+page_index;
+				
+				page_index+=1;
+				
+				var timer=setTimeout(function(){
+					$(str_name_1).removeClass("wrap_show");
+					$(str_name_2).removeClass("wrap_prepare");
+					
+					ResetWrapState();
+					clearTimeout(timer);
+					
+				},300);
+			}
+			else{
+					
+			}
+			
+		 },
+		 wipeUp: function() { 
+			var str_name_1=".con_wrap_"+(page_index-2);
+			var str_name_2=".con_wrap_"+(page_index-1);
+			
+			if(page_index==2){
+				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+				page_index=1;
+			}
+			else if(page_index>2&&page_index<=subpage_index){
+				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
+				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
+				
+				page_index-=1;
+			}
+			else{
+				
+			}
+				
+		 },
+		 wipeLeft: function() {
+			
+		 },
+		 wipeRight: function() { 
+			
+		 },
+		min_move_x: 80,
+		min_move_y: 80,
+		preventDefaultEvents: true
+	});
 	
+	/*pc test*/
 	
+	$(".hook_right").bind("click",function(){
+		
+	});
+	
+	$(".hook_left").bind("click",function(){
+		
+	});
+	
+	$(".hook_up").bind("click",function(){
+		var str_name_1=".con_wrap_"+(page_index-2);
+		var str_name_2=".con_wrap_"+(page_index-1);
+		
+		if(page_index==2){
+			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+			$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+			page_index=1;
+		}
+		else if(page_index>2&&page_index<=subpage_index){
+			$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
+			$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
+			
+			page_index-=1;
+		}
+		else{
+			
+		}
+	});
+	
+	$(".hook_down").bind("click",function(){
+		if(page_index==1){
+			$(".cover_wrap").addClass("wrap_hide");
+			$(".con_wrap_1").addClass("wrap_show");
+			
+			var timer=setTimeout(function(){
+				$(".cover_wrap").removeClass("wrap_show");
+				$(".con_wrap_1").removeClass("wrap_prepare");
+				page_index=2;
+				clearTimeout(timer);
+				
+			},300);
+		}
+		else if(page_index>1&&page_index<subpage_index){
+			$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
+			$(".con_wrap_"+page_index).addClass("wrap_show");
+			
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2=".con_wrap_"+page_index;
+			
+			page_index+=1;
+			
+			var timer=setTimeout(function(){
+				$(str_name_1).removeClass("wrap_show");
+				$(str_name_2).removeClass("wrap_prepare");
+				
+				ResetWrapState();
+				clearTimeout(timer);
+				
+			},300);
+		}
+		else{
+				
+		}
+	});
+	
+	/*pc test*/
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/demo/recruit/images/forward_icon.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
 	var lineLink = location.href;
-	var descContent = "奉天承运,皇帝诏曰！鹅厂有旨，全球追寻神鹅下落，提供线索者封侯拜相，重赏！";
+	var descContent = "这里是 转发文字，比如：大家都爱陈某真！";
 	var shareTitle = document.title;
 	var appid = '';
 	
