@@ -16,7 +16,8 @@ legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
 
-body{ background:url(../images_pc/bg.png) repeat 0 0;}
+body{ background:#363737;}
+.wrap{ background:url(../images_pc/bg.png) repeat 0 0;}
 
 .head{ width:1140px; margin:0px auto; height:120px; position:relative;}
 .head .logo_area{ display:block; height:71px; width:269px; background:url(../images_pc/logo.png) no-repeat 0 0; position:absolute; left:20px; bottom:0px;}
