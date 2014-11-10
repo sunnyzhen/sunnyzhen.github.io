@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><!--  manifest="js/cache.appcache" -->
+<head>
+<meta  charset="utf-8" />
+<title>光线检测</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="format-detection" content="telephone=no" />
+<style type="text/css">
+	*{ margin:0; padding:0;}
+	.box{ display:block; height:100px; width:100px; float:left; border:1px solid #333; margin:10px 0 10px 10px; background:#fff; color:#333; text-align:center; line-height:100px; font-size:20px; font-family:'Arial';}
+	.box_4{ background:#999; color:#333;}
+	
+	@media (light-level: normal) {
+	  .box_1 { background:#fff; color:#333; }
+	}
+	@media (light-level: dim) {
+	  .box_2 { background:#aaa; color:#666; }
+	}
+	@media (light-level: washed) {
+	  .box_3 { background:#666; color:#ddd; }
+	}
+	
+</style>
+
+
+</head>
+<body>
+
+<div class="main">
+    <div class="box box_1">
+        1
+    </div>
+    <div class="box box_2">
+        2
+    </div>
+    <div class="box box_3">
+        3
+    </div>
+    <div class="box box_4">
+        4
+    </div>
+</div>
+</body>
+</html>
