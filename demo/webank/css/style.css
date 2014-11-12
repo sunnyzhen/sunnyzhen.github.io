@@ -97,11 +97,52 @@ body{ background:#1f54a4;}
 .share_tips{ display:block; height:102px; width:151px; background:url(../images/share_tips.png) no-repeat 0 0; background-size:contain; position:absolute; right:26px; top:10px; text-indent:-9999px; overflow:hidden; opacity:0; pointer-events:none; -webkit-transition:opacity 0.2s linear;}
 .mask{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; background:rgba(0,0,0,0.8); opacity:0; -webkit-transition:opacity 0.2s linear;}
 
+
+.open_door_area{ display:block; height:148px; width:62px; background:url(../data/door.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-20px; top:58px;-webkit-perspective:40; overflow:hidden;}
+.open_door_area .penguin{ display:block; height:66px; width:24px; background:url(../images/penguin_open_door.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:37px; -webkit-animation:a_door_penguin 0.2s 0.6s ease both; -webkit-transform-origin:0% 100%; -webkit-transform: translate(-10px,0) rotate(-25deg); z-index:2;}
+.open_door_area .penguin .eye{ display:block; height:7px; width:7px; background:url(../images/penguin_eye.png) no-repeat 0 0; background-size:contain; position:absolute; left:7px; top:21px; -webkit-animation:a_eye 2.4s 0.8s linear infinite;}
+.open_door_area .penguin .hand{ display:block; height:14px; width:5px; background:url(../images/penguin_hand.png) no-repeat 0 0; background-size:contain; position:absolute; left:8px; top:48px; -webkit-animation:a_hand 2.4s 0.8s linear infinite; -webkit-transform-origin:0% 0%;}
+.open_door_area .door{ display:block; height:148px; width:62px; background:#1f54a4; position:absolute; right:0px; top:0px; -webkit-transform-origin:100% 50%; -webkit-animation:a_door 0.3s 0.3s linear both; z-index:1; }
+
+@-webkit-keyframes a_door{
+	0%{ -webkit-transform:rotateY(0deg);}
+	100%{ -webkit-transform:rotateY(-25deg);}
+}
+
+@-webkit-keyframes a_door_penguin{
+	0%{ -webkit-transform: translate(-10px,0) rotate(-25deg);}
+	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
+}
+
+@-webkit-keyframes a_eye{
+	0%{ opacity:0;}
+	1%{ opacity:1;}
+	3%{ opacity:1;}
+	8%{ opacity:1;}
+	10%{ opacity:0;}
+	15%{ opacity:0;}
+	17%{ opacity:1;}
+	22%{ opacity:1;}
+	27%{ opacity:0;}
+	100%{ opacity:0;}
+}
+
+@-webkit-keyframes a_hand{
+	0%{ -webkit-transform:scale(1,1) rotate(0deg);}
+	25%{ -webkit-transform:scale(1,0.8) rotate(-20deg);}
+	50%{ -webkit-transform:scale(1,1.1) rotate(5deg);}
+	75%{ -webkit-transform:scale(1,0.8) rotate(-20deg);}
+	100%{ -webkit-transform:scale(1,1) rotate(0deg);}
+}
+
+
+.link_emiail{ display:block; height:38px; width:113px; position:absolute; left:105px; top:360px; overflow:hidden; font-size:14px; font-family:'microsoft yahei';}
+
 /**/
 
-.con_wrap_1{ background:#1f54a4 url(../data/con_bg_1.jpg) no-repeat center center; background-size: contain;}
-.con_wrap_2{ background:#1f54a4 url(../data/con_bg_2.jpg) no-repeat center center; background-size: contain;}
-.con_wrap_3{ background:#1f54a4 url(../data/con_bg_3.jpg) no-repeat center center; background-size: contain;}
+.con_wrap_1{ background:#1f54a4 url(../data/data_pic/1.jpg) no-repeat center center; background-size: contain;}
+.con_wrap_2{ background:#1f54a4 url(../data/data_pic/2.jpg) no-repeat center center; background-size: contain;}
+.con_wrap_3{ background:#1f54a4 url(../data/data_pic/3.jpg) no-repeat center center; background-size: contain;}
 .con_wrap_4{ background:#1f54a4 url(../data/con_bg_4.jpg) no-repeat center top; background-size: contain;}
 .con_wrap_5{ background:#1f54a4 url(../data/con_bg_5.jpg) no-repeat center center; background-size: contain;}
 .con_wrap_6{ background:#1f54a4 url(../data/con_bg_6.jpg) no-repeat center center; background-size: contain;}
@@ -122,6 +163,46 @@ body{ background:#1f54a4;}
 .index_3 .con_wrap_6{ background:#fff url(../data/con_bg_3_6.jpg) no-repeat center center; background-size:100% 100%;}
 .index_3 .con_wrap_7{ background:#fff url(../data/con_bg_3_7.jpg) no-repeat center center; background-size:100% 100%;}
 .index_3 .con_wrap_8{ background:#fff url(../data/con_bg_3_8.jpg) no-repeat center bottom; background-size:100% 100%;}
+
+.phone_wrap{ display:block; height:430px; width:174px; background:url(../data/data_pic/hand_bg.png) no-repeat 0 0; background-size:contain; position:absolute; bottom:0px; right:0px; }
+.phone_wrap .phone_bg{ display:block; height:180px; width:100px; background:url(../images/cover_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:90px; top:118px; opacity:0;}
+.phone_wrap .phone_logo{display:block; height:18px; width:90px; background:url(../data/data_pic/phone_logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:75px; top:165px;}
+.phone_wrap .phone_logo .phone_penguin{display:block; height:15px; width:13px; background:url(../images/penguin_logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:50px; top:3px;}
+.phone_wrap .phone_slogan_show{ display:block; height:86px; width:187px; position:absolute; left:-136px; top:133px; overflow:hidden;}
+.phone_wrap .phone_slogan_show .phone_slogan{ display:block; height:84px; width:185px; border:1px solid rgba(255,255,255,0.8); background:rgba(255,255,255,0.6); position:absolute; left:0; top:0; opacity:0; -webkit-transform:translate(185px,0);}
+.phone_wrap .phone_slogan_show .phone_slogan .txt{ font-size:24px; font-family:'microsoft yahei'; color:#333; font-weight:normal; margin:5px 15px;}
+
+.wrap_show .phone_wrap{ -webkit-transform:rotate(40deg) translate(130px,40px); -webkit-animation:a_phone_wrap 0.25s 0.3s ease both; -webkit-transform-origin:100% 100%;}
+.wrap_show .phone_wrap .phone_bg{ -webkit-animation:a_phone_bg 0.3s 0.55s ease both; }
+.wrap_show .phone_wrap .phone_logo{ -webkit-animation:a_phone_bg 0.3s 0.85s ease both; }
+.wrap_show .phone_wrap .phone_logo .phone_penguin{ -webkit-animation:a_phone_penguin 0.4s 1.15s ease both; }
+.wrap_show .phone_wrap .phone_slogan{ -webkit-animation:a_phone_slogan 0.3s 1.55s ease both;}
+
+@-webkit-keyframes a_phone_wrap{
+	0%{ -webkit-transform:rotate(40deg) translate(130px,40px);}
+	70%{ -webkit-transform:rotate(0deg) translate(0px,0px);}
+	80%{ -webkit-transform:rotate(-2deg) translate(15px,0px);}
+	90%{ -webkit-transform:rotate(2deg) translate(0px,0px);}
+	100%{ -webkit-transform:rotate(0deg) translate(0px,0px);}
+}
+
+@-webkit-keyframes a_phone_bg{
+	0%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+@-webkit-keyframes a_phone_penguin{
+	0%{ -webkit-transform:translate(0,0);}
+	25%{ -webkit-transform:translate(0,-3px);}
+	50%{ -webkit-transform:translate(0,1px);}
+	75%{ -webkit-transform:translate(0,-2px);}
+	100%{ -webkit-transform:translate(0,0);}
+}
+
+@-webkit-keyframes a_phone_slogan{
+	0%{ opacity:0; -webkit-transform:translate(185px,0);}
+	100%{ opacity:1; -webkit-transform:translate(0,0);}
+}
 
 /**/
 
