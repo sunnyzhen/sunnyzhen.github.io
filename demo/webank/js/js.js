@@ -3,8 +3,9 @@
 $(document).ready(function(){
 	
 	/*翻页标识*/
-	var page_index=1;//当前在那个页面
-	var subpage_index=9;//页面总共有多少个子页
+	var page_index=5;//当前在哪个页面
+	var subpage_index=9;//总共有多少页面
+	var sub_page_index=1;//当前在哪个子页
 	
 	//触摸触发事件
 	$("body").touchwipe({
@@ -43,6 +44,8 @@ $(document).ready(function(){
 					
 			}
 			
+			sub_page_index=1;
+			
 		 },
 		 wipeUp: function() { 
 			var str_name_1=".con_wrap_"+(page_index-2);
@@ -62,12 +65,39 @@ $(document).ready(function(){
 			else{
 				
 			}
-				
+			
+			sub_page_index=1;
+			
 		 },
 		 wipeLeft: function() {
 			
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2="#tab_list_"+(page_index-1);
+			
+			if(page_index==5&&sub_page_index>1){
+				SwitchSubList($(str_name_1),sub_page_index-1);
+			}
+			
+			$(str_name_2).children("li").removeClass("current");
+			if(sub_page_index>0){
+				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			}
+			
 		 },
 		 wipeRight: function() { 
+		 	
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2="#tab_list_"+(page_index-1);
+			
+			if(page_index==5){
+				var list_length=$(str_name_2).children("li").length;
+				if(sub_page_index<list_length){
+					SwitchSubList($(str_name_1),sub_page_index+1);
+				}
+			}
+			
+			$(str_name_2).children("li").removeClass("current");
+			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
 			
 		 },
 		min_move_x: 80,
@@ -75,17 +105,66 @@ $(document).ready(function(){
 		preventDefaultEvents: true
 	});
 	
+	//切换子列表
+	function SwitchSubList(wrap,index){
+		var list=$(wrap).children(".info_list").children("li");
+
+		for(var i=0;i<list.length;i++){
+			if($(list[i]).data("index")<index){
+				$(list[i]).removeClass("wrap_after").addClass("wrap_before");
+			}
+			else if($(list[i]).data("index")>index){
+				$(list[i]).addClass("wrap_after").removeClass("wrap_before");
+			}
+			else if($(list[i]).data("index")==index){
+				$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
+			}
+		}
+
+		$(".design_wrap").removeClass("wrap_after");
+		sub_page_index=index;
+		
+	}
+	
+	//重置状态
+	function ResetWrapState(){
+		$(".info_list li").removeClass("wrap_before").addClass("wrap_after");
+		$($(".info_list li")[0]).removeClass("wrap_after");
+	}
+	
 	/*pc test*/
 	
 	$(".hook_right").bind("click",function(){
+		var str_name_1=".con_wrap_"+(page_index-1);
+		var str_name_2="#tab_list_"+(page_index-1);
 		
+		if(page_index==5){
+			var list_length=$(str_name_2).children("li").length;
+			if(sub_page_index<list_length){
+				SwitchSubList($(str_name_1),sub_page_index+1);
+			}
+		}
+		
+		$(str_name_2).children("li").removeClass("current");
+		$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
 	});
 	
 	$(".hook_left").bind("click",function(){
+		var str_name_1=".con_wrap_"+(page_index-1);
+		var str_name_2="#tab_list_"+(page_index-1);
 		
+		if(page_index==5&&sub_page_index>1){
+			SwitchSubList($(str_name_1),sub_page_index-1);
+		}
+		
+		$(str_name_2).children("li").removeClass("current");
+		if(sub_page_index>0){
+			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+		}
 	});
 	
 	$(".hook_up").bind("click",function(){
+		
 		var str_name_1=".con_wrap_"+(page_index-2);
 		var str_name_2=".con_wrap_"+(page_index-1);
 		
@@ -103,9 +182,19 @@ $(document).ready(function(){
 		else{
 			
 		}
+		
+		var timer=setTimeout(function(){
+			
+			ResetWrapState();
+			clearTimeout(timer);
+			
+		},300);
+		
+		sub_page_index=1;
 	});
 	
 	$(".hook_down").bind("click",function(){
+		
 		if(page_index==1){
 			$(".cover_wrap").addClass("wrap_hide");
 			$(".con_wrap_1").addClass("wrap_show");
@@ -128,17 +217,18 @@ $(document).ready(function(){
 			page_index+=1;
 			
 			var timer=setTimeout(function(){
-				$(str_name_1).removeClass("wrap_show");
-				$(str_name_2).removeClass("wrap_prepare");
-				
+			
 				ResetWrapState();
 				clearTimeout(timer);
 				
 			},300);
+			
 		}
 		else{
 				
 		}
+		
+		sub_page_index=1;
 	});
 	
 	/*pc test*/
