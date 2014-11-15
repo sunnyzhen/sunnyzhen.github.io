@@ -74,21 +74,6 @@ $(document).ready(function(){
 			var str_name_1=".con_wrap_"+(page_index-1);
 			var str_name_2="#tab_list_"+(page_index-1);
 			
-			if(page_index==5&&sub_page_index>1){
-				SwitchSubList($(str_name_1),sub_page_index-1);
-			}
-			
-			$(str_name_2).children("li").removeClass("current");
-			if(sub_page_index>0){
-				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-			}
-			
-		 },
-		 wipeRight: function() { 
-		 	
-			var str_name_1=".con_wrap_"+(page_index-1);
-			var str_name_2="#tab_list_"+(page_index-1);
-			
 			if(page_index==5){
 				var list_length=$(str_name_2).children("li").length;
 				if(sub_page_index<list_length){
@@ -98,6 +83,21 @@ $(document).ready(function(){
 			
 			$(str_name_2).children("li").removeClass("current");
 			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			
+		 },
+		 wipeRight: function() { 
+		 	
+			var str_name_1=".con_wrap_"+(page_index-1);
+			var str_name_2="#tab_list_"+(page_index-1);
+			
+			if(page_index==5&&sub_page_index>1){
+				SwitchSubList($(str_name_1),sub_page_index-1);
+			}
+			
+			$(str_name_2).children("li").removeClass("current");
+			if(sub_page_index>0){
+				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
+			}
 			
 		 },
 		min_move_x: 80,
