@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# 2014-10-13 10:45
+# cache data
+
+CACHE:
+jquery-2.0.0.min.js
+js.js
+ofea.js
+../images/bg.jpg
+../images/email_bg.png
+../images/forward_icon.jpg
+../images/index_bg.jpg
+../images/index_png8.png
+../images/index_png24.png
+../images/page_png24.png
+../images/poster_bg_banner.jpg
+../images/poster_bg_txt.jpg
+../images/poster_bg_2.jpg
+../images/poster_repeat_bg.jpg
+../images/share_tips.png
+../images/watermark.png
+../images/arrow_bg.png
+../css/style.css
+
+NETWORK:
+*
+ 
+FALLBACK:
