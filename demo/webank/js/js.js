@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	
 	/*翻页标识*/
-	var page_index=5;//当前在哪个页面
+	var page_index=1;//当前在哪个页面
 	var subpage_index=9;//总共有多少页面
 	var sub_page_index=1;//当前在哪个子页
 	
