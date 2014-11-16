@@ -408,16 +408,16 @@ body{ background:#1f54a4;}
 .wrap_after{ -webkit-transform:translate(100%,0); opacity:0; z-index:1;}
 .wrap_before{ -webkit-transform:translate(-100%,0); opacity:0; z-index:1;}
 
-.index_2 .con_wrap_1{ background:url(../data/tete_2.jpg) no-repeat 0 0; background-size:100% 100%;}
-.index_2 .con_wrap_2{ background:url(../data/tete_3.jpg) no-repeat 0 0; background-size:100% 100%;}
-.index_2 .con_wrap_3{ background:url(../data/tete_4.jpg) no-repeat 0 0; background-size:100% 100%;}
-.index_2 .paper_wrap{ display:block; height:115px; width:174px; position:absolute; left:17px; top:12px;}
-.index_2 .paper_wrap .paper_show{ display:block; height:105px; width:165px; position:absolute; left:6px; top:5px; z-index:1; overflow:hidden;}
-.index_2 .paper_wrap .paper{ display:block; height:105px; width:165px; background:url(../data/tete_1_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:-110px;}
-.index_2 .paper_wrap .hole{ display:block; height:12px; width:174px; background:url(../data/tete_hole.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px;}
-.index_2 .paper_wrap .paper_1{ background-image:url(../data/tete_1_1.png);}
-.index_2 .paper_wrap .paper_2{ background-image:url(../data/tete_2_1.png);}
-.index_2 .paper_wrap .paper_3{ background-image:url(../data/tete_3_1.png);}
+.test_2 .con_wrap_1{ background:url(../data/tete_2.jpg) no-repeat 0 0; background-size:100% 100%;}
+.test_2 .con_wrap_2{ background:url(../data/tete_3.jpg) no-repeat 0 0; background-size:100% 100%;}
+.test_2 .con_wrap_3{ background:url(../data/tete_4.jpg) no-repeat 0 0; background-size:100% 100%;}
+.test_2 .paper_wrap{ display:block; height:115px; width:174px; position:absolute; left:17px; top:12px;}
+.test_2 .paper_wrap .paper_show{ display:block; height:105px; width:165px; position:absolute; left:6px; top:5px; z-index:1; overflow:hidden;}
+.test_2 .paper_wrap .paper{ display:block; height:105px; width:165px; background:url(../data/tete_1_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:-110px;}
+.test_2 .paper_wrap .hole{ display:block; height:12px; width:174px; background:url(../data/tete_hole.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px;}
+.test_2 .paper_wrap .paper_1{ background-image:url(../data/tete_1_1.png);}
+.test_2 .paper_wrap .paper_2{ background-image:url(../data/tete_2_1.png);}
+.test_2 .paper_wrap .paper_3{ background-image:url(../data/tete_3_1.png);}
 .wrap_show .paper_wrap .paper{ -webkit-animation:a_paper 0.5s 0.3s linear both;}
 
 @-webkit-keyframes a_paper{
