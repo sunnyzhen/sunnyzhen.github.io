@@ -50,40 +50,30 @@ $(document).ready(function(){
 		 },
 		 wipeUp: function() { 
 			
-			if(page_index==1){
-				$(".cover_wrap").addClass("wrap_hide");
-				$(".con_wrap_1").addClass("wrap_show");
-				
-				var timer=setTimeout(function(){
-					$(".cover_wrap").removeClass("wrap_show");
-					$(".con_wrap_1").removeClass("wrap_prepare");
-					page_index=2;
-					clearTimeout(timer);
-					
-				},300);
+			var str_name_1=".con_wrap_"+(page_index-2);
+			var str_name_2=".con_wrap_"+(page_index-1);
+			
+			if(page_index==2){
+				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
+				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
+				page_index=1;
 			}
-			else if(page_index>1&&page_index<subpage_index){
-				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
-				$(".con_wrap_"+page_index).addClass("wrap_show");
+			else if(page_index>2&&page_index<=subpage_index){
+				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
+				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
 				
-				var str_name_1=".con_wrap_"+(page_index-1);
-				var str_name_2=".con_wrap_"+page_index;
-				
-				page_index+=1;
-				
-				var timer=setTimeout(function(){
-					$(str_name_1).removeClass("wrap_show");
-					$(str_name_2).removeClass("wrap_prepare");
-					
-					ResetWrapState();
-					clearTimeout(timer);
-					
-				},300);
-				
+				page_index-=1;
 			}
 			else{
-					
+				
 			}
+			
+			var timer=setTimeout(function(){
+				
+				ResetWrapState();
+				clearTimeout(timer);
+				
+			},300);
 			
 			sub_page_index=1;
 			
