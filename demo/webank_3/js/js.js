@@ -161,8 +161,8 @@ $(document).ready(function(){
 	
 	//重置状态
 	function ResetWrapState(){
-		$(".details_list .item").removeClass("wrap_before").addClass("wrap_after");
-		$($(".details_list .item")[0]).removeClass("wrap_after");
+		$(".details_list .item").removeClass("wrap_before").addClass("wrap_after").removeClass("current");
+		$($(".details_list .item")[0]).removeClass("wrap_after").addClass("current");
 		
 		$(".info_list li").removeClass("wrap_before").addClass("wrap_after");
 		$($(".info_list li")[0]).removeClass("wrap_after");
