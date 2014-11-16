@@ -10,6 +10,18 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() {
+			
+			if(page_index<4){
+				$("body").css({
+					"background":"#fff"
+				});
+			}
+			else{
+				$("body").css({
+					"background":"#1f54a4"
+				});
+			}
+			
 			if(page_index==1){
 				$(".cover_wrap").addClass("wrap_hide");
 				$(".con_wrap_1").addClass("wrap_show");
@@ -48,6 +60,18 @@ $(document).ready(function(){
 			
 		 },
 		 wipeUp: function() { 
+		 	
+			if(page_index<4){
+				$("body").css({
+					"background":"#fff"
+				});
+			}
+			else{
+				$("body").css({
+					"background":"#1f54a4"
+				});
+			}
+		 
 			var str_name_1=".con_wrap_"+(page_index-2);
 			var str_name_2=".con_wrap_"+(page_index-1);
 			
@@ -65,6 +89,15 @@ $(document).ready(function(){
 			else{
 				
 			}
+			
+			var timer=setTimeout(function(){
+				$(str_name_1).removeClass("wrap_show");
+				$(str_name_2).removeClass("wrap_prepare");
+				
+				ResetWrapState();
+				clearTimeout(timer);
+				
+			},300);
 			
 			sub_page_index=1;
 			
@@ -165,6 +198,17 @@ $(document).ready(function(){
 	
 	$(".hook_up").bind("click",function(){
 		
+		if(page_index<4){
+			$("body").css({
+				"background":"#fff"
+			});
+		}
+		else{
+			$("body").css({
+				"background":"#1f54a4"
+			});
+		}
+		
 		var str_name_1=".con_wrap_"+(page_index-2);
 		var str_name_2=".con_wrap_"+(page_index-1);
 		
@@ -195,6 +239,17 @@ $(document).ready(function(){
 	
 	$(".hook_down").bind("click",function(){
 		
+		if(page_index<4){
+			$("body").css({
+				"background":"#fff"
+			});
+		}
+		else{
+			$("body").css({
+				"background":"#1f54a4"
+			});
+		}
+		
 		if(page_index==1){
 			$(".cover_wrap").addClass("wrap_hide");
 			$(".con_wrap_1").addClass("wrap_show");
@@ -217,7 +272,9 @@ $(document).ready(function(){
 			page_index+=1;
 			
 			var timer=setTimeout(function(){
-			
+				$(str_name_1).removeClass("wrap_show");
+				$(str_name_2).removeClass("wrap_prepare");
+				
 				ResetWrapState();
 				clearTimeout(timer);
 				

@@ -151,8 +151,11 @@ body{ background:#1f54a4;}
 /**/
 
 .con_wrap_1{ background:#1f54a4 url(../data/data_pic/1.jpg) no-repeat center center; background-size:100% 100%;}
+.con_wrap_1 .blur_cover{ display:block; height:100%; width:100%; background:url(../data/data_pic/1_1.jpg) no-repeat 0 0; background-size:100% 100%; position:absolute; left:0px; top:0px; opacity:0;}
 .con_wrap_2{ background:#1f54a4 url(../data/data_pic/2.jpg) no-repeat center center; background-size:100% 100%;}
+.con_wrap_2 .blur_cover{ display:block; height:100%; width:100%; background:url(../data/data_pic/2_1.jpg) no-repeat 0 0; background-size:100% 100%; position:absolute; left:0px; top:0px; opacity:0;}
 .con_wrap_3{ background:#1f54a4 url(../data/data_pic/3.jpg) no-repeat center center; background-size:100% 100%;}
+.con_wrap_3 .blur_cover{ display:block; height:100%; width:100%; background:url(../data/data_pic/3_1.jpg) no-repeat 0 0; background-size:100% 100%; position:absolute; left:0px; top:0px; opacity:0;}
 .con_wrap_4{ background:#1f54a4;}
 .con_wrap_5{ background:#1f54a4;}
 .con_wrap_6{ background:#1f54a4;}
@@ -174,19 +177,23 @@ body{ background:#1f54a4;}
 .index_3 .con_wrap_7{ background:#fff url(../data/con_bg_3_7.jpg) no-repeat center center; background-size:100% 100%;}
 .index_3 .con_wrap_8{ background:#fff url(../data/con_bg_3_8.jpg) no-repeat center bottom; background-size:100% 100%;}
 
-.phone_wrap{ display:block; height:430px; width:174px; background:url(../data/data_pic/hand_bg.png) no-repeat 0 0; background-size:contain; position:absolute; bottom:-42px; right:0px; }
-.phone_wrap .phone_bg{ display:block; height:180px; width:100px; background:url(../images/cover_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:90px; top:118px; opacity:0;}
-.phone_wrap .phone_logo{display:block; height:18px; width:90px; background:url(../data/data_pic/phone_logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:75px; top:165px;}
+.phone_wrap{ display:block; height:430px; width:174px; background:url(../data/data_pic/hand_bg.png) no-repeat 0 0; background-size:contain; position:absolute; bottom:-42px; right:0px; z-index:1;}
+.phone_wrap .phone_bg{ display:block; height:180px; width:100px; background:url(../images/cover_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:77px; top:94px; opacity:0;-webkit-transform:rotate(-6deg);}
+.phone_wrap .phone_logo{display:block; height:18px; width:90px; background:url(../data/data_pic/phone_logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:69px; top:150px;-webkit-transform:rotate(-7deg);}
 .phone_wrap .phone_logo .phone_penguin{display:block; height:15px; width:13px; background:url(../images/penguin_logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:50px; top:3px;}
-.phone_wrap .phone_slogan_show{ display:block; height:86px; width:187px; position:absolute; left:-136px; top:133px; overflow:hidden;}
-.phone_wrap .phone_slogan_show .phone_slogan{ display:block; height:84px; width:185px; border:1px solid rgba(255,255,255,0.8); background:rgba(255,255,255,0.6); position:absolute; left:20px; top:0; opacity:0; -webkit-transform:translate(185px,0);}
-.phone_wrap .phone_slogan_show .phone_slogan .txt{ font-size:24px; font-family:'microsoft yahei'; color:#333; font-weight:normal; margin:5px 15px;}
+.phone_wrap .phone_slogan_show{ display:block; height:86px; width:190px; position:absolute; left:-130px; top:133px; overflow:hidden;}
+.phone_wrap .phone_slogan_show .phone_slogan{ display:block; height:84px; width:185px; border:1px solid rgba(255,255,255,0.8); background:rgba(255,255,255,0.6); position:absolute; left:20px; top:0; opacity:0; -webkit-transform:translate(185px,0); border-radius: 3px 0 0 3px;}
+.phone_wrap .phone_slogan_show .phone_slogan .txt{ display:block; height:64px; width:129px; background:url(../data/data_pic/wording_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:21px; top:10px; text-indent:-9999px; overflow: hidden;}
+.phone_wrap .phone_slogan_show .phone_slogan .txt_2{ background-image:url(../data/data_pic/wording_2.png);}
+.phone_wrap .phone_slogan_show .phone_slogan .txt_3{ background-image:url(../data/data_pic/wording_3.png);}
+.border_hook{ display:block; height:84px; width:11px; background:#1a51a3; position:absolute; left:0px; top:0px; border-radius: 3px 0 0 3px;}
 
 .wrap_show .phone_wrap{ -webkit-transform:rotate(40deg) translate(130px,40px); -webkit-animation:a_phone_wrap 0.25s 0.3s ease both; -webkit-transform-origin:100% 100%;}
 .wrap_show .phone_wrap .phone_bg{ -webkit-animation:a_phone_bg 0.3s 0.55s ease both; }
 .wrap_show .phone_wrap .phone_logo{ -webkit-animation:a_phone_bg 0.3s 0.85s ease both; }
 .wrap_show .phone_wrap .phone_logo .phone_penguin{ -webkit-animation:a_phone_penguin 0.4s 1.15s ease both; }
 .wrap_show .phone_wrap .phone_slogan{ -webkit-animation:a_phone_slogan 0.3s 1.55s ease both;}
+.wrap_show .blur_cover{-webkit-animation:a_blur_cover 0.3s 0.3s linear both;}
 
 @-webkit-keyframes a_phone_wrap{
 	0%{ -webkit-transform:rotate(40deg) translate(130px,40px);}
@@ -197,6 +204,11 @@ body{ background:#1f54a4;}
 }
 
 @-webkit-keyframes a_phone_bg{
+	0%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+@-webkit-keyframes a_blur_cover{
 	0%{ opacity:0;}
 	100%{ opacity:1;}
 }
@@ -409,7 +421,7 @@ body{ background:#1f54a4;}
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
 	.arrow_up{ bottom:20px;}
-	.phone_wrap{ bottom:0px;}
+	.phone_wrap{ bottom:-17px;}
 	.phone_wrap .phone_slogan_show .phone_slogan{ left:0px;}
 	.info_list li .info_title{ margin:20px 0 5px 15px; font-size:24px; height:67px;}
 	.info_list li .info_title .title_bg{ top:0px;}
