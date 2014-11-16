@@ -411,8 +411,10 @@ body{ background:#1f54a4;}
 .index_2 .con_wrap_1{ background:url(../data/tete_2.jpg) no-repeat 0 0; background-size:100% 100%;}
 .index_2 .con_wrap_2{ background:url(../data/tete_3.jpg) no-repeat 0 0; background-size:100% 100%;}
 .index_2 .con_wrap_3{ background:url(../data/tete_4.jpg) no-repeat 0 0; background-size:100% 100%;}
-.index_2 .paper_wrap{ display:block; height:105px; width:165px; position:absolute; left:23px; top:17px; overflow:hidden;}
-.index_2 .paper_wrap .paper{ display:block; height:105px; width:165px; background:url(../data/tete_1_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:-105px;}
+.index_2 .paper_wrap{ display:block; height:115px; width:174px; position:absolute; left:17px; top:12px;}
+.index_2 .paper_wrap .paper_show{ display:block; height:105px; width:165px; position:absolute; left:6px; top:5px; z-index:1; overflow:hidden;}
+.index_2 .paper_wrap .paper{ display:block; height:105px; width:165px; background:url(../data/tete_1_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:-110px;}
+.index_2 .paper_wrap .hole{ display:block; height:12px; width:174px; background:url(../data/tete_hole.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px;}
 .index_2 .paper_wrap .paper_1{ background-image:url(../data/tete_1_1.png);}
 .index_2 .paper_wrap .paper_2{ background-image:url(../data/tete_2_1.png);}
 .index_2 .paper_wrap .paper_3{ background-image:url(../data/tete_3_1.png);}
@@ -420,7 +422,7 @@ body{ background:#1f54a4;}
 
 @-webkit-keyframes a_paper{
 	0%{ -webkit-transform:translate(0,0);}
-	100%{ -webkit-transform:translate(0,105px);}
+	100%{ -webkit-transform:translate(0,110px);}
 }
 
 /**/
@@ -461,7 +463,6 @@ body{ background:#1f54a4;}
 	.open_door_area{ top:58px;}
 	.contact_area{ top:292px;}
 	.penguin_dialog{ top:31px;}
-	.index_2 .paper_wrap{ top:20px;}
 }
 
 
