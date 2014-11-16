@@ -103,7 +103,7 @@ body{ background:#fff;}
 .open_door_area .penguin .eye{ display:block; height:7px; width:7px; background:url(../images/penguin_eye.png) no-repeat 0 0; background-size:contain; position:absolute; left:7px; top:21px;}
 .open_door_area .penguin .hand{ display:block; height:14px; width:5px; background:url(../images/penguin_hand.png) no-repeat 0 0; background-size:contain; position:absolute; left:8px; top:48px; -webkit-transform-origin:0% 0%;}
 .open_door_area .door{ display:block; height:148px; width:62px; background:#fff; position:absolute; right:0px; top:0px; -webkit-transform-origin:100% 50%; z-index:1; }
-.join_title_bg{ display:block; height:162px; width:115px; background:url(../images/join_title_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-132px; top:222px; -webkit-transform:translate(100px,0); opacity:0;}
+.join_title_bg{ display:block; height:162px; width:115px; background:url(../images/join_title_bg.jpg) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-132px; top:215px; -webkit-transform:translate(100px,0); opacity:0;}
 
 .current .open_door_area .door{ -webkit-animation:a_door 0.3s 0.3s linear both;}
 .current .open_door_area .penguin{ -webkit-animation:a_door_penguin 0.2s 0.6s ease both;}
@@ -339,7 +339,7 @@ body{ background:#fff;}
 }
 
 .join_title{ display:block; height:96px; width:129px; background:url(../images/title_4.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:222px; margin-left:-64px; text-indent:-9999px; overflow:hidden; z-index:2;}
-.join_us{ display:block; height:40px; width:100%; text-align:center; font-size:14px; font-family:'microsoft yahei'; position:absolute; left:0px; bottom:40px; color:#fff; z-index:2;}
+.join_us{ display:block; height:40px; width:100%; text-align:center; font-size:14px; font-family:'microsoft yahei'; position:absolute; left:0px; top:335px; color:#fff; z-index:2;}
 .link_emiail{color:#333;}
 .link_emiail:hover{ text-decoration:none;}
 
@@ -481,13 +481,14 @@ body{ background:#fff;}
 	.event_wrap .event_title{ top:57px;}
 	.event_area{ top:84px;}
 	.join_title{ top:285px;}
-	.join_title_bg{ top:285px; }
+	.join_title_bg{ top:280px; }
 	.open_door_area{ top:58px;}
 	.contact_area{ top:292px;}
 	.penguin_dialog{ top:31px;}
 	.details_title{ bottom:68px;}
 	.icon_list{ top:45px;}
 	.details_bg{ top:63px;}
+	.join_us{top:400px;}
 }
 
 
