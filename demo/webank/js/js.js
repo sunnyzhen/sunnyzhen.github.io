@@ -71,7 +71,7 @@ $(document).ready(function(){
 					"background":"#1f54a4"
 				});
 			}
-		 
+			
 			var str_name_1=".con_wrap_"+(page_index-2);
 			var str_name_2=".con_wrap_"+(page_index-1);
 			
@@ -91,8 +91,6 @@ $(document).ready(function(){
 			}
 			
 			var timer=setTimeout(function(){
-				$(str_name_1).removeClass("wrap_show");
-				$(str_name_2).removeClass("wrap_prepare");
 				
 				ResetWrapState();
 				clearTimeout(timer);
