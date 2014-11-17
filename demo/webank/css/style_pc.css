@@ -16,6 +16,8 @@ legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
 
+
+body,html{ display:block; height:100%; width:100%; overflow:hidden;}
 body{ background:#363737;}
 .wrap{ background:url(../images_pc/bg.png) repeat 0 0;}
 
@@ -47,15 +49,23 @@ body{ background:#363737;}
 
 
 
+.wrap_1{ display:block; height:100%; width:100%; background:url(../images_pc/bg_1.jpg) no-repeat center 0; background-size: cover;}
+.wrap_body{ width:1000px; display:block; height:1104px; margin:0px auto; background:url(../images_pc/bg_main.png) no-repeat 0 0; position:relative;}
+.qr_code_area{ display:block; height:225px; width:225px; position:absolute; left:48px; top:397px;}
+.qr_code_img{ display:block; height:225px; width:225px; position:absolute; left:0; top:0;}
+.qr_code_area .cover{ display:block; background:url(../images_pc/qr_code_cover.png) no-repeat 0 0; background-size:contain; height:60px; width:60px; position:absolute; left:82px; top:82px;}
 
+.wrap_2{ display:block; height:100%; width:100%; background:url(../images_pc/bg_2.jpg) no-repeat center 0; background-size: cover;}
+.wrap_body_2{ width:1000px; display:block; height:1104px; margin:0px auto; background:url(../images_pc/bg_main_2.png) no-repeat 0 0; position:relative;}
+.wrap_body_2 .qr_code_area{ display:block; height:272px; width:272px; position:absolute; left:21px; top:303px;}
+.wrap_body_2 .qr_code_img{ display:block; height:272px; width:272px; position:absolute; left:0; top:0;}
+.wrap_body_2 .qr_code_area .cover{ display:block; background:url(../images_pc/qr_code_cover.png) no-repeat 0 0; background-size:contain; height:74px; width:74px; position:absolute; left:99px; top:99px;}
 
-
-
-
-
-
-
-
+.wrap_3{ display:block; height:100%; width:100%; background:url(../images_pc/bg_3.jpg) no-repeat center 0; background-size: cover;}
+.wrap_body_3{ width:1000px; display:block; height:1104px; margin:0px auto; background:url(../images_pc/bg_main_3.png) no-repeat 0 0; position:relative;}
+.wrap_body_3 .qr_code_area{ display:block; height:308px; width:308px; position:absolute; left:345px; top:271px;}
+.wrap_body_3 .qr_code_img{ display:block; height:308px; width:308px; position:absolute; left:0; top:0;}
+.wrap_body_3 .qr_code_area .cover{ display:block; background:url(../images_pc/qr_code_cover.png) no-repeat 0 0; background-size:contain; height:83px; width:83px; position:absolute; left:113px; top:113px;}
 
 
 
