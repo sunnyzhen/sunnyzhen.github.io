@@ -422,6 +422,8 @@ body{ background:#1f54a4;}
 .news_after{ -webkit-transform:translate(0,100%); opacity:0; z-index:1;}
 .news_before{ -webkit-transform:translate(0,-100%); opacity:0; z-index:1;}
 
+.links { display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:1;}
+
 /**/
 
 /**/
