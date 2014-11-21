@@ -347,7 +347,7 @@ body{
 	100%{ -webkit-transform:translate(0,0);}
 }*/
 
-.icon_area{ display:block; height:32px; width:32px;  position:absolute; left:146px; top:200px; -moz-transition:left 0.5s linear,top 0.5s linear;}
+.icon_area{ display:block; height:32px; width:32px;  position:absolute; left:146px; top:200px; -moz-transition:left 0.5s linear,top 0.5s linear; -webkit-transition:left 0.5s linear,top 0.5s linear; transition:left 0.5s linear,top 0.5s linear;}
 .icon_area span.icon{ -webkit-transition:height 0.25s linear,width 0.25s linear,opacity 0.25s linear; -moz-transition:height 0.25s linear,width 0.25s linear,opacity 0.25s linear; transition:height 0.25s linear,width 0.25s linear,opacity 0.25s linear;}
 .icon_area span.icon_1{ position:absolute; left:0; top:0px; display:block; height:32px; width:32px;}
 .icon_area span.icon_1 .txt{ color:#80add5; font-family:'microsoft yahei'; font-size:14px; position:absolute; width:50px;}
@@ -365,14 +365,6 @@ body{
 .icon_area i.icon_3{ position:absolute; left:-6px; bottom:-6px; display:block; height:13px; width:13px; background:url(../images/index/icon/icon_3.png) no-repeat 0 0; z-index:1;}
 .icon_area i.icon_4{ position:absolute; right:-10px; top:-10px; display:block; height:19px; width:19px; background:url(../images/index/icon/icon_4.png) no-repeat 0 0; z-index:1;}
 .icon_area i.icon_5{ position:absolute; right:-10px; bottom:-10px; display:block; height:19px; width:19px; background:url(../images/index/icon/icon_5.png) no-repeat 0 0; z-index:1;}
-
-@-moz-keyframes a_icon_area{
-	0%{ -moz-transform:translate(0,0);}
-	25%{ -moz-transform:translate(4px,2px);}
-	50%{ -moz-transform:translate(-2px,-2px);}
-	75%{ -moz-transform:translate(2px,4px);}
-	100%{ -moz-transform:translate(0,0);}
-}
 
 @-webkit-keyframes a_icon_area{
 	0%{ -webkit-transform:translate(0,0);}
