@@ -4,9 +4,14 @@
 $(document).ready(function(){
 	var window_h=$(window).height();
 	var window_w=$(window).width();
-	$(".mod_con").css({
-		"margin-bottom":window_h-$(".mod_con").height()+"px"
-	});
+	if(window_w<=750){
+		$(".mod_con").css({
+			"margin-bottom":window_h-$(".mod_con").height()-20+"px"
+		});
+		$(".animation_box_1").css({
+			"margin-right":window_w-310+"px"
+		});
+	}
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
@@ -142,6 +147,65 @@ $(document).ready(function(){
 	BindMenuItem();
 	
 	
+	$(".hook_right").bind("click",function(){
+		
+		alert("left");
+		if(y==0){
+			$("#link_"+i+" .animation_area").css({
+				"margin-left": -1*(window_w-10)+"px"
+			});
+			//$("#link_"+i+" .animation_area").addClass("swipeLeft");
+			y=1;
+		}
+	});
+	
+	$(".hook_left").bind("click",function(){
+		alert("right");
+		if(y==1){
+			$("#link_"+i+" .animation_area").css({
+				"margin-left": "0px"
+			});
+			//$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+			y=0;
+		} 
+	});
+	
+	$(".hook_up").bind("click",function(){
+		alert("down");
+		for(var j=1;j<15;j++){
+			if(j==i){
+				$(".content_wrap").css({
+					"margin-top":"-"+window_h*(i-2)+"px"
+				});
+			}
+		}
+		
+		if(y==1){
+			$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+			y=0;
+		} 
+		
+		i--;
+	});
+	
+	$(".hook_down").bind("click",function(){
+		
+		alert("up");
+		for(var j=1;j<15;j++){
+			if(j==i){
+				$(".content_wrap").css({
+					"margin-top":"-"+window_h*i+"px"
+				});
+			}
+		}
+		
+		if(y==1){
+			$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+			y=0;
+		}
+		 
+		i++;
+	});
 
 	
 	/*微信转发图片*/
