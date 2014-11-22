@@ -143,7 +143,10 @@ $(document).ready(function(){
 				});
 				
 				if(y==1){
-					$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+					$("#link_"+i+" .animation_area").css({
+						"margin-left": "0px"
+					});
+					//$("#link_"+i+" .animation_area").removeClass("swipeLeft");
 					y=0;
 				}
 				
@@ -155,8 +158,9 @@ $(document).ready(function(){
 		
 	}
 	
-	BindMenuItem();
-	
+	if(window_w<=375){//小于ip6
+		BindMenuItem();
+	}
 	
 	$(".hook_right").bind("click",function(){
 		
