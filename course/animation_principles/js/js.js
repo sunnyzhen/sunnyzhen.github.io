@@ -4,6 +4,9 @@
 $(document).ready(function(){
 	var window_h=$(window).height();
 	var window_w=$(window).width();
+	$(".mod_con").css({
+		"margin-bottom":window_h-$(".mod_con").height()+"px"
+	});
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
