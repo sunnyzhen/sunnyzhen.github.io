@@ -4,7 +4,8 @@
 $(document).ready(function(){
 	var window_h=$(window).height();
 	var window_w=$(window).width();
-	if(window_w<=750){
+	console.log(window_w);
+	if(window_w<=375){
 		$(".mod_con").css({
 			"margin-bottom":window_h-$(".mod_con").height()-20+"px"
 		});
