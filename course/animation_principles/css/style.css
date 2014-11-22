@@ -38,7 +38,7 @@ body{ background:#e0e0e0; font-size:12px; color:#333;}
 .mod_con .subtitle{ font-size:16px; font-weight:normal; font-family:'microsoft yahei'; margin-bottom:20px; clear:both;}
 
 /* moz */
-.animation_con{ clear:both;}
+.animation_con{ clear:both; width:200%;}
 
 .animation_box{ display:block; height:300px; width:300px; background:rgba(0,0,0,0.5); float:left; margin-right:50px; overflow:hidden; position:relative;}
 .demo_ball{ display:block; height:30px; width:30px; background:#fff; box-shadow:0px 0px 3px rgba(0,0,0,0.3); border-radius:15px;}
