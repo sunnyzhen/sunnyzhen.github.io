@@ -53,7 +53,10 @@ $(document).ready(function(){
 		 wipeLeft: function() { 
 		 
 		 	if(y==0){
-				$("#link_"+i+" .animation_area").addClass("swipeLeft");
+				$("#link_"+i+" .animation_area").css({
+					"margin-left": -1*(window_w-10)+"px"
+				});
+				//$("#link_"+i+" .animation_area").addClass("swipeLeft");
 				y=1;
 			}
 
@@ -61,7 +64,10 @@ $(document).ready(function(){
 		 wipeRight: function() {
 			 
 			if(y==1){
-				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+				$("#link_"+i+" .animation_area").css({
+					"margin-left": "0px"
+				});
+				//$("#link_"+i+" .animation_area").removeClass("swipeLeft");
 				y=0;
 			} 
 			
@@ -77,7 +83,9 @@ $(document).ready(function(){
 			}
 			
 			if(y==1){
-				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+				$("#link_"+i+" .animation_area").css({
+					"margin-left": "0px"
+				});
 				y=0;
 			} 
 			
@@ -94,8 +102,10 @@ $(document).ready(function(){
 				}
 			}
 			
-		 	if(y==1){
-				$("#link_"+i+" .animation_area").removeClass("swipeLeft");
+			if(y==1){
+				$("#link_"+i+" .animation_area").css({
+					"margin-left": "0px"
+				});
 				y=0;
 			}
 			 
