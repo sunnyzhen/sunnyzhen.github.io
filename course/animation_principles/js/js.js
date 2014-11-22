@@ -2,7 +2,8 @@
 
 
 $(document).ready(function(){
-	
+	var window_h=$(window).height();
+	var window_w=$(window).width();
 	//var address=window.location;
 	//window.location=address+"#link_2";
 	
@@ -61,7 +62,7 @@ $(document).ready(function(){
 			for(var j=1;j<15;j++){
 				if(j==i){
 					$(".content_wrap").css({
-						"margin-top":"-"+416*(i-2)+"px"
+						"margin-top":"-"+window_h*(i-2)+"px"
 					});
 				}
 			}
@@ -79,7 +80,7 @@ $(document).ready(function(){
 			for(var j=1;j<15;j++){
 				if(j==i){
 					$(".content_wrap").css({
-						"margin-top":"-"+416*i+"px"
+						"margin-top":"-"+window_h*i+"px"
 					});
 				}
 			}
@@ -119,7 +120,7 @@ $(document).ready(function(){
 			
 			$(menu_list[x]).bind("touchstart",function(event){
 				$(".content_wrap").css({
-					"margin-top":"-"+416*$(this).data("num")+"px"
+					"margin-top":"-"+window_h*$(this).data("num")+"px"
 				});
 				
 				if(y==1){
