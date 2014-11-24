@@ -9,7 +9,7 @@
 
 <body>
 <div class="wrap">
-	<div class="scan_wrap">
+	<div class="scan_wrap hover">
     	<div class="circle_box">
         	<div class="hand">
                 <i class="hand_1"></i>
@@ -23,26 +23,6 @@
     </div>
 </div>
 
-<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
-<script language="javascript" type="text/javascript">
-
-$(document).ready(function(){
-	$("body").bind("touchstart", function(event){
-		if($(".scan_wrap").hasClass("hover")){
-			$(".scan_wrap").removeClass("hover");
-		}
-		else{
-			$(".scan_wrap").addClass("hover");
-		}
-		
-		$("body").bind("touchend", function(event){
-			$(".scan_wrap").removeClass("hover");
-		});
-		
-	});
-});
-
-</script>
 
 </body>
 </html>

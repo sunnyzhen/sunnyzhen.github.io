@@ -2,8 +2,8 @@
 
 *{ margin:0px; padding:0px;}
 .scan_wrap{ display:block; height:149px; width:155px; position: relative; background:#b72928;}
-.scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:70px; overflow:hidden; background:#ff8800; margin-left:9px; position:relative; z-index:1; pointer-events: none;}
-.scan_wrap .flag_box{ display:block; height:39px; width:155px; background: url(../img/sprite_bg.png) no-repeat 0 0; position:absolute; left:0px; top:110px; z-index:3; pointer-events: none;}
+.scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:70px; overflow:hidden; background:#ff8800; margin-left:9px; position:relative; z-index:1;}
+.scan_wrap .flag_box{ display:block; height:39px; width:155px; background: url(../img/sprite_bg.png) no-repeat 0 0; position:absolute; left:0px; top:110px; z-index:3;}
 .scan_wrap .flag_box .flag_name{ display:none;}
 .hand{ display:block; height:105px; width:117px; background:url(../img/sprite_bg.png) no-repeat 0 -44px; position:absolute; left:0px; top:23px; }
 .hand .hand_1{ display:block; height:49px; width:10px; background:url(../img/sprite_bg.png) no-repeat -140px -44px; position:absolute; left:51px; top:16px; z-index:2; overflow:hidden;}
