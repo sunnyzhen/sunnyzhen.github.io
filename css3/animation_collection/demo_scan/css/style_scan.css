@@ -5,7 +5,7 @@
 .scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:70px; overflow:hidden; background:#ff8800; margin-left:9px; position:relative; z-index:1;}
 .scan_wrap .flag_box{ display:block; height:39px; width:155px; background: url(../img/sprite_bg.png) no-repeat 0 0; position:absolute; left:0px; top:110px; z-index:3;}
 .scan_wrap .flag_box .flag_name{ display:none;}
-.hand{ display:block; height:105px; width:117px; background:url(../img/sprite_bg.png) no-repeat 0 -44px;/* position:absolute; left:0px; */margin-top:23px; position:relative;}
+.hand{ display:block; height:105px; width:117px; background:url(../img/sprite_bg.png) no-repeat 0 -44px; position:absolute; left:0px; top:23px;}
 .hand .hand_1{ display:block; height:49px; width:10px; background:url(../img/sprite_bg.png) no-repeat -140px -44px; position:absolute; left:51px; top:16px; z-index:2; overflow:hidden;}
 .hand .hand_2{ display:block; height:44px; width:13px;  background:url(../img/sprite_bg.png) no-repeat -122px -46px; position:absolute; left:75px; top:21px; z-index:2; overflow:hidden;}
 .hand .scan_line{ display:block; height:1px; width:35px; background:-moz-linear-gradient(left,rgba(180,245,105,0) 0%,rgba(180,245,105,1) 40%,rgba(180,245,105,1) 60%,rgba(180,245,105,0) 100%); position:absolute; left:52px; top:7px; box-shadow:0 0 3px rgba(180,245,105,1),0 0 1px rgba(180,245,105,0.6); opacity:0;}
@@ -36,16 +36,8 @@
 .hand .scan_line{background:-webkit-linear-gradient(left,rgba(180,245,105,0) 0%,rgba(180,245,105,1) 40%,rgba(180,245,105,1) 60%,rgba(180,245,105,0) 100%);}
 .scan_wrap:hover .hand,.hover .hand{-webkit-animation:a_hand 2s linear infinite;}
 .scan_wrap:hover .scan_line,.hover .scan_line{ -webkit-animation:a_scanline 2.5s linear infinite;}
-/*修复手机上 有隐藏，但不是圆形隐藏，而是方形隐藏bug*/
-.scan_wrap:hover .circle_box,.hover .circle_box{ -webkit-animation:a_circle_box 2.5s linear infinite;}
 
-@-webkit-keyframes a_circle_box{
-	0%{-webkit-transform: translate(0,0); opacity:1;}
-	100%{-webkit-transform: translate(0,5px); opacity:1;}
-}
-/* up */
-
-@-webkit-keyframes a_hand{
+@-webkit-keyframes a_hand1{
 	0%{-webkit-transform: translate(0,0);}
 	12.5%{-webkit-transform: translate(2px,1px);}
 	25%{-webkit-transform: translate(5px,4px);}
@@ -55,6 +47,18 @@
 	75%{-webkit-transform: translate(-5px,4px);}
 	87.5%{-webkit-transform: translate(-2px,1px);}
 	100%{-webkit-transform: translate(0,0);}
+}
+
+@-webkit-keyframes a_hand{
+	0%{left:0px; top:23px;}
+	12.5%{left:2px; top:24px;}
+	25%{left:5px; top:27px;}
+	37.5%{left:2px; top:30px;}
+	50%{left:0px; top:31px;}
+	62.5%{left:-2px; top:30px;}
+	75%{left:-5px; top:27px;}
+	87.5%{left:-2px; top:24px;}
+	100%{left:0px; top:23px;}
 }
 
 @-webkit-keyframes a_scanline{
