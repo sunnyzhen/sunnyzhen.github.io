@@ -2,7 +2,9 @@
 
 *{ margin:0px; padding:0px;}
 .scan_wrap{ display:block; height:149px; width:155px; position: relative; background:#b72928;}
-.scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:70px; overflow:hidden; background:#ff8800; margin-left:9px; position:relative; z-index:1;}
+.scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:140px; overflow:hidden; background:#ff8800; margin-left:9px;}
+
+.hand_show{display:block; height:140px; width:140px; border-radius:140px; overflow:hidden; position:relative; z-index:1;}
 .scan_wrap .flag_box{ display:block; height:39px; width:155px; background: url(../img/sprite_bg.png) no-repeat 0 0; position:absolute; left:0px; top:110px; z-index:3;}
 .scan_wrap .flag_box .flag_name{ display:none;}
 .hand{ display:block; height:105px; width:117px; background:url(../img/sprite_bg.png) no-repeat 0 -44px;/* position:absolute; left:0px; */margin-top:23px; position:relative;}
@@ -35,7 +37,7 @@
 /*webkit*/
 .hand .scan_line{background:-webkit-linear-gradient(left,rgba(180,245,105,0) 0%,rgba(180,245,105,1) 40%,rgba(180,245,105,1) 60%,rgba(180,245,105,0) 100%);}
 .scan_wrap:hover .hand,.hover .hand{-webkit-animation:a_hand 2s linear infinite;}
-/*.scan_wrap:hover .scan_line,.hover .scan_line{ -webkit-animation:a_scanline 2.5s linear infinite;}*/
+.scan_wrap:hover .scan_line,.hover .scan_line{ -webkit-animation:a_scanline 2.5s linear infinite;}
 
 
 @-webkit-keyframes a_hand{
