@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 *{ margin:0px; padding:0px;}
+.wrap{ margin-bottom:10px;}
 .scan_wrap{ display:block; height:149px; width:155px; position: relative; background:#b72928;}
 .scan_wrap .circle_box{ display:block; height:140px; width:140px; border-radius:70px; overflow:hidden; background:#ff8800; margin-left:9px; position:relative; z-index:1;}
 .scan_wrap .flag_box{ display:block; height:39px; width:155px; background: url(../img/sprite_bg.png) no-repeat 0 0; position:absolute; left:0px; top:110px; z-index:3;}
@@ -36,8 +37,11 @@
 .hand .scan_line{background:-webkit-linear-gradient(left,rgba(180,245,105,0) 0%,rgba(180,245,105,1) 40%,rgba(180,245,105,1) 60%,rgba(180,245,105,0) 100%);}
 .scan_wrap:hover .hand,.hover .hand{-webkit-animation:a_hand 2s linear infinite;}
 .scan_wrap:hover .scan_line,.hover .scan_line{ -webkit-animation:a_scanline 2.5s linear infinite;}
+.wrap_bug .scan_wrap:hover .hand,.wrap_bug .hover .hand{-webkit-animation:a_hand_bug 2s linear infinite;}
 
-@-webkit-keyframes a_hand1{
+/*
+animation 中transform 动画，在手机上，会出先父元素circle_box overflow hidden为方形hidden 不会有圆角hidden，当时静态不执行动画时，样式正常*/
+@-webkit-keyframes a_hand_bug{
 	0%{-webkit-transform: translate(0,0);}
 	12.5%{-webkit-transform: translate(2px,1px);}
 	25%{-webkit-transform: translate(5px,4px);}
