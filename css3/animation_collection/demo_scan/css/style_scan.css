@@ -41,7 +41,7 @@
 
 @-webkit-keyframes a_circle_box{
 	0%{-webkit-transform: translate(0,0); opacity:1;}
-	100%{-webkit-transform: translate(0,0); opacity:1;}
+	100%{-webkit-transform: translate(0,5px); opacity:1;}
 }
 /* up */
 
