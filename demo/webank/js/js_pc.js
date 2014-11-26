@@ -74,21 +74,25 @@ $(document).ready(function(){
 			//背景缩放、偏移
 			if(num>=scroll_length){
 				$(".phone_wrap").css({
-					"-moz-transform": " translate(0,0) scale(1)"
+					"-moz-transform": " translate(0,0) scale(1)",
+					"-webkit-transform": " translate(0,0) scale(1)"
 				});
 			}else{
 				$(".phone_wrap").css({
-					"-moz-transform": " translate(0,-"+(scroll_length-num)*1.6+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")"
+					"-moz-transform": " translate(0,-"+(scroll_length-num)*1.55+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")",
+					"-webkit-transform": " translate(0,-"+(scroll_length-num)*1.55+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")"
 				});
 			}
 			
 			if(num>=scroll_length){ //二维码悬浮
 				$(".qr_code_wrap").css({
-					"-moz-transform": " translate(0,0)"
+					"-moz-transform": " translate(0,0)",
+					"-webkit-transform": " translate(0,0)"
 				});
 			}else{
 				$(".qr_code_wrap").css({
-					"-moz-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)" //1.7=600-35()
+					"-moz-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)", //1.7=600-35()
+					"-webkit-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)" 
 				});
 				
 			}
