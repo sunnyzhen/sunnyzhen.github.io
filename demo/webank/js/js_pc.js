@@ -123,7 +123,7 @@ $(document).ready(function(){
 			
 			var x_s=536;
 			var y_s=1040;
-			var param_b=(window_w+x_s)/y_s-1;
+			var param_b=(window_w+x_s)/y_s-0.95;
 			
 			var x_qr=1386000;
 			var y_qr=1080;

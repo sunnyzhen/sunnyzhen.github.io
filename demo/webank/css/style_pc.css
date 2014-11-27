@@ -80,12 +80,12 @@ body,html{ display:block; height:100%; width:100%;}
 .company_detail .txt{ display:block; height:23px; width:575px; font-size:16px; font-family:'microsoft yahei'; color:#666; margin:0px auto 115px;}
 
 .ocupy_area{ position:relative; display:block; height:547px; width:1118px; margin:0 auto 90px;}
-.phone_wrap{ display:block; height:547px; width:1118px; background:url(../images_pc/phone_bg.png) no-repeat 0 0; background-size:100% 100%;/* -moz-transition:-moz-transform 0.1s linear;*/}
+.phone_wrap{ display:block; height:547px; width:1118px; background:url(../images_pc/phone_bg.png) no-repeat 0 0; background-size:100% 100%; -moz-transition:-moz-transform 0.1s linear; -webkit-transition:-webkit-transform 0.2s linear;}
 
 .phone_screen{ display:block; height:488px; width:863px; position:absolute; left:123px; top:30px;}
 .sea_bg{ display:block; height:100%; width:100%; position:absolute; left:0; top:0; z-index:1;}
 
-.qr_code_wrap{ width:273px; position:absolute; left:50%; top:30px; margin-left:-136px; z-index:2;/* -moz-transition:-moz-transform 0.1s linear;*/}
+.qr_code_wrap{ width:273px; position:absolute; left:50%; top:30px; margin-left:-136px; z-index:2; -moz-transition:-moz-transform 0.1s linear; -webkit-transition:-webkit-transform 0.2s linear;}
 .qr_code_wrap .logo{ display:block; height:56px; width:273px; background: url(../images_pc/webank_logo.png) no-repeat 0 0; position:absolute; left:50%; top:70px; margin-left:-136px; text-indent:-9999px; overflow:hidden;}
 .qr_code_wrap .qr_code{display:block; height:205px; width:205px; position:absolute; left:50%; top:160px; margin-left:-102px; border:1px solid #ddd; text-indent:-9999px; overflow:hidden;}
 .qr_code_wrap .qr_code .qr_code_img{ display:block; height:195px; width:195px; position: absolute; left:0px; top:0px; border:5px solid #fff;}
