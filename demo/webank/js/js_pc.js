@@ -15,6 +15,8 @@ $(document).ready(function(){
 	var ocupy_length=$(".ocupy_area").offset().top;
 	var translate_h=600;
 	
+	console.log(window_h/img_min_h);
+	
 	$(".main").css({
 		"margin-top": scroll_length+110+"px"
 	});
@@ -72,6 +74,61 @@ $(document).ready(function(){
 		else{*/
 		
 			//背景缩放、偏移
+			var param_h=(window_h/1100);
+			var param_w=(window_w/700);
+			console.log(param_h);
+			
+			//大致合适位置：
+			//1920x1200 偏移-540 缩放2.5
+			//1440x900  偏移-630 缩放1.9
+			//1024x768  偏移-735 缩放1.5
+			
+			//当宽度变小，手机的偏移值变大，缩放倍数变小，所以宽度相对于偏移值是反比，相对于缩放是正比
+			//所以针对偏移，可以列2元一次不等式，解方程
+			//x=630y+630*1440
+			//x=735y+735*1024
+			
+			//x=1834560
+			//y=1472
+			
+			//所以针对缩放，可以列2元一次不等式，解方程
+			//1440+x=1.9y
+			//1024+x=1.5y
+			
+			//x=536
+			//y=1040
+			
+			//缩放2.1
+			//1440+x=2.1y
+			//1024+x=1.5y
+			//x=16
+			//y=693
+			
+			//二维码偏移值同理，反比
+			//1200 600
+			//900 700
+			//768 750
+			
+			//x=700y+700*900
+			//x=750y+750*768
+			//x=1386000
+			//y=1080
+			
+			
+			
+			
+			var x_t=1834560;
+			var y_t=1472;
+			var param_a=(x_t/(y_t+window_w))/scroll_length;
+			
+			var x_s=536;
+			var y_s=1040;
+			var param_b=(window_w+x_s)/y_s-1;
+			
+			var x_qr=1386000;
+			var y_qr=1080;
+			var translate_h=x_qr/(y_qr+window_h)-80; //大概80为头部导航菜单栏的高度
+			
 			if(num>=scroll_length){
 				$(".phone_wrap").css({
 					"-moz-transform": " translate(0,0) scale(1)",
@@ -79,7 +136,7 @@ $(document).ready(function(){
 				});
 			}else{
 				$(".phone_wrap").css({
-					"-moz-transform": " translate(0,-"+(scroll_length-num)*1.55+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")",
+					"-moz-transform": " translate(0,-"+(scroll_length-num)*param_a+"px) scale("+(1+(scroll_length-num)/scroll_length*param_b)+")",
 					"-webkit-transform": " translate(0,-"+(scroll_length-num)*1.55+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")"
 				});
 			}
@@ -91,7 +148,7 @@ $(document).ready(function(){
 				});
 			}else{
 				$(".qr_code_wrap").css({
-					"-moz-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)", //1.7=600-35()
+					"-moz-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)", 
 					"-webkit-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)" 
 				});
 				
