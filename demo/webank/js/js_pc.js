@@ -137,7 +137,7 @@ $(document).ready(function(){
 			}else{
 				$(".phone_wrap").css({
 					"-moz-transform": " translate(0,-"+(scroll_length-num)*param_a+"px) scale("+(1+(scroll_length-num)/scroll_length*param_b)+")",
-					"-webkit-transform": " translate(0,-"+(scroll_length-num)*1.55+"px) scale("+(1+(scroll_length-num)/scroll_length*1.4)+")"
+					"-webkit-transform": " translate(0,-"+(scroll_length-num)*param_a+"px) scale("+(1+(scroll_length-num)/scroll_length*param_b)+")"
 				});
 			}
 			
