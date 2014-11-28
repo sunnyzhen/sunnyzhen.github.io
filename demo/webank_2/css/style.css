@@ -452,7 +452,7 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 /*首页*/
 .con_wrap_1 .main_title{ display:none;}
 .con_wrap_1 .sub_title{ display:none;}
-.bg_light{ display:block; height:50%; width:100%; background:-webkit-radial-gradient(center center,#2f86d1,#184d9a); position:absolute; left:50%; bottom:150px; border-radius:100%/30%; margin-left:-50%;}
+.bg_light{ display:block; height:50%; width:100%; background:-webkit-radial-gradient(center center,#2f86d1,#2559a8 60%); position:absolute; left:50%; bottom:160px; border-radius:100%/60%; margin-left:-50%;}
 
 
 .logo_area{ display:block; height:41px; width:203px; position:absolute; left:50%; margin-left:-100px; bottom:247px; z-index:3;}
