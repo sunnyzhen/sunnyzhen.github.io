@@ -10,16 +10,58 @@ $(document).ready(function(){
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() {
-			
+			if(page_index==7){
+				var list_num=$(".details_list .details_con").length;
+				if(subpage_index>=1&&subpage_index<list_num){
+					$($(".details_con")[subpage_index-1]).addClass("wrap_before").removeClass("current");
+					$($(".details_con")[subpage_index]).addClass("current").removeClass("wrap_after");
+					
+					subpage_index++;
+				}
+			}
 		 },
 		 wipeUp: function() { 
+			if(page_index==7){
 			
+				var list_num=$(".details_list .details_con").length;
+				if(subpage_index>=2&&subpage_index<=list_num){
+					$($(".details_con")[subpage_index-2]).removeClass("wrap_before").addClass("current");
+					$($(".details_con")[subpage_index-1]).removeClass("current").addClass("wrap_after");
+					
+					subpage_index--;
+				}
+				
+			}
 		 },
 		 wipeLeft: function() {
-			
+			if(page_index>=1&&page_index<page_total&&subpage_index==1){
+				$($(".con_wrap")[page_index-1]).addClass("wrap_hide");
+				$($(".con_wrap")[page_index]).addClass("wrap_show");
+				
+				var timer=setTimeout(function(){
+					$($(".con_wrap")[page_index-1]).removeClass("wrap_show");
+					$($(".con_wrap")[page_index]).removeClass("wrap_prepare");
+					
+					clearTimeout(timer);
+					page_index++;
+					if(page_index>page_total){
+						page_index=page_total;
+					}
+					
+					console.log(page_index+" "+subpage_index);
+					
+				},300);
+				
+			}
 		 },
 		 wipeRight: function() { 
-		 	
+		 	if(page_index>=2&&page_index<=page_total&&subpage_index==1){
+				$($(".con_wrap")[page_index-2]).removeClass("wrap_hide").addClass("wrap_show");
+				$($(".con_wrap")[page_index-1]).removeClass("wrap_show").addClass("wrap_prepare");
+				
+				page_index--;
+				
+			}
 		 },
 		min_move_x: 80,
 		min_move_y: 80,
