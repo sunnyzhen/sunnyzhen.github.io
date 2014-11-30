@@ -418,7 +418,7 @@ body{ background:#1f54a4;}
 /**/
 
 /*新建*/
-body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:contain;}
+body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; background-size:contain;}
 .con_wrap{-webkit-transition: -webkit-transform 0.3s linear,opacity 0.3s linear; -webkit-transform-origin: 50% 200%;}
 .con_wrap_1{ background:#2559a8;}
 .con_wrap_2{ background:#2559a8;}
@@ -426,14 +426,15 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 .con_wrap_4{ background:#2559a8;}
 .con_wrap_5{ background:#2559a8 url(../data/5.jpg) no-repeat center center; background-size:100% 100%;}
 .con_wrap_6{ background:#2559a8 url(../data/6.jpg) no-repeat center center; background-size:100% 100%;}
-.con_wrap_7{ background:#2559a8;}
+.con_wrap_7{ background:#2559a8 url(../data/7.jpg) no-repeat center center; background-size:100% 100%;}
+.con_wrap_8{ background:#2559a8;}
 
 .details_con{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.3s linear,opacity 0.3s linear;}
-.detail_cover{  background:#2559a8 url(../data/7.jpg) no-repeat center center; background-size:100% 100%;}
-.detail_event{  background:#2559a8 url(../data/8.jpg) no-repeat center center; background-size:100% 100%;}
-.detail_stock{  background:#2559a8 url(../data/9.jpg) no-repeat center center; background-size:100% 100%;}
-.detail_join{  background:#2559a8 url(../data/10.jpg) no-repeat center center; background-size:100% 100%;}
-.detail_share{  background:#2559a8 url(../data/11.jpg) no-repeat center center; background-size:100% 100%;}
+.detail_cover{  background:#2559a8 url(../data/8.jpg) no-repeat center center; background-size:100% 100%;}
+.detail_event{  background:#2559a8 url(../data/9.jpg) no-repeat center center; background-size:100% 100%;}
+.detail_stock{  background:#2559a8 url(../data/10.jpg) no-repeat center center; background-size:100% 100%;}
+.detail_join{  background:#2559a8 url(../data/11.jpg) no-repeat center center; background-size:100% 100%;}
+.detail_share{  background:#2559a8 url(../data/12.jpg) no-repeat center center; background-size:100% 100%;}
 
 /*翻页逻辑*/
 .wrap_prepare{ -webkit-transform:rotate(45deg); opacity:0; z-index:1;}
@@ -527,13 +528,13 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 
 
 /*介绍页 1*/
-.con_wrap_1 .man_wrap{ display:block; height:219px; width:61px; position:absolute; left:50%; margin-left:-30px; bottom:163px; z-index:4;-webkit-transform-origin:50% 100%;}
-.con_wrap_1 .man_wrap .head{ display:block; height:60px; width:52px; background:url(../images/page_1/person_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-25px; top:0px; -webkit-transform-origin:50% 100%; -webkit-transform: rotate(-5deg);}
-.con_wrap_1 .man_wrap .body{ display:block; height:159px; width:61px; background:url(../images/page_1/person_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; bottom:0px; z-index:2;}
+.con_wrap_2 .man_wrap_2{ display:block; height:219px; width:61px; position:absolute; left:50%; margin-left:-30px; bottom:163px; z-index:4;-webkit-transform-origin:50% 100%;}
+.con_wrap_2 .man_wrap_2 .head{ display:block; height:60px; width:52px; background:url(../images/page_1/person_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-25px; top:0px; -webkit-transform-origin:50% 100%; -webkit-transform: rotate(-5deg);}
+.con_wrap_2 .man_wrap_2 .body{ display:block; height:159px; width:61px; background:url(../images/page_1/person_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; bottom:0px; z-index:2;}
 
-.con_wrap_1 .hand_wrap .hand{ display:block; height:57px; width:35px; background:url(../images/page_1/person_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-20px; top:0px; z-index:2;}
-.con_wrap_1 .hand_wrap .hand_1{ -webkit-transform:rotate(-15deg) translate(-3px,-2px); -webkit-transform-origin:100% 0%;}
-.con_wrap_1 .hand_wrap .hand_2{ background-image:url(../images/page_1/person_hand_2.png); left:44px; -webkit-transform:rotate(15deg) translate(3px,-2px); -webkit-transform-origin:0% 0%;}
+.con_wrap_2 .hand_wrap_2 .hand{ display:block; height:57px; width:35px; background:url(../images/page_1/person_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-20px; top:0px; z-index:2;}
+.con_wrap_2 .hand_wrap_2 .hand_1{ -webkit-transform:rotate(-15deg) translate(-3px,-2px); -webkit-transform-origin:100% 0%;}
+.con_wrap_2 .hand_wrap_2 .hand_2{ background-image:url(../images/page_1/person_hand_2.png); left:44px; -webkit-transform:rotate(15deg) translate(3px,-2px); -webkit-transform-origin:0% 0%;}
 
 .pocket_wrap{}
 .pocket{ display:block; height:12px; width:18px; position:absolute; left:4px; top:50px; overflow:hidden;}
@@ -550,7 +551,7 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 .pocket_2 .inner_show{ right:auto; left:1px;}
 .pocket_2 .inner_show .s{background-image:url(../images/page_1/pocket_inner_2.png); -webkit-transform: translate(-15px,0);}*/
 
-.con_wrap_1 .man_shadow{ display:block; height:10px; width:97px; background:#194d9c; border-radius:60px/10px; position:absolute; left:50%; bottom:159px; margin-left:-48px; z-index:3;}
+.con_wrap_2 .man_shadow{ display:block; height:10px; width:97px; background:#194d9c; border-radius:60px/10px; position:absolute; left:50%; bottom:159px; margin-left:-48px; z-index:3;}
 
 .cloud_wrap{ display:block; height:44px; width:54px; position:absolute; left:50%; margin-left:-30px; top:-70px;}
 .cloud_wrap .cloud{display:block; height:44px; width:54px; background:url(../images/page_1/cloud.png) no-repeat 0 0;  background-size:contain; position:absolute; left:0px; top:0px;}
@@ -563,10 +564,10 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 
 .wrap_show .building_bg .building_1{ -webkit-animation:a_building 0.3s 0.3s linear both; -webkit-transform-origin:50% 100%;}
 .wrap_show .building_bg .building_2{ -webkit-animation:a_building 0.3s 0.5s linear both; -webkit-transform-origin:50% 100%;}
-.wrap_show .con_wrap_1 .man_wrap{ -webkit-animation:a_man_1 0.2s 0.9s linear both;}
-.wrap_show .con_wrap_1 .man_shadow{ -webkit-animation:a_man_shadow_1 0.2s 0.9s linear both;}
-.wrap_show .con_wrap_1 .hand_wrap .hand_1{ -webkit-animation:a_hand_1 1s 1.3s linear infinite;}
-.wrap_show .con_wrap_1 .hand_wrap .hand_2{ -webkit-animation:a_hand_2 1s 1.3s linear infinite;}
+.wrap_show .man_wrap_2{ -webkit-animation:a_man_1 0.2s 0.9s linear both;}
+.wrap_show .man_shadow{ -webkit-animation:a_man_shadow_1 0.2s 0.9s linear both;}
+.wrap_show .hand_wrap_2 .hand_1{ -webkit-animation:a_hand_1 1s 1.3s linear infinite;}
+.wrap_show .hand_wrap_2 .hand_2{ -webkit-animation:a_hand_2 1s 1.3s linear infinite;}
 
 /*.wrap_show .pocket_1 .pocket_show .b{ -webkit-animation:a_pocket 1s 1.3s linear infinite;}
 .wrap_show .pocket_1 .inner_show{ -webkit-animation:a_pocket_inner_show 1s 1.4s linear infinite;}
@@ -578,7 +579,7 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 .wrap_show .pocket .inner{ -webkit-animation:a_pocket 1s 1.3s linear infinite;}
 .wrap_show .pocket_2 .inner{ -webkit-animation:a_pocket_2 1s 1.3s linear infinite;}
 
-.wrap_show .con_wrap_1 .man_wrap .head{ -webkit-animation:a_man_head_1 1s 1.3s linear infinite;}
+.wrap_show .man_wrap_2 .head{ -webkit-animation:a_man_head_1 1s 1.3s linear infinite;}
 .wrap_show .cloud_wrap .cloud{ -webkit-animation:a_cloud 0.3s 1.1s linear both;}
 .wrap_show .cloud_wrap .lightning{ -webkit-animation:a_lightning 1.2s 1.4s linear infinite;}
 .wrap_show .wording_wrap .wording{ -webkit-animation:a_wording_1 0.3s 1.5s linear both;}
@@ -1031,9 +1032,12 @@ body{ background:url(../images/bg.jpg) no-repeat center bottom; background-size:
 	.penguin_dialog{ top:31px;}
 }
 
+/*ip 6*/
 @media all and (min-width:375px){
 	.tree_wrap .tree_1{bottom:280px;}
 	.tree_wrap .tree_2{bottom:285px;}
+	.building_bg .building_1{ bottom:295px;}
+	.building_bg .building_2{ bottom:298px;}
 }
 
 /* 安卓兼容 兼容*/

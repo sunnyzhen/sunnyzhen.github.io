@@ -4,13 +4,13 @@ $(document).ready(function(){
 	
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
-	var page_total=7;//总共有多少页面
+	var page_total=8;//总共有多少页面
 	var subpage_index=1;//当前在哪个子页
 	
 	//触摸触发事件
 	$("body").touchwipe({
 		wipeDown: function() {
-			if(page_index==7){
+			if(page_index==page_total){
 				var list_num=$(".details_list .details_con").length;
 				if(subpage_index>=1&&subpage_index<list_num){
 					$($(".details_con")[subpage_index-1]).addClass("wrap_before").removeClass("current");
@@ -21,7 +21,7 @@ $(document).ready(function(){
 			}
 		 },
 		 wipeUp: function() { 
-			if(page_index==7){
+			if(page_index==page_total){
 			
 				var list_num=$(".details_list .details_con").length;
 				if(subpage_index>=2&&subpage_index<=list_num){
@@ -114,7 +114,7 @@ $(document).ready(function(){
 	//wipeUp
 	$(".hook_up").bind("click",function(){
 		
-		if(page_index==7){
+		if(page_index==page_total){
 			
 			var list_num=$(".details_list .details_con").length;
 			if(subpage_index>=2&&subpage_index<=list_num){
@@ -131,7 +131,7 @@ $(document).ready(function(){
 	//wipeDown
 	$(".hook_down").bind("click",function(){
 		
-		if(page_index==7){
+		if(page_index==page_total){
 			var list_num=$(".details_list .details_con").length;
 			if(subpage_index>=1&&subpage_index<list_num){
 				$($(".details_con")[subpage_index-1]).addClass("wrap_before").removeClass("current");
