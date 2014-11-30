@@ -1034,6 +1034,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 /*ip 6*/
 @media all and (min-width:375px){
+	.penguin_bg{ bottom:288px;}
 	.tree_wrap .tree_1{bottom:280px;}
 	.tree_wrap .tree_2{bottom:285px;}
 	.building_bg .building_1{ bottom:295px;}
