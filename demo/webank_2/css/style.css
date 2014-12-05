@@ -1612,13 +1612,15 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 	20%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
 	
 	30%{ -webkit-transform:scale(1) translate(0,0px) rotate(0deg);}/*kiss begin*/
-	32%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
+	32%{ -webkit-transform:scale(0.1) translate(0,0) rotate(0deg);}
+	32.1%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
 	
 	40%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
 	50%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
 	60%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
 	
-	68%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
+	67.9%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
+	68%{ -webkit-transform:scale(0.1) translate(0,0) rotate(0deg);}
 	70%{ -webkit-transform:scale(1) rotate(0deg);}/*kiss end*/
 	
 	80%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
