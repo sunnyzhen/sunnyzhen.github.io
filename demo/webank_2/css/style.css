@@ -1606,23 +1606,25 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 }
 
 @-webkit-keyframes a_penguin_7_hand_1{
-	0%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
-	10%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
-	15%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-8deg);}
-	20%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
+	0%{ -webkit-transform:scale(1) translate(0,0px) rotate(0deg);}
+	10%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
+	15%{ -webkit-transform:scale(1) translate(0,0px) rotate(-8deg);}
+	20%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
 	
-	30%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}/*kiss begin*/
+	30%{ -webkit-transform:scale(1) translate(0,0px) rotate(0deg);}/*kiss begin*/
+	32%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
 	
-	40%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
-	50%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
-	60%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
+	40%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
+	50%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
+	60%{ -webkit-transform:scale(-1) translate(2px,-3px) rotate(0deg);}
 	
-	70%{ -webkit-transform:scale(1,1) rotate(0deg);}/*kiss end*/
+	68%{ -webkit-transform:scale(-0.1) translate(0,0) rotate(0deg);}
+	70%{ -webkit-transform:scale(1) rotate(0deg);}/*kiss end*/
 	
-	80%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
-	85%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-8deg);}
-	90%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
-	100%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
+	80%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
+	85%{ -webkit-transform:scale(1) translate(0,0px) rotate(-8deg);}
+	90%{ -webkit-transform:scale(1) translate(0,0px) rotate(5deg);}
+	100%{ -webkit-transform:scale(1) translate(0,0px) rotate(0deg);}
 }
 
 @-webkit-keyframes a_penguin_7_hand_2{
