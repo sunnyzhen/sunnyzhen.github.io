@@ -425,8 +425,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .con_wrap_3{ background:#2559a8;}
 .con_wrap_4{ background:#2559a8;}
 .con_wrap_5{ background:#2559a8;}
-.con_wrap_6{ background:#2559a8 url(../data/6.jpg) no-repeat center center; background-size:100% 100%;}
-.con_wrap_7{ background:#2559a8 url(../data/7.jpg) no-repeat center center; background-size:100% 100%;}
+.con_wrap_6{ background:#2559a8;}
+.con_wrap_7{ background:#2559a8;}
 .con_wrap_8{ background:#2559a8;}
 
 .details_con{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.3s linear,opacity 0.3s linear;}
@@ -1002,10 +1002,10 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .water_show{ display:block; height:14px; width:10px; position:absolute; left:1px; top:1px; border-radius:0 0 14px 14px/0 0 10px 10px; overflow:hidden;}
 .water_show .water{ display:block; height:20px; width:20px; background:#194d9c; position:absolute; left:50%; margin-left:-10px; top:5px;}
 
-.lamp_wrap{ display:block; height:44px; width:73px; position:absolute; left:50%; bottom:396px; margin-left:-34px; z-index:3;}
-.lamp_wrap .lamp{ display:block; height:44px; width:73px; background: url(../images/page_4/lamp.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
-.lamp_wrap .lamp_light{ display:block; height:85px; width:205px; background: url(../images/page_4/light.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-102px; top:34px; z-index:2;}
-.lamp_wrap .lamp_lever{ display:block; height:300px; width:3px; background:#0c3d85; position:absolute; left:50%; margin-left:-2px; bottom:40px; z-index:1;}
+.lamp_wrap_5{ display:block; height:44px; width:73px; position:absolute; left:50%; bottom:396px; margin-left:-34px; z-index:3;}
+.lamp_wrap_5 .lamp{ display:block; height:44px; width:73px; background: url(../images/page_4/lamp.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
+.lamp_wrap_5 .lamp_light{ display:block; height:85px; width:205px; background: url(../images/page_4/light.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-102px; top:34px; z-index:2;}
+.lamp_wrap_5 .lamp_lever{ display:block; height:300px; width:3px; background:#0c3d85; position:absolute; left:50%; margin-left:-2px; bottom:40px; z-index:1;}
 
 .man_wrap_5{ display:block; height:109px; width:86px; position:absolute; left:50%; margin-left:-139px; bottom:214px; z-index:4; -webkit-transform-origin:50% 100%; -webkit-transform: translate(-200px,0); opacity:0;}
 .chair{ display:block; height:109px; width:86px; background:url(../images/page_4/chair_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:3;}
@@ -1039,8 +1039,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .wrap_show .man_shadow_5{ -webkit-animation:a_man_shadow_5 0.24s 1.2s linear both;}
 .wrap_show .penguin_wrap_5{ -webkit-animation:a_penguin_wrap_5 0.3s 1.2s linear both;}
 .wrap_show .penguin_shadow_5{ -webkit-animation:a_penguin_shadow_5 0.24s 1.2s linear both;}
-.wrap_show .lamp_wrap{ -webkit-animation:a_lamp_wrap 0.3s 1.6s linear both;}
-.wrap_show .lamp_light{ -webkit-animation:a_lamp_light 0.5s 1.9s linear both;}
+.wrap_show .lamp_wrap_5{ -webkit-animation:a_lamp_wrap 0.3s 1.6s linear both;}
+.wrap_show .lamp_wrap_5 .lamp_light{ -webkit-animation:a_lamp_light 0.5s 1.9s linear both;}
 
 .wrap_show .man_wrap_5 .man_body{ -webkit-animation:a_man_5_body 3s 1.5s linear infinite;}
 .wrap_show .man_wrap_5 .man_head{ -webkit-animation:a_man_5_head 3s 1.5s linear infinite;}
@@ -1160,7 +1160,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 /*介绍页 5*/
 .wording_wrap .wording_6{ display:block; height:70px; width:138px; background:url(../images/page_5/wording_5.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-69px; bottom:80px; z-index:2; opacity:0;}
 
-.iceberg_wrap{ display:block; height:106px; width:271px; background:url(../images/page_5/iceberg.png) no-repeat 0 0; background-size:contain; position: absolute; left:50%; margin-left:-137px; bottom:206px; z-index:3;}
+.iceberg_wrap{ display:block; height:106px; width:271px; background:url(../images/page_5/iceberg.png) no-repeat 0 0; background-size:contain; position: absolute; left:50%; margin-left:-137px; bottom:206px; z-index:3; -webkit-transform-origin:50% 770%; -webkit-transform:rotate(-25deg);}
 .iceberg_wrap .ice_1{display:block; height:14px; width:48px; background:url(../images/page_5/ice_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:1px; top:70px;}
 .iceberg_wrap .ice_2{display:block; height:28px; width:43px; background:url(../images/page_5/ice_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:121px; top:100px;}
 .iceberg_wrap .ice_3{display:block; height:18px; width:54px; background:url(../images/page_5/ice_3.png) no-repeat 0 0; background-size:contain; position: absolute; left:227px; top:69px;}
@@ -1170,19 +1170,20 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .man_wrap_6 .man_head .hat_1{display:block; height:18px; width:31px; background:url(../images/page_5/hat_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:-16px; top:0;}
 .man_wrap_6 .body{display:block; height:48px; width:34px; background:url(../images/page_5/man_body.png) no-repeat 0 0; background-size:contain; position: absolute; left:0; top:0; z-index:2; -webkit-transform-origin:50% 100%;}
 
-.man_wrap_6 .man_hand_1{display:block; height:35px; width:48px; position: absolute; left:15px; top:-19px; z-index:1; -webkit-transform-origin:0% 100%;}
+.man_wrap_6 .man_hand_1{display:block; height:35px; width:48px; position: absolute; left:15px; top:-19px; z-index:1; -webkit-transform-origin:0% 100%; -webkit-transform:rotate(-30deg);}
 .man_wrap_6 .man_hand_1_1{display:block; height:16px; width:28px; background:url(../images/page_5/man_hand_1_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:0px; bottom:0px; z-index:1;}
-.man_wrap_6 .man_hand_1_2{display:block; height:30px; width:32px; position: absolute; left:20px; top:-2px; z-index:1; -webkit-transform-origin:8% 92%;}
+.man_wrap_6 .man_hand_1_2{display:block; height:30px; width:32px; position: absolute; left:20px; top:-2px; z-index:1; -webkit-transform-origin:8% 92%; -webkit-transform: translate(0,0) rotate(-100deg);}
 .man_wrap_6 .man_hand_1_2_1{display:block; height:26px; width:26px; background:url(../images/page_5/man_hand_1_2_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:0px; bottom:0px; z-index:2;}
-.man_wrap_6 .man_hand_1_2_2{display:block; height:15px; width:13px; background:url(../images/page_5/man_hand_1_2_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:19px; top:1px; -webkit-transform-origin:0% 50%;}
+.man_wrap_6 .man_hand_1_2_2{display:block; height:15px; width:13px; background:url(../images/page_5/man_hand_1_2_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:19px; top:1px; -webkit-transform-origin:0% 50%; -webkit-transform: translate(0,0) rotate(-10deg);}
 
 .man_wrap_6 .man_hand_2{display:block; height:41px; width:47px; background:url(../images/page_5/man_hand_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:15px; top:7px; z-index:3; -webkit-transform-origin:0% 0%;}
 .man_wrap_6 .man_leg_1{display:block; height:36px; width:41px; background:url(../images/page_5/man_leg_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:18px; top:30px; z-index:1;}
 .man_wrap_6 .man_leg_2{display:block; height:23px; width:62px; background:url(../images/page_5/man_leg_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:-1px; top:42px; z-index:1;}
 
-.penguin_wrap_6{display:block; height:53px; width:45px; position: absolute; left:196px; bottom:46px; z-index:1;}
-.penguin_wrap_6 .penguin{display:block; height:53px; width:45px; background:url(../images/page_5/penguin.png) no-repeat 0 0; background-size:contain; position: absolute; left:0; top:0; z-index:1;}
-.penguin_wrap_6 .hat_2{display:block; height:17px; width:31px; background:url(../images/page_5/hat_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:20px; top:-11px; z-index:2;}
+.penguin_wrap_6{display:block; height:53px; width:45px; position: absolute; left:196px; bottom:46px; z-index:2; -webkit-transform-origin:50% 100%;}
+.penguin_wrap_6 .penguin{display:block; height:53px; width:45px; background:url(../images/page_5/penguin.png) no-repeat 0 0; background-size:contain; position: absolute; left:0; top:0; z-index:2;}
+.penguin_wrap_6 .penguin_hand{display:block; height:19px; width:10px; background:url(../images/page_5/penguin_hand.png) no-repeat 0 0; background-size:contain; position: absolute; left:2px; top:2px; -webkit-transform-origin:100% 100%; -webkit-transform: rotate(-140deg);}
+.penguin_wrap_6 .hat_2{display:block; height:17px; width:31px; background:url(../images/page_5/hat_2.png) no-repeat 0 0; background-size:contain; position: absolute; left:20px; top:-11px; z-index:3; -webkit-transform-origin:50% 100%;}
 
 .icon_wrap_6{display:block; height:105px; width:225px; position: absolute; left:35px; top:-130px; z-index:2;}
 .icon_wrap_6 .icon{display:block; height:36px; width:36px; position: absolute; background:url(../images/page_5/icon_1.png) no-repeat 0 0; background-size:contain;}
@@ -1193,26 +1194,64 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .icon_wrap_6 .icon_5{ background-image:url(../images/page_5/icon_5.png); left:38px; top:8px;}
 .icon_wrap_6 .icon_6{ background-image:url(../images/page_5/icon_6.png); left:0px; top:31px;}
 
-.snow_ball{display:block; height:9px; width:19px; background:url(../images/page_5/snow_ball.png) no-repeat 0 0; background-size:contain; position: absolute; left:84px; top:-74px; z-index:2; -webkit-transform:rotate(-32deg);}
-.snow_ball .snow_piece_1{display:block; height:2px; width:4px; background:#fff; border-radius:4px; position: absolute; left:22px; top:3px; z-index:2; -webkit-transform:rotate(10deg);}
-.snow_ball .snow_piece_2{display:block; height:2px; width:4px; background:#fff; border-radius:4px; position: absolute; left:28px; top:10px; z-index:2; -webkit-transform:rotate(10deg);}
+.snow_ball{display:block; height:9px; width:19px; background:url(../images/page_5/snow_ball.png) no-repeat 0 0; background-size:contain; position: absolute; left:84px; top:-74px; z-index:1; -webkit-transform:rotate(-32deg);}
+.snow_ball .snow_piece_1{display:block; height:2px; width:4px; background:#fff; border-radius:4px; position: absolute; left:0px; top:3px; z-index:2; -webkit-transform:rotate(10deg); opacity:0;}
+.snow_ball .snow_piece_2{display:block; height:2px; width:4px; background:#fff; border-radius:4px; position: absolute; left:0px; top:10px; z-index:2; -webkit-transform:rotate(10deg); opacity:0;}
 
-.snow_ball_1{ left:178px; top:-18px; -webkit-transform:rotate(32deg);}
-.snow_ball_1 .snow_piece_1{ left:-17px; top:8px; -webkit-transform:rotate(0deg);}
-.snow_ball_1 .snow_piece_2{ left:-10px; top:4px; -webkit-transform:rotate(0deg);}
+.snow_ball_1{ left:178px; top:-18px; -webkit-transform:rotate(32deg); -webkit-transform: translate(-146px,-2px) rotate(0deg) scale(0.6,1); opacity:1;}
+.snow_ball_1 .snow_piece_1{ left:0px; top:6px; -webkit-transform:rotate(0deg); opacity:0;}
+.snow_ball_1 .snow_piece_2{ left:0px; top:3px; -webkit-transform:rotate(0deg); opacity:0;}
+
+.snow_ball_2{ -webkit-transform: translate(113px,116px) scale(0.4,1) rotate(0); opacity:1;}
 
 .man_shadow_6{ display:block; height:10px; width:70px; background:#5a7faf; position: absolute; left:42px; top:54px; border-radius:70px/10px;}
 .penguin_shadow_6{ display:block; height:10px; width:50px; background:#5a7faf; position: absolute; left:192px; top:54px; border-radius:50px/10px;}
 
-.wrap_show .iceberg_wrap .ice_1{ -webkit-animation:a_ice_1 5s 0.3s linear infinite;}
-.wrap_show .iceberg_wrap .ice_2{ -webkit-animation:a_ice_1 4s 0.3s linear infinite;}
-.wrap_show .iceberg_wrap .ice_3{ -webkit-animation:a_ice_1 6s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .man_hand_1{ -webkit-animation:a_man_6_hand_1 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .man_hand_1_2{ -webkit-animation:a_man_6_hand_1_2 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .man_hand_1_2_2{ -webkit-animation:a_man_6_hand_1_2_2 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .man_hand_2{ -webkit-animation:a_man_6_hand_2 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .body{ -webkit-animation:a_man_6_body 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_6 .man_head{ -webkit-animation:a_man_6_head 2s 0.3s linear infinite;}
+.wrap_show .iceberg_wrap{ -webkit-animation:a_iceberg_wrap 0.5s 0.3s linear both;}
+.wrap_show .iceberg_wrap .ice_1{ -webkit-animation:a_ice_1 5s 0.8s linear infinite;}
+.wrap_show .iceberg_wrap .ice_2{ -webkit-animation:a_ice_1 4s 0.8s linear infinite;}
+.wrap_show .iceberg_wrap .ice_3{ -webkit-animation:a_ice_1 6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .man_hand_1{ -webkit-animation:a_man_6_hand_1 2.6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .man_hand_1_2{ -webkit-animation:a_man_6_hand_1_2 2.6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .man_hand_1_2_2{ -webkit-animation:a_man_6_hand_1_2_2 2.6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .man_hand_2{ -webkit-animation:a_man_6_hand_2 2.6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .body{ -webkit-animation:a_man_6_body 2.6s 0.8s linear infinite;}
+.wrap_show .man_wrap_6 .man_head{ -webkit-animation:a_man_6_head 2.6s 0.8s linear infinite;}
+.wrap_show .snow_ball_1{ -webkit-animation:a_snow_ball_1 2.6s 0.8s linear infinite;}
+.wrap_show .snow_ball_1 .snow_piece_1{ -webkit-animation:a_snow_piece_1 2.6s 0.8s linear infinite;}
+.wrap_show .snow_ball_1 .snow_piece_2{ -webkit-animation:a_snow_piece_1 2.6s 0.1s linear infinite;}
+.wrap_show .snow_ball_2 .snow_piece_1{ -webkit-animation:a_snow_piece_2 2.6s 0.8s linear infinite;}
+.wrap_show .snow_ball_2 .snow_piece_2{ -webkit-animation:a_snow_piece_2 2.6s 0.1s linear infinite;}
+
+.wrap_show .penguin_wrap_6{ -webkit-animation:a_penguin_wrap_6 2.6s 0.8s linear infinite;}
+.wrap_show .penguin_wrap_6 .hat_2{ -webkit-animation:a_hat_2 2.6s 0.8s linear infinite;}
+.wrap_show .penguin_wrap_6 .penguin_hand{ -webkit-animation:a_penguin_6_hand 2.6s 0.8s linear infinite;}
+.wrap_show .penguin_shadow_6{ -webkit-animation:a_penguin_shadow_6 2.6s 0.8s linear infinite;}
+.wrap_show .snow_ball_2{ -webkit-animation:a_snow_ball_2 2.6s 0.8s linear infinite;}
+
+.wrap_show .icon_wrap_6{ -webkit-animation:a_icon_wrap_6 0.3s 0.9s linear both;}
+.wrap_show .icon_wrap_6 .icon_1{ -webkit-animation:a_icon_wrap_6_1 0.2s 2.6s linear both;}
+.wrap_show .icon_wrap_6 .icon_2{ -webkit-animation:a_icon_wrap_6_1 0.2s 2.7s linear both;}
+.wrap_show .icon_wrap_6 .icon_3{ -webkit-animation:a_icon_wrap_6_1 0.2s 2.8s linear both;}
+.wrap_show .icon_wrap_6 .icon_4{ -webkit-animation:a_icon_wrap_6_1 0.2s 2.9s linear both;}
+.wrap_show .icon_wrap_6 .icon_5{ -webkit-animation:a_icon_wrap_6_1 0.2s 3.1s linear both;}
+.wrap_show .icon_wrap_6 .icon_6{ -webkit-animation:a_icon_wrap_6_1 0.2s 3.2s linear both;}
+
+@-webkit-keyframes a_icon_wrap_6_1{
+	0%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+@-webkit-keyframes a_icon_wrap_61{
+	0%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+
+@-webkit-keyframes a_iceberg_wrap{
+	0%{ -webkit-transform: rotate(-25deg);}
+	100%{ -webkit-transform: rotate(0deg);}
+}
 
 @-webkit-keyframes a_ice_1{
 	0%{ -webkit-transform: translate(0,0);}
@@ -1259,16 +1298,380 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 @-webkit-keyframes a_man_6_head{
 	0%{ -webkit-transform:rotate(0deg);}
-	20%{ -webkit-transform:rotate(10deg);}
-	70%{ -webkit-transform:rotate(10deg);}
-	80%{ -webkit-transform:rotate(10deg);}
-	80%{ -webkit-transform:rotate(10deg);}
+	20%{ -webkit-transform:rotate(15deg);}
+	80%{ -webkit-transform:rotate(15deg);}
 	100%{ -webkit-transform:rotate(0deg);}
 }
 
+@-webkit-keyframes a_snow_ball_1{
+	
+	0%{ -webkit-transform: translate(-146px,-2px) rotate(0deg) scale(0.6,1); opacity:1;}
+	7%{ -webkit-transform: translate(-125px,-25px) rotate(0deg) scale(0.6,1); opacity:1;}
+	15%{ -webkit-transform: translate(-90px,-18px) rotate(0deg) scale(0.6,1); opacity:1;}
+	
+	20%{ -webkit-transform: translate(-70px,-5px) rotate(-16deg) scale(0.6,1); opacity:1;}/*出手*/
+	30%{ -webkit-transform: translate(-45px,-4px) rotate(-6deg) scale(0.7,1); opacity:1;}
+	38%{ -webkit-transform: translate(-25px,-2px) rotate(6deg) scale(0.75,1); opacity:1;}
+	45%{ -webkit-transform: translate(0px,5px) rotate(16deg) scale(0.8,1); opacity:1; z-index:1;}
+	
+	55%{ -webkit-transform: translate(35px,20px) rotate(16deg) scale(0.8,1); opacity:1; z-index:4;}
+	70%{ -webkit-transform: translate(35px,23px) rotate(16deg) scale(0.8,0.1); opacity:0; z-index:4;}
+	71%{ -webkit-transform: translate(-76px,65px) rotate(0deg) scale(0.6,1); opacity:0; z-index:1;}
+	72%{ -webkit-transform: translate(-76px,65px) rotate(0deg) scale(0.6,1); opacity:1;}
+	
+	78%{ -webkit-transform: translate(-72px,35px) rotate(0deg) scale(0.6,1); opacity:1;}
+	
+	84%{ -webkit-transform: translate(-78px,0px) rotate(0deg) scale(0.6,1); opacity:1;}
+	90%{ -webkit-transform: translate(-110px,-17px) rotate(-32deg) scale(0.6,1); opacity:1;}
+	
+	100%{ -webkit-transform: translate(-146px,-2px) rotate(0deg) scale(0.6,1); opacity:1;}
+}
 
+@-webkit-keyframes a_penguin_wrap_6{
+	0%{ -webkit-transform: translate(0,0) scale(1,1);}
+	65%{ -webkit-transform: translate(0,0) scale(1,1);}
+	70%{ -webkit-transform: translate(0,-15px) scale(1,1.05);}
+	75%{ -webkit-transform: translate(0,-15px) scale(1,1.05);}
+	80%{ -webkit-transform: translate(0,1px) scale(1.05,1);}
+	90%{ -webkit-transform: translate(0,-1px) scale(1,1);}
+	100%{ -webkit-transform: translate(0,0) scale(1,1);}
+}
+
+@-webkit-keyframes a_penguin_shadow_6{
+	0%{ -webkit-transform:scale(1);}
+	65%{ -webkit-transform:scale(1);}
+	70%{ -webkit-transform:scale(0.8);}
+	75%{ -webkit-transform:scale(0.8);}
+	80%{ -webkit-transform:scale(1.05);}
+	90%{ -webkit-transform:scale(1);}
+	100%{ -webkit-transform: scale(1);}
+}
+
+@-webkit-keyframes a_hat_2{
+	0%{ -webkit-transform:rotate(0deg);}
+	58%{ -webkit-transform:rotate(0deg);}
+	59%{ -webkit-transform:rotate(-10deg);}
+	65%{ -webkit-transform:rotate(2deg);}
+	70%{ -webkit-transform:rotate(-5deg);}
+	75%{ -webkit-transform: translate(0,-8px) rotate(0deg);}
+	80%{ -webkit-transform: translate(0,0px) rotate(0deg);}
+	85%{ -webkit-transform: translate(0,-2px) rotate(0deg);}
+	100%{ -webkit-transform: translate(0,0px)rotate(0deg);}
+}
+
+@-webkit-keyframes a_penguin_6_hand{
+	0%{ -webkit-transform: rotate(-140deg);}
+	30%{ -webkit-transform: rotate(-140deg);}
+	65%{ -webkit-transform: rotate(40deg);}
+	70%{ -webkit-transform: rotate(10deg);}
+	75%{ -webkit-transform: rotate(-40deg);}
+	100%{ -webkit-transform: rotate(-140deg);}
+}
+
+
+@-webkit-keyframes a_snow_ball_2{
+	0%{ -webkit-transform: translate(113px,116px) scale(0.4,1) rotate(0); opacity:1;}
+	30%{ -webkit-transform: translate(113px,116px) scale(0.4,1) rotate(0); opacity:1;}
+	
+	40%{ -webkit-transform: translate(96px,106px) scale(0.4,1) rotate(0); opacity:1;}
+	50%{ -webkit-transform: translate(94px,92px) scale(0.4,1) rotate(0); opacity:1;}
+	65%{ -webkit-transform: translate(116px,71px) scale(0.4,1) rotate(0); opacity:1;}
+	70%{ -webkit-transform: translate(116px,56px) scale(0.4,1) rotate(0); opacity:1;}/*出手*/
+	
+	73%{ -webkit-transform: translate(96px,31px) scale(0.5,1) rotate(24deg); opacity:1;}
+	
+	76%{ -webkit-transform: translate(76px,11px) scale(0.5,1) rotate(24deg); opacity:1;}
+	79%{ -webkit-transform: translate(70px,8px) scale(0.5,1) rotate(22deg); opacity:1;}
+	81%{ -webkit-transform: translate(64px,5px) scale(0.5,1) rotate(20deg); opacity:1;}
+	82%{ -webkit-transform: translate(62px,3px) scale(0.5,1) rotate(20deg); opacity:1;}
+	83%{ -webkit-transform: translate(58px,1px) scale(0.5,1) rotate(18deg); opacity:1;}
+	84%{ -webkit-transform: translate(52px,-1px) scale(0.5,1) rotate(16deg); opacity:1;}
+	85%{ -webkit-transform: translate(46px,-2px) scale(0.5,1) rotate(10deg); opacity:1;}
+	86%{ -webkit-transform: translate(38px,-5px) scale(0.5,1) rotate(9deg); opacity:1;}
+	87%{ -webkit-transform: translate(29px,-7px) scale(0.6,1) rotate(0); opacity:1;}
+	90%{ -webkit-transform: translate(13px,-5px) scale(0.6,1) rotate(-8deg); opacity:1;}
+	
+	95%{ -webkit-transform: translate(-24px,13px) scale(0.6,1) rotate(-8deg); opacity:1;}
+	98%{ -webkit-transform: translate(-24px,25px) scale(0.6,0.1) rotate(-8deg); opacity:0;}
+	99%{ -webkit-transform: translate(113px,116px) scale(0.4,1) rotate(0); opacity:0;}
+	100%{ -webkit-transform: translate(113px,116px) scale(0.4,1) rotate(0); opacity:1;}
+}
+
+@-webkit-keyframes a_snow_piece_1{
+	
+	0%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	20%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	28%{ -webkit-transform: translate(-9px,0); opacity:1;}
+	36%{ -webkit-transform: translate(-17px,0); opacity:0;}
+	37%{ -webkit-transform: translate(0px,0); opacity:0;}
+	
+	45%{ -webkit-transform: translate(-9px,0); opacity:1;}
+	53%{ -webkit-transform: translate(-17px,0); opacity:0;}
+	54%{ -webkit-transform: translate(0px,0); opacity:0;}
+	
+	100%{ -webkit-transform: translate(0,0); opacity:0;}
+}
+
+
+@-webkit-keyframes a_snow_piece_1{
+	
+	0%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	20%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	28%{ -webkit-transform: translate(-9px,0); opacity:1;}
+	36%{ -webkit-transform: translate(-17px,0); opacity:0;}
+	37%{ -webkit-transform: translate(0px,0); opacity:0;}
+	
+	45%{ -webkit-transform: translate(-9px,0); opacity:1;}
+	53%{ -webkit-transform: translate(-17px,0); opacity:0;}
+	54%{ -webkit-transform: translate(0px,0); opacity:0;}
+	
+	100%{ -webkit-transform: translate(0,0); opacity:0;}
+}
+
+@-webkit-keyframes a_snow_piece_2{
+	0%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	70%{ -webkit-transform: translate(0,0); opacity:0;}/*出手*/
+	
+	76%{ -webkit-transform: translate(20px,0); opacity:1;}
+	82%{ -webkit-transform: translate(40px,0); opacity:0;}
+	83%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	89%{ -webkit-transform: translate(20px,0); opacity:1;}
+	95%{ -webkit-transform: translate(40px,0); opacity:0;}
+	96%{ -webkit-transform: translate(0,0); opacity:0;}
+	
+	
+	98%{ -webkit-transform: translate(0,0); opacity:0;}
+	100%{ -webkit-transform: translate(0,0); opacity:0;}
+}
 
 /*介绍页 5*/
+
+/*介绍页 6*/
+.wording_wrap .wording_7{ display:block; height:69px; width:138px; background:url(../images/page_6/wording_6.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-69px; bottom:80px; z-index:2; opacity:0;}
+
+
+.screen_wrap{ display:block; height:103px; width:195px; background:#19478f; position:absolute; left:50%; margin-left:-98px; bottom:335px; z-index:3;}
+.screen_wrap .screen{ display:block; height:96px; width:188px; background:#b9dff1; position:absolute; left:3px; top:3px;}
+
+.sofa_wrap{ display:block; height:109px; width:223px; position:absolute; left:50%; margin-left:-111px; bottom:212px; z-index:4; -webkit-transform-origin:50% 100%;}
+.sofa_wrap .sofa{ display:block; height:109px; width:223px; background: url(../images/page_6/sofa.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
+.sofa_wrap .man_wrap_7{ display:block; height:46px; width:39px; background: url(../images/page_6/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:58px; top:-2px; -webkit-transform-origin:50% 100%;}
+.sofa_wrap .man_wrap_7 .man_head{ display:block; height:53px; width:51px; background: url(../images/page_6/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:2px; top:-53px; background-size:contain;}
+.sofa_wrap .girl_wrap_7{ display:block; height:48px; width:58px; position:absolute; left:119px; top:-43px; -webkit-transform-origin:50% 100%; z-index:1;}
+.sofa_wrap .girl_wrap_7 .girl_head{ display:block; height:48px; width:58px; background: url(../images/page_6/girl_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.sofa_wrap .heart_wrap{ display:block; height:14px; width:15px; position:absolute; left:112px; top:-58px; z-index:2;}
+.sofa_wrap .heart_wrap .heart_1{ display:block; height:14px; width:15px; background: url(../images/page_6/icon_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:0;}
+.sofa_wrap .heart_wrap .heart_2{ display:block; height:14px; width:15px; background: url(../images/page_6/icon_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:0;}
+
+.penguin_wrap_7{ display:block; height:55px; width:42px; background:url(../images/page_6/penguin.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:88px; bottom:204px; z-index:5; -webkit-transform-origin:50% 100%;}
+.penguin_wrap_7 .penguin_eye{ display:block; height:6px; width:6px; background:url(../images/page_6/penguin_eye_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:7px; top:11px; opacity:0;}
+.penguin_wrap_7 .penguin_eye_2{background-image:url(../images/page_6/penguin_eye_2.png); left:29px;}
+.penguin_wrap_7 .penguin_hand{ display:block; height:15px; width:9px; background:url(../images/page_6/penguin_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-7px; top:26px; -webkit-transform-origin:100% 0%;}
+.penguin_wrap_7 .penguin_hand_2{ background-image:url(../images/page_6/penguin_hand_2.png); left:39px; -webkit-transform-origin:0% 0%;}
+.penguin_wrap_7 .blusher{ display:block; height:3px; width:7px; background:rgba(212,41,25,0.4); border:1px solid rgba(212,41,25,0.6); position:absolute; left:2px; top:15px; border-radius:7px/4px; z-index:1; opacity:0;}
+.penguin_wrap_7 .blusher_2{left:31px;}
+
+.lamp_wrap_7{ display:block; height:203px; width:53px; position:absolute; left:50%; margin-left:-141px; bottom:207px; z-index:5;-webkit-transform-origin:50% 100%;}
+.lamp_wrap_7 .lamp_7{ display:block; height:203px; width:53px; background:url(../images/page_6/lamp.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:3;}
+.lamp_wrap_7 .lamp_light{ display:block; height:87px; width:67px; background:url(../images/page_6/lamp_light.png) no-repeat 0 0; background-size:contain; position:absolute; left:-7px; top:36px; z-index:2;}
+.lamp_wrap_7 .lamp_rope{ display:block; height:24px; width:2px; background:#174891; position:absolute; left:13px; top:40px;}
+.lamp_wrap_7 .lamp_bead{ display:block; height:7px; width:7px; border-radius:7px; background:#174891; position:absolute; left:-3px; bottom:-3px}
+
+.lamp_shadow_7{ display:block; height:10px; width:50px; background:#1e539e; border-radius:50px/10px; position:absolute; left:50%; margin-left:-140px; bottom:202px; z-index:3;}
+.sofa_shadow_7{ display:block; height:13px; width:215px; background:#2158a6; border-radius:215px/13px; position:absolute; left:50%; margin-left:-112px; bottom:208px; z-index:3;}
+.penguin_shadow_7{ display:block; height:10px; width:50px; background:#1e539e; border-radius:50px/10px; position:absolute; left:50%; margin-left:80px; bottom:201px; z-index:3;}
+
+
+.wrap_show .sofa_wrap{ -webkit-animation:a_sofa_wrap 0.4s 0.3s linear both; }
+.wrap_show .lamp_wrap_7{ -webkit-animation:a_penguin_wrap_7 0.3s 0.5s linear both; }
+.wrap_show .penguin_wrap_7{ -webkit-animation:a_penguin_wrap_7 0.3s 0.7s linear both; }
+.wrap_show .lamp_shadow_7{ -webkit-animation:a_sofa_shadow 0.3s 0.3s linear both; }
+.wrap_show .sofa_shadow_7{ -webkit-animation:a_sofa_shadow 0.3s 0.5s linear both; }
+.wrap_show .penguin_shadow_7{ -webkit-animation:a_sofa_shadow 0.3s 0.7s linear both; }
+
+.wrap_show .screen_wrap{ -webkit-animation:a_screen_wrap 0.6s 0.9s linear both; }
+.wrap_show .screen{ -webkit-animation:a_screen 3s 1.5s linear infinite alternate; }
+.wrap_show .lamp_rope{ -webkit-animation:a_lamp_rope 5s 1.5s linear infinite; }
+.wrap_show .lamp_light{ -webkit-animation:a_lamp_light 5s 1.5s linear infinite; }
+.wrap_show .man_wrap_7{ -webkit-animation:a_man_wrap_7 5s 1.5s linear infinite; }
+.wrap_show .girl_wrap_7{ -webkit-animation:a_girl_wrap_7 5s 1.5s linear infinite; }
+.wrap_show .sofa_wrap .heart_wrap .heart_1{ -webkit-animation:a_heart_1 5s 1.5s linear infinite;}
+.wrap_show .sofa_wrap .heart_wrap .heart_2{ -webkit-animation:a_heart_1 5s 2.1s linear infinite;}
+.wrap_show .penguin_wrap_7 .penguin_hand_1{ -webkit-animation:a_penguin_7_hand_1 5s 1.5s linear infinite;}
+.wrap_show .penguin_wrap_7 .penguin_hand_2{ -webkit-animation:a_penguin_7_hand_2 5s 1.5s linear infinite;}
+.wrap_show .penguin_wrap_7 .blusher{ -webkit-animation:a_blusher 5s 1.5s linear infinite;}
+.wrap_show .penguin_wrap_7 .penguin_eye_1{ -webkit-animation:a_penguin_7_eye_1 5s 1.5s linear infinite;}
+.wrap_show .penguin_wrap_7 .penguin_eye_2{ -webkit-animation:a_penguin_7_eye_1 5s 1.5s linear infinite;}
+
+@-webkit-keyframes a_sofa_wrap{
+	0%{ -webkit-transform:translate(0px,-400px) scale(0.9,1.4); opacity:0;}
+	30%{ -webkit-transform:translate(0px,5px) scale(1.2,0.9); opacity:1;}
+	60%{ -webkit-transform:translate(0px,-5px) scale(0.95,1.1); opacity:1;}
+	100%{ -webkit-transform:translate(0px,0px) scale(1,1); opacity:1;}
+}
+
+@-webkit-keyframes a_penguin_wrap_7{
+	0%{ -webkit-transform:translate(0px,-400px) scale(0.9,1.3); opacity:0;}
+	30%{ -webkit-transform:translate(0px,3px) scale(1.1,0.9); opacity:1;}
+	60%{ -webkit-transform:translate(0px,-3px) scale(0.95,1.1); opacity:1;}
+	100%{ -webkit-transform:translate(0px,0px) scale(1,1); opacity:1;}
+}
+
+@-webkit-keyframes a_sofa_shadow{
+	0%{ -webkit-transform:scale(0.6); opacity:0;}
+	30%{ -webkit-transform:scale(1.1); opacity:1;}
+	60%{ -webkit-transform:scale(0.9); opacity:1;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
+
+@-webkit-keyframes a_screen_wrap{
+	0%{ -webkit-transform:translate(0px,-400px) rotate(-20deg);}
+	50%{ -webkit-transform:translate(0px,0px) rotate(-20deg);}
+	60%{ -webkit-transform:translate(0px,-10px) rotate(5deg);}
+	80%{ -webkit-transform:translate(0px,-5px) rotate(-3deg);}
+	100%{ -webkit-transform:translate(0px,0px) rotate(0deg);}
+}
+
+@-webkit-keyframes a_screen{
+	0%{ opacity:1;}
+	25%{ opacity:0.9;}
+	50%{ opacity:0.95;}
+	75%{ opacity:0.85;}
+	100%{ opacity:1;}
+}
+
+@-webkit-keyframes a_lamp_rope{
+	0%{ height:24px;}
+	5%{  height:34px;}
+	10%{ height:30px;}
+	30%{ height:30px;}
+	70%{ height:30px;}
+	75%{ height:30px;}
+	80%{ height:34px;}
+	85%{ height:24px;}
+	100%{ height:24px;}
+}
+
+@-webkit-keyframes a_lamp_light{
+	0%{ opacity:1;}
+	5%{   opacity:1;}
+	10%{  opacity:1;}
+	11%{  opacity:0;}
+	30%{ opacity:0;}
+	70%{ opacity:0;}
+	75%{ opacity:0;}
+	80%{ opacity:0;}
+	85%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+@-webkit-keyframes a_man_wrap_7{
+	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	30%{ -webkit-transform: translate(15px,0) rotate(5deg);}/*kiss begin*/
+	70%{ -webkit-transform: translate(15px,0) rotate(5deg);}/*kiss end*/
+	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
+}
+
+@-webkit-keyframes a_girl_wrap_7{
+	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	30%{ -webkit-transform: translate(-5px,0) rotate(-5deg);}
+	70%{ -webkit-transform: translate(-5px,0) rotate(-5deg);}
+	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
+	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
+}
+
+@-webkit-keyframes a_heart_1{
+	0%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}
+	15%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}
+	
+	30%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}/*kiss begin*/
+	
+	40%{ -webkit-transform: translate(2px,-5px) scale(0.5); opacity:1;}
+	50%{ -webkit-transform: translate(10px,-10px) scale(0.8); opacity:1;}
+	60%{ -webkit-transform: translate(5px,-15px) scale(0.6); opacity:0;}
+	
+	70%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}/*kiss end*/
+	
+	85%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}
+	100%{ -webkit-transform: translate(0,0) scale(0.3); opacity:0;}
+}
+
+@-webkit-keyframes a_penguin_7_hand_1{
+	0%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
+	10%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
+	15%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-8deg);}
+	20%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
+	
+	30%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}/*kiss begin*/
+	
+	40%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
+	50%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
+	60%{ -webkit-transform:scale(-1,-1) translate(2px,-3px) rotate(0deg);}
+	
+	70%{ -webkit-transform:scale(1,1) rotate(0deg);}/*kiss end*/
+	
+	80%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
+	85%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-8deg);}
+	90%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(5deg);}
+	100%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
+}
+
+@-webkit-keyframes a_penguin_7_hand_2{
+	0%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
+	10%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-5deg);}
+	15%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(8deg);}
+	20%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-5deg);}
+	
+	30%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}/*kiss begin*/
+	
+	40%{ -webkit-transform:scale(-1,-1) translate(-2px,-3px) rotate(0deg);}
+	50%{ -webkit-transform:scale(-1,-1) translate(-2px,-3px) rotate(0deg);}
+	60%{ -webkit-transform:scale(-1,-1) translate(-2px,-3px) rotate(0deg);}
+	
+	70%{ -webkit-transform:scale(1,1) rotate(0deg);}/*kiss end*/
+	80%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-5deg);}
+	85%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(8deg);}
+	90%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(-5deg);}
+	100%{ -webkit-transform:scale(1,1) translate(0,0px) rotate(0deg);}
+}
+
+
+@-webkit-keyframes a_blusher{
+	0%{  opacity:0;}
+	30%{ opacity:0;}/*kiss begin*/
+	40%{ opacity:1;}
+	60%{ opacity:1;}
+	70%{ opacity:0;}/*kiss end*/
+	100%{ opacity:0;}
+}
+
+@-webkit-keyframes a_penguin_7_eye_1{
+	0%{  opacity:0;}
+	10%{  opacity:0;}
+	13%{  opacity:1;}
+	16%{  opacity:0;}
+	
+	30%{ opacity:0;}/*kiss begin*/
+	35%{ opacity:1;}
+	65%{ opacity:1;}
+	70%{ opacity:0;}/*kiss end*/
+	80%{  opacity:0;}
+	83%{  opacity:1;}
+	86%{  opacity:0;}
+	100%{ opacity:0;}
+}
+
+
+/*介绍页 6*/
 
 /**/
 
