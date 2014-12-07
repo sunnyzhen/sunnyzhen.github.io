@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var window_h=$(window).height();
 	var window_w=$(window).width();
 	
-	if(window_w<=375){
+	if(window_w<=500){
 		$(".mod_con").css({
 			"margin-bottom":window_h-$(".mod_con").height()-20+"px"
 		});
@@ -158,7 +158,7 @@ $(document).ready(function(){
 		
 	}
 	
-	if(window_w<=375){//小于ip6
+	if(window_w<=500){//小于ip6+
 		BindMenuItem();
 	}
 	
