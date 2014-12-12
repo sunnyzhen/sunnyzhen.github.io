@@ -2005,6 +2005,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .wrap_show .event_list .item_2{ -webkit-animation:a_list_item 0.2s 1s linear both;}
 .wrap_show .event_list .item_3{ -webkit-animation:a_list_item 0.2s 1.2s linear both;}
 .wrap_show .event_list .item_4{ -webkit-animation:a_list_item 0.2s 1.4s linear both;}
+.wrap_show .detail_penguin_2{ -webkit-animation:a_detail_penguin_1 4s 0.3s linear infinite;}
 
 .wrap_show .ice_lake_1 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
 .wrap_show .detail_penguin_wrap_1 .penguin_show_1 .detail_penguin_1{ -webkit-animation:a_detail_penguin_1 4s 0.3s linear infinite;}
