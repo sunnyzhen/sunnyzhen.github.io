@@ -693,7 +693,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 /*介绍页 2*/
 .wording_wrap .wording_3{ display:block; height:62px; width:150px; background:url(../images/page_2/wording_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-75px; bottom:80px; z-index:2; opacity:0;}
 .con_wrap_3 .man_wrap_3{ display:block; height:119px; width:70px; position:absolute; left:50%; margin-left:-93px; bottom:206px; z-index:5;}
-.con_wrap_3 .man_shadow{ display:block; height:14px; width:210px; position:absolute; left:50%; margin-left:-106px; bottom:204px; z-index:3; background:#1f5cab; border-radius:210px/14px;}
+.con_wrap_3 .man_shadow_3{ display:block; height:14px; width:210px; position:absolute; left:50%; margin-left:-106px; bottom:204px; z-index:3; background:#194d9c; border-radius:210px/14px;}
 
 .chair_3{ display:block; height:46px; width:69px; position:absolute; left:0px; bottom:0px; z-index:4;}
 .chair_3 .chair_bottom{ display:block; height:46px; width:69px; background:url(../images/page_2/chair_bottom.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
@@ -851,7 +851,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .tree_wrap .tree_2 i{display:block; height:160px; width:149px; background:url(../images/page_3/tree_2.png) no-repeat 0 0;  background-size:contain; position:absolute; left:0; bottom:0; z-index:1; -webkit-transform-origin:50% 100%; opacity:1; }
 
 .motor_hook{ display:block; height:107px; width:187px; position:absolute; bottom:221px; left:50%; margin-left:-96px; z-index:3;}
-.motor_wrap{ display:block; height:107px; width:187px; position:absolute; top:0px; left:0; -webkit-transform-origin:50% 700%; -webkit-transform:rotate(-32deg);}
+.motor_wrap{ display:block; height:107px; width:187px; position:absolute; top:0px; left:0; -webkit-transform-origin:50% 700%; -webkit-transform:rotate(-32deg); z-index:1;}
 .motor_wrap .man{ display:block; height:118px; width:72px; position:absolute; left:67px; top:-26px; z-index:2; -webkit-transform-origin:50% 100%;}
 .motor_wrap .man .body{ display:block; height:118px; width:72px; background: url(../images/page_3/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; bottom:0;}
 .motor_wrap .man .head{ display:block; height:54px; width:55px; background: url(../images/page_3/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:2px; top:-56px; -webkit-transform-origin:50% 100%;}
@@ -865,6 +865,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 .motor_wrap .penguin{ display:block; height:48px; width:40px; background:url(../images/page_3/penguin.png) no-repeat 0 0; position:absolute; left:27px; top:-6px; background-size:contain; -webkit-transform-origin:50% 100%;}
 .motor_wrap .penguin .scarf{ display:block; height:11px; width:26px; background:url(../images/page_3/scarf.png) no-repeat 0 0; position:absolute; left:-22px; top:14px; background-size:contain; -webkit-transform-origin:100% 0%;}
+.motor_shadow{ display:block; height:14px; width:180px; position:absolute; left:50%; margin-left:-85px; bottom:-25px; background:#194d9c; border-radius:180px/14px; -webkit-transform-origin:50% 600px; -webkit-transform:rotate(-35deg);}
 
 .wrap_show .tree_wrap .tree_1 i{ -webkit-animation:a_building 0.3s 0.3s linear both;}
 .wrap_show .tree_wrap .tree_2 i{ -webkit-animation:a_building 0.3s 0.5s linear both;}
@@ -897,6 +898,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 .wrap_show .motor_hook{ -webkit-animation:a_motor_hook 1s 2.4s linear infinite alternate;}
 .wrap_show .motor_wrap{ -webkit-animation:a_motor_wrap 1.5s 0.9s linear both;}
+.wrap_show .motor_shadow{ -webkit-animation:a_motor_wrap 1.5s 0.9s linear both;}
 .wrap_show .motor_wrap .motor .motor_handle{ -webkit-animation:a_motor_handle 0.5s linear infinite;}
 .wrap_show .motor_wrap .motor .motor_body{ -webkit-animation:a_motor_body 0.5s linear infinite;}
 .wrap_show .motor_wrap .motor .wheel_front{ -webkit-animation:a_wheel_front 0.5s linear infinite;}
@@ -1732,10 +1734,11 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .penguin_wrap_8 .penguin_foot{  display:block; height:4px; width:8px; position:absolute; left:34px; bottom:2px; background:#353737; border-radius:8px/4px;}
 .penguin_wrap_8 .penguin_foot_2{ left:25px; border-radius:0 8px 8px 0/0 4px 4px 0;}
 .signpost{ display:block; height:57px; width:74px; background:url(../images/page_7/signpost.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; bottom:260px; margin-left:-134px; -webkit-transform-origin:50% 100%;}
-.ice_bg_1{ display:block; height:279px; width:320px; background:url(../images/page_7/ice_land.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; bottom:0px; margin-left:-160px; z-index:2;}
+.ice_bg_1{ display:block; height:100%; width:100%; background:url(../images/page_7/ice_land.png) no-repeat center
+ bottom; background-size:contain; position:absolute; left:0px; bottom:0px; z-index:2;}
 
 .penguin_shadow_8{ display:block; height:8px; width:46px; background:#abc4e3; position:absolute; left:0px; bottom:-2px; border-radius:46px/8px;}
-.man_shadow_8{ display:block; height:12px; width:80px; background:#abc4e3; position:absolute; left:-26px; bottom:-102px; border-radius:80px/12px;}
+.man_shadow_8{ display:block; height:12px; width:80px; background:#abc4e3; position:absolute; left:-26px; bottom:-99px; border-radius:80px/12px;}
 
 .wrap_show .current .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
 .wrap_show .current .man_hook_8{-webkit-animation:a_man_hook_8 4s 0.3s linear both;}
@@ -2374,6 +2377,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 	.tree_wrap .tree_2{bottom:285px;}
 	.building_bg .building_1{ bottom:295px;}
 	.building_bg .building_2{ bottom:298px;}
+	.signpost{ bottom:300px;}
 }
 
 /* 安卓兼容 兼容*/
