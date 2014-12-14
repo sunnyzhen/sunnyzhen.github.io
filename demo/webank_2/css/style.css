@@ -701,7 +701,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .man_wrap_3 .man{ display:block; height:52px; width:35px; position:absolute; left:17%; top:6px;}
 .man_wrap_3 .man .body_wrap{ display:block; height:52px; width:35px; position:absolute; left:0; top:0px; -webkit-transform-origin:50% 100%; z-index:3; }
 .man_wrap_3 .man .body{ display:block; height:52px; width:35px; position:absolute; left:0; top:0px; background:url(../images/page_2/person_body.png) no-repeat 0 0; background-size:contain; z-index:2; }
-.man_wrap_3 .man .head{ display:block; height:59px; width:53px; position:absolute; left:-19px; top:-55px; background:url(../images/page_2/person_head.png) no-repeat 0 0; background-size:contain; }
+.man_wrap_3 .man .head{ display:block; height:59px; width:53px; position:absolute; left:-24px; top:-55px; background:url(../images/page_2/person_head.png) no-repeat 0 0; background-size:contain; }
 .man_wrap_3 .man .arm_1{ display:block; height:20px; width:62px; position:absolute; left:13px; top:-3px; background:url(../images/page_2/person_hand_1.png) no-repeat 0 0; background-size:contain;}
 .man_wrap_3 .man .arm_2{ display:block; height:30px; width:34px; position:absolute; left:13px; top:6px; background:url(../images/page_2/person_arm_2.png) no-repeat 0 0; background-size:contain; z-index:3; -webkit-transform-origin:0% 0%;}
 .man_wrap_3 .man .hand_2{ display:block; height:11px; width:10px; position:absolute; left:33px; top:22px; background:url(../images/page_2/person_hand_2.png) no-repeat 0 0; background-size:contain; z-index:3; -webkit-transform-origin:0% 30%;}
@@ -1167,7 +1167,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .iceberg_wrap .ice_3{display:block; height:18px; width:54px; background:url(../images/page_5/ice_3.png) no-repeat 0 0; background-size:contain; position: absolute; left:227px; top:69px;}
 
 .man_wrap_6{display:block; height:48px; width:34px; position: absolute; left:47px; bottom:63px;}
-.man_wrap_6 .man_head{display:block; height:50px; width:49px; background:url(../images/page_5/man_head.png) no-repeat 0 0; background-size:contain; position: absolute; left:-2px; top:-47px; z-index:2;}
+.man_wrap_6 .man_head{display:block; height:50px; width:49px; background:url(../images/page_5/man_head.png) no-repeat 0 0; background-size:contain; position: absolute; left:-2px; top:-49px; z-index:2;}
 .man_wrap_6 .man_head .hat_1{display:block; height:18px; width:31px; background:url(../images/page_5/hat_1.png) no-repeat 0 0; background-size:contain; position: absolute; left:-16px; top:0;}
 .man_wrap_6 .body{display:block; height:48px; width:34px; background:url(../images/page_5/man_body.png) no-repeat 0 0; background-size:contain; position: absolute; left:0; top:0; z-index:2; -webkit-transform-origin:50% 100%;}
 
@@ -1463,8 +1463,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .sofa_wrap{ display:block; height:109px; width:223px; position:absolute; left:50%; margin-left:-111px; bottom:212px; z-index:4; -webkit-transform-origin:50% 100%;}
 .sofa_wrap .sofa{ display:block; height:109px; width:223px; background: url(../images/page_6/sofa.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
 .sofa_wrap .man_wrap_7{ display:block; height:46px; width:39px; background: url(../images/page_6/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:58px; top:-2px; -webkit-transform-origin:50% 100%;}
-.sofa_wrap .man_wrap_7 .man_head{ display:block; height:55px; width:52px; background: url(../images/page_6/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:-54px; background-size:contain;}
-.sofa_wrap .girl_wrap_7{ display:block; height:60px; width:65px; position:absolute; left:114px; top:-54px; -webkit-transform-origin:50% 100%; z-index:1;}
+.sofa_wrap .man_wrap_7 .man_head{ display:block; height:55px; width:52px; background: url(../images/page_6/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:-57px; background-size:contain;}
+.sofa_wrap .girl_wrap_7{ display:block; height:60px; width:65px; position:absolute; left:110px; top:-55px; -webkit-transform-origin:50% 100%; z-index:1;}
 .sofa_wrap .girl_wrap_7 .girl_head{ display:block; height:60px; width:65px; background: url(../images/page_6/girl_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
 .sofa_wrap .heart_wrap{ display:block; height:14px; width:15px; position:absolute; left:108px; top:-58px; z-index:2;}
 .sofa_wrap .heart_wrap .heart_1{ display:block; height:14px; width:15px; background: url(../images/page_6/icon_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:0;}
@@ -1575,8 +1575,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 @-webkit-keyframes a_man_wrap_7{
 	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
-	30%{ -webkit-transform: translate(8px,0) rotate(3deg);}/*kiss begin*/
-	70%{ -webkit-transform: translate(8px,0) rotate(3deg);}/*kiss end*/
+	30%{ -webkit-transform: translate(6px,0) rotate(2deg);}/*kiss begin*/
+	70%{ -webkit-transform: translate(6px,0) rotate(2deg);}/*kiss end*/
 	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
 }
@@ -1584,8 +1584,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 @-webkit-keyframes a_girl_wrap_7{
 	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
-	30%{ -webkit-transform: translate(-4px,0) rotate(-3deg);}
-	70%{ -webkit-transform: translate(-4px,0) rotate(-3deg);}
+	30%{ -webkit-transform: translate(-3px,0) rotate(-2deg);}
+	70%{ -webkit-transform: translate(-3px,0) rotate(-2deg);}
 	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
 }
@@ -1691,7 +1691,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .man_wrap_8{ display:block; height:54px; width:30px; position:absolute; left:0px; top:0px; z-index:1;}
 .man_wrap_8 .man_body{ display:block; height:54px; width:30px; position:absolute; left:0; top:0; -webkit-transform-origin:50% 100%; z-index:2;}
 .man_wrap_8 .body{ display:block; height:54px; width:30px; background:url(../images/page_7/body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
-.man_wrap_8 .man_head{ display:block; height:62px; width:59px; background:url(../images/page_7/head.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:-66px; -webkit-transform-origin:30% 100%;}
+.man_wrap_8 .man_head{ display:block; height:62px; width:59px; background:url(../images/page_7/head.png) no-repeat 0 0; background-size:contain; position:absolute; left:-7px; top:-64px; -webkit-transform-origin:30% 100%;}
 .man_wrap_8 .arm_2{ display:block; height:72px; width:23px; background:url(../images/page_7/arm_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:4px; top:5px; z-index:4; -webkit-transform-origin:50% 10%;}
 .man_wrap_8 .bag{ display:block; height:46px; width:41px; background:url(../images/page_7/bag.png) no-repeat 0 0; background-size:contain; position:absolute; left:-16px; top:-3px; z-index:3;}
 .man_wrap_8 .arm_1{ display:block; height:37px; width:45px; position:absolute; left:11px; top:4px; z-index:1; -webkit-transform-origin:10% 10%;}
