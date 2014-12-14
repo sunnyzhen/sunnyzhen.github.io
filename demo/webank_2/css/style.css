@@ -2225,8 +2225,9 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 .wrap_show .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }
 .wrap_show .webank_it_bg .it_earth_bg{ -webkit-animation:a_it_earth 0.2s 0.4s linear both; }
-.wrap_show .we_slogan{ -webkit-animation:a_we_slogan 0.2s 0.7s linear both; }
-.wrap_show .share_we{ -webkit-animation:a_we_slogan 0.2s 0.9s linear both; }
+.wrap_show .we_slogan{ -webkit-animation:a_we_slogan 0.3s 0.7s linear both; }
+.wrap_show .share_we{ -webkit-animation:a_we_slogan 0.3s 1s linear both; }
+.wrap_show .penguin_wrap_10_hook{ -webkit-animation:a_we_slogan 0.3s 1.3s linear both; }
 .wrap_show .penguin_wrap_10{ -webkit-animation:a_penguin_wrap_10 1.6s 0.9s linear infinite; }
 .wrap_show .penguin_wrap_10 .penguin_hand_1{ -webkit-animation:a_penguin_wrap_10_hand_1 0.5s 0.3s linear infinite; }
 .wrap_show .penguin_wrap_10 .penguin_hand_2{ -webkit-animation:a_penguin_wrap_10_hand_2 1.6s 0.9s linear infinite; }
