@@ -1737,42 +1737,42 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .penguin_shadow_8{ display:block; height:8px; width:46px; background:#abc4e3; position:absolute; left:0px; bottom:-2px; border-radius:46px/8px;}
 .man_shadow_8{ display:block; height:12px; width:80px; background:#abc4e3; position:absolute; left:-26px; bottom:-102px; border-radius:80px/12px;}
 
-.wrap_show .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
-.wrap_show .man_hook_8{-webkit-animation:a_man_hook_8 4s 0.3s linear both;}
-.wrap_show .man_wrap_8 { -webkit-animation:a_man_8 2s 0.3s linear infinite;}
-.wrap_show .man_shadow_8 { -webkit-animation:a_man_8 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .man_body{ -webkit-animation:a_man_8_body 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .man_head{ -webkit-animation:a_man_8_head 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .leg_1{ -webkit-animation:a_man_8_leg_1 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .leg_1 .leg_1_2{ -webkit-animation:a_man_8_leg_1_2 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .leg_1 .leg_1_2 .foot{ -webkit-animation:a_man_8_leg_1_2_foot 2s 0.3s linear infinite;}
+.wrap_show .current .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
+.wrap_show .current .man_hook_8{-webkit-animation:a_man_hook_8 4s 0.3s linear both;}
+.wrap_show .current .man_wrap_8 { -webkit-animation:a_man_8 2s 0.3s linear infinite;}
+.wrap_show .current .man_shadow_8 { -webkit-animation:a_man_8 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .man_body{ -webkit-animation:a_man_8_body 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .man_head{ -webkit-animation:a_man_8_head 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_1{ -webkit-animation:a_man_8_leg_1 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_1 .leg_1_2{ -webkit-animation:a_man_8_leg_1_2 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_1 .leg_1_2 .foot{ -webkit-animation:a_man_8_leg_1_2_foot 2s 0.3s linear infinite;}
 
-.wrap_show .man_wrap_8 .leg_2{ -webkit-animation:a_man_8_leg_1 2s 1.3s linear infinite;}
-.wrap_show .man_wrap_8 .leg_2 .leg_2_2{ -webkit-animation:a_man_8_leg_1_2 2s 1.3s linear infinite;}
-.wrap_show .man_wrap_8 .leg_2 .leg_2_2 .foot{ -webkit-animation:a_man_8_leg_1_2_foot 2s 1.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_2{ -webkit-animation:a_man_8_leg_1 2s 1.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_2 .leg_2_2{ -webkit-animation:a_man_8_leg_1_2 2s 1.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .leg_2 .leg_2_2 .foot{ -webkit-animation:a_man_8_leg_1_2_foot 2s 1.3s linear infinite;}
 
-.wrap_show .man_wrap_8 .arm_1{ -webkit-animation:a_man_8_arm_1 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .arm_1 .thumb{ -webkit-animation:a_man_8_arm_thumb 2s 0.3s linear infinite alternate;}
-.wrap_show .man_wrap_8 .arm_2{ -webkit-animation:a_man_8_arm_2 2s 0.3s linear infinite;}
-.wrap_show .man_wrap_8 .bag{ -webkit-animation:a_man_8_bag 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .arm_1{ -webkit-animation:a_man_8_arm_1 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .arm_1 .thumb{ -webkit-animation:a_man_8_arm_thumb 2s 0.3s linear infinite alternate;}
+.wrap_show .current .man_wrap_8 .arm_2{ -webkit-animation:a_man_8_arm_2 2s 0.3s linear infinite;}
+.wrap_show .current .man_wrap_8 .bag{ -webkit-animation:a_man_8_bag 2s 0.3s linear infinite;}
 
-.wrap_show .icon_wrap_8 .icon_1 i{-webkit-animation:a_icon_wrap_8_1 0.3s 4.3s linear both;}
-.wrap_show .icon_wrap_8 .icon_2 i{-webkit-animation:a_icon_wrap_8_2 0.3s 4.5s linear both;}
-.wrap_show .icon_wrap_8 .icon_3 i{-webkit-animation:a_icon_wrap_8_3 0.3s 4.7s linear both;}
-.wrap_show .icon_wrap_8 .icon_4 i{-webkit-animation:a_icon_wrap_8_4 0.3s 4.9s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_1 i{-webkit-animation:a_icon_wrap_8_1 0.3s 4.3s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_2 i{-webkit-animation:a_icon_wrap_8_2 0.3s 4.5s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_3 i{-webkit-animation:a_icon_wrap_8_3 0.3s 4.7s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_4 i{-webkit-animation:a_icon_wrap_8_4 0.3s 4.9s linear both;}
 
-.wrap_show .icon_wrap_8 .icon_1 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.3s linear both;}
-.wrap_show .icon_wrap_8 .icon_2 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.5s linear both;}
-.wrap_show .icon_wrap_8 .icon_3 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.7s linear both;}
-.wrap_show .icon_wrap_8 .icon_4 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.9s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_1 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.3s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_2 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.5s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_3 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.7s linear both;}
+.wrap_show .current .icon_wrap_8 .icon_4 .dot_line{-webkit-animation:a_icon_wrap_8_dot_line 0.3s 4.9s linear both;}
 
-.wrap_show .penguin_hook_8{-webkit-animation:a_penguin_hook_8 1.6s 0.5s linear both;}
-.wrap_show .penguin_wrap_8 { -webkit-animation:a_penguin_8 2s 0.3s linear infinite;}
-.wrap_show .penguin_shadow_8 { -webkit-animation:a_penguin_8 2s 0.3s linear infinite;}
-.wrap_show .penguin_wrap_8 .penguin_eye{ -webkit-animation:a_eye 2.4s 0.8s linear infinite;}
-.wrap_show .penguin_wrap_8 .penguin_foot_1{-webkit-animation:a_penguin_8_foot 1s 0.3s linear infinite;}
-.wrap_show .penguin_wrap_8 .penguin_foot_2{-webkit-animation:a_penguin_8_foot 1s 0.8s linear infinite;}
-.wrap_show .signpost{-webkit-animation:a_signpost 0.3s 0.3s linear both;}
+.wrap_show .current .penguin_hook_8{-webkit-animation:a_penguin_hook_8 1.6s 0.5s linear both;}
+.wrap_show .current .penguin_wrap_8 { -webkit-animation:a_penguin_8 2s 0.3s linear infinite;}
+.wrap_show .current .penguin_shadow_8 { -webkit-animation:a_penguin_8 2s 0.3s linear infinite;}
+.wrap_show .current .penguin_wrap_8 .penguin_eye{ -webkit-animation:a_eye 2.4s 0.8s linear infinite;}
+.wrap_show .current .penguin_wrap_8 .penguin_foot_1{-webkit-animation:a_penguin_8_foot 1s 0.3s linear infinite;}
+.wrap_show .current .penguin_wrap_8 .penguin_foot_2{-webkit-animation:a_penguin_8_foot 1s 0.8s linear infinite;}
+.wrap_show .current .signpost{-webkit-animation:a_signpost 0.3s 0.3s linear both;}
 
 
 @-webkit-keyframes a_signpost{
@@ -1996,26 +1996,26 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .firework_1{ display:block; height:84px; width:37px; background:url(../images/detail/firework_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:4px; top:-60px;}
 .firework_2{ display:block; height:36px; width:45px; background:url(../images/detail/firework_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:-41px;}
 
-.wrap_show .event_wrap .event_title{ -webkit-animation:a_event_title 0.2s 0.3s linear both;}
-.wrap_show .event_list li .dot i{ -webkit-animation:a_event_dot 1.4s linear infinite;}
-.wrap_show .event_area .timeline_1{ -webkit-animation:a_timeline_1 0.3s 0.5s linear both;}
-.wrap_show .event_area .timeline_2{ -webkit-animation:a_timeline_2 0.6s 0.8s linear both;}
-.wrap_show .event_area .timeline_3{ -webkit-animation:a_timeline_3 0.3s 1.4s linear both;}
-.wrap_show .event_list .item_1{ -webkit-animation:a_list_item 0.2s 0.8s linear both;}
-.wrap_show .event_list .item_2{ -webkit-animation:a_list_item 0.2s 1s linear both;}
-.wrap_show .event_list .item_3{ -webkit-animation:a_list_item 0.2s 1.2s linear both;}
-.wrap_show .event_list .item_4{ -webkit-animation:a_list_item 0.2s 1.4s linear both;}
-.wrap_show .detail_penguin_2{ -webkit-animation:a_detail_penguin_1 4.5s 0.5s linear infinite;}
-.wrap_show .firework_1{ -webkit-animation:a_firework_1 4.5s 0.3s linear infinite;}
-.wrap_show .firework_2{ -webkit-animation:a_firework_1 4.5s 0.6s linear infinite;}
+.current .event_wrap .event_title{ -webkit-animation:a_event_title 0.2s 0.3s linear both;}
+.current .event_list li .dot i{ -webkit-animation:a_event_dot 1.4s linear infinite;}
+.current .event_area .timeline_1{ -webkit-animation:a_timeline_1 0.3s 0.5s linear both;}
+.current .event_area .timeline_2{ -webkit-animation:a_timeline_2 0.6s 0.8s linear both;}
+.current .event_area .timeline_3{ -webkit-animation:a_timeline_3 0.3s 1.4s linear both;}
+.current .event_list .item_1{ -webkit-animation:a_list_item 0.2s 0.8s linear both;}
+.current .event_list .item_2{ -webkit-animation:a_list_item 0.2s 1s linear both;}
+.current .event_list .item_3{ -webkit-animation:a_list_item 0.2s 1.2s linear both;}
+.current .event_list .item_4{ -webkit-animation:a_list_item 0.2s 1.4s linear both;}
+.current .detail_penguin_2{ -webkit-animation:a_detail_penguin_1 4.5s 0.5s linear infinite;}
+.current .firework_1{ -webkit-animation:a_firework_1 4.5s 0.3s linear infinite;}
+.current .firework_2{ -webkit-animation:a_firework_1 4.5s 0.6s linear infinite;}
 
-.wrap_show .ice_lake_1 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
-.wrap_show .detail_penguin_wrap_1 .penguin_show_1 .detail_penguin_1{ -webkit-animation:a_detail_penguin_1 4s 0.3s linear infinite;}
-.wrap_show .detail_penguin_wrap_1 .ripple_1{ -webkit-animation:a_ripple_1 4s 0.3s linear infinite;}
-.wrap_show .detail_penguin_wrap_1 .ripple_2{ -webkit-animation:a_ripple_1 4s 0.45s linear infinite;}
-.wrap_show .detail_penguin_wrap_1 .ripple_3{ -webkit-animation:a_ripple_1 4s 0.6s linear infinite;}
-.wrap_show .ice_lake_2 .boat_hook{ -webkit-animation:a_boat_hook_1 2s 1s linear both;}
-.wrap_show .ice_lake_2 .boat{ -webkit-animation:a_ice_block_1 4s 0.5s linear infinite alternate;}
+.current .ice_lake_1 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
+.current .detail_penguin_wrap_1 .penguin_show_1 .detail_penguin_1{ -webkit-animation:a_detail_penguin_1 4s 0.3s linear infinite;}
+.current .detail_penguin_wrap_1 .ripple_1{ -webkit-animation:a_ripple_1 4s 0.3s linear infinite;}
+.current .detail_penguin_wrap_1 .ripple_2{ -webkit-animation:a_ripple_1 4s 0.45s linear infinite;}
+.current .detail_penguin_wrap_1 .ripple_3{ -webkit-animation:a_ripple_1 4s 0.6s linear infinite;}
+.current .ice_lake_2 .boat_hook{ -webkit-animation:a_boat_hook_1 2s 1s linear both;}
+.current .ice_lake_2 .boat{ -webkit-animation:a_ice_block_1 4s 0.5s linear infinite alternate;}
 
 
 
@@ -2119,11 +2119,11 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .stockholder_list_3 li .job{ display:block; font-family:'microsoft yahei'; color:#4167a8; font-size:14px; font-weight:normal; width:100%; text-align:center; letter-spacing:1px; line-height:1.3; font-size:12px; margin-top:-18px;}
 .stockholder_list_3 li .s_line{ height:39px;}
 
-.wrap_show .stockholder_wrap .stock_title{ -webkit-animation:a_stock_title 0.2s 0.3s linear both;}
-.wrap_show .stockholder_list{ -webkit-animation:a_stock_title 0.2s 0.5s linear both;}
-.wrap_show .stockholder_list_2{ -webkit-animation:a_stock_title 0.2s 0.7s linear both;}
-.wrap_show .stockholder_wrap .manage_title{ -webkit-animation:a_stock_title 0.2s 0.9s linear both;}
-.wrap_show .stockholder_list_3{ -webkit-animation:a_stock_title 0.2s 1.1s linear both;}
+.current .stockholder_wrap .stock_title{ -webkit-animation:a_stock_title 0.2s 0.3s linear both;}
+.current .stockholder_list{ -webkit-animation:a_stock_title 0.2s 0.5s linear both;}
+.current .stockholder_list_2{ -webkit-animation:a_stock_title 0.2s 0.7s linear both;}
+.current .stockholder_wrap .manage_title{ -webkit-animation:a_stock_title 0.2s 0.9s linear both;}
+.current .stockholder_list_3{ -webkit-animation:a_stock_title 0.2s 1.1s linear both;}
 
 @-webkit-keyframes a_stock_title{
 	0%{ opacity:0;}
@@ -2152,21 +2152,21 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .join_us_title{ display:block; height:69px; width:127px; background:url(../images/detail/join_us.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:277px; margin-left:-63px; overflow:hidden; text-indent:-9999px;}
 .email_link{ display:block; height:70px; width:110px; background:url(../images/detail/join_email.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:391px; margin-left:-55px; overflow:hidden; text-indent:-9999px;}
 
-.wrap_show .ice_hole_2 .ice_block_2{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
-.wrap_show .ice_lake_8 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.6s linear infinite alternate;}
-.wrap_show .ice_lake_8 .boat{ -webkit-animation:a_ice_block_1 4s 0.9s linear infinite alternate;}
-.wrap_show .join_us_title{ -webkit-animation:a_stock_title 0.3s 0.5s linear both;}
-.wrap_show .email_link{ -webkit-animation:a_stock_title 0.3s 0.8s linear both;}
+.current .ice_hole_2 .ice_block_2{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
+.current .ice_lake_8 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.6s linear infinite alternate;}
+.current .ice_lake_8 .boat{ -webkit-animation:a_ice_block_1 4s 0.9s linear infinite alternate;}
+.current .join_us_title{ -webkit-animation:a_stock_title 0.3s 0.5s linear both;}
+.current .email_link{ -webkit-animation:a_stock_title 0.3s 0.8s linear both;}
 
-.wrap_show .penguin_wrap_9_leader{ -webkit-animation:a_penguin_9 0.2s 0.3s linear both;}
-.wrap_show .penguin_wrap_9_s_1{ -webkit-animation:a_penguin_9 0.2s 3s linear both;}
-.wrap_show .penguin_wrap_9_s_2{ -webkit-animation:a_penguin_9 0.2s 4.5s linear both;}
-.wrap_show .penguin_shadow_9{ -webkit-animation:a_penguin_9 0.2s 0.3s linear both;}
-.wrap_show .penguin_shadow_9_1{ -webkit-animation:a_penguin_9 0.2s 3s linear both;}
-.wrap_show .penguin_shadow_9_2{ -webkit-animation:a_penguin_9 0.2s 4.5s linear both;}
+.current .penguin_wrap_9_leader{ -webkit-animation:a_penguin_9 0.2s 0.3s linear both;}
+.current .penguin_wrap_9_s_1{ -webkit-animation:a_penguin_9 0.2s 3s linear both;}
+.current .penguin_wrap_9_s_2{ -webkit-animation:a_penguin_9 0.2s 4.5s linear both;}
+.current .penguin_shadow_9{ -webkit-animation:a_penguin_9 0.2s 0.3s linear both;}
+.current .penguin_shadow_9_1{ -webkit-animation:a_penguin_9 0.2s 3s linear both;}
+.current .penguin_shadow_9_2{ -webkit-animation:a_penguin_9 0.2s 4.5s linear both;}
 
-.wrap_show .penguin_wrap_9 .penguin_hand_1{ -webkit-animation:a_penguin_9_hand_1 4s 0.5s linear infinite;}
-.wrap_show .penguin_wrap_9 .penguin_hand_2{ -webkit-animation:a_penguin_9_hand_2 4s 0.5s linear infinite;}
+.current .penguin_wrap_9 .penguin_hand_1{ -webkit-animation:a_penguin_9_hand_1 4s 0.5s linear infinite;}
+.current .penguin_wrap_9 .penguin_hand_2{ -webkit-animation:a_penguin_9_hand_2 4s 0.5s linear infinite;}
 
 
 @-webkit-keyframes a_penguin_9{
@@ -2223,17 +2223,17 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .penguin_wrap_10 .penguin_foot_2{ display:block; height:3px; width:9px; background:url(../images/detail/foot_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:22px; z-index:1; -webkit-transform-origin:0% 50%;}
 .penguin_shadow_10{ display:block; height:4px; width:25px; border-radius:25px/4px; background:#cddef2; position:absolute; right:31px; top:49px;}
 
-.wrap_show .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }
-.wrap_show .webank_it_bg .it_earth_bg{ -webkit-animation:a_it_earth 0.2s 0.4s linear both; }
-.wrap_show .we_slogan{ -webkit-animation:a_we_slogan 0.3s 0.7s linear both; }
-.wrap_show .share_we{ -webkit-animation:a_we_slogan 0.3s 1s linear both; }
-.wrap_show .penguin_wrap_10_hook{ -webkit-animation:a_we_slogan 0.3s 1.3s linear both; }
-.wrap_show .penguin_wrap_10{ -webkit-animation:a_penguin_wrap_10 1.6s 0.9s linear infinite; }
-.wrap_show .penguin_wrap_10 .penguin_hand_1{ -webkit-animation:a_penguin_wrap_10_hand_1 0.5s 0.3s linear infinite; }
-.wrap_show .penguin_wrap_10 .penguin_hand_2{ -webkit-animation:a_penguin_wrap_10_hand_2 1.6s 0.9s linear infinite; }
-.wrap_show .penguin_wrap_10 .penguin_foot_1{ -webkit-animation:a_penguin_wrap_10_foot_1 1.6s 0.9s linear infinite; }
-.wrap_show .penguin_wrap_10 .penguin_foot_2{ -webkit-animation:a_penguin_wrap_10_foot_2 1.6s 0.9s linear infinite; }
-.wrap_show .penguin_shadow_10{ -webkit-animation:a_penguin_shadow_10 1.6s 0.9s linear infinite; }
+.current .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }
+.current .webank_it_bg .it_earth_bg{ -webkit-animation:a_it_earth 0.2s 0.4s linear both; }
+.current .we_slogan{ -webkit-animation:a_we_slogan 0.3s 0.7s linear both; }
+.current .share_we{ -webkit-animation:a_we_slogan 0.3s 1s linear both; }
+.current .penguin_wrap_10_hook{ -webkit-animation:a_we_slogan 0.3s 1.3s linear both; }
+.current .penguin_wrap_10{ -webkit-animation:a_penguin_wrap_10 1.6s 0.9s linear infinite; }
+.current .penguin_wrap_10 .penguin_hand_1{ -webkit-animation:a_penguin_wrap_10_hand_1 0.5s 0.3s linear infinite; }
+.current .penguin_wrap_10 .penguin_hand_2{ -webkit-animation:a_penguin_wrap_10_hand_2 1.6s 0.9s linear infinite; }
+.current .penguin_wrap_10 .penguin_foot_1{ -webkit-animation:a_penguin_wrap_10_foot_1 1.6s 0.9s linear infinite; }
+.current .penguin_wrap_10 .penguin_foot_2{ -webkit-animation:a_penguin_wrap_10_foot_2 1.6s 0.9s linear infinite; }
+.current .penguin_shadow_10{ -webkit-animation:a_penguin_shadow_10 1.6s 0.9s linear infinite; }
 
 @-webkit-keyframes a_we_penguin{
 	0%{ opacity:0; -webkit-transform:translate(-200px,0px);}
@@ -2332,7 +2332,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .dot_wrap_1{ bottom:auto; top:30px;}
 .dot_wrap_1 .line{ top:auto; bottom:10px;}
 
-.wrap_show .dot_wrap .dot{ -webkit-animation:a_event_dot 1.4s linear infinite;}
+.current .dot_wrap .dot{ -webkit-animation:a_event_dot 1.4s linear infinite;}
 
 
 /*连接线*/
