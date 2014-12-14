@@ -450,8 +450,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 /*首页*/
 .con_wrap_1 .main_title{ display:none;}
 .con_wrap_1 .sub_title{ display:none;}
-.bg_light{ display:block; height:50%; width:100%; background:-webkit-radial-gradient(center center,#2f86d1,#2559a8 60%); position:absolute; left:50%; bottom:160px; border-radius:100%/60%; margin-left:-50%;}
-
+.bg_light{ display:block; height:50%; width:100%; background:-webkit-radial-gradient(center center,#2f86d1,#2559a8 70%); position:absolute; left:50%; bottom:160px; border-radius:100%/60%; margin-left:-50%; opacity:0.7;}
 
 .logo_area{ display:block; height:41px; width:203px; position:absolute; left:50%; margin-left:-100px; bottom:247px; z-index:3;}
 .logo_area .logo_txt{ display:block; height:41px; width:203px; position:absolute; left:0; top:0;}
@@ -529,7 +528,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 /*介绍页 1*/
 .con_wrap_2 .man_wrap_2{ display:block; height:219px; width:61px; position:absolute; left:50%; margin-left:-30px; bottom:163px; z-index:4;-webkit-transform-origin:50% 100%;}
-.con_wrap_2 .man_wrap_2 .head{ display:block; height:60px; width:52px; background:url(../images/page_1/person_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-25px; top:0px; -webkit-transform-origin:50% 100%; -webkit-transform: rotate(-5deg);}
+.con_wrap_2 .man_wrap_2 .head{ display:block; height:60px; width:52px; background:url(../images/page_1/person_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-28px; top:0px; -webkit-transform-origin:50% 100%; -webkit-transform: rotate(-5deg);}
 .con_wrap_2 .man_wrap_2 .body{ display:block; height:159px; width:61px; background:url(../images/page_1/person_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; bottom:0px; z-index:2;}
 
 .con_wrap_2 .hand_wrap_2 .hand{ display:block; height:57px; width:35px; background:url(../images/page_1/person_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:-20px; top:0px; z-index:2;}
@@ -553,9 +552,9 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 .con_wrap_2 .man_shadow{ display:block; height:10px; width:97px; background:#194d9c; border-radius:60px/10px; position:absolute; left:50%; bottom:159px; margin-left:-48px; z-index:3;}
 
-.cloud_wrap{ display:block; height:44px; width:54px; position:absolute; left:50%; margin-left:-30px; top:-70px;}
-.cloud_wrap .cloud{display:block; height:44px; width:54px; background:url(../images/page_1/cloud.png) no-repeat 0 0;  background-size:contain; position:absolute; left:0px; top:0px;}
-.cloud_wrap .lightning{display:block; height:20px; width:11px; background:url(../images/page_1/lightning.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50%; margin-left:-5px; top:45px; -webkit-transform-origin:50% 0%; -webkit-transform: scale(0.5,0.1); opacity:0;}
+.cloud_wrap{ display:block; height:37px; width:54px; position:absolute; left:50%; margin-left:-30px; top:-80px;}
+.cloud_wrap .cloud{display:block; height:37px; width:54px; background:url(../images/page_1/cloud.png) no-repeat 0 0;  background-size:contain; position:absolute; left:0px; top:0px;}
+.cloud_wrap .lightning{display:block; height:20px; width:11px; background:url(../images/page_1/lightning.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50%; margin-left:-5px; top:40px; -webkit-transform-origin:50% 0%; -webkit-transform: scale(0.5,0.1); opacity:0;}
 
 .building_bg .building_1{display:block; height:61px; width:126px; background:url(../images/page_1/building_1.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50%; margin-left:-151px; bottom:252px; z-index:1; }
 .building_bg .building_2{display:block; height:60px; width:125px; background:url(../images/page_1/building_2.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50%; margin-left:27px; bottom:252px; z-index:1; }
@@ -702,7 +701,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .man_wrap_3 .man{ display:block; height:52px; width:35px; position:absolute; left:17%; top:6px;}
 .man_wrap_3 .man .body_wrap{ display:block; height:52px; width:35px; position:absolute; left:0; top:0px; -webkit-transform-origin:50% 100%; z-index:3; }
 .man_wrap_3 .man .body{ display:block; height:52px; width:35px; position:absolute; left:0; top:0px; background:url(../images/page_2/person_body.png) no-repeat 0 0; background-size:contain; z-index:2; }
-.man_wrap_3 .man .head{ display:block; height:59px; width:53px; position:absolute; left:-19px; top:-60px; background:url(../images/page_2/person_head.png) no-repeat 0 0; background-size:contain; }
+.man_wrap_3 .man .head{ display:block; height:59px; width:53px; position:absolute; left:-19px; top:-55px; background:url(../images/page_2/person_head.png) no-repeat 0 0; background-size:contain; }
 .man_wrap_3 .man .arm_1{ display:block; height:20px; width:62px; position:absolute; left:13px; top:-3px; background:url(../images/page_2/person_hand_1.png) no-repeat 0 0; background-size:contain;}
 .man_wrap_3 .man .arm_2{ display:block; height:30px; width:34px; position:absolute; left:13px; top:6px; background:url(../images/page_2/person_arm_2.png) no-repeat 0 0; background-size:contain; z-index:3; -webkit-transform-origin:0% 0%;}
 .man_wrap_3 .man .hand_2{ display:block; height:11px; width:10px; position:absolute; left:33px; top:22px; background:url(../images/page_2/person_hand_2.png) no-repeat 0 0; background-size:contain; z-index:3; -webkit-transform-origin:0% 30%;}
@@ -717,7 +716,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .con_wrap_3 .sun{ display:block; height:60px; width:60px; background:url(../images/page_2/sun.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-135px; top:26px;}
 .con_wrap_3 .desk{ display:block; height:79px; width:94px; background:url(../images/page_2/desk.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; margin-left:-2px; bottom:211px;}
 
-.con_wrap_3 .icon_wrap{ display:block; height:105px; width:122px; position:absolute; left:50%; margin-left:29px; bottom:310px; z-index:2; -webkit-transform-origin:-10% 90%;}
+.con_wrap_3 .icon_wrap{ display:block; height:105px; width:122px; position:absolute; left:50%; margin-left:29px; bottom:310px; z-index:3; -webkit-transform-origin:-10% 90%;}
 .con_wrap_3 .icon_wrap .icon_1{ display:block; height:14px; width:26px; background:url(../images/page_2/icon_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:73px; opacity:0;}
 .con_wrap_3 .icon_wrap .icon_2{ display:block; height:18px; width:26px; background:url(../images/page_2/icon_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:30px; top:80px;}
 .con_wrap_3 .icon_wrap .icon_3{ display:block; height:19px; width:17px; background:url(../images/page_2/icon_3.png) no-repeat 0 0; background-size:contain; position:absolute; left:30px; top:64px;}
@@ -854,7 +853,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .motor_wrap{ display:block; height:107px; width:187px; position:absolute; top:0px; left:0; -webkit-transform-origin:50% 700%; -webkit-transform:rotate(-32deg); z-index:1;}
 .motor_wrap .man{ display:block; height:118px; width:72px; position:absolute; left:67px; top:-26px; z-index:2; -webkit-transform-origin:50% 100%;}
 .motor_wrap .man .body{ display:block; height:118px; width:72px; background: url(../images/page_3/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; bottom:0;}
-.motor_wrap .man .head{ display:block; height:54px; width:55px; background: url(../images/page_3/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:2px; top:-56px; -webkit-transform-origin:50% 100%;}
+.motor_wrap .man .head{ display:block; height:54px; width:55px; background: url(../images/page_3/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:2px; top:-52px; -webkit-transform-origin:50% 100%;}
 .motor_wrap .motor .motor_body{ display:block; height:107px; width:172px; background:url(../images/page_3/motorcycle_body.png) no-repeat 0 0; position:absolute; left:12px; top:0px; background-size:contain; z-index:1;}
 .motor_wrap .motor .motor_handle{ display:block; height:9px; width:7px; background:url(../images/page_3/motorcycle_handle.png) no-repeat 0 0; position:absolute; right:54px; top:12px; background-size:contain; z-index:3;}
 .motor_wrap .motor .motor_pipe{ display:block; height:11px; width:17px; position:absolute; left:8px; top:91px;}
@@ -1013,7 +1012,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .chair{ display:block; height:109px; width:86px; background:url(../images/page_4/chair_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:0px; z-index:3;}
 .man_wrap_5 .man_body{display:block; height:55px; width:34px; position:absolute; left:41px; top:-2px; -webkit-transform-origin:30% 100%;}
 .man_wrap_5 .man_body .body{display:block; height:55px; width:34px; background:url(../images/page_4/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
-.man_wrap_5 .man_body .man_head{display:block; height:53px; width:51px; background:url(../images/page_4/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:12px; top:-51px; z-index:2; -webkit-transform-origin:50% 100%;}
+.man_wrap_5 .man_body .man_head{display:block; height:53px; width:51px; background:url(../images/page_4/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:9px; top:-50px; z-index:2; -webkit-transform-origin:50% 100%;}
 .man_wrap_5 .man_body .man_hand_1{display:block; height:44px; width:49px; background:url(../images/page_4/man_hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:21px; top:6px; z-index:1; -webkit-transform-origin:0% 0%;}
 .man_wrap_5 .man_body .man_hand_2{display:block; height:52px; width:38px; background:url(../images/page_4/man_hand_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:8px; top:6px; z-index:3;}
 .man_wrap_5 .man_leg{display:block; height:60px; width:66px; background:url(../images/page_4/man_leg.png) no-repeat 0 0; background-size:contain; position:absolute; left:39px; top:48px; z-index:1;}
@@ -1464,10 +1463,10 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .sofa_wrap{ display:block; height:109px; width:223px; position:absolute; left:50%; margin-left:-111px; bottom:212px; z-index:4; -webkit-transform-origin:50% 100%;}
 .sofa_wrap .sofa{ display:block; height:109px; width:223px; background: url(../images/page_6/sofa.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; z-index:2;}
 .sofa_wrap .man_wrap_7{ display:block; height:46px; width:39px; background: url(../images/page_6/man_body.png) no-repeat 0 0; background-size:contain; position:absolute; left:58px; top:-2px; -webkit-transform-origin:50% 100%;}
-.sofa_wrap .man_wrap_7 .man_head{ display:block; height:53px; width:51px; background: url(../images/page_6/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:2px; top:-53px; background-size:contain;}
-.sofa_wrap .girl_wrap_7{ display:block; height:48px; width:58px; position:absolute; left:119px; top:-43px; -webkit-transform-origin:50% 100%; z-index:1;}
-.sofa_wrap .girl_wrap_7 .girl_head{ display:block; height:48px; width:58px; background: url(../images/page_6/girl_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
-.sofa_wrap .heart_wrap{ display:block; height:14px; width:15px; position:absolute; left:112px; top:-58px; z-index:2;}
+.sofa_wrap .man_wrap_7 .man_head{ display:block; height:55px; width:52px; background: url(../images/page_6/man_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:-4px; top:-54px; background-size:contain;}
+.sofa_wrap .girl_wrap_7{ display:block; height:60px; width:65px; position:absolute; left:114px; top:-54px; -webkit-transform-origin:50% 100%; z-index:1;}
+.sofa_wrap .girl_wrap_7 .girl_head{ display:block; height:60px; width:65px; background: url(../images/page_6/girl_head.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0;}
+.sofa_wrap .heart_wrap{ display:block; height:14px; width:15px; position:absolute; left:108px; top:-58px; z-index:2;}
 .sofa_wrap .heart_wrap .heart_1{ display:block; height:14px; width:15px; background: url(../images/page_6/icon_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:0;}
 .sofa_wrap .heart_wrap .heart_2{ display:block; height:14px; width:15px; background: url(../images/page_6/icon_heart.png) no-repeat 0 0; background-size:contain; position:absolute; left:0; top:0; opacity:0;}
 
@@ -1576,8 +1575,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 @-webkit-keyframes a_man_wrap_7{
 	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
-	30%{ -webkit-transform: translate(15px,0) rotate(5deg);}/*kiss begin*/
-	70%{ -webkit-transform: translate(15px,0) rotate(5deg);}/*kiss end*/
+	30%{ -webkit-transform: translate(8px,0) rotate(3deg);}/*kiss begin*/
+	70%{ -webkit-transform: translate(8px,0) rotate(3deg);}/*kiss end*/
 	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
 }
@@ -1585,8 +1584,8 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 @-webkit-keyframes a_girl_wrap_7{
 	0%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	15%{ -webkit-transform: translate(0,0) rotate(0deg);}
-	30%{ -webkit-transform: translate(-5px,0) rotate(-5deg);}
-	70%{ -webkit-transform: translate(-5px,0) rotate(-5deg);}
+	30%{ -webkit-transform: translate(-4px,0) rotate(-3deg);}
+	70%{ -webkit-transform: translate(-4px,0) rotate(-3deg);}
 	85%{ -webkit-transform: translate(0,0) rotate(0deg);}
 	100%{ -webkit-transform: translate(0,0) rotate(0deg);}
 }
