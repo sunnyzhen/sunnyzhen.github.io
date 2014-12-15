@@ -6,6 +6,33 @@ $(document).ready(function(){
 	var page_index=1;//当前在哪个页面
 	var page_total=8;//总共有多少页面
 	var subpage_index=1;//当前在哪个子页
+	var main_list=$("#tab_list_1");
+	
+	function setMainList(num){
+		var str="";
+		for(var i=1;i<=num;i++){
+			if(i==1){
+				str+="<li class='current'><a href='##'><i>"+i+"</i></a></li>";
+			}
+			else{
+				str+="<li><a href='##'><i>"+i+"</i></a></li>";
+			}
+		}
+		$(main_list).html(str);
+	}
+	
+	setMainList(page_total);
+	
+	function setMainListItem(num){
+		$(main_list).children("li").removeClass("current");
+		$($(main_list).children("li")[num-1]).addClass("current");
+		if(page_index==8){
+			$(main_list).fadeOut();
+		}
+		else{
+			$(main_list).fadeIn();
+		}
+	}
 	
 	//触摸触发事件
 	$("body").touchwipe({
@@ -48,7 +75,7 @@ $(document).ready(function(){
 						page_index=page_total;
 					}
 					
-					console.log(page_index+" "+subpage_index);
+					//console.log(page_index+" "+subpage_index);
 					
 				},300);
 				
@@ -87,7 +114,9 @@ $(document).ready(function(){
 					page_index=page_total;
 				}
 				
-				console.log(page_index+" "+subpage_index);
+				setMainListItem(page_index);
+				
+				//console.log(page_index+" "+subpage_index);
 				
 			},300);
 			
@@ -107,7 +136,9 @@ $(document).ready(function(){
 			
 		}
 		
-		console.log(page_index+" "+subpage_index);
+		setMainListItem(page_index);
+		
+		//console.log(page_index+" "+subpage_index);
 		
 	});
 	
