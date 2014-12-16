@@ -19,7 +19,7 @@ button {cursor:pointer;}
 html,body{ height:100%; width:100%; overflow:hidden;}
 
 /*新建*/
-body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; background-size:contain;}
+body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; background-size:contain;}
 .con_wrap{ display:block; height:100%; width:100%; background:none; position:absolute; left:0px; top:0px; -webkit-transition: -webkit-transform 0.3s linear,opacity 0.3s linear; -webkit-transform-origin: 50% 180%; z-index:2;}
 
 .details_con{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.3s linear,opacity 0.3s linear;}
@@ -47,17 +47,17 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 .logo_area{ display:block; height:41px; width:203px; position:absolute; left:50%; margin-left:-100px; bottom:247px; z-index:3;}
 .logo_area .logo_txt{ display:block; height:41px; width:203px; position:absolute; left:0; top:0;}
-.logo_area .logo_txt .words{ display:block; height:41px; width:203px; background:url(../images/logo_txt.png) no-repeat 0 0; background-size:203px 41px; position:absolute; left:0; top:0; z-index:1;}
+.logo_area .logo_txt .words{ display:block; height:41px; width:203px; background:url(../images/cover/logo_txt.png) no-repeat 0 0; background-size:203px 41px; position:absolute; left:0; top:0; z-index:1;}
 .logo_area .logo_txt .shadow{ display:block; height:11px; width:208px; background:#194d9c; position:absolute; left:50%; margin-left:-106px; bottom:-5px; border-radius:208px/11px;}
 .logo_area .logo_sub_txt{ display:block; height:11px; width:95px; position:absolute; left:50%; margin-left:-47px; top:50px;}
-.logo_area .logo_sub_txt .words{ display:block; height:11px; width:95px; background:url(../images/logo_sub_txt.png) no-repeat 0 0; background-size:95px 11px; position:absolute; left:0; top:0; z-index:1;}
+.logo_area .logo_sub_txt .words{ display:block; height:11px; width:95px; background:url(../images/cover/logo_sub_txt.png) no-repeat 0 0; background-size:95px 11px; position:absolute; left:0; top:0; z-index:1;}
 .logo_area .logo_sub_txt .shadow{ display:block; height:5px; width:101px; background:#194d9c; position:absolute; left:50%; margin-left:-50px; bottom:-2px; border-radius:101px/5px;}
-.logo_area .logo_txt_n{ display:block; height:30px; width:29px; background:url(../images/logo_txt_n.png) no-repeat 0 0; background-size:29px 30px; position:absolute; left:142px; bottom:0px;}
+.logo_area .logo_txt_n{ display:block; height:30px; width:29px; background:url(../images/cover/logo_txt_n.png) no-repeat 0 0; background-size:29px 30px; position:absolute; left:142px; bottom:0px;}
 
 .logo_area .penguin_area{ display:block; height:33px; width:49px; position:absolute; left:110px; top:9px; overflow: hidden;}
-.logo_area .penguin_area .penguin{ display:block; background:url(../images/penguin_logo.png) no-repeat 0 0; height:33px; width:28px; position:absolute; left:0px; top:1px; background-size:28px 33px; z-index:1;}
-.earth_bg{ display:block; height:100%; width:100%; position:absolute; left:0; bottom:0; background:url(../images/earth_bg.png) no-repeat center bottom; background-size:contain; z-index:2;}
-.penguin_bg{ display:block; width:269px; height:213px; background:url(../images/cover_bg.png) no-repeat 0 0; position:absolute; right:-71px; bottom:236px; background-size:contain; z-index:1;}
+.logo_area .penguin_area .penguin{ display:block; background:url(../images/cover/penguin_logo.png) no-repeat 0 0; height:33px; width:28px; position:absolute; left:0px; top:1px; background-size:28px 33px; z-index:1;}
+.earth_bg{ display:block; height:100%; width:100%; position:absolute; left:0; bottom:0; background:url(../images/cover/earth_bg.png) no-repeat center bottom; background-size:contain; z-index:2;}
+.penguin_bg{ display:block; width:269px; height:213px; background:url(../images/cover/cover_bg.png) no-repeat 0 0; position:absolute; right:-71px; bottom:236px; background-size:contain; z-index:1;}
 
 .wrap_show .penguin_bg{-webkit-animation:a_penguin_bg 0.2s 0.3s linear both;}
 .wrap_show .logo_txt{-webkit-animation:a_logo_txt 0.4s 0.5s linear both; -webkit-transform:translate(300px,0); opacity:0; -webkit-transform-origin:50% 100%;}
@@ -1764,14 +1764,21 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .webank_it_bg .it_earth_bg{ display:block; height:190px; width:100px; background:url(../images/detail/penguin_internet_bg.png) no-repeat -110px 0; background-size:210px 190px; position:absolute; right:0px; top:0px;}
 
 .we_slogan{ display:block; height:53px; width:136px; background:url(../images/detail/we_slogan.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:300px; margin-left:-71px; overflow:hidden; text-indent:-9999px;}
-.share_we{ display:block; height:40px; width:160px; background:url(../images/detail/share_we.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:398px; margin-left:-87px; overflow:hidden; text-indent:-9999px;}
+.share_we{ display:block; height:40px; width:160px; background:url(../images/detail/share_we.png) no-repeat 0 0; background-size:contain; position:absolute; left:50%; top:398px; margin-left:-87px; overflow:hidden; text-indent:-9999px; z-index:2; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 
+.penguin_wrap_10_hook{ position:relative;}
 .penguin_wrap_10{ display:block; height:24px; width:25px; background:url(../images/detail/detail_penguin_4.png) no-repeat 0 0; background-size:contain; position:absolute; right:31px; top:26px; z-index:1; -webkit-transform-origin:50% 100%;}
 .penguin_wrap_10 .penguin_hand_1{ display:block; height:8px; width:5px; background:url(../images/detail/hand_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:0px; top:9px; z-index:1;}
 .penguin_wrap_10 .penguin_hand_2{ display:block; height:10px; width:5px; background:url(../images/detail/hand_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:20px; top:5px; z-index:1; -webkit-transform-origin:0% 80%;}
 .penguin_wrap_10 .penguin_foot_1{ display:block; height:3px; width:9px; background:url(../images/detail/foot_1.png) no-repeat 0 0; background-size:contain; position:absolute; left:3px; top:22px; z-index:1; -webkit-transform-origin:100% 50%;}
 .penguin_wrap_10 .penguin_foot_2{ display:block; height:3px; width:9px; background:url(../images/detail/foot_2.png) no-repeat 0 0; background-size:contain; position:absolute; left:13px; top:22px; z-index:1; -webkit-transform-origin:0% 50%;}
 .penguin_shadow_10{ display:block; height:4px; width:25px; border-radius:25px/4px; background:#cddef2; position:absolute; right:31px; top:49px;}
+.penguin_dialog{ display:block; height:19px; width:34px; background:url(../images/detail/share_we_dialog.png) no-repeat 0 0; background-size:contain; position:absolute; left:-32px; top:-9px; overflow:hidden; text-indent:-9999px;}
+
+.share_guide_wrap{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; opacity:0; z-index:0;}
+.show_guide{ opacity:1; z-index:99;}
+.share_we_guide{ display: block; height:132px; width:235px; background:url(../images/detail/share_we_guide.png) no-repeat 0 0; background-size:contain; position:absolute; right:30px; top:10px; z-index:100;}
+.mask{ display: block; background:#20539f; opacity:0.77; height:100%; width:100%; z-index:99; position:absolute; left:0px; top:0px;}
 
 .current .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }
 .current .webank_it_bg .it_earth_bg{ -webkit-animation:a_it_earth 0.2s 0.4s linear both; }
@@ -1784,6 +1791,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 .current .penguin_wrap_10 .penguin_foot_1{ -webkit-animation:a_penguin_wrap_10_foot_1 1.6s 0.9s linear infinite; }
 .current .penguin_wrap_10 .penguin_foot_2{ -webkit-animation:a_penguin_wrap_10_foot_2 1.6s 0.9s linear infinite; }
 .current .penguin_shadow_10{ -webkit-animation:a_penguin_shadow_10 1.6s 0.9s linear infinite; }
+.current .penguin_dialog{ -webkit-animation:a_penguin_dialog 1.6s 0.9s linear infinite; }
 
 @-webkit-keyframes a_we_penguin{
 	0%{ opacity:0; -webkit-transform:translate(-200px,0px);}
@@ -1870,6 +1878,17 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 	100%{ -webkit-transform: scale(1);}
 }
 
+@-webkit-keyframes a_penguin_dialog{
+	0%{ opacity:0;}
+	45%{ opacity:0;}
+	
+	50%{ opacity:1;}
+	70%{ opacity:1;}
+	
+	80%{ opacity:0;}
+	100%{ opacity:0;}
+}
+
 /*We分享*/
 
 /*连接线*/
@@ -1897,24 +1916,7 @@ body{ background:#2559a8 url(../images/bg.jpg) no-repeat center bottom; backgrou
 
 /*5s 640x1136分辨率兼容*/
 @media all and (min-height:480px){
-	.arrow_up{ bottom:20px;}
-	.phone_wrap{ bottom:0px;}
-	.phone_wrap .phone_slogan_show .phone_slogan{ left:0px;}
-	.info_list li .info_title{ margin:20px 0 5px 15px; font-size:24px; height:67px;}
-	.info_list li .info_title .title_bg{ top:0px;}
-	.info_list li .info_detail{font-size:14px;}
-	.info_list li .info_time{margin-bottom:26px;}
 	
-	.stockholder_list{}
-	.stockholder_list li{ height:70px; width:70px; margin-left:28px;}
-	.stockholder_list li .txt{ line-height:70px;}
-	
-	.event_wrap .event_title{ top:48px;}
-	.event_area{ top:75px;}
-	.join_title{ top:285px;}
-	.open_door_area{ top:58px;}
-	.contact_area{ top:292px;}
-	.penguin_dialog{ top:31px;}
 }
 
 /*ip 6*/
