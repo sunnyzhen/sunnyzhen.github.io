@@ -156,9 +156,9 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
+	var imgUrl = 'http://sunnyzhen.github.io/demo/webank_2/images/cover/icon_webank.jpg';
 	var lineLink = location.href;
-	var descContent = "这里是 转发文字，比如：大家都爱陈某真！";
+	var descContent = "我们是银行？我们是互联网？We是互联网银行。";
 	var shareTitle = document.title;
 	var appid = '';
 	
