@@ -19,7 +19,7 @@ button {cursor:pointer;}
 html,body{ height:100%; width:100%; overflow:hidden;}
 
 /*新建*/
-body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; background-size:100% auto;}
+body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; background-size:100% auto;}
 .con_wrap{ display:block; height:100%; width:100%; background:none; position:absolute; left:0px; top:0px; -webkit-transition: -webkit-transform 0.3s linear,opacity 0.3s linear; -webkit-transform-origin: 50% 180%; z-index:2;}
 
 .details_con{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.3s linear,opacity 0.3s linear;}
@@ -266,7 +266,7 @@ body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .con_wrap_3 .phone{ display:block; height:5px; width:35px; position:absolute; left:56px; top:0px; background:url(../images/page_2/page_2_man.png) no-repeat -52px -151px; background-size:90px 196px;}
 .con_wrap_3 .penguin_show{ display:block; height:29px; width:38px; position:absolute; left:0px; top:-28px; overflow: hidden;}
-.con_wrap_3 .penguin_show .penguin{ display:block; height:29px; width:37px; position:absolute; left:0px; top:0; background:url(../images/page_2/sprite_8.png) no-repeat 0 -97px; background-size:101px 130px; -webkit-transform:translate(0,30px) scale(0.2); opacity:1; -webkit-transform-origin:50% 100%;}
+.con_wrap_3 .penguin_show .penguin{ display:block; height:29px; width:37px; position:absolute; left:0px; top:0; background:url(../images/page_2/sprite_8.png) no-repeat 0 -98px; background-size:101px 130px; -webkit-transform:translate(0,30px) scale(0.2); opacity:1; -webkit-transform-origin:50% 100%;}
 .con_wrap_3 .sun{ display:block; height:60px; width:60px; background:url(../images/page_2/sprite_scene.png) no-repeat -96px -76px; background-size:227px 148px; position:absolute; left:50%; margin-left:-135px; top:26px;}
 .con_wrap_3 .desk{ display:block; height:79px; width:94px; background:url(../images/page_2/sprite_scene.png) no-repeat 0px -69px; background-size:227px 148px; position:absolute; left:50%; margin-left:-2px; bottom:211px; z-index:4;}
 
@@ -552,7 +552,7 @@ body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .lamp_wrap_5{ display:block; height:44px; width:73px; position:absolute; left:50%; bottom:396px; margin-left:-34px; z-index:3;}
 .lamp_wrap_5 .lamp{ display:block; height:44px; width:73px; background:url(../images/page_4/sprite_scene.png) no-repeat 0 -252px; background-size:174px 296px; position:absolute; left:0; top:0; z-index:3;}
-.lamp_wrap_5 .lamp_light{ display:block; height:200px; width:200px; background:-webkit-linear-gradient(right top,rgba(130,185,212,0.4) 0%,rgba(130,185,212,0) 50%); position:absolute; left:50%; margin-left:-100px; top:40px; z-index:2; -webkit-transform: rotate(-45deg);}
+.lamp_wrap_5 .lamp_light{ display:block; height:200px; width:200px; background:-webkit-linear-gradient(right top,rgba(130,185,212,0.4) 0%,rgba(130,185,212,0) 50%); position:absolute; left:50%; margin-left:-100px; top:41px; z-index:2; -webkit-transform: rotate(-45deg);}
 .lamp_wrap_5 .lamp_lever{ display:block; height:300px; width:3px; background:#0c3d85; position:absolute; left:50%; margin-left:-2px; bottom:40px; z-index:1;}
 
 .man_wrap_5{ display:block; height:109px; width:86px; position:absolute; left:50%; margin-left:-139px; bottom:214px; z-index:4; -webkit-transform-origin:50% 100%; -webkit-transform: translate(-200px,0); opacity:0;}
@@ -569,7 +569,7 @@ body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .penguin_wrap_5{ display:block; height:109px; width:86px; position:absolute; left:50%; margin-left:53px; bottom:214px; z-index:4;-webkit-transform-origin:50% 100%; -webkit-transform: translate(200px,0); opacity:0;}
 .chair_2{ background-position:-88px 0px;}
-.penguin_wrap_5 .penguin{display:block; height:53px; width:45px; background:url(../images/page_4/sprite_scene.png) no-repeat -107px -182px; background-size:174px 296px; position:absolute; left:4px; top:8px;}
+.penguin_wrap_5 .penguin{display:block; height:53px; width:45px; background:url(../images/page_4/penguin.png) no-repeat 0 0; background-size: contain; position:absolute; left:4px; top:8px;}
 .penguin_wrap_5 .penguin .eye{display:block; height:8px; width:8px; background:url(../images/page_4/sprite_scene.png) no-repeat -107px -237px; background-size:174px 296px; position:absolute; left:16px; top:9px;}
 
 .man_shadow_5{ display:block; height:10px; width:100px; background:#1d5aa7; border-radius:100px/10px; position:absolute; left:50%; margin-left:-120px; bottom:210px; z-index:3; -webkit-transform: translate(-200px,0);}
@@ -730,7 +730,7 @@ body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .man_wrap_6 .man_leg_2{display:block; height:23px; width:62px; background:url(../images/page_5/page_5_man.png) no-repeat 0 -95px; background-size:90px 136px; position: absolute; left:-1px; top:42px; z-index:1;}
 
 .penguin_wrap_6{display:block; height:53px; width:45px; position: absolute; left:196px; bottom:46px; z-index:2; -webkit-transform-origin:50% 100%;}
-.penguin_wrap_6 .penguin{display:block; height:53px; width:45px; background:url(../images/page_4/sprite_scene.png) no-repeat -107px -182px; background-size:174px 296px; position: absolute; left:0; top:0; z-index:2;}
+.penguin_wrap_6 .penguin{display:block; height:53px; width:45px; background:url(../images/page_4/penguin.png) no-repeat 0 0; background-size: contain; position: absolute; left:0; top:0; z-index:2;}
 .penguin_wrap_6 .penguin_hand{display:block; height:19px; width:10px; background:url(../images/page_5/sprite_scene.png) no-repeat -197px -124px; background-size:271px 215px; position: absolute; left:2px; top:2px; -webkit-transform-origin:100% 100%; -webkit-transform: rotate(-140deg);}
 .penguin_wrap_6 .hat_2{display:block; height:17px; width:31px; background:url(../images/page_5/sprite_scene.png) no-repeat -212px -108px; background-size:271px 215px; position: absolute; left:20px; top:-11px; z-index:3; -webkit-transform-origin:50% 100%;}
 
@@ -1527,7 +1527,7 @@ body{ background:#2559a8 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .ice_lake_1 .detail_penguin_wrap_1 .penguin_show_1{ display:block; height:27px; width:40px; position:absolute; left:0px; top:0px; overflow:hidden;}
 .ice_lake_1 .detail_penguin_wrap_1 .penguin_show_1 .detail_penguin_1{ display:block; height:27px; width:40px; background:url(../images/detail/sprite_lake.png) no-repeat 0 -125px; background-size:172px 194px; position:absolute; left:0px; top:0px; -webkit-transform:translate(0,30px);}
 .ice_lake_1 .detail_penguin_wrap_1 .ripple_1{ display:block; height:14px; width:41px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -102px; background-size:172px 194px; position:absolute; left:-11px; top:16px; -webkit-transform-origin:100% 50%; -webkit-transform: scale(0.7); opacity:0;}
-.ice_lake_1 .detail_penguin_wrap_1 .ripple_2{ display:block; height:17px; width:53px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -118px; background-size:172px 194px; position:absolute; left:-1px; top:17px;-webkit-transform-origin:0% 50%; -webkit-transform: scale(0.7); opacity:0;}
+.ice_lake_1 .detail_penguin_wrap_1 .ripple_2{ display:block; height:17px; width:53px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -118px; background-size:172px 194px; position:absolute; left:3px; top:17px;-webkit-transform-origin:0% 50%; -webkit-transform: scale(0.7); opacity:0;}
 .ice_lake_1 .detail_penguin_wrap_1 .ripple_3{ display:block; height:9px; width:75px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -137px; background-size:172px 194px; position:absolute; left:-19px; top:31px;-webkit-transform-origin:50% 0%; -webkit-transform: scale(0.7); opacity:0;}
 
 .ice_lake_2{ display:block; height:116px; width:87px; background:url(../images/detail/sprite_ice_land.png) no-repeat -103px -367px; background-size:212px 748px; position:absolute; right:0px; top:60px;}
