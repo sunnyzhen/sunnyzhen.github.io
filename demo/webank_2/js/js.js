@@ -223,6 +223,7 @@ $(document).ready(function(){
 		}
 		else{
 			$("body").addClass("android_version");
+		}
 	}
 	
 	/*微信转发图片*/
