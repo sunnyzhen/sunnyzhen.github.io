@@ -16,7 +16,7 @@ legend{ display:none;}
 textarea{resize:none;}
 button {cursor:pointer;}
 
-html,body{ height:100%; width:100%; overflow:hidden;}
+html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 
 /*新建*/
 body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; background-size:100% auto;}
