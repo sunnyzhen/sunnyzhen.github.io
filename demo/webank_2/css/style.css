@@ -1779,7 +1779,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .share_guide_wrap{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; opacity:0; z-index:0;}
 .show_guide{ opacity:1; z-index:99;}
-.share_we_guide{ display: block; height:132px; width:235px; background:url(../images/detail/share_we_guide.png) no-repeat 0 0; background-size:contain; position:absolute; right:30px; top:10px; z-index:100;}
+.share_we_guide{ display: block; height:132px; width:235px; background:url(../images/detail/share_we_guide.png) no-repeat 0 0; background-size:contain; position: fixed; right:30px; top:10px; z-index:100;}
 .mask{ display: block; background:#20539f; opacity:0.77; height:100%; width:100%; z-index:99; position:absolute; left:0px; top:0px;}
 
 .current .webank_it_bg .we_penguin_bg{ -webkit-animation:a_we_penguin 0.2s 0.4s linear both; }

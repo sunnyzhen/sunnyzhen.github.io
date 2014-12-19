@@ -6,6 +6,7 @@ $(document).ready(function(){
 	var page_index=1;//当前在哪个页面
 	var page_total=8;//总共有多少页面
 	var subpage_index=1;//当前在哪个子页
+	var no_wipe=0;
 	var main_list=$("#tab_list_1");
 	
 	function setMainList(num){
@@ -39,6 +40,7 @@ $(document).ready(function(){
 		$(".penguin_wrap_10_hook").css({
 			"top": "-100px"
 		});
+		no_wipe=1;
 	});
 	
 	$(".share_guide_wrap").click(function(){
@@ -46,6 +48,7 @@ $(document).ready(function(){
 		$(".penguin_wrap_10_hook").css({
 			"top": "0px"
 		});
+		no_wipe=0;
 	});
 	
 	$(".penguin_wrap_10").click(function(){
@@ -53,6 +56,7 @@ $(document).ready(function(){
 		$(".penguin_wrap_10_hook").css({
 			"top": "-100px"
 		});
+		no_wipe=1;
 	});
 	
 	
@@ -135,15 +139,18 @@ $(document).ready(function(){
 	
 	function wipe_up(){
 		if(page_index==page_total){
-			
-			var list_num=$(".details_list .details_con").length;
-			if(subpage_index>=2&&subpage_index<=list_num){
-				$($(".details_con")[subpage_index-2]).removeClass("wrap_before").addClass("current");
-				$($(".details_con")[subpage_index-1]).removeClass("current").addClass("wrap_after");
+			if(no_wipe==1){
 				
-				subpage_index--;
 			}
-			
+			else{
+				var list_num=$(".details_list .details_con").length;
+				if(subpage_index>=2&&subpage_index<=list_num){
+					$($(".details_con")[subpage_index-2]).removeClass("wrap_before").addClass("current");
+					$($(".details_con")[subpage_index-1]).removeClass("current").addClass("wrap_after");
+					
+					subpage_index--;
+				}
+			}
 		}
 	}
 	
