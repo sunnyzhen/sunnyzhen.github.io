@@ -47,8 +47,8 @@ function deviceMotionHandler(eventData) {
 	if(acceleration.x<=10&&acceleration.x>=-10){
 		current_item=0;
 	}
-	str+=acceleration.x+"<br/>";
-	$(".test").html(str);
+	/*str+=acceleration.x+"<br/>";
+	$(".test").html(str);*/
 	if(acceleration.x>10||acceleration.x<-10){
 		if(acceleration.x>x_large){
 			x_large=acceleration.x
