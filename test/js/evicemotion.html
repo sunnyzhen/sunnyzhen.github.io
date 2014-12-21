@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>手机摇转</title>
+<title>天天撸管</title>
 <link rel="apple-touch-icon-precomposed" href="http://sunnyzhen.github.io/test/img/app_icon.png" />
 
 
@@ -14,122 +14,232 @@
 	body{ height:100%; width:100%; overflow:hidden;}
 	.ball_wrap{ height:100%; width:100%; position:absolute; left:0px; top:0px;}
 	.ball{ background:#333; height:30px; width:30px; border:1px solid #555; box-shadow:0px 0px 2px rgba(0,0,0,0.1); position:absolute; left:50%; top:50%; margin:-15px 0 0 -15px; border-radius:30px;}
+	.data_wrap{ width:100%; text-align:center;}
+	.data_wrap .txt{ font-size:20px; font-family:"microsoft yahei"; text-align:center;}
+	.data_wrap .num{ font-size:120px; font-family:"Arial";}
+	.tips_wrap{font-size:30px; font-family:"microsoft yahei"; text-align:center; margin:50px auto;}
+	
+	.history_score .num{ font-size:60px; font-family:"Arial";}
 </style>
 <script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-2.0.0.min.js"></script>
 <script>
-// DeviceOrientation将底层的方向传感器和运动传感器进行了高级封装，提供了DOM事件的支持。
-// 这个特性包括两个事件：
-// 1、deviceOrientation：封装了方向传感器数据的事件，可以获取手机静止状态下的方向数据（手机所处的角度、方位和朝向等）。
-// 2、deviceMotion：封装了运动传感器的事件，可以获取手机运动状态下的运动加速度等数据。
-// 使用这两个事件，可以很能够实现重力感应、指南针等有趣的功能。
-
-// 现在在很多Native应用中有一个非常常见而时尚的功能 —— 摇一摇，摇一摇找人、摇一摇看新闻、摇一摇找金币。。。
-// 也许在android或者ios的客户端上对这个功能你已经很了解了，但是现在，我将告诉你如何在手机网页上实现摇一摇的功能。
-
-// OK，那我们现在就开始吧，嘿嘿~
-// 先来让我们了解一下设备运动事件 —— DeviceMotionEvent:返回设备关于加速度和旋转的相关信息，其中加速度的数据包含以下三个方向：
-// x：横向贯穿手机屏幕；
-// y：纵向贯穿手机屏幕；
-// z：垂直手机屏幕。
-// 鉴于有些设备没有排除重力的影响，所以该事件会返回两个属性：
-// 1、accelerationIncludingGravity(含重力的加速度)
-// 2、acceleration(排除重力影响的加速度)
-
-// 作为码农，上代码才是最直接的，come on，代码走起！
-
-// 首先在页面上要监听运动传感事件 
+ 
 function init(){
 　　if (window.DeviceMotionEvent) {
 　　　　// 移动浏览器支持运动传感事件
 　　　　window.addEventListener('devicemotion', deviceMotionHandler, false);
-　　　　$("#yaoyiyaoyes").show();
+　　
 　　} else{
 　　　　// 移动浏览器不支持运动传感事件
-　　　　$("#yaoyiyaono").show();
+　　
 　　} 
 }
 
-// 那么，我们如何计算用户是否是在摇动手机呢？可以从以下几点进行考虑：
-// 1、其实用户在摇动手机的时候始终都是以一个方向为主进行摇动的；
-// 2、用户在摇动手机的时候在x、y、z三个方向都会有相应的想速度的变化；
-// 3、不能把用户正常的手机运动行为当做摇一摇（手机放在兜里，走路的时候也会有加速度的变化）。
-// 从以上三点考虑，针对三个方向上的加速度进行计算，间隔测量他们，考察他们在固定时间段里的变化率，而且需要确定一个阀值来触发摇一摇之后的操作。
-
-// 首先，定义一个摇动的阀值
-var SHAKE_THRESHOLD = 3000;
-// 定义一个变量保存上次更新的时间
-var last_update = 0;
-// 紧接着定义x、y、z记录三个轴的数据以及上一次出发的时间
-var x;
-var y;
-var z;
-var last_x;
-var last_y;
-var last_z;
-
-// 为了增加这个例子的一点无聊趣味性，增加一个计数器
-var count = 0;
+var history_max_item=0;
+var current_item=0;
+var str="";
 
 function deviceMotionHandler(eventData) {
 　　// 获取含重力的加速度
-　　var acceleration = eventData.accelerationIncludingGravity; 
-
-　　// 获取当前时间
-　　var curTime = new Date().getTime(); 
-　　var diffTime = curTime -last_update;
-　　// 固定时间段
-　　if (diffTime > 100) {
-　　　　last_update = curTime; 
-
-　　　　x = acceleration.x; 
-　　　　y = acceleration.y; 
-　　　　z = acceleration.z; 
-
-　　　　var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000; 
-
-　　　　if (speed > SHAKE_THRESHOLD) { 
-　　　　　　// TODO:在此处可以实现摇一摇之后所要进行的数据逻辑操作
-　　　　　　count++;
-　　　　　　$("#yaoyiyaoyes").hide();
-　　　　　　$("#yaoyiyaoresult").show();
-　　　　　　$("#yaoyiyaoresult").html("摇你妹!第" + count + "个了！");
-　　　　}
-
-　　　　last_x = x; 
-　　　　last_y = y; 
-　　　　last_z = z; 
-　　} 
+　　	var acceleration = eventData.accelerationIncludingGravity;
+	var x_large=0; 
+	var x_small=0; 
+	if(acceleration.x<=10&&acceleration.x>=-10){
+		current_item=0;
+	}
+	str+=acceleration.x+"<br/>";
+	$(".test").html(str);
+	if(acceleration.x>10||acceleration.x<-10){
+		if(acceleration.x>x_large){
+			x_large=acceleration.x
+		}
+		if(acceleration.x<x_small){
+			x_small=acceleration.x
+		}
+		
+		if(Math.round(Math.abs(x_large))>Math.round(Math.abs(x_small))){
+			if(Math.round(Math.abs(x_large))>current_item){
+				current_item=Math.round(Math.abs(x_large));
+			}
+		}
+		else{
+			if(Math.round(Math.abs(x_small))>current_item){
+				current_item=Math.round(Math.abs(x_small));
+			}
+		}
+		$(".current_score .num").html(current_item);
+		
+		/*
+		if(Math.abs(x_large)>max_item){
+			max_item=Math.round(Math.abs(x_large));
+		}
+		if(Math.abs(x_small)>max_item){
+			max_item=Math.round(Math.abs(x_small));
+		}
+		$(".current_score .num").html(max_item);*/
+		
+		if(current_item>history_max_item){
+			history_max_item=current_item;
+		}
+		else{
+			
+		}
+		$(".history_score .num").html(history_max_item);
+		
+		
+		getTips(current_item);
+		
+	}
+  	/*if(acceleration.x>=20){
+		$(".data_wrap").html(acceleration.x);
+	}
+	if(acceleration.x<=-20){
+		$(".data_wrap").html(acceleration.x);
+	}*/
+	
+   /*if(acceleration.x<1){}
+   else{
+    tr+=acceleration.y +"<br/>";// +acceleration.y +"<br/>"+acceleration.z +"<br/>"
+	$(".data_wrap").html(tr);
+   }*/
+   /*
+   	switch(max_item)
+	{
+		  case 10:
+		   $(".tips_wrap").html("拜托！大力点！管都撸不动好不好！");
+		  case 20:
+		   $(".tips_wrap").html("我只想安静的撸一管！");
+		  case 30:
+		   $(".tips_wrap").html("撸那么大力，你以为有杜蕾斯拿啊！");
+		  case 40:
+		   $(".tips_wrap").html("继续撸！继续撸！奇摩橘！");
+		  case 50:
+		   $(".tips_wrap").html("撸管不要用两只手，好吗！");
+		  case 60:
+		   $(".tips_wrap").html("你天天撸管，你妈造吗！");
+		  case 70:
+		   $(".tips_wrap").html("医生说：一天三次！饭后再撸！");  
+		  case 80:
+		   $(".tips_wrap").html("撸管达人！你好！");
+		  default:
+		   $(".tips_wrap").html("你！屌！爆了！Bong！");
+	}*/
+　
 } 
+
+function getTips(current_item){
+	if(current_item>=10&&current_item<20){
+			$(".tips_wrap").html("拜托！大力点！管都撸不动好不好！");
+		}
+		else if(current_item>=20&&current_item<30){
+			$(".tips_wrap").html("我只想安静的撸一管！");
+		}
+		else if(current_item>=30&&current_item<40){
+			$(".tips_wrap").html("撸那么大力，你以为有杜蕾斯拿啊！");
+		}
+		else if(current_item>=40&&current_item<50){
+			$(".tips_wrap").html("继续撸！继续撸！奇摩橘！");
+		}
+		else if(current_item>=50&&current_item<60){
+			$(".tips_wrap").html("撸管不要用两只手，好吗！");
+		}
+		else if(current_item>=60&&current_item<70){
+			$(".tips_wrap").html("你天天撸管，你妈造吗！");
+		}
+		else if(current_item>=70&&current_item<80){
+			$(".tips_wrap").html("医生说：一天三次！饭后再撸！");
+		}
+		else if(current_item>=80&&current_item<90){
+			$(".tips_wrap").html("你！屌！爆了！Bong！");
+		}
+		else{
+			$(".tips_wrap").html("撸管达人！你好！"); 
+		}
+}
 </script>
-<div id="yaoyiyaono" style="font-size:20px;margin:10px;line-height:35px;display:none;">
-　　兄弟，如果您看到了我，说明您现在还不能摇，不是说您没有资格用我，而是：</br>
-　　1、如果您使用PC机的浏览器，那可就不对了，我只爱手机浏览器；</br>
-　　2、如果您是Android手机，那不好意思告诉你，android自带的浏览器抛弃了我，您可以用UCWeb、chrome等第三方浏览器；</br>
-　　3、如果您都不属于以上两种情况，那我只有告诉您：您改换手机啦！！！</br>
-</div>
-<div id="yaoyiyaoyes" style="font-size:20px;margin:10px;line-height:50px;display:none;">
-　　兄弟，摇一个吧，说不定有一个清纯的妹子等着你呢!
-</div>
-<div id="yaoyiyaoresult" style="font-size:20px;margin:10px;line-height:50px;display:none;"></div>
+
 <script>
 $(document).ready(function(){
 init();
 });
+
+
+/*微信转发图片*/
+
+var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
+var lineLink = location.href;
+var descContent = "天天撸管！出品人-陈某真";
+var shareTitle = document.title;
+var appid = '';
+
+function shareFriend() {
+	WeixinJSBridge.invoke('sendAppMessage',{
+		"appid": appid,
+		"img_url": imgUrl,
+		"img_width": "200",
+		"img_height": "200",
+		"link": lineLink,
+		"desc": descContent,
+		"title": shareTitle
+	}, function(res) {
+		//_report('send_msg', res.err_msg);
+	})
+}
+function shareTimeline() {
+	WeixinJSBridge.invoke('shareTimeline',{
+		"img_url": imgUrl,
+		"img_width": "200",
+		"img_height": "200",
+		"link": lineLink,
+		"desc": descContent,
+		"title": shareTitle
+	}, function(res) {
+		   //_report('timeline', res.err_msg);
+	});
+}
+function shareWeibo() {
+	WeixinJSBridge.invoke('shareWeibo',{
+		"content": descContent,
+		"url": lineLink,
+	}, function(res) {
+		//_report('weibo', res.err_msg);
+	});
+}
+// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function(argv){
+		shareFriend();
+	});
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function(argv){
+		shareTimeline();
+	});
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function(argv){
+		shareWeibo();
+	});
+}, false);
+
+	
 </script>
 
 </head>
 
 <body>
-
+<div class="data_wrap history_score"><span class="txt">最高撸管分：</span><span class="num">0</span></div>
+<div class="data_wrap current_score"><span class="txt">当前撸管分：</span><span class="num">0</span></div>
+<div class="tips_wrap"></div>
+<div class="test"></div>
 <!--<p>左右：<span id="alpha">0</span></p>  
 <p>前后：<span id="beta">0</span></p>  
 <p>扭转：<span id="gamma">0</span></p>  
 <p>指北针指向：<span id="heading">0</span>度</p>  
 <p>指北针精度：<span id="accuracy">0</span>度</p>-->
         
-<div class="ball_wrap">
+<!--<div class="ball_wrap">
 	<div class="ball"></div>
-</div>
+</div>-->
 
 </body>
 </html>
