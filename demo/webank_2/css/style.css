@@ -1505,21 +1505,22 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .event_wrap{ position:absolute; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:2;}
 .event_wrap .event_title{ display:block; height:30px; width:95px; background:url(../images/detail/sprite_title.png) no-repeat 0 0; background-size:136px 257px; position:absolute; left:50%; margin-left:-47px; top:47px; text-indent:-9999px; overflow:hidden;}
-.event_area{ width:320px; position:absolute; left:50%; margin-left:-160px; top:75px; height:350px;}
-.event_list li{ display:block; width:120px; height:55px; position:absolute; left:50%; top:0px; color:#20539f; font-size:14px; font-family:'microsoft yahei';}
+.event_area{ width:320px; position:absolute; left:50%; margin-left:-160px; top:50px; height:392px;}
+.event_list li{ display:block; width:200px; height:55px; position:absolute; left:50%; top:0px; color:#20539f; font-size:14px; font-family:'microsoft yahei';}
 .event_list li strong{ font-weight:bold; margin-bottom:2px; font-family:'Arial';}
 .event_list li .dot{ display:block; position:absolute; left:-20px; top:6px; height:8px; width:8px; background:#2154a0; border-radius:7px;}
 .event_list li .dot i{ display:block; position:absolute; left:0px; top:0px; height:8px; width:8px; background:rgba(33,84,160,0.3); border-radius:7px; -webkit-transform:scale(1.8,1.8);}
-.event_area .timeline_1{ display:block; height:85px; width:1px; position:absolute; left:50%; top:11px; margin-left:3px;}
-.event_area .timeline_2{ display:block; height:228px; width:1px; position:absolute; left:50%; margin-left:4px; top:97px; -webkit-transform:rotate(30deg); -webkit-transform-origin:100% 0%;}
-.event_area .timeline_3{ display:block; height:130px; width:1px; position:absolute; left:50%; top:295px; margin-left:-113px; -webkit-transform:rotate(-61deg); -webkit-transform-origin:0% 0%; opacity:0.2;}
+.event_area .timeline_1{ display:block; height:58px; width:1px; position:absolute; left:50%; top:37px; margin-left:3px;}
+.event_area .timeline_2{ display:block; height:266px; width:1px; position:absolute; left:50%; margin-left:4px; top:97px; -webkit-transform:rotate(30deg); -webkit-transform-origin:100% 0%;}
+.event_area .timeline_3{ display:block; height:150px; width:1px; position:absolute; left:50%; top:329px; margin-left:-125px; -webkit-transform:rotate(-61deg); -webkit-transform-origin:0% 0%; opacity:0.2;}
 .event_area .dot_wrap{ bottom:-13px;}
-.event_area .dot_wrap .line{ height:250px;}
+.event_area .dot_wrap .line{ height:280px;}
 
 .event_list .item_1{ margin-left:19px; top:89px;}
-.event_list .item_2{ margin-left:-24px; top:162px;}
-.event_list .item_3{ margin-left:-59px; top:223px;}
-.event_list .item_4{ margin-left:-95px; top:286px;}
+.event_list .item_2{ margin-left:-13px; top:145px;}
+.event_list .item_3{ margin-left:-46px; top:203px;}
+.event_list .item_4{ margin-left:-80px; top:260px;}
+.event_list .item_5{ margin-left:-111px; top:316px;}
 
 .ice_lake_1{ display:block; height:211px; width:101px; background:url(../images/detail/sprite_ice_land.png) no-repeat 0 -367px; background-size:212px 748px; position:absolute; left:0px; top:0px;}
 .ice_lake_1 .ice_block_1{ display:block; height:21px; width:35px; background:url(../images/detail/sprite_lake.png) no-repeat 0 -102px; background-size:172px 194px; position:absolute; left:7px; top:61px;}
@@ -1530,11 +1531,11 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .ice_lake_1 .detail_penguin_wrap_1 .ripple_2{ display:block; height:17px; width:53px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -118px; background-size:172px 194px; position:absolute; left:3px; top:17px;-webkit-transform-origin:0% 50%; -webkit-transform: scale(0.7); opacity:0;}
 .ice_lake_1 .detail_penguin_wrap_1 .ripple_3{ display:block; height:9px; width:75px; background:url(../images/detail/sprite_lake.png) no-repeat -42px -137px; background-size:172px 194px; position:absolute; left:-19px; top:31px;-webkit-transform-origin:50% 0%; -webkit-transform: scale(0.7); opacity:0;}
 
-.ice_lake_2{ display:block; height:116px; width:87px; background:url(../images/detail/sprite_ice_land.png) no-repeat -103px -367px; background-size:212px 748px; position:absolute; right:0px; top:60px;}
+.ice_lake_2{ display:block; height:116px; width:87px; background:url(../images/detail/sprite_ice_land.png) no-repeat -103px -367px; background-size:212px 748px; position:absolute; right:0px; top:40px;}
 .ice_lake_2 .boat{ display:block; height:23px; width:49px; background:url(../images/detail/sprite_lake.png) no-repeat -97px -102px; background-size:172px 194px; position:absolute; left:26px; top:35px;}
 
 .ice_lake_3{ display:block; height:41px; width:100px; background:url(../images/detail/sprite_ice_land.png) no-repeat -103px -485px; background-size:212px 748px; position:absolute; right:0px; bottom:0px;}
-.ice_hole_1{ display:block; height:29px; width:55px; background:url(../images/detail/sprite_ice_land.png) no-repeat -132px -635px; background-size:212px 748px; position:absolute; left:50%; margin-left:22px; top:372px;}
+.ice_hole_1{ display:block; height:29px; width:55px; background:url(../images/detail/sprite_ice_land.png) no-repeat -132px -635px; background-size:212px 748px; position:absolute; left:50%; margin-left:21px; top:390px;}
 .ice_hole_1 .tree_wrap_2 .tree_1{ display:block; height:17px; width:15px; background:url(../images/detail/sprite_penguin.png) no-repeat -87px -129px; background-size:150px 153px; position:absolute; left:-18px; top:6px;}
 .ice_hole_1 .tree_wrap_2 .tree_2{ display:block; height:17px; width:15px; background:url(../images/detail/sprite_penguin.png) no-repeat -87px -129px; background-size:150px 153px; position:absolute; left:64px; top:10px;}
 .ice_hole_1 .tree_wrap_2 .tree_3{ display:block; height:12px; width:10px; background:url(../images/detail/sprite_penguin.png) no-repeat -104px -129px; background-size:150px 153px; position:absolute; left:-8px; top:16px;}
@@ -1544,21 +1545,22 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .detail_penguin_wrap_2 .penguin_show_2{ display:block; height:41px; width:44px; position:absolute; left:0; top:-5px; overflow:hidden;}
 .detail_penguin_wrap_2 .penguin_show_2 .detail_penguin_2{ display:block; height:41px; width:44px; background:url(../images/detail/sprite_penguin.png) no-repeat 0 0; background-size:150px 153px; position:absolute; left:0; top:0; -webkit-transform:translate(0,42px);}
 
-.firework_1{ display:block; height:84px; width:37px; background:url(../images/detail/sprite_penguin.png) no-repeat 0 -43px; background-size:150px 153px; position:absolute; left:4px; top:-60px;}
-.firework_2{ display:block; height:36px; width:45px; background:url(../images/detail/sprite_penguin.png) no-repeat -46px -92px; background-size:150px 153px; position:absolute; left:13px; top:-41px;}
+.firework_1{ display:block; height:84px; width:37px; background:url(../images/detail/sprite_penguin.png) no-repeat 0 -43px; background-size:150px 153px; position:absolute; left:4px; top:-60px; opacity:0;}
+.firework_2{ display:block; height:36px; width:45px; background:url(../images/detail/sprite_penguin.png) no-repeat -46px -92px; background-size:150px 153px; position:absolute; left:13px; top:-41px; opacity:0;}
 
 .current .event_wrap .event_title{ -webkit-animation:a_event_title 0.2s 0.3s linear both;}
 .current .event_list li .dot i{ -webkit-animation:a_event_dot 1.4s linear infinite;}
 .current .event_area .timeline_1{ -webkit-animation:a_timeline_1 0.3s 0.5s linear both;}
-.current .event_area .timeline_2{ -webkit-animation:a_timeline_2 0.6s 0.8s linear both;}
-.current .event_area .timeline_3{ -webkit-animation:a_timeline_3 0.3s 1.4s linear both;}
+.current .event_area .timeline_2{ -webkit-animation:a_timeline_2 0.8s 0.8s linear both;}
+.current .event_area .timeline_3{ -webkit-animation:a_timeline_3 0.3s 1.6s linear both;}
 .current .event_list .item_1{ -webkit-animation:a_list_item 0.2s 0.8s linear both;}
 .current .event_list .item_2{ -webkit-animation:a_list_item 0.2s 1s linear both;}
 .current .event_list .item_3{ -webkit-animation:a_list_item 0.2s 1.2s linear both;}
 .current .event_list .item_4{ -webkit-animation:a_list_item 0.2s 1.4s linear both;}
-.current .detail_penguin_2{ -webkit-animation:a_detail_penguin_1 4.5s 0.5s linear infinite;}
-.current .firework_1{ -webkit-animation:a_firework_1 4.5s 0.3s linear infinite;}
-.current .firework_2{ -webkit-animation:a_firework_1 4.5s 0.6s linear infinite;}
+.current .event_list .item_5{ -webkit-animation:a_list_item 0.2s 1.6s linear both;}
+.current .detail_penguin_2{ -webkit-animation:a_detail_penguin_1 4.5s 0.6s linear infinite;}
+.current .firework_1{ -webkit-animation:a_firework_1 4.5s 0.4s linear infinite;}
+.current .firework_2{ -webkit-animation:a_firework_1 4.5s 0.7s linear infinite;}
 
 .current .ice_lake_1 .ice_block_1{ -webkit-animation:a_ice_block_1 4s 0.3s linear infinite alternate;}
 .current .detail_penguin_wrap_1 .penguin_show_1 .detail_penguin_1{ -webkit-animation:a_detail_penguin_1 4s 0.3s linear infinite;}
@@ -1626,17 +1628,17 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 @-webkit-keyframes a_timeline_1{
 	0%{ height:0;}
-	100%{ height:85px;}
+	100%{ height:58px;}
 }
 
 @-webkit-keyframes a_timeline_2{
 	0%{ height:0;}
-	100%{ height:228px;}
+	100%{ height:266px;}
 }
 
 @-webkit-keyframes a_timeline_3{
 	0%{ height:0;}
-	100%{ height:130px;}
+	100%{ height:150px;}
 }
 
 @-webkit-keyframes a_event_dot{
