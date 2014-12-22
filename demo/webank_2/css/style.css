@@ -1944,5 +1944,5 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .android_version .wrap_show .glass_2 .water{ -webkit-animation: none;}
 
 /* 安卓兼容 4.4兼容*/
-.android_version_4_4 .s{}
+.android_version_4_4 .wrap_show .glass_2 .water{ -webkit-animation: none;}
 
