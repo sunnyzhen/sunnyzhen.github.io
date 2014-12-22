@@ -59,6 +59,10 @@ $(document).ready(function(){
 		no_wipe=1;
 	});
 	
+	$(".cover_link_next").click(function(){
+		wipe_down();
+	});
+	
 	
 	//触摸触发事件
 	$("body").touchwipe({
