@@ -1920,6 +1920,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 	50%{ -webkit-transform: translate(0,10px);}
 	100%{ -webkit-transform: translate(0,0);}
 }
+
 .cover_link_next{ display:block; height:40px; width:40px; position:absolute; bottom:0px; left:50%; margin-left:-17px; z-index:3; -webkit-tap-highlight-color:rgba(0,0,0,0);}
 /*hook*/
 
@@ -1957,6 +1958,16 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 	.cover_link_next{ bottom:40px;}
 }
 
+@media all and (min-width:360px){
+	.penguin_bg{ bottom:268px;}
+	.tree_wrap .tree_1{bottom:260px;}
+	.tree_wrap .tree_2{bottom:265px;}
+	.building_bg .building_1{ bottom:275px;}
+	.building_bg .building_2{ bottom:278px;}
+	.signpost{ bottom:280px;}
+	.iceberg_wrap{ bottom:238px;}
+}
+
 /*ip 6*/
 @media all and (min-width:375px){
 	.penguin_bg{ bottom:288px;}
@@ -1982,9 +1993,65 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 	.penguin_hook_8{ bottom:245px;}
 }
 
-/* 安卓兼容 兼容*/
+
+/* 安卓兼容 吃饭杯水溢出兼容*/
 .android_version .wrap_show .glass_2 .water{ -webkit-animation: none;}
 
-/* 安卓兼容 4.4兼容*/
+/* 安卓兼容 4.4 吃饭杯水溢出兼容*/
 .android_version_4_4 .wrap_show .glass_2 .water{ -webkit-animation: none;}
+
+/* 安卓兼容 最后一屏 */
+.android_version .wrap_show .current .man_hook_8{  -webkit-animation: none; -webkit-transform:rotate(0deg);}
+.android_version .wrap_show .current .man_wrap_8{ -webkit-animation: a_man_hook_8_android 0.4s 0.6s linear both; -webkit-transform-origin:50% 100%;}
+.android_version .wrap_show .current .man_wrap_8 .arm_2{ -webkit-animation:a_man_8_arm_2_android 2s 0.6s linear infinite;}
+.android_version .wrap_show .current .man_wrap_8 .bag{ -webkit-animation: none;}
+.android_version .wrap_show .current .man_wrap_8 .leg_1{ -webkit-animation: none; -webkit-transform:rotate(1deg);}
+.android_version .wrap_show .current .man_wrap_8 .leg_2{ -webkit-animation: none; -webkit-transform:rotate(-4deg);}
+.android_version .wrap_show .current .man_wrap_8 .leg_1 .leg_1_2{ -webkit-animation: none;}
+.android_version .wrap_show .current .man_wrap_8 .leg_2 .leg_2_2{ -webkit-animation: none;}
+.android_version .wrap_show .current .man_wrap_8 .leg_1 .leg_1_2 .foot{ -webkit-animation: none;}
+.android_version .wrap_show .current .man_wrap_8 .leg_2 .leg_2_2 .foot{ -webkit-animation:a_man_8_leg_1_2_foot_android 1.6s 1s linear infinite;}
+.android_version .wrap_show .current .man_shadow_8{-webkit-animation:a_man_shadow_8_android 0.4s 0.6s linear both; left:-20px;}
+
+@-webkit-keyframes a_man_hook_8_android{
+	0%{ -webkit-transform: translate(0,-600px) scale(0.95,1.1);}
+	70%{ -webkit-transform: translate(0,10px) scale(1.05,0.98);}
+	85%{ -webkit-transform: translate(0,-5px) scale(0.98,1.05);}
+	100%{ -webkit-transform: translate(0,0) scale(1,1);}
+}
+
+@-webkit-keyframes a_man_shadow_8_android{
+	0%{ -webkit-transform:scale(0.6); opacity:0;}
+	70%{ -webkit-transform:scale(1.1); opacity:1;}
+	85%{ -webkit-transform:scale(0.9); opacity:1;}
+	100%{ -webkit-transform:scale(1); opacity:1;}
+}
+
+@-webkit-keyframes a_man_8_leg_1_2_foot_android{
+	0%{ -webkit-transform: rotate(0deg);}
+	50%{ -webkit-transform: rotate(-10deg);}
+	100%{ -webkit-transform: rotate(0deg);}
+}
+
+@-webkit-keyframes a_man_8_arm_2_android{
+	0%{ -webkit-transform: rotate(3deg);}
+	50%{ -webkit-transform: rotate(-3deg);}
+	100%{ -webkit-transform: rotate(3deg);}
+}
+
+
+.android_version .wrap_show .current .icon_wrap_8 .icon_1 i{ -webkit-animation-delay:1.8s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_2 i{ -webkit-animation-delay:2s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_3 i{ -webkit-animation-delay:2.2s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_4 i{ -webkit-animation-delay:2.4s;}
+
+.android_version .wrap_show .current .icon_wrap_8 .icon_1 .dot_line{ -webkit-animation-delay:1.8s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_2 .dot_line{ -webkit-animation-delay:2s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_3 .dot_line{ -webkit-animation-delay:2.2s;}
+.android_version .wrap_show .current .icon_wrap_8 .icon_4 .dot_line{ -webkit-animation-delay:2.4s;}
+
+.android_version .wrap_show .current .wording_wrap .wording_8{ -webkit-animation-delay:2.8s;}
+
+
+
 
