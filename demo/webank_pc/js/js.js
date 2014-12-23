@@ -1,55 +1,117 @@
 $(document).ready(function(){
 	
-	var scroll_height=270;
-	var window_h=$(window).height();
-	var window_w=$(window).width();
-	var img_min_h=488;
-	var img_min_w=863;
-	var phone_min_h=547;
-	var phone_min_w=1118;
-	var phone_set_h=parseInt(547/488*window_h);
-	var phone_set_w=parseInt(1118/863*window_w);
-	var phone_set_l=parseInt(123/1118*phone_set_w);
-	var phone_set_t=parseInt(30/547*phone_set_h);
-	var scroll_length=350;
-	var ocupy_length=$(".ocupy_area").offset().top;
-	var translate_h=600;
 	
-	console.log(window_h/img_min_h);
+	/* 安卓版本兼容 */
+	var brower = {
+		versions:function(){
+			var u = window.navigator.userAgent;
+			var num ;
+			if(u.indexOf('Trident') > -1){
+			//IE
+				return "IE";
+			}else if(u.indexOf('Presto') > -1){
+			//opera
+				return "Opera";
+			}else if(u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1){
+			//firefox
+				return "Firefox";
+			}else if(u.indexOf('AppleWebKit' && u.indexOf('Safari') > -1) > -1){
+			//苹果、谷歌内核
+				if(u.indexOf('Chrome') > -1){
+				//chrome
+					return "Chrome";
+				}else if(u.indexOf('OPR')){
+				//webkit Opera
+					return "Opera_webkit"
+				}else{
+				//Safari
+					return "Safari";
+				}
+			}else if(u.indexOf('Mobile') > -1){
+			//移动端
+				if(!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){
+				//ios
+					if(u.indexOf('iPhone') > -1){
+					//iphone
+						return "iPhone"
+					}else if(u.indexOf('iPod') > -1){
+					//ipod
+						return "iPod"
+					}else if(u.indexOf('iPad') > -1){
+					//ipad
+						return "iPad"
+					}
+				}else if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+				//android
+					num = u.substr(u.indexOf('Android') + 8, 3);
+					return {"type":"Android", "version": num};
+				}else if(u.indexOf('BB10') > -1 ){
+				//黑莓bb10系统
+					return "BB10";
+				}else if(u.indexOf('IEMobile')){
+				//windows phone
+					return "Windows Phone"
+				}
+			}
+		}
+    }
 	
-	$(".main").css({
-		"margin-top": scroll_length+110+"px"
-	});
+	var system=brower.versions();
 	
-	$(window).scroll(function(){
-		var scroll_num=$(window).scrollTop();
-/*		if(scroll_num>270){
-			$(".phone_screen").removeAttr("style");
-			$(".phone_wrap").removeAttr("style");
-			
-		}*/
-		setPhoneSize(scroll_num);
-		//console.log($(window).scrollTop());
-	});
+	//console.log(system);
+	if(system!="IE"){
+		
+		var scroll_height=270;
+		var window_h=$(window).height();
+		var window_w=$(window).width();
+		var img_min_h=488;
+		var img_min_w=863;
+		var phone_min_h=547;
+		var phone_min_w=1118;
+		var phone_set_h=parseInt(547/488*window_h);
+		var phone_set_w=parseInt(1118/863*window_w);
+		var phone_set_l=parseInt(123/1118*phone_set_w);
+		var phone_set_t=parseInt(30/547*phone_set_h);
+		var scroll_length=350;
+		var ocupy_length=$(".ocupy_area").offset().top;
+		var translate_h=600;
+		
+		$(".main").css({
+			"margin-top": scroll_length+110+"px"
+		});
+		
+		$(window).scroll(function(){
+			var scroll_num=$(window).scrollTop();
+	/*		if(scroll_num>270){
+				$(".phone_screen").removeAttr("style");
+				$(".phone_wrap").removeAttr("style");
+				
+			}*/
+			setPhoneSize(scroll_num);
+			//console.log($(window).scrollTop());
+		});
+		
+	/*	$(".phone_screen").css({
+			"height": window_h+"px",
+			"width": window_w+"px",
+			"left":phone_set_l+"px",
+			"top":phone_set_t+"px"
+		});
+		
+		$(".phone_wrap").css({
+			"height": phone_set_h+"px",
+			"width": phone_set_w+"px",
+			"left": "0",
+			"top": "0",
+			"margin-left": phone_set_l*-1+"px",
+			"margin-top": phone_set_t*-1+"px",
+			"position":"fixed"
+		});*/
+		
+		setPhoneSize(0);
+		
+	}
 	
-/*	$(".phone_screen").css({
-		"height": window_h+"px",
-		"width": window_w+"px",
-		"left":phone_set_l+"px",
-		"top":phone_set_t+"px"
-	});
-	
-	$(".phone_wrap").css({
-		"height": phone_set_h+"px",
-		"width": phone_set_w+"px",
-		"left": "0",
-		"top": "0",
-		"margin-left": phone_set_l*-1+"px",
-		"margin-top": phone_set_t*-1+"px",
-		"position":"fixed"
-	});*/
-	
-	setPhoneSize(0);
 	function setPhoneSize(num){
 		/*if(num==0){
 			if(num>=0&&num<=scroll_length&& window_h*((scroll_length-num)/scroll_length)>=img_min_h){
@@ -76,7 +138,7 @@ $(document).ready(function(){
 			//背景缩放、偏移
 			var param_h=(window_h/1100);
 			var param_w=(window_w/700);
-			console.log(param_h);
+			//console.log(param_h);
 			
 			//大致合适位置：
 			//1920x1200 偏移-540 缩放2.5
@@ -158,7 +220,6 @@ $(document).ready(function(){
 			//console.log(num);
 		//}
 	}
-	
 });
 
 
