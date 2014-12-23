@@ -1,351 +1,229 @@
-(function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft(e)}else{config.wipeRight(e)}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown(e)}else{config.wipeUp(e)}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
-
 $(document).ready(function(){
 	
-	/*翻页标识*/
-	var page_index=1;//当前在哪个页面
-	var subpage_index=9;//总共有多少页面
-	var sub_page_index=1;//当前在哪个子页
 	
-	//触摸触发事件
-	$("body").touchwipe({
-		wipeDown: function() {
-			
-			if(page_index<4){
-				$("body").css({
-					"background":"#fff"
-				});
-			}
-			else{
-				$("body").css({
-					"background":"#1f54a4"
-				});
-			}
-			
-			if(page_index==1){
-				$(".cover_wrap").addClass("wrap_hide");
-				$(".con_wrap_1").addClass("wrap_show");
-				
-				var timer=setTimeout(function(){
-					$(".cover_wrap").removeClass("wrap_show");
-					$(".con_wrap_1").removeClass("wrap_prepare");
-					page_index=2;
-					clearTimeout(timer);
-					
-				},300);
-			}
-			else if(page_index>1&&page_index<subpage_index){
-				$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
-				$(".con_wrap_"+page_index).addClass("wrap_show");
-				
-				var str_name_1=".con_wrap_"+(page_index-1);
-				var str_name_2=".con_wrap_"+page_index;
-				
-				page_index+=1;
-				
-				var timer=setTimeout(function(){
-					$(str_name_1).removeClass("wrap_show");
-					$(str_name_2).removeClass("wrap_prepare");
-					
-					ResetWrapState();
-					clearTimeout(timer);
-					
-				},300);
-			}
-			else{
-					
-			}
-			
-			sub_page_index=1;
-			
-		 },
-		 wipeUp: function() { 
-		 	
-			if(page_index<4){
-				$("body").css({
-					"background":"#fff"
-				});
-			}
-			else{
-				$("body").css({
-					"background":"#1f54a4"
-				});
-			}
-			
-			var str_name_1=".con_wrap_"+(page_index-2);
-			var str_name_2=".con_wrap_"+(page_index-1);
-			
-			if(page_index==2){
-				$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-				$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
-				page_index=1;
-			}
-			else if(page_index>2&&page_index<=subpage_index){
-				$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
-				$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
-				
-				page_index-=1;
-			}
-			else{
-				
-			}
-			
-			var timer=setTimeout(function(){
-				
-				ResetWrapState();
-				clearTimeout(timer);
-				
-			},300);
-			
-			sub_page_index=1;
-			
-		 },
-		 wipeLeft: function() {
-			
-			var str_name_1=".con_wrap_"+(page_index-1);
-			var str_name_2="#tab_list_"+(page_index-1);
-			
-			if(page_index==5){
-				var list_length=$(str_name_2).children("li").length;
-				if(sub_page_index<list_length){
-					SwitchSubList($(str_name_1),sub_page_index+1);
+	/* 安卓版本兼容 */
+	var brower = {
+		versions:function(){
+			var u = window.navigator.userAgent;
+			var num ;
+			if(u.indexOf('Trident') > -1){
+			//IE
+				return "IE";
+			}else if(u.indexOf('Presto') > -1){
+			//opera
+				return "Opera";
+			}else if(u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1){
+			//firefox
+				return "Firefox";
+			}else if(u.indexOf('AppleWebKit' && u.indexOf('Safari') > -1) > -1){
+			//苹果、谷歌内核
+				if(u.indexOf('Chrome') > -1){
+				//chrome
+					return "Chrome";
+				}else if(u.indexOf('OPR')){
+				//webkit Opera
+					return "Opera_webkit"
+				}else{
+				//Safari
+					return "Safari";
+				}
+			}else if(u.indexOf('Mobile') > -1){
+			//移动端
+				if(!!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){
+				//ios
+					if(u.indexOf('iPhone') > -1){
+					//iphone
+						return "iPhone"
+					}else if(u.indexOf('iPod') > -1){
+					//ipod
+						return "iPod"
+					}else if(u.indexOf('iPad') > -1){
+					//ipad
+						return "iPad"
+					}
+				}else if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+				//android
+					num = u.substr(u.indexOf('Android') + 8, 3);
+					return {"type":"Android", "version": num};
+				}else if(u.indexOf('BB10') > -1 ){
+				//黑莓bb10系统
+					return "BB10";
+				}else if(u.indexOf('IEMobile')){
+				//windows phone
+					return "Windows Phone"
 				}
 			}
-			
-			$(str_name_2).children("li").removeClass("current");
-			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-			
-		 },
-		 wipeRight: function() { 
-		 	
-			var str_name_1=".con_wrap_"+(page_index-1);
-			var str_name_2="#tab_list_"+(page_index-1);
-			
-			if(page_index==5&&sub_page_index>1){
-				SwitchSubList($(str_name_1),sub_page_index-1);
-			}
-			
-			$(str_name_2).children("li").removeClass("current");
-			if(sub_page_index>0){
-				$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-			}
-			
-		 },
-		min_move_x: 80,
-		min_move_y: 80,
-		preventDefaultEvents: true
-	});
+		}
+    }
 	
-	//切换子列表
-	function SwitchSubList(wrap,index){
-		var list=$(wrap).children(".info_list").children("li");
-
-		for(var i=0;i<list.length;i++){
-			if($(list[i]).data("index")<index){
-				$(list[i]).removeClass("wrap_after").addClass("wrap_before");
-			}
-			else if($(list[i]).data("index")>index){
-				$(list[i]).addClass("wrap_after").removeClass("wrap_before");
-			}
-			else if($(list[i]).data("index")==index){
-				$(list[i]).removeClass("wrap_after").removeClass("wrap_before");
-			}
-		}
-
-		$(".design_wrap").removeClass("wrap_after");
-		sub_page_index=index;
-		
-	}
+	var system=brower.versions();
 	
-	//重置状态
-	function ResetWrapState(){
-		$(".info_list li").removeClass("wrap_before").addClass("wrap_after");
-		$($(".info_list li")[0]).removeClass("wrap_after");
-	}
-	
-	/*pc test*/
-	
-	$(".hook_right").bind("click",function(){
-		var str_name_1=".con_wrap_"+(page_index-1);
-		var str_name_2="#tab_list_"+(page_index-1);
+	//console.log(system);
+	if(system!="IE"){
 		
-		if(page_index==5){
-			var list_length=$(str_name_2).children("li").length;
-			if(sub_page_index<list_length){
-				SwitchSubList($(str_name_1),sub_page_index+1);
-			}
-		}
 		
-		$(str_name_2).children("li").removeClass("current");
-		$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-	});
-	
-	$(".hook_left").bind("click",function(){
-		var str_name_1=".con_wrap_"+(page_index-1);
-		var str_name_2="#tab_list_"+(page_index-1);
+		var scroll_height=270;
+		var window_h=$(window).height();
+		var window_w=$(window).width();
+		var img_min_h=488;
+		var img_min_w=863;
+		var phone_min_h=547;
+		var phone_min_w=1118;
+		var phone_set_h=parseInt(547/488*window_h);
+		var phone_set_w=parseInt(1118/863*window_w);
+		var phone_set_l=parseInt(123/1118*phone_set_w);
+		var phone_set_t=parseInt(30/547*phone_set_h);
+		var scroll_length=350;
+		var ocupy_length=$(".ocupy_area").offset().top;
+		var translate_h=600;
 		
-		if(page_index==5&&sub_page_index>1){
-			SwitchSubList($(str_name_1),sub_page_index-1);
-		}
+		$(".main").css({
+			"margin-top": scroll_length+110+"px"
+		});
 		
-		$(str_name_2).children("li").removeClass("current");
-		if(sub_page_index>0){
-			$($(str_name_2).children("li")[sub_page_index-1]).addClass("current");
-		}
-	});
-	
-	$(".hook_up").bind("click",function(){
-		
-		if(page_index<4){
-			$("body").css({
-				"background":"#fff"
-			});
-		}
-		else{
-			$("body").css({
-				"background":"#1f54a4"
-			});
-		}
-		
-		var str_name_1=".con_wrap_"+(page_index-2);
-		var str_name_2=".con_wrap_"+(page_index-1);
-		
-		if(page_index==2){
-			$(".cover_wrap").removeClass("wrap_hide").addClass("wrap_show");
-			$(".con_wrap_1").removeClass("wrap_show").addClass("wrap_prepare");
-			page_index=1;
-		}
-		else if(page_index>2&&page_index<=subpage_index){
-			$(str_name_1).removeClass("wrap_hide").addClass("wrap_show");
-			$(str_name_2).removeClass("wrap_show").addClass("wrap_prepare");
-			
-			page_index-=1;
-		}
-		else{
-			
-		}
-		
-		var timer=setTimeout(function(){
-			
-			ResetWrapState();
-			clearTimeout(timer);
-			
-		},300);
-		
-		sub_page_index=1;
-	});
-	
-	$(".hook_down").bind("click",function(){
-		
-		if(page_index<4){
-			$("body").css({
-				"background":"#fff"
-			});
-		}
-		else{
-			$("body").css({
-				"background":"#1f54a4"
-			});
-		}
-		
-		if(page_index==1){
-			$(".cover_wrap").addClass("wrap_hide");
-			$(".con_wrap_1").addClass("wrap_show");
-			
-			var timer=setTimeout(function(){
-				$(".cover_wrap").removeClass("wrap_show");
-				$(".con_wrap_1").removeClass("wrap_prepare");
-				page_index=2;
-				clearTimeout(timer);
+		$(window).scroll(function(){
+			var scroll_num=$(window).scrollTop();
+	/*		if(scroll_num>270){
+				$(".phone_screen").removeAttr("style");
+				$(".phone_wrap").removeAttr("style");
 				
-			},300);
-		}
-		else if(page_index>1&&page_index<subpage_index){
-			$(".con_wrap_"+(page_index-1)).addClass("wrap_hide");
-			$(".con_wrap_"+page_index).addClass("wrap_show");
-			
-			var str_name_1=".con_wrap_"+(page_index-1);
-			var str_name_2=".con_wrap_"+page_index;
-			
-			page_index+=1;
-			
-			var timer=setTimeout(function(){
-				$(str_name_1).removeClass("wrap_show");
-				$(str_name_2).removeClass("wrap_prepare");
-				
-				ResetWrapState();
-				clearTimeout(timer);
-				
-			},300);
-			
-		}
-		else{
-				
-		}
+			}*/
+			setPhoneSize(scroll_num);
+			//console.log($(window).scrollTop());
+		});
 		
-		sub_page_index=1;
-	});
-	
-	/*pc test*/
-	
-	/*微信转发图片*/
-	
-	var imgUrl = 'http://sunnyzhen.github.io/public/img/sunny.jpg';
-	var lineLink = location.href;
-	var descContent = "这里是 转发文字，比如：大家都爱陈某真！";
-	var shareTitle = document.title;
-	var appid = '';
-	
-	function shareFriend() {
-		WeixinJSBridge.invoke('sendAppMessage',{
-			"appid": appid,
-			"img_url": imgUrl,
-			"img_width": "200",
-			"img_height": "200",
-			"link": lineLink,
-			"desc": descContent,
-			"title": shareTitle
-		}, function(res) {
-			//_report('send_msg', res.err_msg);
-		})
+	/*	$(".phone_screen").css({
+			"height": window_h+"px",
+			"width": window_w+"px",
+			"left":phone_set_l+"px",
+			"top":phone_set_t+"px"
+		});
+		
+		$(".phone_wrap").css({
+			"height": phone_set_h+"px",
+			"width": phone_set_w+"px",
+			"left": "0",
+			"top": "0",
+			"margin-left": phone_set_l*-1+"px",
+			"margin-top": phone_set_t*-1+"px",
+			"position":"fixed"
+		});*/
+		
+		setPhoneSize(0);
+		
 	}
-	function shareTimeline() {
-		WeixinJSBridge.invoke('shareTimeline',{
-			"img_url": imgUrl,
-			"img_width": "200",
-			"img_height": "200",
-			"link": lineLink,
-			"desc": descContent,
-			"title": shareTitle
-		}, function(res) {
-			   //_report('timeline', res.err_msg);
-		});
+	else{
+		$("body").addClass("version_ie");
 	}
-	function shareWeibo() {
-		WeixinJSBridge.invoke('shareWeibo',{
-			"content": descContent,
-			"url": lineLink,
-		}, function(res) {
-			//_report('weibo', res.err_msg);
-		});
+	
+	function setPhoneSize(num){
+		/*if(num==0){
+			if(num>=0&&num<=scroll_length&& window_h*((scroll_length-num)/scroll_length)>=img_min_h){
+				$(".phone_screen").css({
+					"height": window_h*((scroll_length-num)/scroll_length)+"px",
+					"width": window_w*((scroll_length-num)/scroll_length)+"px",
+					"left":phone_set_l*((scroll_length-num)/scroll_length)+"px",
+					"top":phone_set_t*((scroll_length-num)/scroll_length)+"px"
+				});
+				
+				$(".phone_wrap").css({
+					"height": phone_set_h*((scroll_length-num)/scroll_length)+"px",
+					"width": phone_set_w*((scroll_length-num)/scroll_length)+"px",
+					"left": "50%",
+					"top": "50%",
+					"margin-left": Math.floor(phone_set_w/2)*-1*((scroll_length-num)/scroll_length)+"px",
+					"margin-top": (ocupy_length+Math.floor(phone_set_h/2))*-1*((scroll_length-num)/scroll_length)+"px",
+					"position":"absolute"
+				});
+			}
+		}
+		else{*/
+		
+			//背景缩放、偏移
+			var param_h=(window_h/1100);
+			var param_w=(window_w/700);
+			//console.log(param_h);
+			
+			//大致合适位置：
+			//1920x1200 偏移-540 缩放2.5
+			//1440x900  偏移-630 缩放1.9
+			//1024x768  偏移-735 缩放1.5
+			
+			//当宽度变小，手机的偏移值变大，缩放倍数变小，所以宽度相对于偏移值是反比，相对于缩放是正比
+			//所以针对偏移，可以列2元一次不等式，解方程
+			//x=630y+630*1440
+			//x=735y+735*1024
+			
+			//x=1834560
+			//y=1472
+			
+			//所以针对缩放，可以列2元一次不等式，解方程
+			//1440+x=1.9y
+			//1024+x=1.5y
+			
+			//x=536
+			//y=1040
+			
+			//缩放2.1
+			//1440+x=2.1y
+			//1024+x=1.5y
+			//x=16
+			//y=693
+			
+			//二维码偏移值同理，反比
+			//1200 600
+			//900 700
+			//768 750
+			
+			//x=700y+700*900
+			//x=750y+750*768
+			//x=1386000
+			//y=1080
+			
+			
+			
+			
+			var x_t=1834560;
+			var y_t=1472;
+			var param_a=(x_t/(y_t+window_w))/scroll_length;
+			
+			var x_s=536;
+			var y_s=1040;
+			var param_b=(window_w+x_s)/y_s-0.95;
+			
+			var x_qr=1386000;
+			var y_qr=1080;
+			var translate_h=x_qr/(y_qr+window_h)-80; //大概80为头部导航菜单栏的高度
+			
+			if(num>=scroll_length){
+				$(".phone_wrap").css({
+					"-moz-transform": " translate(0,0) scale(1)",
+					"-webkit-transform": " translate(0,0) scale(1)"
+				});
+			}else{
+				$(".phone_wrap").css({
+					"-moz-transform": " translate(0,-"+(scroll_length-num)*param_a+"px) scale("+(1+(scroll_length-num)/scroll_length*param_b)+")",
+					"-webkit-transform": " translate(0,-"+(scroll_length-num)*param_a+"px) scale("+(1+(scroll_length-num)/scroll_length*param_b)+")"
+				});
+			}
+			
+			if(num>=scroll_length){ //二维码悬浮
+				$(".qr_code_wrap").css({
+					"-moz-transform": " translate(0,0)",
+					"-webkit-transform": " translate(0,0)"
+				});
+			}else{
+				$(".qr_code_wrap").css({
+					"-moz-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)", 
+					"-webkit-transform": " translate(0,"+(translate_h-num*(translate_h/scroll_length))*-1+"px)" 
+				});
+				
+			}
+			
+			//if($(".phone_wrap").css("width"))
+			//console.log(num);
+		//}
 	}
-	// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-		// 发送给好友
-		WeixinJSBridge.on('menu:share:appmessage', function(argv){
-			shareFriend();
-		});
-		// 分享到朋友圈
-		WeixinJSBridge.on('menu:share:timeline', function(argv){
-			shareTimeline();
-		});
-		// 分享到微博
-		WeixinJSBridge.on('menu:share:weibo', function(argv){
-			shareWeibo();
-		});
-	}, false);
-	
-	
 });
 
 

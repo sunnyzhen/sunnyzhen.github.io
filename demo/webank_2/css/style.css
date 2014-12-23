@@ -1571,8 +1571,6 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .current .ice_lake_2 .boat_hook{ -webkit-animation:a_boat_hook_1 2s 1s linear both;}
 .current .ice_lake_2 .boat{ -webkit-animation:a_ice_block_1 4s 0.5s linear infinite alternate;}
 
-
-
 @-webkit-keyframes a_firework_1{
 	0%{ -webkit-transform:translate(0,-6px); opacity:0;}
 	20%{ -webkit-transform:translate(1px,-3px); opacity:0;}
