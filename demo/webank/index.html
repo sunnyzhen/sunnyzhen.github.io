@@ -7,9 +7,21 @@
 <meta name="keywords" content="" />
 <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="format-detection" content="telephone=no" />-->
+
 <script type="text/javascript">
-(function(){function c(h,g){g=g||document.location.toString();var e=new RegExp("[?&#]"+h+"=([^&#]+)","i");var i=e.exec(g);if(i&&i.length>1){return i[1]}return""}function f(){var e=c("ptag")||c("PTAG"),g="v.index.adaptor";if(e){e+="#{defaulTag}#1"}else{if(/https?:\/\/(.+?)(\/|$)/.test(document.referrer)){e=RegExp.$1+"#{defaulTag}#2"}else{e="v_qq_com#{defaulTag}#3"}}return encodeURIComponent(e.replace("{defaulTag}",g))}try{if(window!=top&&document.referrer&&document.referrer.indexOf("v.baidu.com")!=-1){top.location.href=self.location.href}}catch(d){}var ua=navigator.userAgent;var istablet=/android/i.test(ua)&&!/mobile/i.test(ua);if(!istablet&&/(android)|(iphone)|(ipod)/i.test(ua)&&(!/mi pad/i.test(ua))&&(typeof document.referrer!="string"||document.referrer.indexOf("m.v.qq.com")==-1)){try{var a="http://sunnyzhen.github.io/demo/webank/mobile/index.html?ptag=",b=f();a=a+b+"&";if(document.referrer){a+="mreferrer="+encodeURIComponent(document.referrer)+"&"}location.replace(a)}catch(d){}}})();
-</script><!--[if !IE]>|xGv00|97f6de192b9d0d9289e4f3be39d0dc32<![endif]-->
+(function() {
+
+	var ua = navigator.userAgent;
+	var istablet = /android/i.test(ua) && !/mobile/i.test(ua);
+	if (!istablet && /(android)|(iphone)|(ipod)/i.test(ua) && (!/mi pad/i.test(ua))) {
+		try {
+			var jumpUrl = "http://sunnyzhen.github.io/demo/webank/mobile/index.html";
+			location.replace(jumpUrl)
+		} catch (d) {}
+	}
+	
+})(); </script>
+
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 
