@@ -61,6 +61,7 @@ $(document).ready(function(){
 	//console.log(system);
 	if(system!="IE"){
 		
+		
 		var scroll_height=270;
 		var window_h=$(window).height();
 		var window_w=$(window).width();
@@ -110,6 +111,9 @@ $(document).ready(function(){
 		
 		setPhoneSize(0);
 		
+	}
+	else{
+		$("body").addClass("version_ie");
 	}
 	
 	function setPhoneSize(num){
