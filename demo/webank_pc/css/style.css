@@ -17,7 +17,8 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 body,html{ display:block; height:100%; width:100%;}
-.wrap{ padding-top:1px; width:100%; overflow-x:hidden;}
+body{ background:#363737;}
+.wrap{ padding-top:1px; width:100%; overflow-x:hidden; background:#fff;}
 
 .logo_area { display:block; height:128px; width:576px; border-bottom:1px solid #b9c0cb; margin:115px auto 25px; text-align:center;}
 .logo_area .logo{ display:block; height:104px; width:293px; background:url(../images/logo.png) no-repeat 0 0; margin:0 auto; text-indent:-9999px; overflow:hidden;}
@@ -123,7 +124,8 @@ body,html{ display:block; height:100%; width:100%;}
 .version_ie .sea_wrap{background:url(../images/sea_bg_ie.jpg) no-repeat 0 0;}
 .version_ie .wave_wrap{display:none;}
 .version_ie .ship_wrap{display:none;}
-
+.version_ie .logo_area{margin-top:45px;}
+.version_ie .company_detail .txt{margin-bottom:45px;}
 
 
 
