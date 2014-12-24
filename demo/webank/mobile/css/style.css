@@ -267,7 +267,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .con_wrap_3 .phone{ display:block; height:5px; width:35px; position:absolute; left:56px; top:0px; background:url(../images/page_2/page_2_man.png) no-repeat -52px -151px; background-size:90px 196px;}
 .con_wrap_3 .penguin_show{ display:block; height:29px; width:38px; position:absolute; left:0px; top:-28px; overflow: hidden;}
-.con_wrap_3 .penguin_show .penguin{ display:block; height:29px; width:37px; position:absolute; left:0px; top:0; background:url(../images/page_2/sprite_8.png) no-repeat 0 -98px; background-size:101px 130px; -webkit-transform:translate(0,30px) scale(0.2); opacity:1; -webkit-transform-origin:50% 100%;}
+.con_wrap_3 .penguin_show .penguin{ display:block; height:29px; width:37px; position:absolute; left:0px; top:0; background:url(../images/page_2/sprite_8.png) no-repeat 0 -97px; background-size:101px 130px; -webkit-transform:translate(0,30px) scale(0.2); opacity:1; -webkit-transform-origin:50% 100%;}
 .con_wrap_3 .sun{ display:block; height:60px; width:60px; background:url(../images/page_2/sprite_scene.png) no-repeat -96px -76px; background-size:227px 148px; position:absolute; left:50%; margin-left:-135px; top:26px;}
 .con_wrap_3 .desk{ display:block; height:79px; width:94px; background:url(../images/page_2/sprite_scene.png) no-repeat 0px -69px; background-size:227px 148px; position:absolute; left:50%; margin-left:-2px; bottom:211px; z-index:4;}
 
@@ -737,12 +737,12 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .icon_wrap_6{display:block; height:105px; width:225px; position: absolute; left:35px; top:-130px; z-index:2;}
 .icon_wrap_6 .icon{display:block; height:36px; width:36px; position: absolute; background:url(../images/page_5/sprite_scene.png) no-repeat 0 -179px; background-size:271px 215px;}
-.icon_wrap_6 .icon_1{ background-position:-38px -179px; left:187px; top:68px;}
-.icon_wrap_6 .icon_2{ background-position:-76px -179px; left:160px; top:32px;}
-.icon_wrap_6 .icon_3{ background-position:-114px -179px; left:124px; top:8px;}
-.icon_wrap_6 .icon_4{ background-position:-152px -179px; left:81px; top:0px;}
-.icon_wrap_6 .icon_5{ background-position:-190px -179px; left:38px; top:8px;}
-.icon_wrap_6 .icon_6{ background-position:-228px -179px; left:0px; top:31px;}
+.icon_wrap_6 .icon_1{ background-position:0px -179px; left:187px; top:68px;}
+.icon_wrap_6 .icon_2{ background-position:-38px -179px; left:160px; top:32px;}
+.icon_wrap_6 .icon_3{ background-position:-76px -179px; left:124px; top:8px;}
+.icon_wrap_6 .icon_4{ background-position:-114px -179px; left:81px; top:0px;}
+.icon_wrap_6 .icon_5{ background-position:-152px -179px; left:38px; top:8px;}
+.icon_wrap_6 .icon_6{ background-position:-190px -179px; left:0px; top:31px;}
 
 .snow_ball{display:block; height:9px; width:19px; background:url(../images/page_5/sprite_scene.png) no-repeat -191px -108px; background-size:271px 215px; position: absolute; left:84px; top:-74px; z-index:1; -webkit-transform:rotate(-32deg);}
 .snow_ball .snow_piece_1{display:block; height:2px; width:4px; background:#fff; border-radius:4px; position: absolute; left:0px; top:3px; z-index:2; -webkit-transform:rotate(10deg); opacity:0;}
@@ -1295,6 +1295,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .detail_cover .dot i{ display:block; height:23px; width:23px; background:rgba(31,83,159,0.15); position:absolute; left:0px; top:0px; border-radius:24px;}
 .arrow_up{ display:block; height:10px; width:16px; background:url(../images/detail/sprite_lake.png) no-repeat -148px -102px;  background-size:172px 194px; position:absolute; left:4px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0.8;}
 
+.wrap_show .wording_wrap .wording_8{ -webkit-animation:none;}
 .wrap_show .current .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
 .wrap_show .current .man_hook_8{-webkit-animation:a_man_hook_8 4s 0.3s linear both;}
 .wrap_show .current .man_wrap_8 { -webkit-animation:a_man_8 2s 0.3s linear infinite;}
