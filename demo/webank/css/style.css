@@ -23,6 +23,8 @@ body{ background:#363737;}
 .logo_area { display:block; height:128px; width:576px; border-bottom:1px solid #b9c0cb; margin:115px auto 25px; text-align:center;}
 .logo_area .logo{ display:block; height:104px; width:293px; background:url(../images/logo.png) no-repeat 0 0; margin:0 auto; text-indent:-9999px; overflow:hidden;}
 .logo_area .logo_slogan{ display:none;}
+.company_title{ position:relative; top:55px;}
+.company_detail{ position:relative; top:55px;}
 .company_detail .detail_slogan{ display:block; height:23px; width:575px; background:url(../images/webank_slogan.png) no-repeat 0 0; text-indent:-9999px; overflow:hidden; margin:0px auto 10px;}
 
 .company_detail .txt{ display:block; height:23px; width:575px; font-size:16px; font-family:'microsoft yahei'; color:#666; margin:0px auto 115px;}
@@ -125,8 +127,9 @@ body{ background:#363737;}
 .version_ie .wave_wrap{display:none;}
 .version_ie .ship_wrap{display:none;}
 .version_ie .logo_area{margin-top:45px;}
+.version_ie .company_title{ top:0px;}
+.version_ie .company_detail{ top:0px;}
 .version_ie .company_detail .txt{margin-bottom:45px;}
-
 
 
 
