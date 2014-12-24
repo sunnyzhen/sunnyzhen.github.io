@@ -15,6 +15,9 @@ $(document).ready(function(){
 			if(i==1){
 				str+="<li class='current'><a href='##'><i>"+i+"</i></a></li>";
 			}
+			else if(i==num){
+				str+="<li class='last'><a href='##'><i>"+i+"</i></a></li>";
+			}
 			else{
 				str+="<li><a href='##'><i>"+i+"</i></a></li>";
 			}
