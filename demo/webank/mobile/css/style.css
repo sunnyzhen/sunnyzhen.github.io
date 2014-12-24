@@ -1291,7 +1291,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .man_shadow_8{ display:block; height:12px; width:80px; background:#abc4e3; position:absolute; left:-26px; bottom:-99px; border-radius:80px/12px;}
 .detail_cover .dot_wrap{ background:none;}
 .detail_cover .dot_wrap .line{ height:0px;}
-.detail_cover .dot{ display:block; height:23px; width:23px; background:#2154a0; border-radius:20px; position:absolute; left:50%; margin-left:-8px; bottom:15px; z-index:10;}
+.detail_cover .dot{ display:block; height:23px; width:23px; background:#2154a0; border-radius:20px; position:absolute; left:50%; margin-left:-8px; bottom:15px; z-index:10; opacity:0;}
 .detail_cover .dot i{ display:block; height:23px; width:23px; background:rgba(31,83,159,0.15); position:absolute; left:0px; top:0px; border-radius:24px;}
 .arrow_up{ display:block; height:10px; width:16px; background:url(../images/detail/sprite_lake.png) no-repeat -148px -102px;  background-size:172px 194px; position:absolute; left:4px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0.8;}
 
@@ -1334,7 +1334,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .wrap_show .current .dot{ -webkit-animation:a_arrow_dot 0.3s 5.5s linear both;}
 .wrap_show .current .dot i{ -webkit-animation:a_arrow_up_i 1.4s linear infinite;}
 .wrap_show .current .dot .arrow_up{ -webkit-animation:a_arrow_up 1.4s linear infinite;}
-.wrap_show .current .dot_wrap .line{ -webkit-animation:a_arrow_dot_line 0.3s 5.8s linear both;}
+.wrap_show .detail_cover.current .dot_wrap .line{ -webkit-animation:a_arrow_dot_line 0.3s 5.8s linear both;}
 
 
 @-webkit-keyframes a_arrow_dot_line{
