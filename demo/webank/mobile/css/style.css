@@ -1289,8 +1289,10 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 
 .penguin_shadow_8{ display:block; height:8px; width:46px; background:#abc4e3; position:absolute; left:0px; bottom:-2px; border-radius:46px/8px;}
 .man_shadow_8{ display:block; height:12px; width:80px; background:#abc4e3; position:absolute; left:-26px; bottom:-99px; border-radius:80px/12px;}
+.detail_cover .dot_wrap{ background:none;}
+.detail_cover .dot_wrap .line{ height:0px;}
 .detail_cover .dot{ display:block; height:23px; width:23px; background:#2154a0; border-radius:20px; position:absolute; left:50%; margin-left:-8px; bottom:15px; z-index:10;}
-.detail_cover .dot i{ display:block; height:23px; width:23px; background:rgba(31,83,159,0.1); position:absolute; left:0px; top:0px; border-radius:24px;}
+.detail_cover .dot i{ display:block; height:23px; width:23px; background:rgba(31,83,159,0.15); position:absolute; left:0px; top:0px; border-radius:24px;}
 .arrow_up{ display:block; height:10px; width:16px; background:url(../images/detail/arrow_up.png) no-repeat 0 0; background-size: contain; position:absolute; left:4px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0.8;}
 
 .wrap_show .current .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
@@ -1329,9 +1331,21 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .wrap_show .current .penguin_wrap_8 .penguin_foot_1{-webkit-animation:a_penguin_8_foot 1s 0.3s linear infinite;}
 .wrap_show .current .penguin_wrap_8 .penguin_foot_2{-webkit-animation:a_penguin_8_foot 1s 0.8s linear infinite;}
 .wrap_show .current .signpost{-webkit-animation:a_signpost 0.3s 0.3s linear both;}
+.wrap_show .current .dot{ -webkit-animation:a_arrow_dot 0.3s 5.5s linear both;}
 .wrap_show .current .dot i{ -webkit-animation:a_arrow_up_i 1.4s linear infinite;}
 .wrap_show .current .dot .arrow_up{ -webkit-animation:a_arrow_up 1.4s linear infinite;}
+.wrap_show .current .dot_wrap .line{ -webkit-animation:a_arrow_dot_line 0.3s 5.8s linear both;}
 
+
+@-webkit-keyframes a_arrow_dot_line{
+	0%{ height:0px;}
+	100%{ height:90px;}
+}
+
+@-webkit-keyframes a_arrow_dot{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
 
 @-webkit-keyframes a_arrow_up_i{
 	0%{ -webkit-transform:scale(1); opacity:1;}
@@ -1339,9 +1353,9 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 }
 
 @-webkit-keyframes a_arrow_up{
-	0%{ -webkit-transform: translate(0,0);}
+	0%{ -webkit-transform: translate(0,1px);}
 	50%{ -webkit-transform: translate(0,-2px);}
-	100%{ -webkit-transform: translate(0,0);}
+	100%{ -webkit-transform: translate(0,1px);}
 }
 
 @-webkit-keyframes a_signpost{
