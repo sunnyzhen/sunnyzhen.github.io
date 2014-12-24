@@ -39,7 +39,7 @@ body{ background:#363737;}
 .qr_code_wrap .logo{ display:block; height:56px; width:273px; background: url(../images/webank_logo.png) no-repeat 0 0; position:absolute; left:50%; top:70px; margin-left:-136px; text-indent:-9999px; overflow:hidden;}
 .qr_code_wrap .qr_code{display:block; height:205px; width:205px; position:absolute; left:50%; top:160px; margin-left:-102px; border:1px solid #ddd; text-indent:-9999px; overflow:hidden;}
 .qr_code_wrap .qr_code .qr_code_img{ display:block; height:195px; width:195px; position: absolute; left:0px; top:0px; border:5px solid #fff;}
-.qr_code_wrap .qr_code .code_cover{ display:block; height:53px; width:53px; position: absolute; left:50%; top:50%; margin:-26px 0 0 -26px; z-index:1; background:url(../images/qr_code_cover.png) no-repeat 0 0; background-size:contain; background-image:url(../images/qr_code_cover_ie.png);}
+.qr_code_wrap .qr_code .code_cover{ display:block; height:53px; width:53px; position: absolute; left:50%; top:50%; margin:-26px 0 0 -26px; z-index:1; background:url(../images/qr_code_cover.png) no-repeat 0 0; background-size:contain; background-image:url(../images/qr_code_cover.png);}
 .qr_code_wrap .scan_tips{ display:block; color:#353737; font-size:14px; font-family:"microsoft yahei"; position:absolute; top:390px; left:0px; text-align:center; width:100%;}
 
 .sea_wrap{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:2;}
