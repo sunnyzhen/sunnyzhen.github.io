@@ -1293,7 +1293,7 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .detail_cover .dot_wrap .line{ height:0px;}
 .detail_cover .dot{ display:block; height:23px; width:23px; background:#2154a0; border-radius:20px; position:absolute; left:50%; margin-left:-8px; bottom:15px; z-index:10;}
 .detail_cover .dot i{ display:block; height:23px; width:23px; background:rgba(31,83,159,0.15); position:absolute; left:0px; top:0px; border-radius:24px;}
-.arrow_up{ display:block; height:10px; width:16px; background:url(../images/detail/arrow_up.png) no-repeat 0 0; background-size: contain; position:absolute; left:4px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0.8;}
+.arrow_up{ display:block; height:10px; width:16px; background:url(../images/detail/sprite_lake.png) no-repeat -148px -102px;  background-size:172px 194px; position:absolute; left:4px; top:6px; text-indent:-9999px; overflow:hidden; opacity:0.8;}
 
 .wrap_show .current .wording_wrap .wording_8{ -webkit-animation:a_wording_1 0.3s 5.2s linear both;}
 .wrap_show .current .man_hook_8{-webkit-animation:a_man_hook_8 4s 0.3s linear both;}
