@@ -1333,9 +1333,9 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 .wrap_show .current .penguin_wrap_8 .penguin_foot_1{-webkit-animation:a_penguin_8_foot 1s 0.3s linear infinite;}
 .wrap_show .current .penguin_wrap_8 .penguin_foot_2{-webkit-animation:a_penguin_8_foot 1s 0.8s linear infinite;}
 .wrap_show .current .signpost{-webkit-animation:a_signpost 0.3s 0.3s linear both;}
-.wrap_show .current .dot{ -webkit-animation:a_arrow_dot 0.3s 5.5s linear both;}
-.wrap_show .current .dot i{ -webkit-animation:a_arrow_up_i 1.4s linear infinite;}
-.wrap_show .current .dot .arrow_up{ -webkit-animation:a_arrow_up 1.4s linear infinite;}
+.wrap_show .current .dot_large{ -webkit-animation:a_arrow_dot 0.3s 5.5s linear both;}
+.wrap_show .current .dot_large i{ -webkit-animation:a_arrow_up_i 1.4s linear infinite;}
+.wrap_show .current .dot_large .arrow_up{ -webkit-animation:a_arrow_up 1.4s linear infinite;}
 .wrap_show .detail_cover.current .dot_wrap .line{ -webkit-animation:a_arrow_dot_line 0.3s 5.8s linear both;}
 
 
