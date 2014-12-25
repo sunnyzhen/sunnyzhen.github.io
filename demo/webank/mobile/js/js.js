@@ -259,7 +259,14 @@ $(document).ready(function(){
 	
 	/*微信转发图片*/
 	
-	var imgUrl = 'images/cover/icon_webank.jpg';
+	var location_str=location.href;
+	var location_reg="mobile/";
+	//stri.split(reg)[0]+"/images/cover/icon_webank.jpg";
+	//console.log(stri.split(reg));
+	//console.log(location.href);
+	//console.log();
+	
+	var imgUrl = location_str.split(location_reg)[0]+location_reg+"images/cover/icon_webank.jpg";
 	var lineLink = location.href;
 	var descContent = "我们是银行？我们是互联网？We是互联网银行。";
 	var shareTitle = document.title;
