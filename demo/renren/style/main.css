@@ -249,7 +249,7 @@ body { font-family: 'helvetica neue', arial, 'hiragino sans gb', 'microsoft yahe
 .active .pageBg .letter .start { -webkit-transform: rotatex(180deg); transform: rotatex(180deg); -webkit-transform-origin: 50% 0; transform-origin: 50% 0; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transition: -webkit-transform 1.5s linear; transition: transform 1.5s linear; z-index: 6; }
 .active .pageBg .letter .start .front { z-index: 1; }
 .active .pageBg .letter .start .back { z-index: 2; }
-.active .pageBg .letter .letterContent { visibility: visible; height: 1980px; -webkit-transition: height 1.2s 1.5s ease; transition: height 1.2s 1.5s ease; z-index: 2; }
+.active .pageBg .letter .letterContent { visibility: visible; height: 1980px; -webkit-transition: height 1.2s 1.5s linear; transition: height 1.2s 1.5s linear; z-index: 2; }
 .active .pageBg .letter .letterBottom { z-index: 3; }
 .active .pageBg .letter .letterBottom:after { height: 54px; top: 75px; }
 .indexChange .letterTop { z-index: 0!important; }
