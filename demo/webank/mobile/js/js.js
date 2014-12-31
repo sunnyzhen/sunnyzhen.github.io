@@ -264,7 +264,8 @@ $(document).ready(function(){
 	//stri.split(reg)[0]+"/images/cover/icon_webank.jpg";
 	//console.log(stri.split(reg));
 	//console.log(location.href);
-	//console.log();
+	//console.log(location.href.split("mobile/")[0]+"mobile/"+"images/cover/icon_webank.jpg");
+	
 	
 	var imgUrl = location_str.split(location_reg)[0]+location_reg+"images/cover/icon_webank.jpg";
 	var lineLink = location.href;
