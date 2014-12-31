@@ -242,14 +242,14 @@ body { font-family: 'helvetica neue', arial, 'hiragino sans gb', 'microsoft yahe
 .pageBg .letter .letterBottom { position: absolute; z-index: 5; overflow: hidden; text-align: center; height:160px; }
 .pageBg .letter .letterBottom .shareWord { font-size: 18px; color: #7e7e7e; position: absolute; top: 110px; width: 100%; left: 0; }
 .pageBg .letter .letterBottom:after {content: ' '; position: absolute; width: 97px; height: 20px; background: url('../images/logo.png') no-repeat center top transparent; top: 95px; left: 50%; z-index: 999; margin-left: -48px; background-size: 97px 54px; -webkit-transition: height 0.5s 0.6s linear, top 0.5s 0.6s linear; transition: height 0.5s 0.6s linear, top 0.5s 0.6s linear; }
-.pageBg .letter .letterContent { visibility: hidden; position: absolute; bottom: 40px; z-index: 1; overflow: hidden; height: 80px; width: 294px; margin-left: -147px; left: 50%; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform-style: preserve-3d; -transform-style: preserve-3d; box-shadow: 0px 0px 5px rgba(0,0,0,0.5);  }
+.pageBg .letter .letterContent {  position: absolute; bottom: 40px; z-index: 1; overflow: hidden; height: 80px; width: 294px; margin-left: -147px; left: 50%; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform-style: preserve-3d; -transform-style: preserve-3d; box-shadow: 0px 0px 5px rgba(0,0,0,0.5); opacity:0; }
 .pageBg .letter .letterContent img { width: 294px; }
 .active .pageBg { height: 200px; margin-top: 0; top: 0; -webkit-transition:top 1s 1.5s linear,margin-top 1s 1.5s linear; transition:top 1s 1.5s linear,margin-top 1s 1.5s linear; }
 .active .pageBg .letter{-webkit-transform:translate(0px,1870px);}
 .active .pageBg .letter .start { -webkit-transform: rotatex(180deg); transform: rotatex(180deg); -webkit-transform-origin: 50% 0; transform-origin: 50% 0; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transition: -webkit-transform 1.5s linear; transition: transform 1.5s linear; z-index: 6; }
 .active .pageBg .letter .start .front { z-index: 1; }
 .active .pageBg .letter .start .back { z-index: 2; }
-.active .pageBg .letter .letterContent { visibility: visible; height: 1980px; -webkit-transition: height 1.2s 1.5s linear; transition: height 1.2s 1.5s linear; z-index: 2; }
+.active .pageBg .letter .letterContent { height: 1980px; -webkit-transition: height 1.2s 1.2s linear; transition: height 1.2s 1.2s linear; z-index: 2; opacity:1; }
 .active .pageBg .letter .letterBottom { z-index: 3; }
 .active .pageBg .letter .letterBottom:after { height: 54px; top: 75px; }
 .indexChange .letterTop { z-index: 0!important; }
