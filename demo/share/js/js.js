@@ -64,9 +64,33 @@ $(document).ready(function(){
 	}
 	
 	$.getJSON("http://117.121.10.68:8081/videoserver/app?msgCode=3005&videoId=54aa31c0e4b0425dd033687f&userid=-1&clientid=2&format=json&loginuserid=-1&timestamp=2014-03-24%2012:12:12&softVersion=1.4.5", function(json){
-	   //console.log(json.videouri);
+		
 	   $(".video_area").attr("src",json.videouri);
+	   $(".details_wrap .details").html(json.description);
+	   $(".details_wrap .location .txt").html(json.city);
+	   $(".hot .txt").html(json.likenum);
+	   $(".view .txt").html(json.looknum);
+	   
+	   var date_string="";
+	    if(parseInt(json.createtime/1000/60/60/24)){
+	 		date_string=parseInt(json.createtime/1000/60/60/24)+"天前";
+	    }
+	    else if(parseInt(json.createtime/1000/60/60)){
+		 	  date_string=parseInt(json.createtime/1000/60/60)+"小时前";
+		}
+		else if(parseInt(json.createtime/1000/60/60)){
+		 	  date_string=parseInt(json.createtime/1000/60)+"分前";
+		}
+		else if(parseInt(json.createtime/1000/60/60)){
+		 	  date_string="刚刚";
+		}
+		
+	   $(".time .txt").html(date_string);
+	   
 	});
+	
+	//$(".video_area").attr("width",window.screen.width);
+	//$(".video_area").attr("height",window.screen.height);
 	
 	
 	
