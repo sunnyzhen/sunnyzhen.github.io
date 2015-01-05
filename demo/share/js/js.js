@@ -59,12 +59,8 @@ $(document).ready(function(){
 	
 	var system=brower.versions();
 	if(system.type=="Android"){
-		if(system.version==4.4){
-			$("body").addClass("android_version_4_4");
-		}
-		else{
-			$("body").addClass("android_version");
-		}
+		$(".banner_ios").hide();
+		$(".banner_android").show();
 	}
 	
 	$.getJSON("http://117.121.10.68:8081/videoserver/app?msgCode=3005&videoId=54aa31c0e4b0425dd033687f&userid=-1&clientid=2&format=json&loginuserid=-1&timestamp=2014-03-24%2012:12:12&softVersion=1.4.5", function(json){
