@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
+
+.banner_download{ display:none; height:66px; width:100%; background:rgba(44,19,61,0.95); position: fixed; bottom:0px; left:0px; box-shadow:0px -1px 3px rgba(0,0,0,0.3);}
+.banner_download .logo a{ display:block; height:43px; width:96px; background:url(../images/logo.png) no-repeat 0 0; background-size:contain; position:absolute; left:18px; top:11px;}
+.banner_download .btn_download{ display:block; height:30px; width:128px; background:url(../images/btn_download.png) no-repeat 0 0; background-size:contain; position:absolute; right:8px; top:18px; overflow:hidden; text-indent:-9999px;}
+.banner_ios{ display:block;}
+
+.video_wrap{ height:100%; width:100%; display:block; margin:0px; padding:0px; background:#000;}
+.video_area{ width:100%; height:auto;/* height:100%; width:100%; display:block; margin:0px; padding:0px;*/}
+.details_wrap{display:block; position:absolute; left:15px; top:90px; width:200px; color:#fff; font-family:'microsoft yahei'; font-size:14px;}
+.details_wrap .details{ margin-bottom:5px;}
+.details_wrap .location .icon_location{ display:inline-block; height:10px; width:13px; vertical-align:middle; margin-right:5px; background:url(../images/icon_location.png) no-repeat 0 0; background-size:contain;}
+.details_wrap .location .icon_location{ display:inline-block; height:13px; width:10px; vertical-align:middle; margin-right:3px; background:url(../images/icon_location.png) no-repeat 0 0; background-size:contain; margin-top:-4px;}
+
+.data_wrap{ display:block; width:100%; text-align:center; height:20px; position:absolute; left:0px; bottom:80px; color:#fff; font-family:'microsoft yahei'; font-size:12px;}
+.data_wrap .hot{ border-right:1px solid rgba(255,255,255,0.6); padding-right:10px; margin-right:8px;}
+.data_wrap .view{ border-right:1px solid rgba(255,255,255,0.6); padding-right:10px; margin-right:6px;}
+.data_wrap .time{}
+.icon_hot,.icon_view,.icon_time{ display:inline-block; height:17px; width:17px; background:url(../images/icon_hot.png) no-repeat 0 0; vertical-align:middle; margin-right:1px; background-size:contain; margin-top:-2px;}
+.icon_view{ background-image:url(../images/icon_view.png);}
+.icon_time{ background-image:url(../images/icon_time.png);}
+
+
