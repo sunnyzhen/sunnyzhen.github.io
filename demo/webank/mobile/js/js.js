@@ -326,6 +326,19 @@ $(document).ready(function(){
 	//新版分享JSsdk
 	wx.ready(function(){
 		
+		 wx.config({
+			jsApiList: [
+				'checkJsApi',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo'
+			],
+			success: function (res) {
+				alert(JSON.stringify(res));
+			} 
+		}); 
+		
 		 wx.checkJsApi({
 			jsApiList: [
 				'getNetworkType',
