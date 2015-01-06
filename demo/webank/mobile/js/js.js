@@ -323,6 +323,36 @@ $(document).ready(function(){
 	}, false);
 	
 	
+	//新版分享JSsdk
+	
+	wx.onMenuShareTimeline({
+		'title': shareTitle, // 分享标题
+		'link': lineLink, // 分享链接
+		'imgUrl': imgUrl // 分享图标
+	});
+
+	wx.onMenuShareAppMessage({
+		'title': shareTitle, // 分享标题
+		'desc': descContent, // 分享描述
+		'link': lineLink, // 分享链接
+		'imgUrl': imgUrl, // 分享图标
+	});
+	
+	wx.onMenuShareQQ({
+		'title': shareTitle, // 分享标题
+		'desc': descContent, // 分享描述
+		'link': lineLink, // 分享链接
+		'imgUrl': imgUrl // 分享图标
+	});
+
+	wx.onMenuShareWeibo({
+		'title': shareTitle, // 分享标题
+		'desc': descContent, // 分享描述
+		'link': lineLink, // 分享链接
+		'imgUrl': imgUrl // 分享图标
+	});
+
+	
 });
 
 

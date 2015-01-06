@@ -63,7 +63,15 @@ $(document).ready(function(){
 		$(".banner_android").show();
 	}
 	
-	$.getJSON("http://117.121.10.68:8081/videoserver/app?msgCode=3005&videoId=54aa31c0e4b0425dd033687f&userid=-1&clientid=2&format=json&loginuserid=-1&timestamp=2014-03-24%2012:12:12&softVersion=1.4.5", function(json){
+	var $date=new Date();
+	var videoid=window.location.href.split("=")[1];
+	var year_string=$date.getFullYear()+"-"+($date.getMonth()+1 < 10 ? '0'+($date.getMonth()+1) : $date.getMonth()+1)+"-"+$date.getDate();
+	//console.log(year_string);
+	
+	var json_string="http://test.highand.cn:8081/videoserver/app?msgCode=3005&videoId="+videoid+"&userid=-1&clientid=2&format=json&loginuserid=-1&timestamp="+year_string+"%2012:12:12&softVersion=1.4.5";
+	
+	//console.log(json_string);
+	$.getJSON(json_string, function(json){
 		
 	   $(".video_area").attr("src",json.videouri);
 	   $(".details_wrap .details").html(json.description);
