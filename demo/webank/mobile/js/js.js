@@ -325,6 +325,17 @@ $(document).ready(function(){
 	
 	//新版分享JSsdk
 	wx.ready(function(){
+		
+		 wx.checkJsApi({
+			jsApiList: [
+				'getNetworkType',
+				'previewImage'
+			],
+			success: function (res) {
+			alert(JSON.stringify(res));
+			}
+		});
+		
 		wx.onMenuShareTimeline({
 			'title': shareTitle, // 分享标题
 			'link': lineLink, // 分享链接
