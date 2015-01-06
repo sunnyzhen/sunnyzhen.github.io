@@ -324,7 +324,7 @@ $(document).ready(function(){
 	
 	
 	//新版分享JSsdk
-	wx.ready(function(){
+	/*wx.ready(function(){
 		
 		 wx.config({
 			jsApiList: [
@@ -376,7 +376,7 @@ $(document).ready(function(){
 			'imgUrl': imgUrl // 分享图标
 		});
 	});
-
+*/
 	
 
 	
