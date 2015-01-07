@@ -61,6 +61,15 @@ $(document).ready(function(){
 	if(system.type=="Android"){
 		$(".banner_ios").hide();
 		$(".banner_android").show();
+		
+		if(system.version=='4.1'){
+			$(".video_area").css({
+				"width": window.screen.width+"px"
+			});
+			$(".video_area").css({
+				"height": window.screen.height+"px"
+			})
+		}
 	}
 	
 	var $date=new Date();
@@ -97,8 +106,6 @@ $(document).ready(function(){
 	   
 	});
 	
-	//$(".video_area").attr("width",window.screen.width);
-	//$(".video_area").attr("height",window.screen.height);
 	
 	
 	
