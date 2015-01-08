@@ -238,10 +238,10 @@ body{ height:100%; width:100%; background:url(../images/index_bg.jpg) no-repeat 
 	.icon_play_area .icon_play_3{ bottom:198px;}
 	.icon_play_area .icon_play_4{ bottom:210px;}
 	.icon_play_area .icon_play_5{ bottom:235px;}
-	.icon_play_area .icon_play_6{ bottom:260px;}
-	.icon_play_area .icon_play_7{ bottom:265px;}
-	.icon_play_area .icon_play_8{ bottom:282px;}
-	.icon_play_area .icon_play_9{ bottom:284px;}
+	.icon_play_area .icon_play_6{ bottom:250px;}
+	.icon_play_area .icon_play_7{ bottom:255px;}
+	.icon_play_area .icon_play_8{ bottom:272px;}
+	.icon_play_area .icon_play_9{ bottom:274px;}
 	
 	.btn_area .btn{ width:165px; height:40px; line-height:40px; font-size:16px;}
 }
