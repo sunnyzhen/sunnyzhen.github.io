@@ -46,7 +46,7 @@ body{ height:100%; width:100%; background:url(../images/index_bg.jpg) no-repeat 
 .logo_area .slogan_txt .word_16{ background-position:-340px -25px; left:340px; top:25px;}
 
 .btn_area{ display:block; height:50px; width:100%; text-align:center; bottom:40px; position:absolute; left:0px; z-index:2;}
-.btn_area .btn{ display:inline-block; height:50px; width:200px; line-height:50px; background:rgba(44,19,61,0.95); border-radius:3px; color:#fff; font-size:18px; font-family:'microsoft yahei'; font-weight:normal; -webkit-transition: background 0.2s linear;}
+.btn_area .btn{ display:inline-block; height:50px; width:200px; line-height:50px; background:rgba(44,19,61,0.95); border-radius:3px; color:#fff; font-size:18px; font-family:'microsoft yahei'; font-weight:normal; -webkit-transition: background 0.2s linear; position:relative; background:#29113a;}
 .btn_area .btn:hover{ text-decoration:none; background:#de4e1c;}
 .btn_area .btn:active{ background:#b63e13;}
 .btn_area .btn .icon_ios{ display:inline-block; height:24px; width:20px; background:url(../images/icon_ios.png) no-repeat 0 0; margin-right:5px; vertical-align:middle; position:relative; top:-2px;}
@@ -170,6 +170,18 @@ body{ height:100%; width:100%; background:url(../images/index_bg.jpg) no-repeat 
 	100%{ opacity:1;}
 }
 
+.bg_ie{ display:none; display:block\9; height:100%; width:100%;}
+
+.qr_code_wrap{ display:block; height:200px; width:200px; position:absolute; left:0px; top:-210px; overflow:hidden;}
+.qr_code_wrap .qr_img{ display:block; height:200px; width:200px; position:absolute; left:0px; top:0px; opacity:0; display:none\9; -webkit-transform-origin:50% 100%;}
+.btn_active .qr_code_wrap .qr_img,.btn:hover .qr_code_wrap .qr_img{ -webkit-animation:a_qr_img 0.3s linear both; opacity:1\9; display:block\9;}
+
+@-webkit-keyframes a_qr_img{
+	0%{ opacity:0; -webkit-transform:scale(0.1);}
+	80%{ opacity:1; -webkit-transform:scale(1.05);}
+	90%{ opacity:1; -webkit-transform:scale(0.95);}
+	100%{ opacity:1; -webkit-transform:scale(1);}
+}
 
 /*ip 5s*/
 @media all and (max-width:414px){
@@ -245,9 +257,6 @@ body{ height:100%; width:100%; background:url(../images/index_bg.jpg) no-repeat 
 	
 	.btn_area .btn{ width:165px; height:40px; line-height:40px; font-size:16px;}
 }
-
-
-
 
 
 
