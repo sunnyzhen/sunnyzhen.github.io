@@ -18,5 +18,91 @@ button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 
+.wrap{ display:block; height:100%; width:100%;}
+.board_wrap{ width:100%; height:110px; position:absolute; left:0px; bottom:0px;}
+.board_wrap .board{ width:100%; height:110px; position:absolute; left:0px; bottom:0px; background:#CCC;}
+
+.sunnyzhen_wrap{ display:block; height:300px; width:160px; position:absolute; left:50%; margin-left: -80px; bottom:60px; z-index:2;}
+
+.sunnyzhen_wrap .body_wrap{ display:block; height:300px; width:160px; position:absolute; left:0; background:#666; top:0px;}
+.sunnyzhen_wrap .body_wrap .head{ display:block; height:160px; width:160px; position:absolute; left:0; background:#777; top:0px;}
+
+.operate_list{ display:block; height:300px; width:50px; position:absolute; left:10px; bottom:60px;}
+.operate_list .item{ display:block; height:50px; width:50px; background:#999; margin-bottom:10px;}
+.operate_list .current{ box-shadow:0px 0px 1px 1px rgba(0,0,0,0.9);}
+
+.decoration_wrap{ display:block; height:300px; width:160px; position:absolute; left:0px; top:0px;}
+.decoration_wrap .de{display:block; position:absolute; opacity:0; -webkit-transition:opacity 0.3s cubic-bezier(0.85,0.3,0.19,0.8);}
+.decoration_wrap .glass{ height:60px; width:160px; left:50%; margin-left:-80px; background:#333; top:60px;}
+.decoration_wrap .blush{ height:40px; width:160px; left:50%; margin-left:-80px; background:#f9C; top:80px;}
+.decoration_wrap .bowknot{ height:40px; width:160px; left:50%; margin-left:-80px; background:#f3C; top:20px;}
+
+.clothes_wrap{ display:block; height:60px; width:160px; position:absolute; left:0px; top:160px;}
+.clothe{ display:block; height:60px; width:160px; position:absolute; left:0px; top:0px;}
+.clothe_christmas{ background:#f30;}
+.clothe_chopper{ background:#f6c;}
+
+.pants_wrap{ display:block; height:80px; width:160px; position:absolute; left:0px; top:220px;}
+.pants{ display:block; height:80px; width:160px; position:absolute; left:0px; top:0px;}
+.pants_christmas{ background:#f30;}
+.pants_chopper{ background:#f6c;}
+
+
+
+
+
+
+
+
+
+/*pc test hook*/
+
+.hook_down{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; bottom:0px; z-index:9; text-indent:-9999px; overflow:hidden; margin-left:-20px;}
+.hook_up{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; top:0px; z-index:9; text-indent:-9999px; overflow:hidden; margin-left:-20px;}
+.hook_left{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden; margin-top:-20px;}
+.hook_right{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; right:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden; margin-top:-20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
