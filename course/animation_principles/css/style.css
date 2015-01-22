@@ -514,6 +514,7 @@ body{ background:#e0e0e0; font-size:12px; color:#333;}
 	.menu_list li{ margin-bottom:2px;}
 	.menu_list .tit{ font-size:12px;}
 	.menu_list .txt{ padding:4px;}
+	.menu_list .txt:hover{ background: none;}
 	
 	.swipeLeft{ margin-left:-320px;}
 	
