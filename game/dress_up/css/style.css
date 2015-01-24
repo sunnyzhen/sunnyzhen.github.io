@@ -18,34 +18,40 @@ button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 
-.wrap{ display:block; height:100%; width:100%;}
+.wrap{ display:block; height:100%; width:100%; background:url(../images/environment/bg.jpg) no-repeat center bottom; background-size:150% 100%;}
 .board_wrap{ width:100%; height:110px; position:absolute; left:0px; bottom:0px;}
-.board_wrap .board{ width:100%; height:110px; position:absolute; left:0px; bottom:0px; background:#CCC;}
+.board_wrap .board{ width:100%; height:110px; position:absolute; left:0px; bottom:0px; background: url(../images/environment/board.png) no-repeat center bottom; background-size:100% 110px;}
 
 .sunnyzhen_wrap{ display:block; height:300px; width:160px; position:absolute; left:50%; margin-left: -80px; bottom:60px; z-index:2;}
 
-.sunnyzhen_wrap .body_wrap{ display:block; height:300px; width:160px; position:absolute; left:0; background:#666; top:0px;}
-.sunnyzhen_wrap .body_wrap .head{ display:block; height:160px; width:160px; position:absolute; left:0; background:#777; top:0px;}
+.sunnyzhen_wrap .body_wrap{ display:block; height:300px; width:160px; position:absolute; left:0; top:0px;}
+.sunnyzhen_wrap .body_wrap .head{ display:block; height:160px; width:160px; position:absolute; left:0; top:0px; background:url(../images/base/base_face.png) no-repeat center bottom; background-size:contain; z-index:2; top:13px;}
+.sunnyzhen_wrap .body_wrap .body{ display:block; height:140px; width:160px; position:absolute; left:0; top:160px; background:url(../images/base/base_body.png) no-repeat center bottom; background-size:contain;}
+
+.sunnyzhen_wrap .body_wrap .head .eye{ display:block; height:160px; width:160px; position:absolute; left:-2px; top:0px; background: url(../images/head/eye/3.png) no-repeat center 103px; background-size:90px auto; z-index:2; }
+.sunnyzhen_wrap .body_wrap .head .mouth{ display:block; height:160px; width:160px; position:absolute; left:-2px; top:0px; background: url(../images/head/mouth/3.png) no-repeat center 122px; background-size:100px auto; z-index:2; }
 
 .operate_list{ display:block; height:300px; width:50px; position:absolute; left:10px; bottom:60px;}
 .operate_list .item{ display:block; height:50px; width:50px; background:#999; margin-bottom:10px;}
 .operate_list .current{ box-shadow:0px 0px 1px 1px rgba(0,0,0,0.9);}
 
-.decoration_wrap{ display:block; height:300px; width:160px; position:absolute; left:0px; top:0px;}
+.decoration_wrap{ display:block; height:300px; width:160px; position:absolute; left:0px; top:0px; z-index:2;}
 .decoration_wrap .de{display:block; position:absolute; opacity:0; -webkit-transition:opacity 0.3s cubic-bezier(0.85,0.3,0.19,0.8);}
-.decoration_wrap .glass{ height:60px; width:160px; left:50%; margin-left:-80px; background:#333; top:60px;}
-.decoration_wrap .blush{ height:40px; width:160px; left:50%; margin-left:-80px; background:#f9C; top:80px;}
-.decoration_wrap .bowknot{ height:40px; width:160px; left:50%; margin-left:-80px; background:#f3C; top:20px;}
+.decoration_wrap .glass{ height:60px; width:160px; left:50%; margin-left:-82px; top:72px; background:url(../images/decoration/9.png) no-repeat center bottom; background-size:110px auto;}
+.decoration_wrap .blush{ height:40px; width:160px; left:50%; margin-left:-80px; top:94px; background: url(../images/decoration/2.png) no-repeat center bottom; background-size:126px auto;}
+.decoration_wrap .anger{ height:40px; width:40px; left:104px; top:60px; background: url(../images/decoration/3.png) no-repeat center bottom; background-size:40px 40px;}
+.decoration_wrap .knife{ height:100px; width:60px; left:80px; top:-15px; background: url(../images/decoration/6.png) no-repeat center bottom; background-size:60px auto;}
+.decoration_wrap .beard{ height:160px; width:160px; left:50%; margin-left:-80px; top:31px; background: url(../images/decoration/10.png) no-repeat center bottom; background-size:120px auto;}
 
 .clothes_wrap{ display:block; height:60px; width:160px; position:absolute; left:0px; top:160px;}
 .clothe{ display:block; height:60px; width:160px; position:absolute; left:0px; top:0px;}
-.clothe_christmas{ background:#f30;}
-.clothe_chopper{ background:#f6c;}
+.clothe_christmas{ background:#f30; background:none;}
+.clothe_chopper{ background:#f6c; background:none;}
 
 .pants_wrap{ display:block; height:80px; width:160px; position:absolute; left:0px; top:220px;}
 .pants{ display:block; height:80px; width:160px; position:absolute; left:0px; top:0px;}
-.pants_christmas{ background:#f30;}
-.pants_chopper{ background:#f6c;}
+.pants_christmas{ background:#f30; background:none;}
+.pants_chopper{ background:#f6c; background:none;}
 
 
 

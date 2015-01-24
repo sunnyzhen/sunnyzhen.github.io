@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	
 	var item_sel_index=0;
-	var decoration_list=["glass","blush","bowknot"];
+	var decoration_list=["glass","blush","anger","knife","beard"];
 	var decoration_index=0;
 	
 	//触摸触发事件
