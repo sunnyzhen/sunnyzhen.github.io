@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="腾讯公益新年红包">
+    <meta name="keywords" content="腾讯,公益,腾讯公益,红包,新年" />
+    <meta name="author" content="jsonzhang" /> 
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <!-- 避免转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+    <!-- 禁止缓存 -->
+    <!-- <meta http-equiv="Pragma" content="no-cache"> -->
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/> -->
+    <!-- viewport：能优化移动浏览器的显示。如果不是响应式网站，不要使用initial-scale或者禁用缩放。
+    大部分4.7-5寸设备的viewport宽设为360px；5.5寸设备设为400px；iphone6设为375px；ipone6 plus设为414px。-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边  -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-title" content="luckyMoney">
+    <!-- 忽略数字自动识别为电话号码 -->
+    <!-- <meta content="telephone=no" name="format-detection" />  -->
+    <!-- 忽略识别邮箱 -->
+    <!-- <meta content="email=no" name="format-detection" /> -->
+    <!-- 添加智能 App 广告条 Smart App Banner：告诉浏览器这个网站对应的app -->
+    <!-- <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">  -->
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Windows 8 磁贴颜色 -->
+    <!-- <meta name="msapplication-TileColor" content="#000"/>  -->
+    <!-- Windows 8 磁贴图标 -->
+    <!-- <meta name="msapplication-TileImage" content="icon.png"/>  -->
+    <script src="./lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style/loader.css">
+    <title>腾讯公益 新年红包</title>
+</head>
+<body>
+<div class="loader">
+    <div class="center">
+        <div class="heard"></div>
+        <div class="loading"></div>
+        <div class="gif">
+            <img class="gifImg" src="" alt="">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+jQuery(document).ready(function($) {
+    $(".gifImg").attr('src', './images/loading.gif');
+    /**
+     * Created by Jolam on 2014/11/30.
+     */
+
+    var ResourceLoader = (function (Config, Util, _, Backbone) {
+
+        var ResourceLoader = function (opts) {
+            this.files = opts.files;
+            this.loadedCallback = opts.callback;
+            this.filesLoaded = 0;
+        };
+
+        ResourceLoader.prototype.loadResource = function (url, callback) {
+            if (url.indexOf('.png') > 0) {
+                var image = new Image();
+                image.onload = function () {
+                    return callback(null, null);
+                };
+                image.src = url;
+                return;
+            }
+
+            var request = new XMLHttpRequest();
+            request.open('GET', url, true);
+
+            request.addEventListener('load', function () {
+                return callback(null, request.response);
+            });
+            request.addEventListener('error', function () {
+                var statusCode = request.status;
+                var statusText = request.statusText;
+                var error = new Error(statusText);
+                error.status = statusCode;
+                return callback(error, request.response);
+            });
+            request.send();
+        };
+
+        ResourceLoader.prototype.load = function () {
+            var _this = this;
+            for (var i = 0; i < _this.files.length; i++) {
+                var url = _this.files[i];
+                _this.loadResource(url, function () {
+                    _this.filesLoaded += 1;
+                    _this.loadedCallback(false, _this.filesLoaded, url);
+                    if (_this.filesLoaded >= _this.files.length) {
+                        _this.loadedCallback(true, _this.filesLoaded);
+                    }
+                });
+            }
+        };
+
+        return ResourceLoader;
+    })();
+    var gif = $(".gif");
+    var fileList = ['./images/sprites.png','./images/sprites_2.png','./images/sprites_3.png','./images/sprites_4.png','./images/sprites_5.png','./images/bg.jpg','./images/bg_2.jpg','./images/bg_4.jpg'];
+    var fileLength = fileList.length;
+    var loader = new ResourceLoader({
+        files: fileList,
+        callback: function(isDone, filesLoaded, url) {
+            if(isDone){
+                setTimeout(function(){
+                    window.location="./main.html";
+                },1000);
+            }else{
+                console.log(filesLoaded);
+                gif.css({
+                    'transform' :'translate(0,' + (78 - 78 * filesLoaded / fileLength) + 'px)',
+                    '-webkit-transform' :'translate(0,' + (78 - 78 * filesLoaded / fileLength) + 'px)'
+                },
+                    400);
+            }
+        }
+    });
+
+loader.load();
+});
+</script>
+</body>
+</html>

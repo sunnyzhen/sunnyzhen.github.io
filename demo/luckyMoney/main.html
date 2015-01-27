@@ -1,0 +1,319 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="腾讯公益新年红包">
+        <meta name="keywords" content="腾讯,公益,腾讯公益,红包,新年" />
+        <meta name="author" content="jsonzhang" /> 
+        <meta name="robots" content="index,follow" />
+        <meta name="google" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="verify" content="index,follow" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <!-- 避免转码 -->
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+        <!-- 禁止缓存 -->
+        <!-- <meta http-equiv="Pragma" content="no-cache"> -->
+        
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/> -->
+        <!-- viewport：能优化移动浏览器的显示。如果不是响应式网站，不要使用initial-scale或者禁用缩放。
+        大部分4.7-5寸设备的viewport宽设为360px；5.5寸设备设为400px；iphone6设为375px；ipone6 plus设为414px。-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+        <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边  -->
+        <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 启用 WebApp 全屏模式 -->
+        <meta name="apple-mobile-web-app-title" content="luckyMoney">
+        <!-- 忽略数字自动识别为电话号码 -->
+        <!-- <meta content="telephone=no" name="format-detection" />  -->
+        <!-- 忽略识别邮箱 -->
+        <!-- <meta content="email=no" name="format-detection" /> -->
+        <!-- 添加智能 App 广告条 Smart App Banner：告诉浏览器这个网站对应的app -->
+        <!-- <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">  -->
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Windows 8 磁贴颜色 -->
+        <!-- <meta name="msapplication-TileColor" content="#000"/>  -->
+        <!-- Windows 8 磁贴图标 -->
+        <!-- <meta name="msapplication-TileImage" content="icon.png"/>  -->
+        
+        
+        <title>腾讯公益 爱心红包</title>
+
+        <link rel="stylesheet" href="style/main.css">
+        <style>
+            .hook{
+                position:absolute;
+                width:50px;
+                height:50px;
+                background:black;
+                z-index:10000;
+            }
+            .hook_left{
+                left:0;
+                top:50%;
+            }
+            .hook_right{
+                right:0;
+                top:50%;
+            }
+            .hook_top{
+                left:50%;
+                top:0;
+            }
+            .hook_down{
+                left:50%;
+                bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="loading">
+            <i class="loadingIcon"></i>
+        </div> -->
+        <div id="luckyMoney" class="luckyMoney">
+            <section class="section section_1">
+                <div class="container">
+                    <div class="main">
+                        <div class="child childs">
+                        	<div class="child_1_main"></div>
+                        </div>
+                        <div class="index_title spritesImg"></div>
+                        <div class="q_group">
+                            <div class="q_1 qSprite spritesImg"></div>
+                            <div class="q_2 qSprite spritesImg"></div>
+                            <div class="q_3 qSprite spritesImg"></div>
+                            <div class="q_4 qSprite spritesImg"></div>
+                            <div class="q_5 qSprite spritesImg"></div>
+                            <div class="q_6 qSprite spritesImg"></div>
+                            <div class="q_7 qSprite spritesImg"></div>
+                            <div class="wordsprite">
+                                <div class="word spritesImg"></div>
+                                <div class="qipao spritesImg"></div>
+                                <div class="smallBubble_1 spritesImg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_2 no_active wrap_after">
+                <div class="container">
+                     <div class="main">
+                        <div class="child_2 childs spritesImg_2"></div>
+                        <div class="cloth_2_warpper">
+                            <div class="cloth_2 cloths spritesImg_2"></div>
+                        </div>
+                        <div class="nameGroup">
+                            <div class="name_2 spritesImg_2"></div>
+                            <div class="nine_2 spritesImg_2"></div>
+                            <div class="sui_2 spritesImg_2"></div>
+                        </div>
+                        <div class="starGroup">
+                            <div class="star_2_1 spritesImg_2"></div>
+                            <div class="star_2_2 spritesImg_2"></div>
+                            <div class="star_2_3 spritesImg_2"></div>
+                            <div class="star_2_4 spritesImg_2"></div>
+                            <div class="star_2_5 spritesImg_2"></div>
+                            <div class="plant_2_1 spritesImg_2"></div>
+                            <div class="plant_2_2 spritesImg_2"></div>
+                        </div>
+                        <div class="wordGroup">
+                            <div class="word_2_1 spritesImg_2"></div>
+                            <div class="word_2_2 spritesImg_2"></div>
+                            <div class="bigBubble_2 spritesImg_2"></div>
+                            <div class="middleBubble_2 spritesImg_2"></div>
+                            <div class="smallBubble_2 spritesImg_2"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_3 no_active wrap_after">
+                <div class="container">
+                    <div class="main">
+                        <div class="child_3 childs spritesImg_3"></div>
+                        <div class="clothGroup childs">
+                            <div class="cloth_3_1 spritesImg_3"></div>
+                            <div class="cloth_3_2 spritesImg_3"></div>
+                        </div>
+                        <div class="noteGroup">
+                            <div class="note_1 spritesImg_3"></div>
+                            <div class="note_2 spritesImg_3"></div>
+                            <div class="note_3 spritesImg_3"></div>
+                            <div class="note_4 spritesImg_3"></div>
+                            <div class="note_5 spritesImg_3"></div>
+                            <div class="note_6 spritesImg_3"></div>
+                            <div class="note_7 spritesImg_3"></div>
+                            <div class="note_8 spritesImg_3"></div>
+                            <div class="note_9 spritesImg_3"></div>
+                        </div>
+                        <div class="wordGroup">
+                            <div class="word_3_1 spritesImg_3"></div>
+                            <div class="word_3_2 spritesImg_3"></div>
+                            <div class="bigBubble_3 spritesImg_3"></div>
+                            <div class="middleBubble_3 spritesImg_3"></div>
+                            <div class="smallBubble_3 spritesImg_3"></div>
+                        </div>
+                        <div class="nameGroup">
+                            <div class="name_3 spritesImg_3"></div>
+                            <div class="age_3 spritesImg_3"></div>
+                            <div class="sui_3 spritesImg_3"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_5 no_active wrap_after">
+                <div class="container">
+                    <div class="main">
+                        <div class="child_5 childs spritesImg_5"></div>
+                        <div class="plainingGroup">
+                            <div class="painting spritesImg_5"></div>
+                            <div class="easel spritesImg_5"></div>
+                        </div>
+                        <div class="clothGroup">
+                            <div class="sketchpad spritesImg_5"></div>
+                            <div class="cap spritesImg_5"></div>
+                            <div class="brush_5 spritesImg_5"></div>
+                            <div class="apron spritesImg_5"></div>
+                            <div class="word_5_01 spritesImg_5"></div>
+                            <div class="word_5_02 spritesImg_5"></div>
+                            <div class="bigBubble_5 spritesImg_5"></div>
+                            <div class="middleBubble_5 spritesImg_5"></div>
+                            <div class="smallBubble_5 spritesImg_5"></div>
+                        </div>
+                        <div class="nameGroup">
+                            <div class="name_5 spritesImg_5"></div>
+                            <div class="age_5 spritesImg_5"></div>
+                            <div class="sui_5 spritesImg_5"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_4 no_active wrap_after">
+                <div class="container">
+                    <div class="main">
+                        <div class="child childs spritesImg"></div>
+                        <div class="lightingGroup">
+                            <div class="lighting_1 spritesImg_4"></div>
+                            <div class="lighting_2 spritesImg_4"></div>
+                            <div class="lighting_3 spritesImg_4"></div>
+                            <div class="lighting_4 spritesImg_4"></div>
+                            <div class="lighting_5 spritesImg_4"></div>
+                            <div class="lighting_6 spritesImg_4"></div>
+                            <div class="lighting_7 spritesImg_4"></div>
+                        </div>
+                        <div class="thinkingGroup">
+                            <div class="writingBrush thinking_1 spritesImg_4"></div>
+                            <div class="rocket thinking_2 spritesImg_4"></div>
+                            <div class="music_2 thinking_3 spritesImg_4"></div>
+                            <div class="bush thinking_4 spritesImg_4"></div>
+                            <div class="plantAndStar thinking_5 spritesImg_4"></div>
+                            <div class="music thinking_6 spritesImg_4"></div>
+                            <div class="camera thinking_7 spritesImg_4"></div>
+                            <div class="skirt thinking_8 spritesImg_4"></div>
+                            <div class="picture thinking_9 spritesImg_4"></div>
+                            <div class="pigment thinking_10 spritesImg_4"></div>
+                            <div class="pencil thinking_11 spritesImg_4"></div>
+                            <div class="robot thinking_12 spritesImg_4"></div>
+                            <div class="ufo thinking_13 spritesImg_4"></div>
+                            <!-- <div class="cloud thinking_14 spritesImg_4"></div> -->
+                            <div class="word_4_1 thinking_15 spritesImg_4"></div>
+                            <div class="word_4_2 thinking_16 spritesImg_4"></div>
+                            <div class="bigBubble spritesImg_4"></div>
+                            <div class="middleBubble spritesImg_4"></div>
+                            <div class="smallBubble spritesImg_4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="fixLayer">
+            <p class="sendWord">有<span class="peopleNum">123,2589</span>人送出爱心红包</p>
+            <div>
+                <div class="buttonGroup clearfix">
+                    <div class="button">
+                        <a href="#" data-num="5" class="buttonItem"><span class="moneyNum">5</span> 元 <span class="select_arrow spritesImg"></span></a>
+                        <ul class="chooseList">
+                            <li><a class="buttonItem_item bd" href="#" data-num="other">其他</a></li>
+                            <li><a class="buttonItem_item bd" href="#" data-num="10"><span class="moneyNum" >10</span> 元</a></li>
+                            <li><a class="buttonItem_item bd" href="#" data-num="15"><span class="moneyNum">15</span> 元</a></li>
+                            <li><a class="buttonItem_item bd" href="#" data-num="20"><span class="moneyNum">20</span> 元</a></li>
+                            <li><a class="buttonItem_item lastOne" href="#">收起</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="submit">送出爱心红包</a>
+                </div>
+                <p class="rules"><a class="checked spritesImg checkbox" href="#" data-checked="true"></a><span>同意并接受</span><a href="#">《腾讯公益用户协议》</a><a class="rulesLink" href="#">活动规则</a></p>
+            </div>
+            <div class="arrow">
+                <div class="select_arrow select_arrow_1 tiping spritesImg"></div>
+                <div class="select_arrow select_arrow_2 tiping spritesImg"></div>
+            </div>
+        </div>
+        <div class="floatTips floatLayer">
+            <div class="floatTips_content">
+                <h2>活动规则</h2>
+                <ol>
+                    <li>1、活动时间：2015年1月20日-2月28日。</li>
+                    <li>2、善款使用：每50元爱心红包可为1位贫困儿童送去1份新年礼包，内含美术套装、益智玩具及体育用品共计66件单品，您的爱心将会助力孩子们实现缤纷梦想。</li>
+                    <li>3、新年礼包的发放对象为四川、贵州、云南、甘肃、宁夏、内蒙古6省贫困地区的村小儿童。</li>
+                    <li>4、本活动由中国扶贫基金会负责执行（具有公募资质的全国性基金会）。</li>
+                    <li>5、在法律允许范围内腾讯公益拥有本活动最终解解释权。有任何问题或疑问，请联系客服（邮箱：gykefu@qq.com），我们将尽快和您联系。</li>
+                    <li>6、如需了解项目详情，请点击 <a href="#">项目进展</a></li>
+                </ol>
+                <a href="#" class="closeBtn spritesImg"></a>
+            </div>
+            <div class="floatTips_bg"></div>
+        </div>
+        <div class="payOtherMoney floatLayer">
+            <div class="payOtherMoney_content">
+                <h4>请输入红包金额</h4>
+                <div class="typeInArea">
+                    <input type="number" placeholder="其他">
+                    <span class="yuan">元</span>
+                </div>
+                <a href="#" class="sendMoneyBtn">送出爱心红包</a>
+                <a href="#" class="closeBtn spritesImg"></a>
+            </div>
+            <div class="floatTips_bg"></div>
+        </div>
+        <!-- <div>
+            <div class="hook hook_left"></div>
+            <div class="hook hook_top"></div>
+            <div class="hook hook_down"></div>
+            <div class="hook hook_right"></div>
+        </div> -->
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="lib/jquery.min.js"></script>
+        <!-- <script src="lib/jquery.slimscroll.min.js"></script> -->
+        <!-- // <script src="lib/jquery.onepage-scroll.min.js"></script> -->
+        <!-- <script src="lib/jquery.easing.min.js"></script> -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <script src="lib/jquery.touchSwipe.min.js"></script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+
+        <script src="script/main.js"></script>
+        <script>
+        </script>
+        <script type="text/javascript" src="http://tajs.qq.com/stats?sId=40245967" charset="UTF-8"></script>
+    </body>
+</html>

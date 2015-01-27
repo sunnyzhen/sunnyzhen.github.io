@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="腾讯公益新年红包">
+        <meta name="keywords" content="腾讯,公益,腾讯公益,红包,新年" />
+        <meta name="author" content="jsonzhang" /> 
+        <meta name="robots" content="index,follow" />
+        <meta name="google" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="verify" content="index,follow" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <!-- 避免转码 -->
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+        <!-- 禁止缓存 -->
+        <!-- <meta http-equiv="Pragma" content="no-cache"> -->
+        
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/> -->
+        <!-- viewport：能优化移动浏览器的显示。如果不是响应式网站，不要使用initial-scale或者禁用缩放。
+        大部分4.7-5寸设备的viewport宽设为360px；5.5寸设备设为400px；iphone6设为375px；ipone6 plus设为414px。-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no,minimal-ui"/>
+        <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边  -->
+        <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 启用 WebApp 全屏模式 -->
+        <meta name="apple-mobile-web-app-title" content="luckyMoney">
+        <!-- 忽略数字自动识别为电话号码 -->
+        <meta content="telephone=no" name="format-detection" /> 
+        <!-- 忽略识别邮箱 -->
+        <!-- <meta content="email=no" name="format-detection" /> -->
+        <!-- 添加智能 App 广告条 Smart App Banner：告诉浏览器这个网站对应的app -->
+        <!-- <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">  -->
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- Windows 8 磁贴颜色 -->
+        <!-- <meta name="msapplication-TileColor" content="#000"/>  -->
+        <!-- Windows 8 磁贴图标 -->
+        <!-- <meta name="msapplication-TileImage" content="icon.png"/>  -->
+        
+        
+        <title>腾讯公益 爱心红包</title>
+        <link rel="stylesheet" href="style/feedback.css">
+    </head>
+    <body>
+        <!-- <div id="loading">
+            <i class="loadingIcon"></i>
+        </div> -->
+        <div id="feedback" class="feedback">
+            <div class="letter_top">
+                <img src="./images/letter_top.png" class="letter_top_Img" alt="">
+                <div class="avatarWarpper">
+                    <div class="avatar">
+                        <img src="./images/avatar.png" class="avatarImg" alt="">
+                    </div>
+                    <span class="username">json</span>
+                </div>
+            </div>
+            <div class="wording">
+                <img src="./images/thanks_word.png" class="thanks_word" alt="">
+                <p>您是第<span>153 8926</span>个送出爱心红包的人</p>
+            </div>
+            <a href="#" class="btn">邀请小伙伴一起送红包</a>
+        </div>
+        <div class="shareLayer">
+            <img src="./images/shareWord.png" alt="请点击右上角发送给朋友或者分享到朋友圈" class="shareWord">
+        </div>
+        <script src="lib/jquery.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function($) {
+                $(".btn").click(function(event) {
+                    $(".shareLayer").addClass('show');
+                });
+                $(".shareLayer").click(function(event) {
+                    $(this).removeClass('show');
+                });
+            });
+        </script>
+    </body>
+</html>
