@@ -3409,4 +3409,6 @@ body {
   background: url(../images/child_main.png) no-repeat 0 0;
   background-size: 163px 319px;
   width: 163px;
-  height: 319px;}
+  height: 319px;
+  -webkit-filter: drop-shadow(0 0px 5px rgba(0,0,0,.5));
+  }
