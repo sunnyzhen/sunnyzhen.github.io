@@ -323,6 +323,62 @@ $(document).ready(function(){
 	}, false);
 	
 	
+	//新版分享JSsdk
+	/*wx.ready(function(){
+		
+		 wx.config({
+			jsApiList: [
+				'checkJsApi',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo'
+			],
+			success: function (res) {
+				alert(JSON.stringify(res));
+			} 
+		}); 
+		
+		 wx.checkJsApi({
+			jsApiList: [
+				'getNetworkType',
+				'previewImage'
+			],
+			success: function (res) {
+			alert(JSON.stringify(res));
+			}
+		});
+		
+		wx.onMenuShareTimeline({
+			'title': shareTitle, // 分享标题
+			'link': lineLink, // 分享链接
+			'imgUrl': imgUrl // 分享图标
+		});
+	
+		wx.onMenuShareAppMessage({
+			'title': shareTitle, // 分享标题
+			'desc': descContent, // 分享描述
+			'link': lineLink, // 分享链接
+			'imgUrl': imgUrl, // 分享图标
+		});
+		
+		wx.onMenuShareQQ({
+			'title': shareTitle, // 分享标题
+			'desc': descContent, // 分享描述
+			'link': lineLink, // 分享链接
+			'imgUrl': imgUrl // 分享图标
+		});
+	
+		wx.onMenuShareWeibo({
+			'title': shareTitle, // 分享标题
+			'desc': descContent, // 分享描述
+			'link': lineLink, // 分享链接
+			'imgUrl': imgUrl // 分享图标
+		});
+	});
+*/
+	
+
 	
 });
 

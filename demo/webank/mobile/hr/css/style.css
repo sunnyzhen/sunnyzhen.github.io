@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+a:focus,input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
+
+/*社招首页*/
+
+.banner_wrap{ display:block; height:175px; width:100%; background:url(../images/global/banner_bg.png) repeat right top; background-size:10px 10px; margin-bottom:35px;}
+.banner_wrap .penguin_bg{ display:block; height:175px; width:150px; background:url(../images/index/banner_penguin.png) no-repeat 0 0; background-size:contain; position:absolute; right:0; top:0px;}
+.banner_wrap .title{ display:block; height:49px; width:142px; background:url(../images/index/banner_title.png) no-repeat 0 0; background-size:contain; position:absolute; left:22px; top:59px; text-indent:-9999px; overflow:hidden;}
+.banner_wrap .title_en{ display:none;}
+
+.search_wrap{width:290px; margin:0 auto 35px; position:relative;}
+.search_wrap .ipt_area{ display:block; width:100%; height:45px; border:1px solid #1b4e9a; border-radius:3px;}
+.search_wrap .ipt_area .ipt_job{display:block; width:230px; padding-left:14px; padding-right:11px; height:45px; line-height:45px; font-size:16px; font-family:'microsoft yahei'; color:#bfbfbf; border:none;}
+.search_wrap .ipt_area .ipt_job:focus{ color:#6f6f6f;}
+.search_wrap .btn_search{ display:block; height:45px; width:50px; background:#2a5eab; position:absolute; right:-1px; top:1px; text-indent:-9999px; overflow:hidden;}
+.search_wrap .btn_search .icon_search{ display:block; height:20px; width:21px; background:url(../images/global/icon_search.png) no-repeat 0 0; background-size:contain; position:absolute; left:15px; top:12px; pointer-events:none;}
+
+.job_classify_wrap{ margin:0 auto 35px; width:290px; overflow:hidden;}
+.job_classify_list{ width:320px; float:left;}
+.job_classify_list li{ float:left; display:inline;}
+.job_classify_list li a{ display:block; margin-right:14px; margin-bottom:14px; width:85px; height:45px; line-height:45px; border:1px solid #d5d5d5; border-radius:3px; text-align:center; font-size:16px; font-family:'microsoft yahei'; color:#6f6f6f;}
+.job_classify_list li a:hover{ text-decoration:none;}
+.job_classify_list li a:active{ border-color:#1b4e9a; color:#1b4e9a; background:#fff;}
+
+/*社招首页*/
+
+/*校园招聘页*/
+
+.campus_bg{ display:block; height:100%; width:100%; background:url(../images/campus_index/campus_recruitment_bg.jpg) no-repeat center top; background-size: cover; position:absolute; left:0px; top:0px;}
+.campus_slogan_wrap{ display:block; height:77px; width:100%; background:url(../images/global/banner_bg.png) repeat 0 0; background-size:10px 10px; position:absolute; left:0px; bottom:0px;}
+.campus_slogan_wrap .txt{ display:block; height:21px; width:177px; background:url(../images/campus_index/campus_recruitment_title.png) repeat 0 0; background-size: contain; position:absolute; left:50%; margin-left:-89px; top:28px; text-indent:-9999px; overflow:hidden;}
+
+/*校园招聘页*/
+
+/*岗位详情页*/
+
+.job_title_wrap{ display:block; width:100%; border-bottom:1px solid #bdbdbd; padding:20px 15px 17px;}
+.job_title_wrap .title{ font-size:16px; font-family:'microsoft yahei'; color:#595959; margin-bottom:2px;}
+.job_title_wrap .number{ color:#bfbfbf;  font-family:'microsoft yahei'; font-size:14px;}
+.job_title_wrap .date{ color:#bfbfbf;  font-family:'Arial'; font-size:14px; position:absolute; right:15px; top:45px;}
+
+.job_detail_con{ padding:20px 15px;}
+.job_detail_con .title{font-size:16px; font-family:'microsoft yahei'; color:#595959; margin-bottom:3px;}
+.job_detail_con .detail_list{font-size:14px; font-family:'microsoft yahei'; color:#595959; margin-bottom:30px; margin-left:17px;}
+.job_detail_con .detail_list li{ list-style:disc; padding-left:0px; margin-bottom:3px;}
+
+.btn_fixed_wrap{ display:block; width:100%; height:65px; background:#ebebeb; border-top:1px solid #bdbdbd; position:fixed; bottom:0px; left:0px; text-align:center;}
+.btn_fixed_wrap .btn_delivery{ display: inline-block; margin-top:9px; height:45px; line-height:45px; width:188px; background:#2a5eab; border:1px solid #1b4e9a; text-align:center; font-size:16px; font-family:'microsoft yahei'; color:#fff; border-radius:3px; }
+.btn_fixed_wrap .btn_delivery:hover{ text-decoration: none;}
+.btn_fixed_wrap .btn_delivery:active{ position:relative; top:1px;}
+
+/*岗位详情页*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pc test hook*/
+
+.hook_down{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; bottom:0px; z-index:9; text-indent:-9999px; overflow:hidden; margin-left:-20px;}
+.hook_up{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:50%; top:0px; z-index:9; text-indent:-9999px; overflow:hidden; margin-left:-20px;}
+.hook_left{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; left:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden; margin-top:-20px;}
+.hook_right{ display:block; height:40px; width:40px; background:rgba(255,0,0,0.5); position:absolute; right:0px; top:50%; z-index:9; text-indent:-9999px; overflow:hidden; margin-top:-20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
