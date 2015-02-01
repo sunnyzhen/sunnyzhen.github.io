@@ -155,10 +155,12 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .progress_wrap{ display:block; width:66%; height:3px; background:#ebebeb; position:absolute; left:50%; margin-left:-33%; top:35px; position:relative; z-index:1;}
 .progress_wrap .progress_bar{ display:block; width:100%; height:3px; background:#42bd12; -webkit-transition:width 0.3s linear;}
 
-.basic_info_wrap .title{ display:block; height:38px; line-height:38px; width:100%; background:#ebebeb; border-bottom:1px solid #6f6f6f; font-size:16px; font-family:'microsoft yahei'; padding-left:10px; color:#6f6f6f;}
+.basic_info_wrap .title{ display:block; height:38px; line-height:38px; width:100%; background:#ebebeb; border-bottom:1px solid #bdbdbd; font-size:16px; font-family:'microsoft yahei'; padding-left:10px; color:#6f6f6f;}
 .info_list{ padding-left:10px;}
 .info_list li{ height:48px; border-bottom:1px solid #bdbdbd;}
-.info_list li .ipt{ height:48px; line-height:48px; font-size:16px; font-family:'microsoft yahei'; border:none; width:70%; padding:0px 10px; color:#;}
+.info_list li.last{border: none;}
+.info_list li .ipt{ height:48px; line-height:48px; font-size:16px; font-family:'microsoft yahei'; border:none; width:70%; padding:0px 10px; color:#cdcdcd;}
+.info_list li .ipt:focus{ color:#6f6f6f;}
 .info_list .icon{ display:inline-block; vertical-align:middle; height:16px; width:16px; background:url(../images/user_center/icon_name.png) no-repeat 0 0; background-size:contain;}
 .info_list .icon_name{ background-image:url(../images/user_center/icon_name.png);}
 .info_list .icon_phone{ background-image:url(../images/user_center/icon_phone.png);}
@@ -166,6 +168,10 @@ html,body{ height:100%; width:100%; position: relative; overflow-x:hidden;}
 .info_list .icon_company{ background-image:url(../images/user_center/icon_company.png);}
 .info_list .icon_position{ background-image:url(../images/user_center/icon_position.png);}
 .info_list .label_txt{ display:inline-block; vertical-align:middle; font-size:16px; font-family:'microsoft yahei';}
+
+.s_area{ display:block; height:19px; width:100%; background:#ebebeb; border-top:1px solid #bdbdbd; border-bottom:1px solid #bdbdbd;}
+
+.notice_wrap{ display:block; height:44px; margin-bottom:65px; padding:10px 0px 10px 10px; font-size:14px; font-family:'microsoft yahei'; color:#cdcdcd;}
 
 /*创建简历*/
 
