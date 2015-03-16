@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>模拟透视</title>
+<style>
+html,body{ padding:0px; margin:0px; height:100%; width:100%;overflow:hidden;}
+.container{background:#222; height:100%;position:relative;;}
+.container span{width:100px;height:100px;background:#f33;opacity:0.6;}
+.container .bgc-blue{background:#07d;z-index:2;}
+</style>
+</head>
+<body>
+<div id="Jcontainer" class="container"></div>
+  <script>
+    void function(window){
+        var document = window.document;
+
+        function getEleOffset(element){
+            var left = 0, top = 0;
+                do{
+                    left += element.offsetLeft;
+                    top += element.offsetTop;
+                }while(element = element.offsetParent);
+                return {
+                    left:left,
+                    top:top
+                };
+        }
+
+        //鼠标位置
+        function getMouseOffset(event){
+            return {
+                x:(event.pageX || event.clientX + document.body.scrollLeft - document.body.clientLeft),
+                y:(event.pageY || event.clientY + document.body.scrollTop - document.body.clientTop)
+            };
+        }
+        //监听事件
+        function addEventListener(element,type,fun){
+            if(element.addEventListener){
+                element.addEventListener(type,function(event){
+                    fun(event);
+                },false);
+            }else{
+                element.attachEvent('on'+type,function(){
+                    fun(window.event);
+                });
+            }
+        }
+        function extend(subClass,supClass){
+            var fun = function(){},
+                prototype = subClass.prototype;
+            fun.prototype = supClass.prototype;
+            subClass.prototype = new fun();
+            for(var i in prototype){
+                subClass.prototype[i] = prototype[i];
+            }
+            subClass.$supClass = supClass;
+            subClass.prototype.$supClass = function(){
+                var supClass = arguments.callee.caller.$supClass;
+                if(typeof supClass == 'function'){
+                     supClass.apply(this,arguments);
+                     this.$supClass = supClass;
+                }
+            };
+            subClass.prototype.constructor = subClass;
+            return subClass;
+        }
+        /**
+         * Shape高宽
+         */
+        function Shape(w,h){
+            this.w = w;
+            this.h = h;
+        }
+        /**
+         * 初始坐标类
+         * 
+         */
+        function position(x,y,z){
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+        /**
+         * 容器类
+         */
+        function Container(Properties){
+            //属性
+            //dom
+            this.element = null;
+
+            //距离
+            this.fl = 19830;//7m换算为像素
+            this.shape = null;
+           
+            //中心坐标
+            this.cX = 0;
+            this.cY = 0;
+            //偏移坐标
+            this.offsetX = 0;
+            this.offsetY = 0;
+
+            //z轴
+            this.baseZ = 0;
+
+            this.Things = [];
+            this.setOption(Properties);
+            this.init();
+        }
+        Container.prototype = {
+            setOption:function(Properties){
+                for(var i in Properties){
+                    switch(i){
+                        case 'element':
+                            this[i] = typeof Properties[i] == 'string' ? document.getElementById(Properties[i]) : Properties[i];
+                            break;
+                    }
+                }
+            },
+            init:function(){
+                if(!this.element) alert('没有容器');
+                this.shape = new Shape(this.element.clientWidth,this.element.clientHeight);
+                this.bindEvent();
+            },
+            addThing:function(thing){
+                this.Things.push(thing);
+                this.calcPosition(thing);
+                this.element.appendChild(thing.getElement(this));
+            },
+            //计算位置及大小
+            calcPosition:function(thing){
+                this.cX = this.element.clientWidth/2;
+                this.cY = this.element.clientHeight/2;
+                scale = this.fl/(this.fl + thing.position.z + this.baseZ);
+                if(scale <= 0){
+                    thing.element.style.display = 'none';
+                    return ;
+                }else{
+                    thing.element.style.display = '';
+                }
+                thing.element.style.width = thing.shape.w * scale + 'px';
+                thing.element.style.height = thing.shape.h * scale + 'px';
+                thing.element.style.top = (this.cY + ((thing.position.y + this.offsetY - this.cY - thing.shape.h/2) * scale))  + 'px';
+                thing.element.style.left = (this.cX + ((thing.position.x + this.offsetX - this.cX - thing.shape.w/2) * scale))  + 'px';
+            },
+            bindEvent:function(){
+                var self = this;
+                addEventListener(this.element,'mousemove',function(event){
+                    self.onMouseMove(event);
+                });
+            },
+            //鼠标移动
+            onMouseMove:function(event){
+                //容器的页面坐标
+                var position = getEleOffset(this.element);
+                //鼠标坐标
+                var e = getMouseOffset(event);
+                //容器内坐标
+                var x = e.x-position.left;
+                var y = e.y-position.top;
+                //偏移差
+                this.offsetX = this.element.clientWidth/2 - x;
+                this.offsetY = this.element.clientHeight/2 - y;
+                this.draw();
+            },
+            draw:function(){
+                for(var i=0 ; i<this.Things.length;i++){
+                    this.calcPosition(this.Things[i]);
+                }
+            }
+        };
+        /**
+         * 物件
+         */
+        function Thing(Properties){
+            this.Container = null;
+            this.shape = new Shape(100,100);
+            this.position = new position(0,0,0);
+            this.element = null;
+            this.className = null;
+            this.setOption(Properties);
+            this.init();
+        }
+        Thing.prototype = {
+            setOption:function(Properties){
+                for(var i in Properties){
+                    switch(i){
+                        case 'wh':
+                        case 'position':
+                        case 'className':
+                            this[i] = Properties[i];
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            },
+            init:function(){
+                this.element = this.draw();
+                this.element.style.position = 'absolute';
+                this.element.style.width = this.shape.w + 'px';
+                this.element.style.height = this.shape.h + 'px';
+                this.element.className=this.className;
+            },
+            getElement:function(Container){
+                this.Container = Container;
+                return this.element;
+            }
+        };
+        function Refer(Properties){
+            this.$supClass(Properties);
+        }
+        Refer.prototype = {
+            draw:function(){
+                var obj = document.createElement('span');
+                return obj;
+            }
+        };
+        extend(Refer,Thing);
+
+        var Container = new Container({
+            'element':'Jcontainer'
+        });
+        Container.addThing(new Refer({
+            shape:new Shape(100,100,'blue'),
+            position:new position(document.body.clientWidth/2,document.body.clientHeight/2,0),
+            className:'bgc-blue'
+        }));
+        Container.addThing(new Refer({
+            shape:new Shape(100,100,'red'),
+            position:new position(document.body.clientWidth/2,document.body.clientHeight/2,8498),//相距3m换算为像素
+            className:'bgc-red'
+        }));
+    }(window);
+</script>
+
+</body>
+</html>
