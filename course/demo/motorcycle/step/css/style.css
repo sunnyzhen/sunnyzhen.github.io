@@ -448,4 +448,4 @@ body{ background:#2758a7 url(../images/cover/bg.jpg) no-repeat center bottom; ba
 	.penguin_hook_8{ bottom:245px;}
 }
 
-
+.icon_img{ display:block; height:0px; width:0px; opacity:0; position:absolute; left:0px; top:0px; z-index:1;}
