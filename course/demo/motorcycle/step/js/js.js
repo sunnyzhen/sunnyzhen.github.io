@@ -1,10 +1,10 @@
-(function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft(e)}else{config.wipeRight(e)}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown(e)}else{config.wipeUp(e)}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})(jQuery);
+(function($){$.fn.touchwipe=function(settings){var config={min_move_x:20,min_move_y:20,wipeLeft:function(){},wipeRight:function(){},wipeUp:function(){},wipeDown:function(){},preventDefaultEvents:true};if(settings)$.extend(config,settings);this.each(function(){var startX;var startY;var isMoving=false;function cancelTouch(){this.removeEventListener('touchmove',onTouchMove);startX=null;isMoving=false}function onTouchMove(e){if(config.preventDefaultEvents){e.preventDefault()}if(isMoving){var x=e.touches[0].pageX;var y=e.touches[0].pageY;var dx=startX-x;var dy=startY-y;if(Math.abs(dx)>=config.min_move_x){cancelTouch();if(dx>0){config.wipeLeft(e)}else{config.wipeRight(e)}}else if(Math.abs(dy)>=config.min_move_y){cancelTouch();if(dy>0){config.wipeDown(e)}else{config.wipeUp(e)}}}}function onTouchStart(e){if(e.touches.length==1){startX=e.touches[0].pageX;startY=e.touches[0].pageY;isMoving=true;this.addEventListener('touchmove',onTouchMove,false)}}if('ontouchstart'in document.documentElement){this.addEventListener('touchstart',onTouchStart,false)}});return this}})($);
 
 $(document).ready(function(){
 	
 	/*翻页标识*/
 	var page_index=1;//当前在哪个页面
-	var page_total=8;//总共有多少页面
+	var page_total=11;//总共有多少页面
 	var subpage_index=1;//当前在哪个子页
 	var no_wipe=0;
 	var main_list=$("#tab_list_1");
@@ -16,7 +16,7 @@ $(document).ready(function(){
 				str+="<li class='current'><a href='##'><i>"+i+"</i></a></li>";
 			}
 			else if(i==num){
-				str+="<li class='last'><a href='##'><i>"+i+"</i></a></li>";
+				str+="<li><a href='##'><i>"+i+"</i></a></li>";
 			}
 			else{
 				str+="<li><a href='##'><i>"+i+"</i></a></li>";
@@ -30,12 +30,6 @@ $(document).ready(function(){
 	function setMainListItem(num){
 		$(main_list).children("li").removeClass("current");
 		$($(main_list).children("li")[num-1]).addClass("current");
-		if(page_index==8){
-			$(main_list).fadeOut();
-		}
-		else{
-			$(main_list).fadeIn();
-		}
 	}
 	
 	$(".share_we").click(function(){
@@ -269,7 +263,7 @@ $(document).ready(function(){
 	
 	var imgUrl = location_str.split(location_reg)[0]+location_reg+"images/cover/icon_webank.jpg";
 	var lineLink = location.href;
-	var descContent = "我们是银行？我们是互联网？We是互联网银行。";
+	var descContent = "CSS3 动画demo";
 	var shareTitle = document.title;
 	var appid = '';
 	
