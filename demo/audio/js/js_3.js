@@ -45,8 +45,30 @@ $(document).ready(function(){
 		audio.load();
 		audio.addEventListener("canplaythrough", function(){
 			
-			audio.volume=1;
+			audio.volume=0.01;
+			timer_volume_up=setInterval(function(){
+				if(audio.volume<0.15){
+					audio.volume+=0.01;
+				}
+				else{
+					audio.volume=0.15;
+					clearInterval(timer_volume_up);
+				}
+				console.log(audio.volume);
+			},1000);
 			
+			timer_count=setTimeout(function(){
+                timer_volume_down=setInterval(function(){
+                    if(audio.volume>0.01){
+                        audio.volume-=0.01;
+                    }
+                    else{
+                        audio.volume=0.01;
+                        clearInterval(timer_volume_down);
+                    }
+                  	console.log(audio.volume);
+                },1000);
+			},parseInt(audio.duration*1000-15000));
 			
 			audio.play();
 			
