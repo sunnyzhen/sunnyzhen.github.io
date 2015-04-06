@@ -46,6 +46,7 @@ $(document).ready(function(){
 		audio.addEventListener("canplaythrough", function(){
 			audio.play();
 		},false);
+		$(".audio_wrap").append(audio);
 	}
 	
 	musicPlay();

@@ -42,6 +42,7 @@ $(document).ready(function(){
 		var audio = document.createElement("audio");
 		audio.src = "media/thunder.mp3";
 		audio.loop = true;
+		audio.load();
 		audio.addEventListener("canplaythrough", function(){
 			audio.play();
 		},false);
