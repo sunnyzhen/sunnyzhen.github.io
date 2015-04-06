@@ -45,7 +45,7 @@ $(document).ready(function(){
 		audio.load();
 		audio.addEventListener("canplaythrough", function(){
 			
-			audio.volume=0.01;
+			audio.volume=1;
 			
 			
 			audio.play();
