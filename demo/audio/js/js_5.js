@@ -37,7 +37,9 @@ $(document).ready(function(){
 	function wipe_down(){
 		
 	}
+	
 	var audio_2 = "";
+	var audio_3 = "";
 	function musicPlay(){
 		var audio = document.createElement("audio");
 		audio.src = "media/happy.mp3";
@@ -55,6 +57,10 @@ $(document).ready(function(){
 		audio_2.src = "media/beep.mp3";
 		$(".audio_wrap").append(audio_2);
 		
+		audio_3 = document.createElement("audio");
+		audio_3.src = "media/thunder.mp3";
+		$(".audio_wrap").append(audio_3);
+		
 	}
 	
 	musicPlay();
@@ -63,6 +69,10 @@ $(document).ready(function(){
 	
 	$(".btn_beep").click(function(){
 		audio_2.play();
+	});
+	
+	$(".btn_thunder").click(function(){
+		audio_3.play();
 	});
 	
 	

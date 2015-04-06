@@ -22,6 +22,10 @@ html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 .btn_beep:hover{ text-decoration:none;}
 .btn_beep:active{ position:relative; top:1px; box-shadow:0px 1px 0px rgba(255,255,255,0.8) inset,0px 0px 3px rgba(0,0,0,0.1);}
 
+.btn_thunder{ display:block; height:50px; width:280px; border:1px solid #F96; color:#a84a1a; text-align:center; margin:50px auto; line-height:50px; font-size:16px; font-family:'Arial','microsoft yahei'; border-radius:5px; background:#ffd8c4; box-shadow:0px 1px 0px rgba(255,255,255,0.8) inset,0px 0px 3px rgba(0,0,0,0.1),0px 1px 2px rgba(0,0,0,0.2);}
+.btn_thunder:hover{ text-decoration:none;}
+.btn_thunder:active{ position:relative; top:1px; box-shadow:0px 1px 0px rgba(255,255,255,0.8) inset,0px 0px 3px rgba(0,0,0,0.1);}
+
 
 
 
