@@ -122,7 +122,7 @@ $(document).ready(function(){
 			$(".con_wrap").css({
 				"pointer-events":"auto"
 			});
-		},2000);
+		},1600);
 		
 		$(".con_wrap").css({
 			"pointer-events":"none"

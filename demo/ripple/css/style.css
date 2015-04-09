@@ -69,11 +69,11 @@ html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 .ripple_4:before{ content:""; display: block; height:100%; width:100%; background:rgba(255,255,255,0.6); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.96,rgba(0,0,0,0)),color-stop(0.98,rgba(0,0,0,1)),to(rgba(0,0,0,0))); z-index:3; position:absolute; left:0px; top:0px;}
 
 
-.ripple_show{ -webkit-animation: a_ripple_wrap 2s linear both;}
-.ripple_show .ripple_1{ -webkit-animation: a_ripple_1 2s linear both;}
-.ripple_show .ripple_2{ -webkit-animation: a_ripple_2 2s linear both;}
-.ripple_show .ripple_3{ -webkit-animation: a_ripple_3 2s linear both;}
-.ripple_show .ripple_4{ -webkit-animation: a_ripple_4 2s linear both /*infinite*/;}
+.ripple_show{ -webkit-animation: a_ripple_wrap 1.6s linear both;}
+.ripple_show .ripple_1{ -webkit-animation: a_ripple_1 1.6s linear both;}
+.ripple_show .ripple_2{ -webkit-animation: a_ripple_2 1.6s linear both;}
+.ripple_show .ripple_3{ -webkit-animation: a_ripple_3 1.6s linear both;}
+.ripple_show .ripple_4{ -webkit-animation: a_ripple_4 1.6s linear both /*infinite*/;}
 
 
 @-webkit-keyframes a_ripple_wrap{
