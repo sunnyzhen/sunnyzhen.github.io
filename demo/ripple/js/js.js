@@ -40,9 +40,9 @@ $(document).ready(function(){
 	/*loading*/
 	
 	var img_list={
-		"cover":{
+		/*"cover":{
 			"img_1":"bg.jpg"
-		}
+		}*/
 	};
 	
 	//console.log(img_list.cover);
@@ -102,6 +102,37 @@ $(document).ready(function(){
 		
 		*/
 		
+		var p_x=x-100;
+		var p_y=y-95;
+		var num_scale=1;
+		
+		$(".ripple_hook .ripple_wrap").addClass("ripple_show");
+		
+		if(num_scale<=0.2){
+			num_scale=0.2;
+		}
+		
+		$(".ripple_hook").css({
+			"left": p_x+"px",
+			"top": p_y+"px"
+		});
+		
+		var timer=setTimeout(function(){
+			$(".ripple_hook .ripple_wrap").removeClass("ripple_show");
+			$(".con_wrap").css({
+				"pointer-events":"auto"
+			});
+		},2000);
+		
+		$(".con_wrap").css({
+			"pointer-events":"none"
+		});
+		
+	}
+	
+	
+	/*function createRipple(x,y){ //增加dom写法，会导致页面渲染刷新
+		
 		var time_delay=0;
 		var p_x=x-100;
 		var p_y=y-95;
@@ -122,8 +153,7 @@ $(document).ready(function(){
 		if(ripple_container.children().length>30){
 			ripple_container.children()[0].remove();
 		}
-		//console.log(ripple_container.children().length);
-	}
+	}*/
 	
 /*	 var timer=setInterval(function(){
 	 	createRipple();
