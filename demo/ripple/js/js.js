@@ -98,7 +98,7 @@ $(document).ready(function(){
 		var p_x=Math.round(Math.random()*320);
 		var p_y=Math.round(Math.random()*502);
 		var num_scale=Math.random();
-		var ripple_type=Math.round(Math.random());
+		var ripple_type=Math.round(Math.random());//两面骰
 		
 		if(num_scale<=0.2){
 			num_scale=0.2;
@@ -113,7 +113,11 @@ $(document).ready(function(){
 	
 	 var timer=setInterval(function(){
 	 	createRipple();
-	 },200);
+		if(ripple_container.children().length>30){
+			ripple_container.children()[0].remove();
+		}
+		console.log(ripple_container.children().length);
+	 },300);
 	
 	/* 安卓版本兼容 */
 	var brower = {
