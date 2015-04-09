@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* 浏览器样式清除 reset */
+body,form,div,span,ul,ol,li,p,pre,dl,dt,dd,h1,h2,h3,h4,h5,h6,em,a,fieldset,legend,address,label,textarea,select,input,figure,table,th,td,b,i{margin:0;padding:0;}
+body, button, input, select, textarea{ font:12px/1.5 Tahoma,Arial,'宋体'; }
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+em,i{font-style:normal;}
+table{border-collapse:separate;border-spacing:0;}
+a{text-decoration:none;}
+a:hover{ text-decoration:underline;}
+input,button,select,textarea{outline:none; font-size:100%;}
+h1,h2,h3,h4,h5,h6{ font-size:100%; font-variant: normal;}
+input,select,img{ vertical-align:middle;}
+legend{ display:none;}
+textarea{resize:none;}
+button {cursor:pointer;}
+
+html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
+
+/*翻页逻辑*/
+.wrap_prepare{ -webkit-transform:rotate(45deg); opacity:0; z-index:2;}
+.wrap_show{ -webkit-transform:rotate(0deg); opacity:1; z-index:2;}
+.wrap_hide{ -webkit-transform:rotate(-45deg); opacity:0; z-index:2;}
+
+.wrap_after{ -webkit-transform:translate(0%,100%); opacity:1; z-index:2;}
+.wrap_before{ -webkit-transform:translate(0%,-100%); opacity:1; z-index:2;}
+.current{ -webkit-transform:translate(0%,0%); opacity:1; z-index:3;}
+/*翻页逻辑*/
+
+
+
+
+
+
+
+
+.wrap_show .icon_wrap .icon_1{ -webkit-animation:a_icon_1 0.1s 0.9s linear both;}
+
+@-webkit-keyframes a_icon_1{
+	0%{ -webkit-transform: translate(-20px,0) scale(0.5); opacity:0;}
+	100%{ -webkit-transform: translate(0,0) scale(1); opacity:1;}
+}
+
+
+.con_wrap{ display:block; height:100%; width:100%;/* background:url(../images/lake.jpg) no-repeat 0 0; background-size:100% 100%;*/ background:#6CF;}
+
+.ripple_hook{ display:block; height:190px; width:200px; position:absolute; left:0px; top:0px;}
+
+.ripple_wrap{ display:block; height:190px; width:200px; position:absolute; left:0px; top:0px; -webkit-transform:skew(0deg);}
+.ripple{ display:block; height:190px; width:200px; border-radius:200px; -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.93,rgba(0,0,0,0)),color-stop(0.95,rgba(0,0,0,0.3)),color-stop(0.97,rgba(0,0,0,1)),to(rgba(0,0,0,0))); position:absolute; left:0px; top:0px; opacity:0.5; background:rgba(255,255,255,1);/* background-image:url(../images/lake.jpg);*/}
+
+/*底色*/
+.ripple_1{ -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.95,rgba(0,0,0,0)),color-stop(0.96,rgba(0,0,0,0.3)),color-stop(0.98,rgba(0,0,0,1)),to(rgba(0,0,0,0))); width:200px;}
+.ripple_2{ -webkit-transform:scale(0.945); opacity:0.8;}
+.ripple_3{ -webkit-transform:scale(0.87); opacity:0.3;}
+.ripple_4{ -webkit-transform:scale(0.76); opacity:0.1;}
+
+/*压暗*/
+.ripple_1:after{ content:""; display: block; height:100%; width:100%; background:rgba(0,0,0,0.5); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)),color-stop(0.97,rgba(0,0,0,0)),to(rgba(0,0,0,1))); z-index:2; position:absolute; left:0px; top:0px;}
+.ripple_2:after{ content:""; display: block; height:100%; width:100%; background:rgba(0,0,0,0.5); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)),color-stop(0.96,rgba(0,0,0,0)),to(rgba(0,0,0,1))); z-index:2; position:absolute; left:0px; top:0px;}
+.ripple_3:after{ content:""; display: block; height:100%; width:100%; background:rgba(0,0,0,0.7); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)),color-stop(0.97,rgba(0,0,0,0)),to(rgba(0,0,0,1))); z-index:2; position:absolute; left:0px; top:0px;}
+.ripple_4:after{ content:""; display: block; height:100%; width:100%; background:rgba(0,0,0,0.7); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)),color-stop(0.98,rgba(0,0,0,0)),to(rgba(0,0,0,1))); z-index:2; position:absolute; left:0px; top:0px;}
+
+/*高光*/
+.ripple_1:before{ content:""; display: block; height:100%; width:100%; background:rgba(255,255,255,0.6); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.96,rgba(0,0,0,0)),color-stop(0.97,rgba(0,0,0,1)),to(rgba(0,0,0,0))); z-index:3; position:absolute; left:0px; top:0px;}
+.ripple_2:before{ content:""; display: block; height:100%; width:100%; background:rgba(255,255,255,1); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.94,rgba(0,0,0,0)),color-stop(0.96,rgba(0,0,0,1)),to(rgba(0,0,0,0))); z-index:3; position:absolute; left:0px; top:0px;}
+.ripple_3:before{ content:""; display: block; height:100%; width:100%; background:rgba(255,255,255,0.8); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.96,rgba(0,0,0,0)),color-stop(0.97,rgba(0,0,0,1)),to(rgba(0,0,0,0))); z-index:3; position:absolute; left:0px; top:0px;}
+.ripple_4:before{ content:""; display: block; height:100%; width:100%; background:rgba(255,255,255,0.6); -webkit-mask:-webkit-gradient(radial,100 95,0,100 95,100,from(rgba(0,0,0,0)), color-stop(0.96,rgba(0,0,0,0)),color-stop(0.98,rgba(0,0,0,1)),to(rgba(0,0,0,0))); z-index:3; position:absolute; left:0px; top:0px;}
+
+
+.ripple_show{ -webkit-animation: a_ripple_wrap 2s linear both;}
+.ripple_show .ripple_1{ -webkit-animation: a_ripple_1 2s linear both;}
+.ripple_show .ripple_2{ -webkit-animation: a_ripple_2 2s linear both;}
+.ripple_show .ripple_3{ -webkit-animation: a_ripple_3 2s linear both;}
+.ripple_show .ripple_4{ -webkit-animation: a_ripple_4 2s linear both /*infinite*/;}
+
+
+@-webkit-keyframes a_ripple_wrap{
+	0%{ -webkit-transform: scale(0); opacity:0.2;}
+	70%{ -webkit-transform: scale(0.8); opacity:1;}
+	100%{ -webkit-transform:scale(1); opacity:0;}
+}
+
+@-webkit-keyframes a_ripple_1{
+	0%{opacity:0.8;}
+	50%{opacity:0.8;}
+	100%{opacity:0;}
+}
+
+@-webkit-keyframes a_ripple_2{
+	0%{opacity:0;}
+	40%{opacity:0.6;}
+	70%{opacity:0.6;}
+	100%{opacity:0;}
+}
+
+@-webkit-keyframes a_ripple_3{
+	0%{opacity:0;}
+	50%{opacity:0.3;}
+	80%{opacity:0.3;}
+	100%{opacity:0;}
+}
+
+@-webkit-keyframes a_ripple_4{
+	0%{opacity:0;}
+	60%{opacity:0.1;}
+	90%{opacity:0.1;}
+	100%{opacity:0;}
+}
+
+
+/*ip 4s*/
+@media all and (min-width:320px) and (max-height:416px){
+	
+}
+
+@media all and (min-height:416px) and (max-height:500px){
+	
+}
+
+@media all and (min-width:320px) and (min-height:504px){
+	
+}
+
+@media all and (min-width:360px){
+	
+}
+
+/*ip 6*/
+@media all and (min-width:375px){
+	
+}
+
+/*ip 6+*/
+@media all and (min-width:414px){
+	
+}
+
+
+/* 安卓兼容 吃饭杯水溢出兼容*/
+.android_version .wrap_show .glass_2 .water{ -webkit-animation: none;}
+
+/* 安卓兼容 4.4 吃饭杯水溢出兼容*/
+.android_version_4_4 .wrap_show .glass_2 .water{ -webkit-animation: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
