@@ -93,11 +93,19 @@ $(document).ready(function(){
 	var ripple_container=$(".con_wrap");
 	
 	
-	function createRipple(){
-		var time_delay=Math.random();
+	function createRipple(x,y){
+/*		var time_delay=Math.random();
 		var p_x=Math.round(Math.random()*320);
 		var p_y=Math.round(Math.random()*502);
 		var num_scale=Math.random();
+		var ripple_type=Math.round(Math.random());//两面骰
+		
+		*/
+		
+		var time_delay=0;
+		var p_x=x-100;
+		var p_y=y-95;
+		var num_scale=1;
 		var ripple_type=Math.round(Math.random());//两面骰
 		
 		if(num_scale<=0.2){
@@ -108,16 +116,24 @@ $(document).ready(function(){
 		}else{
 			var ripple_template="<div class='ripple_hook' style='left:"+p_x+"px; top:"+p_y+"px; -webkit-transform:scale("+num_scale+");'><div class='ripple_wrap ripple_show' style='-webkit-animation-delay:"+time_delay+"s;'><div class='ripple ripple_1' style='-webkit-animation-delay:"+time_delay+"s;'></div><div class='ripple ripple_2' style='-webkit-animation-delay:"+time_delay+"s;'></div></div></div>";
 		}
+		
 		ripple_container.append(ripple_template);
-	}
-	
-	 var timer=setInterval(function(){
-	 	createRipple();
+		
 		if(ripple_container.children().length>30){
 			ripple_container.children()[0].remove();
 		}
-		console.log(ripple_container.children().length);
-	 },300);
+		//console.log(ripple_container.children().length);
+	}
+	
+/*	 var timer=setInterval(function(){
+	 	createRipple();
+	 },300);*/
+	
+	 
+	$(".con_wrap").click(function(e){
+		 //console.log(e.clientX+" "+e.clientY);
+		 createRipple(e.clientX,e.clientY);
+	});
 	
 	/* 安卓版本兼容 */
 	var brower = {
