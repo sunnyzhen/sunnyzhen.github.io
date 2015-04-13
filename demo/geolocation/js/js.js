@@ -28,10 +28,12 @@ $(document).ready(function(){
 */	
 
 	var map = new BMap.Map($(".ele_map")[0]);           
-	var point = new BMap.Point(114.27568,22.63136);    
-	map.centerAndZoom(point,16);                     
+	var point = new BMap.Point(114.28233,22.63726);    
+	map.centerAndZoom(point,17);                     
 	map.addControl(new BMap.ZoomControl()); //添加地图缩放控件
 	map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
 	var marker = new BMap.Marker(point);  //创建标注
-	map.addOverlay(marker);  
+	map.addOverlay(marker); 
+	
+	 
 });
