@@ -24,4 +24,6 @@ $(document).ready(function(){
 		map: map
 	});
 	
+	var maptypectrl = new soso.maps.MapTypeControl({map:map});
+	
 });
