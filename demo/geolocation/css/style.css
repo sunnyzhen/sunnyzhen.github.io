@@ -28,7 +28,7 @@ html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
 .current{ -webkit-transform:translate(0%,0%); opacity:1; z-index:3;}
 /*翻页逻辑*/
 
-
+.ele_map{ display:block; height:100%; width:100%;}
 
 
 
