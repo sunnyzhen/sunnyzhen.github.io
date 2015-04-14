@@ -163,9 +163,9 @@ $(document).ready(function() {
 
 	};*/
 	
-	var overlay = new PIXI.TilingSprite(PIXI.Texture.fromImage("./images/zeldaWaves.png"), 630, 410);
+/*	var overlay = new PIXI.TilingSprite(PIXI.Texture.fromImage("./images/zeldaWaves.png"), 630, 410);
 	overlay.alpha = 0.1//0.2
-	pondContainer.addChild(overlay);
+	pondContainer.addChild(overlay);*/
 
 
 	
@@ -248,8 +248,8 @@ $(document).ready(function() {
 		displacementFilter.offset.x = count * 10//blurAmount * 40;
 		displacementFilter.offset.y = count * 10
 		
-		overlay.tilePosition.x = count * -10//blurAmount * 40;
-		overlay.tilePosition.y = count * -10
+/*		overlay.tilePosition.x = count * -10//blurAmount * 40;
+		overlay.tilePosition.y = count * -10*/
 
 	    renderer.render(stage);
 	    requestAnimFrame( animate );
