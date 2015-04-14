@@ -225,7 +225,7 @@ $(document).ready(function() {
 
 		pondContainer.filters = filtersToApply.length > 0 ? filtersToApply : null;
 
-		for (var i = 0; i < fishs.length; i++) 
+/*		for (var i = 0; i < fishs.length; i++) 
 		{
 			var fish = fishs[i];
 
@@ -243,7 +243,7 @@ $(document).ready(function() {
 			if(fish.position.y < bounds.y)fish.position.y += bounds.height;
 			if(fish.position.y > bounds.y + bounds.height)fish.position.y -= bounds.height
 		}
-
+*/
 	
 		displacementFilter.offset.x = count * 10//blurAmount * 40;
 		displacementFilter.offset.y = count * 10
