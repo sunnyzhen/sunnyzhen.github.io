@@ -226,8 +226,8 @@ $(document).ready(function() {
 		}
 */
 	
-		displacementFilter.offset.x = 10//blurAmount * 40;
-		displacementFilter.offset.y = 10
+		displacementFilter.offset.x = count * 10//blurAmount * 40;
+		displacementFilter.offset.y = count * 10
 		
 /*		overlay.tilePosition.x = count * -10//blurAmount * 40;
 		overlay.tilePosition.y = count * -10*/
