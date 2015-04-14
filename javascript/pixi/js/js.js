@@ -27,7 +27,7 @@ $(document).ready(function() {
 	displacementFolder.add(filtersSwitchs, '0').name("apply");
 	displacementFolder.add(displacementFilter.scale, 'x', 1, 200).name("scaleX");
 	displacementFolder.add(displacementFilter.scale, 'y', 1, 200).name("scaleY");
-
+/*
 	var blurFilter = new PIXI.BlurFilter();
 
 	var blurFolder = gui.addFolder('Blur');
@@ -113,9 +113,9 @@ $(document).ready(function() {
 	
 	var rgbSplitFolder = gui.addFolder('RGB Splitter');
 	rgbSplitFolder.add(filtersSwitchs, '10').name("apply");
+*/
 
-
-	var filterCollection = [displacementFilter, blurFilter, pixelateFilter, invertFilter, grayFilter, sepiaFilter, twistFilter, dotScreenFilter, colorStepFilter, crossHatchFilter, rgbSplitterFilter];
+	var filterCollection = [displacementFilter];
 
 
 	// create an new instance of a pixi stage
