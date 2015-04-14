@@ -135,7 +135,7 @@ $(document).ready(function() {
 	//littleDudes.position.y = 100;
 	var padding = 100;
 	var bounds = new PIXI.Rectangle(-padding, -padding, 630 + padding * 2, 410 + padding * 2)
-	var fishs = [];
+	/*var fishs = [];
 
 
 	for (var i = 0; i < 20; i++) 
@@ -161,7 +161,7 @@ $(document).ready(function() {
 		fish.scale.x = fish.scale.y = 0.8 + Math.random() * 0.3;
 		fishs.push(fish);
 
-	};
+	};*/
 	
 	var overlay = new PIXI.TilingSprite(PIXI.Texture.fromImage("./images/zeldaWaves.png"), 630, 410);
 	overlay.alpha = 0.1//0.2
