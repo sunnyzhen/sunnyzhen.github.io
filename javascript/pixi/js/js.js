@@ -12,21 +12,21 @@ $(document).ready(function() {
 	// add render view to DOM
 	document.body.appendChild(renderer.view);
 
-	var gui = new dat.GUI({
+/*	var gui = new dat.GUI({
     //height : 5 * 32 - 1,
     
     //width : 350
-	});
+	});*/
 	
 	//// 
 
 	var displacementTexture = PIXI.Texture.fromImage("./images/displacement_map.jpg");
 	var displacementFilter = new PIXI.DisplacementFilter(displacementTexture);
 
-	var displacementFolder = gui.addFolder('Displacement');
+/*	var displacementFolder = gui.addFolder('Displacement');
 	displacementFolder.add(filtersSwitchs, '0').name("apply");
 	displacementFolder.add(displacementFilter.scale, 'x', 1, 200).name("scaleX");
-	displacementFolder.add(displacementFilter.scale, 'y', 1, 200).name("scaleY");
+	displacementFolder.add(displacementFilter.scale, 'y', 1, 200).name("scaleY");*/
 /*
 	var blurFilter = new PIXI.BlurFilter();
 
