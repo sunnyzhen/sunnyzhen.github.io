@@ -185,26 +185,7 @@ $(document).ready(function() {
 	
 	var count = 0;
 	var switchy = false;
-	
-	/*
-	 * Add a pixi Logo!
-	 */
-	var logo = PIXI.Sprite.fromImage("./images/logo_small.png")
-	stage.addChild(logo);
-	
-	logo.anchor.x = 1;
-	logo.anchor.y = 1;
 
-	logo.position.x = 630
-	logo.scale.x = logo.scale.y = 0.5;
-	logo.position.y = 400;
-	logo.interactive = true;
-	logo.buttonMode = true;
-	
-	logo.click = logo.tap = function()
-	{
-		window.open("https://github.com/GoodBoyDigital/pixi.js", "_blank")
-	}
 	
 	
 	requestAnimFrame(animate);
