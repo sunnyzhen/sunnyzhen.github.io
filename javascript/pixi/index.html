@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>pixi.js example 15 - Filters</title>
+    <title>wave demo</title>
     <style>
         body {
             margin: 0;
@@ -15,7 +15,7 @@
 </head>
 <body>
     <script>
-    var renderer = PIXI.autoDetectRenderer(630, 410);
+    var renderer = PIXI.autoDetectRenderer(640, 1008);
     renderer.view.style.position = "absolute"
     renderer.view.style.width = window.innerWidth + "px";
     renderer.view.style.height = window.innerHeight + "px";
@@ -42,10 +42,10 @@
     pondContainer.addChild(bg);
 
     var padding = 100;
-    var bounds = new PIXI.Rectangle(-padding, -padding, 630 + padding * 2, 410 + padding * 2)
+    var bounds = new PIXI.Rectangle(-padding, -padding, 640 + padding * 2, 1008 + padding * 2)
     
-    displacementFilter.scale.x = 10;
-    displacementFilter.scale.y = 10;
+    displacementFilter.scale.x = 12;
+    displacementFilter.scale.y = 12;
     
     var count = 0;
     var switchy = false; 
