@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>pixi.js example 15 - Filters</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+    </style>
+    
+    <script src="pixi.js"></script>
+
+</head>
+<body>
+    <script>
+    var renderer = PIXI.autoDetectRenderer(630, 410);
+    renderer.view.style.position = "absolute"
+    renderer.view.style.width = window.innerWidth + "px";
+    renderer.view.style.height = window.innerHeight + "px";
+    renderer.view.style.display = "block";
+    
+
+    // add render view to DOM
+    document.body.appendChild(renderer.view);
+    //// 
+
+    var displacementTexture = PIXI.Texture.fromImage("displacement_map.jpg");
+    var displacementFilter = new PIXI.DisplacementFilter(displacementTexture);
+
+
+    // create an new instance of a pixi stage
+    var stage = new PIXI.Stage(0xFF0000, true);
+    
+    var pondContainer = new PIXI.DisplayObjectContainer();
+    stage.addChild(pondContainer);
+
+    stage.interactive = true;
+    
+    var bg = PIXI.Sprite.fromImage("displacement_BG.jpg");
+    pondContainer.addChild(bg);
+
+    var padding = 100;
+    var bounds = new PIXI.Rectangle(-padding, -padding, 630 + padding * 2, 410 + padding * 2)
+    
+    displacementFilter.scale.x = 10;
+    displacementFilter.scale.y = 10;
+    
+    var count = 0;
+    var switchy = false; 
+    
+    requestAnimFrame(animate);
+	
+	var filtersToApply = [displacementFilter];
+	pondContainer.filters = filtersToApply;
+
+    function animate() {
+        
+        count += 0.1;
+        
+        var blurAmount = Math.cos(count) ;
+        var blurAmount2 = Math.sin(count * 0.8)  ;
+
+    
+        displacementFilter.offset.x = count * 10;
+        displacementFilter.offset.y = count * 10;
+
+        renderer.render(stage);
+        requestAnimFrame( animate );
+    }
+
+    </script>
+
+    </body>
+</html>
