@@ -8,69 +8,17 @@
             padding: 0;
             background-color: #000000;
         }
+		.num{ display:block; height:50px; width:350px; position:absolute; left:0px; top:0px; z-index:10; background:rgba(255,255,255,0.5); text-align:center; line-height:50px; font-size:32px; color:#000; font-family:'Arial';}
+
     </style>
     
-    <script src="pixi.js"></script>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script src="pixi.dev.js"></script>
+    <script src="js.js"></script>
 
 </head>
 <body>
-    <script>
-    var renderer = PIXI.autoDetectRenderer(640, 1008);
-    renderer.view.style.position = "absolute"
-    renderer.view.style.width = window.innerWidth + "px";
-    renderer.view.style.height = window.innerHeight + "px";
-    renderer.view.style.display = "block";
-    
+<div class="num">0</div>
 
-    // add render view to DOM
-    document.body.appendChild(renderer.view);
-    //// 
-
-    var displacementTexture = PIXI.Texture.fromImage("displacement_map.jpg");
-    var displacementFilter = new PIXI.DisplacementFilter(displacementTexture);
-
-
-    // create an new instance of a pixi stage
-    var stage = new PIXI.Stage(0xFF0000, true);
-    
-    var pondContainer = new PIXI.DisplayObjectContainer();
-    stage.addChild(pondContainer);
-
-    stage.interactive = true;
-    
-    var bg = PIXI.Sprite.fromImage("displacement_BG.jpg");
-    pondContainer.addChild(bg);
-
-    var padding = 100;
-    var bounds = new PIXI.Rectangle(-padding, -padding, 640 + padding * 2, 1008 + padding * 2)
-    
-    displacementFilter.scale.x = 12;
-    displacementFilter.scale.y = 12;
-    
-    var count = 0;
-    var switchy = false; 
-    
-    requestAnimFrame(animate);
-	
-	var filtersToApply = [displacementFilter];
-	pondContainer.filters = filtersToApply;
-
-    function animate() {
-        
-        count += 0.1;
-        
-        var blurAmount = Math.cos(count) ;
-        var blurAmount2 = Math.sin(count * 0.8)  ;
-
-    
-        displacementFilter.offset.x = count * 10;
-        displacementFilter.offset.y = count * 10;
-
-        renderer.render(stage);
-        requestAnimFrame( animate );
-    }
-
-    </script>
-
-    </body>
+</body>
 </html>
