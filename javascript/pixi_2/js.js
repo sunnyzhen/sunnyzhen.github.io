@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 
     // create an new instance of a pixi stage
-    stage = new PIXI.Stage(0x151e45, true);
+    stage = new PIXI.Stage(0xffffff, true);
     
     pondContainer = new PIXI.DisplayObjectContainer();
     stage.addChild(pondContainer);
@@ -54,8 +54,38 @@ $(document).ready(function(){
 
     stage.interactive = true;
     
-    bg = PIXI.Sprite.fromImage("displacement_BG.jpg");
-    pondContainer.addChild(bg);
+    //bg = PIXI.Sprite.fromImage("displacement_BG.jpg");
+   // pondContainer.addChild(bg);
+	drop =PIXI.Sprite.fromImage("drop.png");
+	pondContainer.addChild(drop);
+	console.log(drop);
+	console.log($(window).width());
+	var x=320;
+	var y=504;
+	drop.position.x=x;
+	drop.position.y=y;
+	drop.pivot.x=504;
+	drop.pivot.y=504;
+	
+	drop.scale.x=0.03;
+	drop.scale.y=0.03;
+	drop.alpha=1;
+	var scale_counter=1;
+	
+	
+	var timer_scale=setInterval(function(){
+		scale_counter++;
+		if(drop.scale.x/*<1&&drop.scale.x>0*/){
+			drop.scale.x+=0.005*(1-scale_counter/600);
+			drop.scale.y+=0.005*(1-scale_counter/600);
+			drop.alpha=1-scale_counter/3200;
+		}
+		else{
+			drop.scale.x=1;
+			drop.scale.y=1;
+			drop.alpha=0;
+		}
+	},20);
     
     displacementFilter.scale.x = 12;
     displacementFilter.scale.y = 12;
