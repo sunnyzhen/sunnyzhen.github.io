@@ -37,7 +37,7 @@ button{cursor:pointer}
 .icon_2 .line_2{ display:block; height:12px; width:2px; background:#479de6; position:absolute; left:25px; bottom:18px; -webkit-transform:rotate(-52deg); -webkit-transform-origin:50% 100%; -webkit-transition:-webkit-transform 0.2s ease,height 0.2s ease;}
 .icon_2 .line_3{ display:block; height:12px; width:2px; background:#479de6; position:absolute; left:25px; top:19px; -webkit-transform:rotate(55deg); -webkit-transform-origin:50% 0%; -webkit-transition:-webkit-transform 0.2s ease,height 0.2s ease;}
 
-.icon_2 .icon_line_wrap{ display:block; height:38px; width:38px; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.2s ease; }
+.icon_2 .icon_line_wrap{ display:block; height:38px; width:38px; position:absolute; left:0px; top:0px; -webkit-transition:-webkit-transform 0.2s ease;}
 
 .icon_2:hover .icon_line_wrap{ -webkit-transform:rotate(180deg) translate(0px,-1px);}
 .icon_2:hover .line_1{ -webkit-transform:translate(0px,2px); height:12px;}
@@ -49,16 +49,15 @@ button{cursor:pointer}
 .icon_animation_show .line_2{ -webkit-transform:rotate(0deg) translate(-4px,0px); height:6px;}
 .icon_animation_show .line_3{ -webkit-transform:rotate(0deg) translate(-4px,1px); height:6px;}
 
-
 .icon_3{ background: url(../img/icon_3.png) no-repeat 0 0;}
 .icon_3 .pen_wrap{ display:block; height:32px; width:30px; position:absolute; left:8px; top:3px;}
 .icon_3 .pen_wrap .pen{ display:block; height:28px; width:28px; background:url(../img/icon_3_pen.png) no-repeat 0 0; position:absolute; left:1px; top:3px; z-index:1;}
 .icon_3 .pen_wrap .pen_shadow{ display:block; height:32px; width:30px; background:url(../img/icon_3_pen_shadow.png) no-repeat 0 0; position:absolute; left:0px; top:0px;}
 
 .icon:hover .pen{-webkit-animation:a_pen 2s linear infinite;}
-.icon:hover .pen_shadow{ opacity:0; }
+.icon:hover .pen_shadow{ opacity:0;  opacity:1\9; }
 .icon_animation_show .pen{-webkit-animation:a_pen 2s linear both infinite;}
-.icon_animation_show .pen_shadow{ opacity:0; }
+.icon_animation_show .pen_shadow{ opacity:0; opacity:1\9; }
 
 @-webkit-keyframes a_pen{
 	0%{ -webkit-transform: translate(-2px,-24px);}
@@ -71,7 +70,14 @@ button{cursor:pointer}
 }
 
 
+.icon_wrap_ie .icon_2 .line_1{ height:14px; width:12px; background:url(../img/icon_2_play.png) no-repeat 0 0; position:absolute; left:15px; top:12px;}
+.icon_wrap_ie .icon_2 .line_2{ display:none;}
+.icon_wrap_ie .icon_2 .line_3{ display:none;}
 
+.icon_wrap_ie .icon_2:hover .line_1{ height:14px; background-image:url(../img/icon_2_pause.png); left:13px;}
+.icon_wrap_ie .icon_animation_show .line_1{height:14px; background-image:url(../img/icon_2_pause.png); left:13px;}
+.icon_wrap_ie .icon:hover .pen_shadow{ opacity:1; }
+.icon_wrap_ie .icon_animation_show .pen_shadow{ opacity:1; }
 
 
 
