@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>wave demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+    
+    
+
+</head>
+<body>
+
+<a href="#" class="btn">btn</a>
+<audio class="webcam"></audio>
+
+
+
+<script src="jquery-1.9.0.min.js"></script>
+<script src="js.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+	var currUrl = window.location.href.replace(window.location.hash, '');
+	$.getJSON('http://hr.webank.com/wx/signature.php?url=' + encodeURIComponent(currUrl)).done(function(data) {
+		wx.config({
+			debug: false,
+			appId: data.appId,
+			timestamp: data.timestamp,
+			nonceStr: data.nonceStr,
+			signature: data.signature,
+			jsApiList: [
+				'checkJsApi',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'hideMenuItems',
+				'showMenuItems',
+				'hideAllNonBaseMenuItem',
+				'showAllNonBaseMenuItem',
+				'translateVoice',
+				'startRecord',
+				'stopRecord',
+				'onRecordEnd',
+				'playVoice',
+				'pauseVoice',
+				'stopVoice',
+				'uploadVoice',
+				'downloadVoice',
+				'chooseImage',
+				'previewImage',
+				'uploadImage',
+				'downloadImage',
+				'getNetworkType',
+				'openLocation',
+				'getLocation',
+				'hideOptionMenu',
+				'showOptionMenu',
+				'closeWindow',
+				'scanQRCode',
+				'chooseWXPay',
+				'openProductSpecificView',
+				'addCard',
+				'chooseCard',
+				'openCard'
+			]
+		});
+	});
+	
+  wx.ready(function () {
+	wx.checkJsApi({
+		jsApiList: [
+			'getNetworkType',
+			'previewImage'
+		],
+		success: function (res) {}
+	});
+	
+	// 2. 分享接口
+	// 2.1 监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+	
+	wx.onMenuShareAppMessage({
+		title: 'WeBank 微众招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+	// 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+	
+	wx.onMenuShareTimeline({
+		title: 'WeBank 微众招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+	// 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+	wx.onMenuShareQQ({
+		title: 'WeBank 微众招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		complete: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	// 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+	wx.onMenuShareWeibo({
+		title: 'WeBank 微众招聘',
+		desc: '他来了，你来不来？',
+		link: '',
+		imgUrl: 'http://hr.webank.com/m/images/promote_images/page_1/icon_200x200.jpg',
+		trigger: function (res) {},
+		complete: function (res) {},
+		success: function (res) {},
+		cancel: function (res) {},
+		fail: function (res) {}
+	});
+	
+  });
+</script>
+
+
+</body>
+</html>
