@@ -17,13 +17,13 @@ textarea{resize:none;}
 button {cursor:pointer;}
 
 html,body{ height:100%; width:100%; overflow:hidden; position: relative;}
-body{ background:#f4f1e7 url(../images/con_wrap_bg.jpg) repeat 0 0; background-size:105px 105px;}
+body{ background:#f4f1e7;}
 .con_wrap{ display:block; height:100%; width:100%; position:absolute; left:0px; top:0px; z-index:10; -webkit-transition:-webkit-transform 0.3s linear,opacity 0.3s linear; -webkit-tap-highlight-color: transparent;}
-.con_wrap .main_title{ display:block; height:25px; width:209px; background:url(../images/sprite.png) no-repeat 0 -126px;  background-size:249px 162px; position:absolute; left:50%; top:200px; margin-left:-139px; text-indent:-9999px; overflow:hidden; opacity:0;}
-.con_wrap .sub_title{ display:block; height:38px; width:119px; background:url(../images/sprite.png) no-repeat -107px -53px;  background-size:249px 162px; position:absolute; left:50%; bottom:148px; margin-left:-139px; text-indent:-9999px; overflow:hidden; opacity:0;}
+.con_wrap .main_title{ display:block; height:25px; width:209px; background:url(../images/main_title.png) no-repeat 0 0;  background-size: contain; position:absolute; left:50%; top:200px; margin-left:-139px; text-indent:-9999px; overflow:hidden; opacity:0;}
+.con_wrap .sub_title{ display:block; height:38px; width:119px; background:url(../images/sub_title.png) no-repeat 0 0;  background-size:contain; position:absolute; left:50%; bottom:148px; margin-left:-139px; text-indent:-9999px; overflow:hidden; opacity:0;}
 
 .arrow_hook{display:block; height:19px; width:25px; position:absolute; left:50%; margin-left:-12px; bottom:20px; z-index:10; opacity:0;}
-.page_arrow{ display:block; height:19px; width:25px; background:url(../images/sprite.png) no-repeat -80px -53px;  background-size:249px 162px; position:absolute; left:0; top:0; text-indent:-9999px; overflow:hidden;}
+.page_arrow{ display:block; height:19px; width:25px; background:url(../images/page_arrow.png) no-repeat 0 0;  background-size: contain; position:absolute; left:0; top:0; text-indent:-9999px; overflow:hidden;}
 
 .wrap_show .main_title{ -webkit-animation:a_main_title 0.3s 0.3s linear both;}
 .wrap_show .sub_title{ -webkit-animation:a_main_title 0.3s 0.6s linear both;}
