@@ -25,8 +25,12 @@
 		var i=0;
         
 		$(".wrap")[0].addEventListener('touchstart',function(e){
-			alert(e.touches[0]);
-			$(".param").html(e.touches[0].radiusX+","+e.touches[0].radiusY+" "+i++);
+			var str="";
+			for(var i in e.touches[0]){
+				str+=i+" "+e.touches[0][i]+"<br/>";
+			}
+			//$(".param").html(e.touches[0].radiusX+","+e.touches[0].radiusY+" "+i++);
+			$(".param").html(str);
 		},false);
 		
     });
