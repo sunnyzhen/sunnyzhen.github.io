@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NUM</title>
+</head>
+
+<body>
+
+<div class="wrap">
+	<div class="number">1</div>
+    <a class="forward" href="?">go forward!</a>
+</div>
+
+<script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-1.9.0.min.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function() {
+        var a_link=$(".forward");
+		var num=$(".number");
+		
+		$(a_link).click(function(e){
+			e.preventDefault();
+			var myNum=parseInt($(num).html(),10);
+			//console.log(++myNum);
+			$(num).html(++myNum);
+			history.pushState({count:myNum,fuck:123},null,"?num="+myNum);
+			document.title="Number"+myNum;
+		});
+		
+		window.addEventListener("popstate",function(e){
+			console.log(e);
+			if(e.state&&e.state.count){
+				$(num).html(e.state.count+" "+e.state.fuck);
+				document.title="Number"+e.state.count;
+			}else{
+				setNumFromUrl();
+			}
+		});
+		
+		function setNumFromUrl(){
+			
+			if(location.search){
+				var match=location.search.match(/num=([0-9]+)/);
+				if(match){
+					$(num).html(match[1]);
+					document.title="Number"+match[1];
+				}
+			}else{
+				
+				$(num).html(1);
+				document.title="Number 1";
+				
+			}
+			
+		}
+		
+    });
+</script>
+
+
+</body>
+</html>
