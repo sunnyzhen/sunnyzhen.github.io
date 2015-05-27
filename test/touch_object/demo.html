@@ -16,14 +16,17 @@
 <body>
 
 <div class="wrap">
+	<div class="param"></div>
 </div>
 
 <script language="javascript" type="text/javascript" src="http://sunnyzhen.github.io/public/js/jquery-1.9.0.min.js"></script>
 <script language="javascript" type="text/javascript">
 	$(document).ready(function() {
+		var i=0;
         
 		$(".wrap")[0].addEventListener('touchstart',function(e){
-			console.log(e);
+			alert(e.touches[0]);
+			$(".param").html(e.touches[0].radiusX+","+e.touches[0].radiusY+" "+i++);
 		},false);
 		
     });
