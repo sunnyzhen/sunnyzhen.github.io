@@ -70,13 +70,19 @@
             }
 
             var cube;
+			var mesh;
             function initObject() {
                 var geometry = new THREE.CylinderGeometry( 100,150,400);
                 var material = new THREE.MeshLambertMaterial( { color:0xFFFFFF} );
-                var mesh = new THREE.Mesh( geometry,material);
+                mesh = new THREE.Mesh( geometry,material);
                 mesh.position = new THREE.Vector3(0,0,0);
                 scene.add(mesh);
             }
+			
+			function initTween()
+			{
+				new TWEEN.Tween( mesh.position).to( { x: -400 }, 3000 ).repeat( Infinity ).easing(TWEEN.Easing.Back.Out).start();
+			}
 
             function threeStart() {
                 initThree();
@@ -84,17 +90,19 @@
                 initScene();
                 initLight();
                 initObject();
+				initTween();
                 animation();
 
             }
             function animation()
             {
                 //renderer.clear();
-                camera.position.x =camera.position.x +1;
+                //camera.position.x =camera.position.x +1;
                 renderer.render(scene, camera);
                 requestAnimationFrame(animation);
 				
 				stats.update();
+				TWEEN.update();
             }
 
 		</script>
