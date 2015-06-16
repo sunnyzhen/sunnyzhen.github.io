@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Three框架</title>
+        <script src="http://www.sunnyzhen.com/public/js/jquery-1.9.0.min.js"></script>
+        <script src="three.js"></script>
+        <script src="Stats.js"></script>
+        <script src="Tween.js"></script>
+ 		<style type="text/css">
+                     div#canvas-frame {
+                            border: none;
+                            cursor: pointer;
+                            width: 100%;
+                            height: 600px;
+                            background-color: #EEEEEE;
+                     }
+
+              </style>
+              <script>
+            var renderer;
+            function initThree() {
+                width = document.getElementById('canvas-frame').clientWidth;
+                height = document.getElementById('canvas-frame').clientHeight;
+                renderer = new THREE.WebGLRenderer({
+                    antialias : true
+                });
+                renderer.setSize(width, height);
+                document.getElementById('canvas-frame').appendChild(renderer.domElement);
+                renderer.setClearColor(0xFFFFFF, 1.0);
+            }
+
+            var camera;
+            function initCamera() {
+                camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+                camera.position.x = 0;
+                camera.position.y = 30;
+                camera.position.z = 60;
+                camera.up.x = 0;
+                camera.up.y = 1;
+                camera.up.z = 0;
+                camera.lookAt({
+                    x : 0,
+                    y : 0,
+                    z : 0
+                });
+            }
+
+            var scene;
+            function initScene() {
+                scene = new THREE.Scene();
+            }
+
+            var light;
+            function initLight() {
+// A begin
+                light = new THREE.DirectionalLight(0xffff00,1);
+                light.position.set(0,50,50);
+                scene.add(light);
+// A end
+            }
+
+            var cube;
+			var plane;
+			var ball;
+            function initObject() {
+                var geometry = new THREE.BoxGeometry( 20, 20, 20);
+				var texture=THREE.ImageUtils.loadTexture("sunny.jpg",{},function(){
+					renderer.render(scene,camera);
+				});
+                var material = new THREE.MeshLambertMaterial( { 
+					color:0xffff00,
+					map:texture
+					//,emissive:0xff0000
+					//,wireframe:true
+				} );
+				
+                var mesh = new THREE.Mesh( geometry,material);
+                mesh.position = new THREE.Vector3(0,0,0);
+                scene.add(mesh);
+				
+				var planeGeo=new THREE.PlaneGeometry(50,50);
+				var plane=new THREE.Mesh(planeGeo,material);
+				plane.position=new THREE.Vector3(0,0,0);
+				//scene.add(plane);
+				
+				  var ballGeo=new THREE.SphereGeometry(10,10,10);
+				ball=new THREE.Mesh(ballGeo,material);
+				mesh.position=new THREE.Vector3(0,0,0);
+				//scene.add(ball);
+				
+				var circleGeo=new THREE.CircleGeometry(30,100);
+				circle=new THREE.Mesh(circleGeo,material);
+				circle.position=new THREE.Vector3(0,0,0);
+				//scene.add(circle);
+				
+				
+            }
+
+            function threeStart() {
+                initThree();
+                initCamera();
+                initScene();
+                initLight();
+                initObject();
+                renderer.clear();
+                renderer.render(scene, camera);
+            }
+
+              </script>
+       </head>
+
+       <body onLoad="threeStart();">
+              <div id="canvas-frame"></div>
+       </body>
+</html>
