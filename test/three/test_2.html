@@ -99,14 +99,16 @@
 				circle.position=new THREE.Vector3(0,0,0);
 				//scene.add(circle);
 				
+				var loader=new THREE.OBJLoader();
+				loader.load("Tails.obj",function(obj){
+					mesh=obj;
+					scene.add(obj);
+				});
+				
 				
             }
 			
-			var loader=new THREE.OBJLoader();
-			loader.load("Tails.obj",function(obj){
-				mesh=obj;
-				scene.add(obj)
-			});
+			
 
             function threeStart() {
                 initThree();

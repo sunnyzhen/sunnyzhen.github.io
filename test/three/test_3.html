@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+        <title>Three框架</title>
+        <script src="http://www.sunnyzhen.com/public/js/jquery-1.9.0.min.js"></script>
+        <script src="three.js"></script>
+        <script src="Stats.js"></script>
+        <script src="Tween.js"></script>
+ 		<style type="text/css">
+                     div#canvas-frame {
+                            border: none;
+                            cursor: pointer;
+                            width: 100%;
+                            height: 600px;
+                            background-color: #EEEEEE;
+                     }
+
+              </style>
+              <script>
+            var renderer;
+            function initThree() {
+                width = document.getElementById('canvas-frame').clientWidth;
+                height = document.getElementById('canvas-frame').clientHeight;
+                renderer = new THREE.WebGLRenderer({
+                    antialias : true
+                });
+                renderer.setSize(width, height);
+                document.getElementById('canvas-frame').appendChild(renderer.domElement);
+                renderer.setClearColor(0x000000, 1.0);
+            }
+
+            var camera;
+            function initCamera() {
+                camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+                camera.position.x = 2;
+                camera.position.y = 0;
+                camera.position.z = 5;
+                camera.up.x = 0;
+                camera.up.y = 1;
+                camera.up.z = 0;
+                camera.lookAt({
+                    x : 0,
+                    y : 0,
+                    z : 0
+                });
+            }
+
+            var scene;
+            function initScene() {
+                scene = new THREE.Scene();
+            }
+
+            var light;
+			var light_2;
+			var light_3;
+            function initLight() {
+
+                light = new THREE.DirectionalLight(0xffffff,1);
+                light.position.set(0,5,5);
+                scene.add(light);
+				
+				light_2 = new THREE.AmbientLight(0x505050,1);
+                scene.add(light_2);
+				
+				light_3=new THREE.PointLight(0xffffff,0.5,50);
+				light_3.position.set(-10,0,20);
+				scene.add(light_3);
+
+            }
+
+            var cube;
+			var mesh;
+			var uniforms;
+            function initObject() {
+				
+				/*var surfaceMap=THREE.ImageUtils.loadTexture("earth_surface_2048.jpg",{},function(){
+					renderer.render(scene,camera);
+				});
+				var normalMap=THREE.ImageUtils.loadTexture("earth_normal_2048.jpg",{},function(){
+					renderer.render(scene,camera);
+				});
+				var specularMap=THREE.ImageUtils.loadTexture("earth_specular_2048.jpg",{},function(){
+					renderer.render(scene,camera);
+				});*/
+				
+				var surfaceMap=THREE.ImageUtils.loadTexture("earth_surface_2048.jpg");
+				var normalMap=THREE.ImageUtils.loadTexture("earth_normal_2048.jpg");
+				var specularMap=THREE.ImageUtils.loadTexture("earth_specular_2048.jpg");
+			
+				var shader = THREE.ShaderLib[ "normal" ],
+				uniforms = THREE.UniformsUtils.clone( shader.uniforms );
+				
+				console.log(uniforms);
+				
+				uniforms[ "tNormal" ].texture = normalMap;
+				uniforms[ "tDiffuse" ].texture = surfaceMap;
+				uniforms[ "tSpecular" ].texture = specularMap;
+			
+				uniforms[ "enableDiffuse" ].value = true;
+				uniforms[ "enableSpecular" ].value = true;
+			
+				var shaderMaterial = new THREE.ShaderMaterial({
+					fragmentShader: shader.fragmentShader,
+					vertexShader: shader.vertexShader,
+					uniforms: uniforms,
+					lights: true
+				});
+			
+				var globeGeometry = new THREE.SphereGeometry(1, 32, 32);
+			
+				// We'll need these tangents for our shader
+				globeGeometry.computeTangents();
+				var mesh = new THREE.Mesh( globeGeometry, shaderMaterial ); 
+				
+				scene.add(mesh);
+				
+                
+	/*			var earthmap = "earth_surface_2048.jpg";
+				var geometry = new THREE.SphereGeometry(1, 32, 32);
+				var texture=THREE.ImageUtils.loadTexture(earthmap,{},function(){
+					renderer.render(scene,camera);
+				});
+				var material = new THREE.MeshPhongMaterial( { map: texture } );
+				mesh = new THREE.Mesh( geometry, material );*/
+				//scene.add(mesh);
+				
+				var boxgeo = new THREE.BoxGeometry(1,1,1);
+				var boxtex=THREE.ImageUtils.loadTexture("sunny.jpg",{},function(){
+					renderer.render(scene,camera);
+				});
+				var boxmat = new THREE.MeshPhongMaterial( { map:boxtex } );
+				cube = new THREE.Mesh( boxgeo, boxmat );
+				cube.position.x=2;
+				scene.add(cube);
+				
+            }
+			
+			
+			
+
+            function threeStart() {
+				console.log(THREE.REVISION );
+                initThree();
+                initCamera();
+                initScene();
+                initLight();
+                initObject();
+                renderer.clear();
+                renderer.render(scene, camera);
+				
+				animation();
+            }
+			
+			function animation(){
+                renderer.clear();
+                mesh.rotation.y +=0.003;
+				cube.rotation.y +=Math.PI/180*0.25;
+                renderer.render(scene, camera);
+                requestAnimationFrame(animation);
+            }
+
+              </script>
+       </head>
+
+       <body onLoad="threeStart();">
+              <div id="canvas-frame"></div>
+       </body>
+</html>
