@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>loading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="" >
+    <meta itemprop="name" content=""/>
+    <meta itemprop="description" name="description"  content=""/>
+    <meta itemprop="image" content="http://qzonestyle.gtimg.cn/aoi/sola/20150407145907_WGHDfZiYfg.jpg" />
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="index_ori.css"/>
+</head>
+<body>
+<div class="loading" id="j-panel-loading">
+    <div class="obj">
+        <b class="flyman-wrap">
+            <b class="gas"></b>
+            <b class="flyman-body"></b>
+            <b class="flyman-head"></b>
+            <b class="drop1"></b>
+            <b class="drop2"></b>
+            <b class="drop3"></b>
+        </b>
+        <p class="loading-txt">loading...</p>
+    </div>
+</div>
+<div class="main" id="j-panel-main">
+    
+</div>
+
+<script src="http://qzonestyle.gtimg.cn/ac/lib/sea/2.1.2/sea.js"></script>
+<script src="http://qzonestyle.gtimg.cn/ac/lib/jquery/1.10.2/jquery.js"></script>
+<script>
+    seajs.use('http://qzonestyle.gtimg.cn/qzone/qzact/common.m/imageLoader/index.js', function(loader) {
+        var loaderDone = false; // 加载完成标志位
+        //图片名，由重构提供
+        var images = [
+            ''
+        ];
+        // 匹配高清屏
+        if (window.devicePixelRatio >= 1.25) {
+            for (var i = 0, l = images.length; i < l; ++i) {
+                images[i] = images[i].replace(/\.(jpg|png)/, '@2x\.$1');
+            }
+        }
+        //得到完整图片路径
+        for (var i = 0, l = images.length; i < l; ++i) {
+            images[i] = [
+                'http://qzonestyle.gtimg.cn',//域名
+                '/qz-act/2015/fm-reservation-second/',//目录
+                images[i],//名称
+            ].join('');
+        }
+        //开始加载图片
+        loader(images, function (percent) {
+            //加载完一张图片之后的回调函数
+            if (percent === 1) {
+                //加载完所有图片之后
+                loaderDone ? loaderDone() : (loaderDone = true);
+                // $('#j-panel-loading').fadeOut(function () {
+                //     $('#j-panel-loading').remove();
+                //     $('#j-panel-main').show();
+                // });
+            }
+        });
+    });
+</script>
+</body>
+</html>
+<!-- CssGaga 150827190309,tqn,334 -->
